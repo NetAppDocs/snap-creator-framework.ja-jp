@@ -1,0 +1,23 @@
+---
+permalink: domino-ops/concept_single_file_restore_in_fc_iscsi_environments.html 
+sidebar: sidebar 
+keywords: domino, ibm, performing, single-file, restore, single, file, san 
+summary: SAN 環境で単一ファイルのリストアを実行する場合は、 SnapDrive を使用して、 Snap Creator エージェントホストに Snapshot コピーをマウントできます。 
+---
+= SAN 環境で単一ファイルのリストアを実行する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAN 環境で単一ファイルのリストアを実行する場合は、 SnapDrive を使用して、 Snap Creator エージェントホストに Snapshot コピーをマウントできます。リストアするファイルを Data Restore Directory にコピーし、 Snap Creator のカスタムアクションを使用してリストア処理を完了できます。
+
+* 関連情報 *
+
+xref:task_using_snapdrive_for_windows_to_mount_snapshot_copy.adoc[SnapDrive を使用して Snapshot コピーをマウント]
+
+xref:task_copying_files_to_restore_location.adoc[データ復元ディレクトリにファイルをコピーしています]
+
+xref:task_running_snap_creator_by_using_the_custom_action.adoc[Snap Creator のカスタムアクションを使用してリストア処理を完了します]
+
+xref:task_disconnecting_snapshot_copy.adoc[Snapshot コピーを切断しています]

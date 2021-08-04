@@ -1,0 +1,45 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_plug_in_overview.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, overview 
+summary: SAP HANA プラグインは Snap Creator Framework と連携して、ネットアップストレージのバックエンドに依存する SAP HANA データベースのバックアップ解決策を提供しますSnap Creator によって作成された Snapshot バックアップは HANA Catalog に登録され、 HANA Studio に表示されます。 
+---
+= SAP HANA プラグインの概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA プラグインは Snap Creator Framework と連携して、ネットアップストレージのバックエンドに依存する SAP HANA データベースのバックアップ解決策を提供しますSnap Creator によって作成された Snapshot バックアップは HANA Catalog に登録され、 HANA Studio に表示されます。
+
+Snap Creator Framework は、単一コンテナとマルチテナントデータベースコンテナ（ MDC ）のシングルテナントデータベースという 2 種類の SAP HANA データベースをサポートしています。
+
+Snap Creator と SAP HANA プラグインは、 Data ONTAP 7-Mode と clustered Data ONTAP でサポートされており、 SAP HANA データベースノードが NFS またはファイバチャネルを使用してストレージコントローラに接続されています。SAP HANA データベースに必要なインターフェイスは、 Service Pack Stack （ SPS ） 7 以降で使用できます。
+
+Snap Creator Framework は、ストレージシステムと通信して Snapshot コピーを作成し、 SnapVault を使用してセカンダリストレージにデータをレプリケートします。Snap Creator は、プライマリストレージで SnapRestore を使用するか、セカンダリストレージから SnapVault リストアを使用して、データをリストアする場合にも使用されます。
+
+SAP HANA 用 Snap Creator プラグインは、 SAP HANA hdbsql クライアントを使用して SQL コマンドを実行し、データベースの整合性を確保して、 SAP HANA のバックアップカタログを管理します。SAP HANA プラグインは、 SAP 認定ハードウェアアプライアンスとテーラードデータセンター統合（ TDI ）プログラムの両方でサポートされています。
+
+SAP HANA 用 Snap Creator プラグインは、 SAP HANA hdbsql クライアントを使用して、次のタスクに対する SQL コマンドを実行します。
+
+* データベースの整合性を確保し、ストレージベースの Snapshot バックアップを準備します
+* ファイルシステムレベルでログファイルのバックアップ保持を管理します
+* データファイルとログファイルのバックアップ用の SAP HANA バックアップカタログを管理します
+* ファイルベースのバックアップを実行してブロックの整合性チェックを行います
+
+
+次の図は、 Snap Creator とストレージおよび SAP HANA データベースとの通信パスの概要を示しています。
+
+image::../media/sap_hana_overview_of_communication_path.gif[この図には説明が付随しています。]
+
+Snap Creator は、データベースをバックアップするために次の手順を実行します。
+
+. SAP HANA データベースの Snapshot コピーを作成して、永続性レイヤ上で整合性のあるイメージを取得します。
+. データボリュームのストレージ Snapshot コピーを作成します。
+. SAP HANA バックアップカタログ内のストレージの Snapshot バックアップを登録します。
+. SAP HANA の Snapshot コピーを削除します。
+. データボリュームの SnapVault 更新を実行します。
+. プライマリストレージとセカンダリストレージに定義されたバックアップの保持ポリシーに基づいて、プライマリストレージとセカンダリストレージのストレージ Snapshot コピーを削除します。
+. バックアップがプライマリストレージとセカンダリストレージに存在しなくなった場合に、 SAP HANA のバックアップカタログのエントリを削除します。
+. ファイルシステム上および SAP HANA のバックアップカタログ内で、最も古いデータバックアップよりも古いすべてのログバックアップを削除します。
+

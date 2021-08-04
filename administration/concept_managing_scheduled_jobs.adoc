@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_managing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: manage, scheduled, jobs, listing, running, deleting, managing 
+summary: スケジュールされたジョブを管理するには、ジョブを作成し（バックアップ処理を自動化する）し、それらのジョブのリスト作成、表示、実行、および削除を行います。 
+---
+= スケジュールされたジョブの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スケジュールされたジョブを管理するには、スケジュールされたジョブを作成（バックアップ処理を自動化）するか、それらのジョブを編集、リスト表示、実行、および削除します。
+
+Snap Creator サーバには、一元化されたスケジューラが採用されています。このスケジューラを使用すると、ポリシースケジュール（ Policy Object の一部）を使用して、またはスケジューラ経由で直接作成された Snap Creator ジョブのスケジュールを設定できます。スケジューラでは、最大 10 個のジョブを同時に実行でき、実行中のジョブが完了するまで追加のジョブをキューに登録できます。

@@ -1,0 +1,15 @@
+---
+permalink: installation/concept_installing_the_snap_creator_server.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server 
+summary: Snap Creator サーバは、 Windows ホストと UNIX ホストにインストールできます。 
+---
+= Snap Creator サーバをインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバは、 Windows ホストと UNIX ホストにインストールできます。
+
+一般的なインストールでは、 Snap Creator サーバと Snap Creator エージェントは別々のホストにインストールします。ただし、場合によっては、サーバとエージェントを同時にインストールできます。このセットアップでは、インストール時にサーバのみが設定されます。

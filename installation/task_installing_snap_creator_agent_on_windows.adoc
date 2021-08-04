@@ -1,0 +1,84 @@
+---
+permalink: installation/task_installing_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, agent, windows 
+summary: Windows インストーラを使用して、 Snap Creator エージェントを Windows ホストにインストールできます。 
+---
+= Windows への Snap Creator エージェントのインストール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows インストーラを使用して、 Snap Creator エージェントを Windows ホストにインストールできます。
+
+* JRE 1.8 Update 72 以降がインストールされている必要があります。
+* 管理者レベルの権限が必要です。
+* デフォルトのポート（ 9090 ）または別のネットワークポートが必要です。
+* Snap Creator をダウンロードしておく必要があります。
++
+.. Snap_Creator_Frameworkrelease-Windowsversion.exe ファイルアイコン（たとえば、 SnapCreator _Framework4.1.0 -Windows64.exe ）をダブルクリックして、 Snap Creator インストーラを起動します。
+.. Welcome （ようこそ）ページで、 * Next （次へ） * をクリックしてインストールを開始します。
+.. ライセンス契約の内容を確認し、同意します。
+.. [Choose Install Type] ページで、さまざまなインストールタイプに合わせて次の設定を行います。
++
+*** * インストールタイプ * を選択します
++
+* Agent * を選択します。
+
+*** * エージェントをサービスとして開始 *
++
+このオプションを選択すると ' インストール・プロセスの完了直後に * snapcreatoragentservice * をインストールして起動できます
+
++
+このオプションが選択されていない場合、 [ エージェントポート ] フィールドは無効になります。
+
++
+
+NOTE: このオプションを選択しない場合、サービスはインストールされません。コマンドプロンプトからバッチスクリプトを実行して、 Snap Creator エージェントを手動で起動する必要があります。
+
+*** * システム IP を入力します *
++
+Snap Creator サーバまたは Snap Creator エージェントがインストールされているシステムの IP アドレスを指定する場合は、このオプションを選択します。このオプションは、 Snap Creator のインストールプロセス中に SSL 証明書を生成するために使用します。
+
+*** * Java bin path * を入力します
++
+keytool ユーティリティを見つけるための Java ビンパスを指定するには、このオプションを選択します。keytool ユーティリティを使用して、 Snap Creator のインストールプロセス中に SSL 証明書を生成します。
+
+*** * エージェントポート *
++
+デフォルトのポート（ 9090 ）をそのまま使用するか、ポート番号を指定します。
+
+
+
+
+
++
+image::../media/choose_install_type_page.gif[[ インストールタイプ ] ページを選択します]
+
++
+.. 「 * 次へ * 」をクリックします。
+.. Choose Install Location ページで、 Snap Creator のインストールパスを入力するか、デフォルトのパス（ C ： \Program Files\NetApp\SnapCreator _Framework ）を受け入れ、 * Next * をクリックします。
++
+
+NOTE: IBM Domino プラグインを使用する場合は、 Domino データフォルダ以外の場所を選択してください。
+
+.. [Choose Start Menu Folder] ページで、 Snap Creator が Windows の Start メニューに表示されるフォルダをカスタマイズするか、デフォルトのフォルダ・オプションを受け入れてから、 [*Install] をクリックします。
+.. インストールが完了したら、「 * 次へ * 」をクリックします。
++
+インストールオプションでサービスを選択した場合は、 Snap Creator エージェントサービスのインストール時にコマンドプロンプトが表示されます。このプロセスは既存のサービスを開始しようとします。そのため、この手順の一部としてエラーメッセージが表示されることがよくありますが、このメッセージは無視してください。
+
+.. [ 完了 ] をクリックして、 Windows インストーラを閉じます。
+
+
+
+
+インストールプロセスで「 * Start agent as service * 」オプションを選択しなかった場合は、 Snap Creator エージェントを手動で起動する必要があります。
+
+* 関連情報 *
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[Snap Creator ホストに Java をインストールしています]
+
+xref:task_downloading_the_snap_creator_software.adoc[Snap Creator ソフトウェアのダウンロード]
+
+xref:task_starting_the_agent_from_a_command_prompt.adoc[コマンドプロンプトからエージェントを起動します]

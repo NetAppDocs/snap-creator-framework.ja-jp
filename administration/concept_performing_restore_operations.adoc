@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_performing_restore_operations.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, snapdrive, windows 
+summary: Snap Creator の GUI を使用して、ボリュームリストア、単一ファイルのリストア、アプリケーションで定義したリストアの各処理を実行できます。 
+---
+= リストア処理を実行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、ボリュームリストア、単一ファイルのリストア、アプリケーションで定義したリストアの各処理を実行できます。
+
+SnapDrive for Windows を使用する場合は、 SnapDrive を使用してリストア処理を実行する必要があります。この処理は Snap Creator の外部で実行する必要があります。

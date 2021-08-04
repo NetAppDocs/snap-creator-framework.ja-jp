@@ -1,0 +1,24 @@
+---
+permalink: domino-ops/concept_general_configuration_file_information.html 
+sidebar: sidebar 
+keywords: domino, ibm, logging into, Snap Creator, GUI, login 
+summary: Web ブラウザを使用して、 Snap Creator の GUI にログインします。管理者に連絡して、 Snap Creator サーバの IP アドレス、ポート、ログインのクレデンシャルを確認してください。 
+---
+= Snap Creator の GUI にログインします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Web ブラウザを使用して、 Snap Creator の GUI にログインします。管理者に連絡して、 Snap Creator サーバの IP アドレス、ポート、ログインのクレデンシャルを確認してください。
+
+. Web ブラウザに「 + https://server_name:port+` 」と入力します。
++
+** server_name は、 Snap Creator サーバの名前または IP アドレスです
+** port は、 Snap Creator サーバのポート（デフォルトは 8443 ）です。
+
+
+. Snap Creator サーバのログインクレデンシャルを入力します。
+
+
+Snap Creator の GUI がブラウザに表示されます。GUI を初めて起動すると、画面にウェルカムメッセージが表示されます。[OK] をクリックしてメッセージを閉じます。

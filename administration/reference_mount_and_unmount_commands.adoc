@@ -1,0 +1,31 @@
+---
+permalink: administration/reference_mount_and_unmount_commands.html 
+sidebar: sidebar 
+keywords: cloning, mount_cmd, unmount_cmd, command, snap, creator, pre, post 
+summary: クローニングを実行するときは、 Snap Creator の PRE コマンドまたは POST コマンドではなく、 MOUNT_CMD コマンドと UMOUNT_CMD コマンドを使用してください。 
+---
+= mount コマンドおよび unmount コマンドを使用します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローニングを実行するときは、 Snap Creator の PRE コマンドまたは POST コマンドではなく、 MOUNT_CMD コマンドと UMOUNT_CMD コマンドを使用してください。
+
+|===
+| コマンドを実行します | 説明 
+
+
+ a| 
+MOUNT_CMD##
+ a| 
+mount コマンドを使用して、クローニングまたはマウント処理用にファイルシステムをマウントします。 ## は、 01~99 の数字が入ります。
+
+
+
+ a| 
+UMOUNT_CMD##
+ a| 
+unmount コマンドを使用して、クローニングまたはマウント処理用にファイルシステムをマウントします。 ## は、 01~99 の数字が入ります。
+
+|===

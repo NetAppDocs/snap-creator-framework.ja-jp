@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/task_performing_database_integrity_checks_with_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: sap, hana, peforming, database, integrity, checks, snap, creator, gui, graphical, user, interface 
+summary: データベース整合性チェックは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）から実行できます。 
+---
+= Snap Creator の GUI からデータベース整合性チェックを実行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベース整合性チェックは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）から実行できます。
+
+HANA Integrity Check Settings タブで DB Integrity Check パラメータを有効にしておく必要があります。
+
+. 構成として HANA データベースの整合性チェックを選択します。
+. [ * アクション * > * 整合性チェック * ] を選択します。
++
+image::../media/performing_file_based_backup_with_gui.gif[GUI を使用したファイルベースのバックアップの実行]
+
+. [ ポリシー ] オプションを [* なし *] に設定し、 [OK] をクリックします。
++
+image::../media/performing_file_based_backup_with_gui_2.gif[GUI を使用したファイルベースのバックアップの実行]
+
+

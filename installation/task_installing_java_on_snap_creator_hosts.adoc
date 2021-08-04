@@ -1,0 +1,34 @@
+---
+permalink: installation/task_installing_java_on_snap_creator_hosts.html 
+sidebar: sidebar 
+keywords: installing, install, java, snap, creator, hosts 
+summary: OpenJDK と Oracle Java Runtime Environment （ JRE ） 1.8 Update 72 以降が、すべての Snap Creator サーバとエージェントホストにインストールされている必要があります。Transport Layer Security \ （ TLS\ ）の脆弱性を回避するために、 Snap Creator サーバおよびエージェントホストに JRE 1.8 Update 72 をこれ以降のバージョンにインストールすることを推奨します。 
+---
+= Snap Creator ホストに Java をインストールしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OpenJDK と Oracle Java Runtime Environment （ JRE ） 1.8 Update 72 以降が、すべての Snap Creator サーバとエージェントホストにインストールされている必要があります。Transport Layer Security （ TLS ）の脆弱性を回避するため、 Snap Creator サーバおよびエージェントホストに JRE 1.8 Update 72 を以降のバージョンにインストールすることを推奨します。
+
+. 各 Snap Creator サーバまたは Snap Creator エージェントホストに JRE をダウンロードしてインストールします。
++
+Java と Snap Creator のビットレベル（ 32 ビットまたは 64 ビット）は同じである必要があります。
+
++
+必要に応じて、から Java をダウンロードします http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"] ページ
+
+. JRE をインストールしたら、 Java のバージョンとビットレベルを確認します。 java -version
++
+[listing]
+----
+C:\Documents and Settings\Administrator>java -version
+java version "1.7.0_04-ea"
+Java(TM) SE Runtime Environment (build 1.7.0_04-ea-b01)
+Java HotSpot(TM) Client VM (build 23.0-b03, mixed mode, sharing)
+----
++
+コマンドの出力に、インストールされている Java のバージョンが表示されます。ビットレベルが表示されない場合（前述の例のように）、 32 ビットのインストールです。
+
+

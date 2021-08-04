@@ -1,0 +1,56 @@
+---
+permalink: installation/task_upgrading_snap_creator_agent_4_1_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 4.1.x, unix, unix-based 
+summary: UNIX ベースのシステムでは、 Snap Creator エージェント 4.1.x からアップグレードできます。 
+---
+= UNIX ベースのシステムでの Snap Creator エージェント 4.1.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX ベースのシステムでは、 Snap Creator エージェント 4.1.x からアップグレードできます。
+
+* Snap Creator エージェントのディレクトリをバックアップする前に Snap Creator エージェントを停止し、バックアップデータが確実に完了するようにしておきます。
++
+たとえば、次のコマンドを入力します。
+
++
+[listing]
+----
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+* Snap Creator エージェントのディレクトリ（ /install_path/scAgent4.1.x ）に、次のディレクトリと、関連するすべてのサブディレクトリおよびファイルをバックアップしておきます。
++
+** Snap Creator エージェントのプロパティ（ ./etc ）。 allowed_command.config ファイルと agent.properties ファイルが含まれています
+** ログ（ ./logs ）
+** プラグイン（ ./plugins ） * 注： * 作成した Snap Creator 4.1.x バックアップコピーは削除しないでください。
+
+
+
+
+次の手順で指定するパスは、デフォルトのインストールパスを示しています。デフォルト値を使用しなかった場合は、パス情報がインストールパスと異なることがあります。
+
+. Snap Creator エージェントをまだ停止していない場合は停止します。
++
+詳細については、このトピックで前述した詳細を参照してください。
+
+. 最新の Snap Creator エージェントをインストールします。ただし、 Snap Creator エージェントは起動しないでください。
++
+詳細については、 UNIX への Snap Creator エージェントのインストールに関する情報を参照してください。
+
+. バックアップされた Snap Creator 4.1.x のログディレクトリを /install_path/scAgent4.1.x /logs に最新の場所にコピーします）。
+. バックアップされた Snap Creator 4.1.x プラグインディレクトリを /install_path/scAgent4.1.x /plugins の最新の場所にコピーします）。
+. バックアップされた Snap Creator 4.1.x エージェントプロパティディレクトリを /install_path/scAgent4.1.x /etc の最新の場所にコピーします）。
+. 次のコマンドを入力して、 Snap Creator エージェントを起動します。
++
+[listing]
+----
+/install_path/scAgent4.1.x/bin/scAgent start
+----
++
+
+NOTE: allowed_command.config ファイルまたは agent.properties ファイルを変更する場合、変更を行ったときに Snap Creator エージェントが実行されているときは、そのファイルを再起動する必要があります。
+
+

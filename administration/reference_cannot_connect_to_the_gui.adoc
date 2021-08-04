@@ -1,0 +1,36 @@
+---
+permalink: administration/reference_cannot_connect_to_the_gui.html 
+sidebar: sidebar 
+keywords: unix, snap, creator, gui, https 
+summary: UNIX 環境では、 Snap Creator の GUI に接続できない場合があります。問題の原因を調査する際には、特定の条件が存在することを確認する必要があります。 
+---
+= Snap Creator の GUI に接続できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 環境では、 Snap Creator の GUI に接続できない場合があります。問題の原因を調査する際には、特定の条件が存在することを確認する必要があります。
+
+* * 問題 *
++
+UNIX 環境では、 Snap Creator の GUI に接続することはできません。
+
+* * 是正措置 *
++
+次の点を確認します。
+
++
+** URL は HTTPS で始まる必要があります。
++
+
+NOTE: HTTPS ではなく HTTP を使用すると ' ページに何も表示されないか ' または "?" が表示されます 使用するブラウザによって異なります。
+
+** URL に正しいポート番号が使用されており、選択したポートを他に何も使用していないこと。
++
+別のポートを選択しようとすると、
+
+** 通信は、オペレーティングシステムのファイアウォールを介して許可されます。
+
+
+

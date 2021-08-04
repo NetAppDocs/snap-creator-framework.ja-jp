@@ -1,0 +1,19 @@
+---
+permalink: administration/concept_managing_backups.html 
+sidebar: sidebar 
+keywords: managing, backups, backup, copies, 
+summary: 不要になったバックアップコピーは、作成したり、バックアップコピーのリストを表示したり、削除したりできます。 
+---
+= バックアップの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要になったバックアップコピーは、作成したり、バックアップコピーのリストを表示したり、削除したりできます。
+
+また、バックアップ処理を自動化することもできます。詳細については、「スケジュール済みジョブの作成」の関連タスクを参照してください。
+
+* 関連情報 *
+
+xref:task_creating_scheduled_jobs_using_sc_gui.adoc[スケジュール済みジョブを作成しています]

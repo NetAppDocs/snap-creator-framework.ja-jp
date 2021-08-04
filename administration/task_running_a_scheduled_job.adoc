@@ -1,0 +1,17 @@
+---
+permalink: administration/task_running_a_scheduled_job.html 
+sidebar: sidebar 
+keywords: schedule, job, run, snap, creator, gui 
+summary: スケジュール済みジョブを実行できます。 
+---
+= スケジュール済みのジョブを実行中です
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スケジュール済みジョブを実行できます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Schedules * を選択します。
+. [ スケジュール ] タブで、スケジュール済みジョブのリストからジョブを選択し、 [* 実行 ] をクリックします。
+

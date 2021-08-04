@@ -1,0 +1,21 @@
+---
+permalink: administration/task_deleting_clones.html 
+sidebar: sidebar 
+keywords: unmount, delete, clone, gui, snap, creator, management, configuration, action, snapshot, copy, controller, volume 
+summary: クローンはアンマウント（または削除）できます。 
+---
+= クローンのアンマウント
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローンはアンマウント（または削除）できます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. 構成 * タブから構成ファイルを選択し、 * アクション * > * アンマウント * を選択します。
+. 追加パラメータのウィンドウで、マウントされたバックアップを含むコントローラ、ボリューム、 Snapshot コピーのポリシー、およびクローンが作成された特定の Snapshot コピー名を選択し、 * OK * をクリックします。
++
+クローンがアンマウントされます。 Snapshot コピーは削除されません。
+
+

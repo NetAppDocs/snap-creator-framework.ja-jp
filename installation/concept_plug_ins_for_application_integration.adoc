@@ -1,0 +1,51 @@
+---
+permalink: installation/concept_plug_ins_for_application_integration.html 
+sidebar: sidebar 
+keywords: plug-in, application, integration 
+summary: プラグインを使用すると、アプリケーションやデータベースを整合性のある状態にすることができます。Snap Creator には、すでにバイナリファイルに含まれているプラグインがいくつか含まれているため、追加のインストールは必要ありません。 
+---
+= アプリケーション統合用のプラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プラグインを使用すると、アプリケーションやデータベースを整合性のある状態にすることができます。Snap Creator には、すでにバイナリファイルに含まれているプラグインがいくつか含まれているため、追加のインストールは必要ありません。
+
+サポートされるアプリケーションのタイプには、データベース、 E メール、ハイパーバイザー、またはカスタムアプリケーションがあります。Snap Creator でサポートされているプラグインは次のとおりです。
+
+* アプリケーションとデータベースのプラグイン：
++
+** DB2
+** IBM Domino （ Domino ）
+** MaxDB
+** MySQL
++
+
+NOTE: MySQL プラグインは、複数データベースのバックアップおよびリストア処理はサポートしていません。
+
+** Oracle の場合
+** SAP ハイパフォーマンス分析アプライアンス（ HANA ）
+** Sybase Adaptive Server Enterprise （ ASE ）
+
+
+* SnapManager プラグイン：
++
+** SnapManager for Microsoft Exchange の略
+** SnapManager for Microsoft SQL Server の略
+
+
+* ハイパーバイザープラグイン：
++
+** Citrix XenServer
+** Red Hat Kernel-Based Virtual Machine （ KVM ）
+** VMware （個々の仮想マシンのバックアップ用の vSphere 、 vApp バックアップ用の vCloud Director ）
+
+
+
+
+カスタム（「コミュニティ」とも呼ばれる）プラグインは開発者コミュニティによって記述され、 Snap Creator で有効にすることはできますが、サポートされていません。このプラグインは、 Snap Creator が提供するインターフェイスを活用することで、開発者はターゲットアプリケーションに開発作業を集中させることができます。
+
+詳細については、を参照してください http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework のディスカッションコミュニティフォーラム"] サイト
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["『 Snap Creator Framework 4.3.3 Administration Guide 』"]

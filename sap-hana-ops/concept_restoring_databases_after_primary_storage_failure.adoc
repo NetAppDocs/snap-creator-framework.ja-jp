@@ -1,0 +1,13 @@
+---
+permalink: sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html 
+sidebar: sidebar 
+keywords: restoring, restore, database, primary, storage, failure 
+summary: プライマリストレージに障害が発生した場合、またはプライマリストレージのボリュームからすべての Snapshot コピーが削除された場合、 Snap Creator はリストアを処理できません。これは、プライマリストレージシステムに SnapVault 関係がなくなるためです。 
+---
+= プライマリストレージの障害後のデータベースのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プライマリストレージに障害が発生した場合、またはプライマリストレージのボリュームからすべての Snapshot コピーが削除された場合、 Snap Creator はリストアを処理できません。これは、プライマリストレージシステムに SnapVault 関係がなくなるためです。

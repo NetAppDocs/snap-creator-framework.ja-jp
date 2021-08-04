@@ -1,0 +1,13 @@
+---
+permalink: administration/concept_troubleshooting_snap_creator_gui_errors.html 
+sidebar: sidebar 
+keywords: unix, environments, snap, creator, gui, troubleshoot, errors, troubleshooting 
+summary: UNIX 環境では、 Snap Creator の GUI へのアクセス時にエラーが発生することがあります。これらのエラーについて理解し、トラブルシューティングの方法を把握しておく必要があります。 
+---
+= Snap Creator の GUI エラーに対するトラブルシューティング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 環境では、 Snap Creator の GUI へのアクセス時にエラーが発生することがあります。これらのエラーについて理解し、トラブルシューティングの方法を把握しておく必要があります。

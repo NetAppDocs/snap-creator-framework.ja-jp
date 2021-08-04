@@ -1,0 +1,31 @@
+---
+permalink: domino-ops/concept_allowing_additional_commands_through_the_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: domino, ibm, allowing, allow, additional, commands, snap, creator, agent 
+summary: Snap Creator エージェントに対して補足コマンドを実行するには、エージェントの allowed_command.config ファイルにそのコマンドを含めることで、コマンドの実行を明示的に許可する必要があります。 
+---
+= Snap Creator エージェントに対して追加コマンドを許可します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントに対して補足コマンドを実行するには、エージェントの allowed_command.config ファイルにそのコマンドを含めることで、コマンドの実行を明示的に許可する必要があります。
+
+allowed_command.config は、 Snap Creator エージェントのインストールディレクトリの etc サブディレクトリにあります。例：
+
+* UNIX ホストでは、 /install-path/scAgent4.1.x /etc/allowed_command.config を指定します
+* Windows ホストの場合は、 C ： \Program Files\NetApp\Snap Creator _Framework\scAgent4.1.x \etc\allowed_command.config を指定します
+
+
+Agent で補助コマンドを使用できるようにするには、エディタで allowed_command.config を開きます。コマンドプロンプトでコマンドを入力するのとまったく同じように、コマンドをそれぞれ専用の行に入力します。重要なケースです。完全修飾パス名を指定してください。パス名にスペースが含まれる場合は、引用符で囲みます。例：
+
+[listing]
+----
+"C:\Program Files\NetApp\SnapDrive\sdcli.exe"
+ myscript.bat
+----
+変更を有効にするには、 Agent を再起動します。
+
+
+NOTE: セキュリティ上の理由から、ワイルドカードエントリ（ * ）を使用してすべてのコマンドを許可しないでください。

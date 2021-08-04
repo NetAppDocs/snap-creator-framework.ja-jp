@@ -1,0 +1,21 @@
+---
+permalink: administration/task_editing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: edit, schedule, job, snap, creator, gui 
+summary: スケジュール済みジョブを編集することができます。 
+---
+= スケジュール済みジョブを編集しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スケジュール済みジョブを編集することができます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Schedules * を選択します。
+. [ スケジュール ] タブで、スケジュール済みジョブのリストからジョブを選択し、 [* 編集 ] をクリックします。
+. 目的のフィールドを変更し、 * 保存 * をクリックします。
++
+スケジュールされたジョブが変更とともに保存されます。
+
+

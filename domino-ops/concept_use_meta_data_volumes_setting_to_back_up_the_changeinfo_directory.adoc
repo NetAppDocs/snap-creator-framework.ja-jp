@@ -1,0 +1,37 @@
+---
+permalink: domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, changeinfo, directory 
+summary: changeinfo ディレクトリをバックアップする場合は、ディレクトリを含むボリュームをメタデータボリュームとして設定する必要があります。これにより、 IBM Domino プラグインに対して、データベースファイルの Snapshot コピーの作成後に changeinfo ボリュームの Snapshot コピーを作成するよう指示します。 
+---
+= changeinfo ディレクトリをバックアップします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+changeinfo ディレクトリをバックアップする場合は、ディレクトリを含むボリュームをメタデータボリュームとして設定する必要があります。これにより、 IBM Domino プラグインに対して、データベースファイルの Snapshot コピー changeinfo volume_after_creating の Snapshot コピーの作成を実行するように指示します。
+
+変更情報ボリュームは、構成ファイルの作成時にバックアップするボリュームとしてすでに特定されている必要があります。詳細については、手順を参照してください link:task_using_the_gui_to_create_a_configuration_file.md#STEP_2036E43A6921415985798979F2226786["GUI を使用した作業で構成を作成"]。
+
+構成ファイル内の META_DATA_VOLUME パラメータを使用して、 changeinfo ボリュームをメタデータボリュームとして識別します。GUI ではパラメータを使用できません。
+
+. 構成ファイルをテキストエディタで開きます。
++
+構成ファイルは、 Snap Creator のインストールディレクトリの、プロファイルのという名前のサブディレクトリに配置されます。Windows ホストの場合： C ： \Program Files\NetApp\Snap Creator _Framework\scServer4.1.x\engines\configs\Domino\Fuji15.conf のように入力します。 Domino はプロファイルの名前で、 藤15.conf は構成ファイルの名前です。
+
+. META_DATA_VOLUME パラメータに、 changeinfo ボリュームの名前を入力します。
++
+changeinfo ボリュームは VOLUMES パラメータにすでに指定されている必要があります。
+
++
+次の例は、メタデータボリュームとして 藤15_DomChangeInfo を設定する方法を示しています。
+
++
+[listing]
+----
+VOLUMES=domino_vserver:Fuji15_DomDAOS,Fuji15_DomChangeInfo,
+Fuji15_DomTxn,Fuji15_DomData
+META_DATA_VOLUME=domino_vserver:Fuji15_DomChangeInfo
+----
+

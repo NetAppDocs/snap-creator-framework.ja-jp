@@ -1,0 +1,142 @@
+---
+permalink: sap-hana-ops/reference_sap_hana_plug_in_parameters.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, parameters 
+summary: SAP HANA プラグインのパラメータ 
+---
+= SAP HANA プラグインのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+次の表に、 SAP HANA プラグインのパラメータ、パラメータの設定、およびパラメータの説明を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+ha_SID の設定を行います
+ a| 
+例： ABC
+ a| 
+HANA データベースの SID 。
+
+
+
+ a| 
+hana_nodes
+ a| 
+例： node1 、 node2 、 node3
+ a| 
+hdbsql ステートメントを実行できる HANA ノードのカンマ区切りリスト。
+
+
+
+ a| 
+ha_user_name
+ a| 
+例： backupUser
+ a| 
+HANA データベースのユーザ名。このユーザに必要な最小限の権限は、 backup Admin 権限です。
+
+
+
+ a| 
+ha_password を入力します
+ a| 
+例： hfasfh87r83r
+ a| 
+HANA データベースのパスワード。
+
+
+
+ a| 
+hana_instance
+ a| 
+例： 42
+ a| 
+HANA ノードインスタンス番号。
+
+
+
+ a| 
+HANA_HDBSQL _CMD のように表示されます
+ a| 
+例 : /usr/sa p/hdbclient/hdbsql
+ a| 
+hana hdbsql コマンドへのパス。このパラメータが設定されていない場合、検索パス上の hdbsql が使用されます。デフォルトは hdbsql です。
+
+
+
+ a| 
+ha_osd_user をクリックします
+ a| 
+例： user1
+ a| 
+hdbsql ( 通常は sidadm ) を実行するオペレーティングシステムユーザは ' 検索パスに hdbsql バイナリを持ち ' 実行する権限を持っている必要があります
+
+
+
+ a| 
+HA_USERSTORE_Keys
+ a| 
+例： node1 ： key1 、 node 2 ： key2 、 node3 ： ke y3
+ a| 
+hdbsql ステートメントを実行できる、 HANA ユーザストアキーとノードペアのカンマ区切りリスト。
+
+
+
+ a| 
+hana_file_backup_enable を実行します
+ a| 
+「 Y 」または「 N 」
+ a| 
+Snap Creator で SAP HANA プラグインのファイルベースのバックアップを有効にするかどうかを指定します。この設定は、 SAP HANA のファイルベースのバックアップ処理を実行する場合に役立ちます。
+
+
+
+ a| 
+hana_file_backup_path
+ a| 
+例： /hana/data /scn /mnt00001
+ a| 
+（オプション）データベースファイルのバックアップを保存できるディレクトリへのパス。このパラメータが設定されていない場合は、 default を使用します。
+
+
+
+ a| 
+hana_file_backup_prefix
+ a| 
+例： Snap Creator _ < HANA _ FILE _ BACKUP _ prefix> _ _ < 現在の _ タイムスタンプ >
+ a| 
+（任意）バックアップファイル名にプレフィックスを追加します。デフォルト： Snap Creator __ <current_timestamp>
+
+
+
+ a| 
+hana_integrity_check_enable のように入力します
+ a| 
+「 Y 」または「 N 」
+ a| 
+Snap Creator で SAP HANA プラグインの整合性チェックを有効にするかどうかを指定します。この設定は、通常、 SAP HANA の整合性チェック処理を実行する場合に使用します。
+
+
+
+ a| 
+hana_TEMP_FILE_BACKUP パス
+ a| 
+例： /temp
+ a| 
+（任意）整合性チェック用の一時データベースファイルを保存できるパス。不明な場合は、デフォルトを使用します。
+
+
+
+ a| 
+hana_log_cleanup.enable を実行します
+ a| 
+「 Y 」または「 N 」
+ a| 
+ログカタログのクリーンアップを有効にします。
+
+|===

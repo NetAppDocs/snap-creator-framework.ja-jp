@@ -1,0 +1,80 @@
+---
+permalink: domino-ops/task_preparing_storage_systems_for_snapvault_replication.html 
+sidebar: sidebar 
+keywords: domino, ibm, preparing, storage, systems, snapvault, replication 
+summary: を使用してディスクツーディスクのバックアップレプリケーションを実行するには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。初期化の際に、 SnapVault はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。 
+---
+= SnapVault レプリケーションのためのストレージシステムの準備
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+を使用してディスクツーディスクのバックアップレプリケーションを実行するには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。初期化の際に、 SnapVault はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。
+
+* クラスタ管理者である必要があります。
+
+
+SnapVault 関係は、 Data ONTAP コマンドラインインターフェイス（ CLI ）または OnCommand の System Manager を使用して作成できます。次の手順ドキュメントでは、 CLI を使用しています。
+
+
+IMPORTANT: データベースファイルとトランザクションログを別々のボリュームに格納する場合は、データベースファイルのソースボリュームとデスティネーションボリュームの間、およびトランザクションログのソースボリュームとデスティネーションボリュームの間に関係を作成する必要があります。
+
+次の図は、 SnapVault 関係を初期化するための手順を示しています。
+
+image::../media/snapvault_steps_clustered.gif[この図は、 SnapVault 関係を初期化するための手順を示しています。デスティネーションクラスタを特定しています,creating a destination volume,creating a policy]
+
+. デスティネーションクラスタを特定します。
+. デスティネーションクラスタで、 -type DP オプションを指定して volume create コマンドを実行し、ソースボリュームと同じサイズ以上の SnapVault デスティネーションボリュームを作成します。
++
+
+IMPORTANT: デスティネーションボリュームの言語設定とソースボリュームの言語設定が一致している必要があります。
+
++
+次のコマンドでは、アグリゲート node01_aggr の SVM2 に、 dstvolB という名前の 2GB のデスティネーションボリュームを作成します。
+
++
+[listing]
+----
+cluster2::> volume create -vserver SVM2 -volume dstvolB -aggregate node01_aggr -type DP
+-size 2GB
+----
+. デスティネーション SVM で、 snapmirror policy create コマンドを使用して、 SnapVault ポリシーを作成します。
++
+次のコマンドでは、 SVM 全体のポリシー SVM1-vault を作成します。
+
++
+[listing]
+----
+SVM2::> snapmirror policy create -vserver SVM2 -policy SVM1-vault
+----
++
+
+NOTE: SnapVault 関係用の cron スケジュールまたは Snapshot コピーポリシーを定義しないでください。バックアップスケジュールの作成時に自動的に定義されます。
+
+. type XDP パラメータと -policy パラメータを指定して snapmirror create コマンドを実行し、 SnapVault 関係を作成してバックアップポリシーを割り当てます。
++
+XDP タイプは、関係を SnapVault 関係として定義します。
+
++
+次のコマンドでは、 SVM1 のソースボリューム srcvolA と SVM2 のデスティネーションボリューム dstvolB との SnapVault 関係を作成し、 SVM1-vault ポリシーを割り当てます。
+
++
+[listing]
+----
+SVM2::> snapmirror create -source-path SVM1:srcvolA -destination-path SVM2:dstvolB
+-type XDP -policy SVM1-vault
+----
+. snapmirror initialize コマンドを使用して、関係を初期化します。
++
+初期化プロセスでは、デスティネーションボリュームへのベースライン転送が実行されます。SnapMirror はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。
+
++
+次のコマンドでは、 SVM1 のソースボリューム srcvolA と SVM2 のデスティネーションボリューム dstvolB との関係を初期化します。
+
++
+[listing]
+----
+SVM2::> snapmirror initialize -destination-path SVM2:dstvolB
+----
+

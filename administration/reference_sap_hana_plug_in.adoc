@@ -1,0 +1,21 @@
+---
+permalink: administration/reference_sap_hana_plug_in.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, backup, point-in-time, recovery, sql 
+summary: SAP HANA プラグインを使用すると、ストレージの Snapshot コピーに基づいて、 SAP HANA データベースのバックアップを作成し、ポイントインタイムリカバリを実行できます。 
+---
+= SAP HANA プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA プラグインを使用すると、ストレージの Snapshot コピーに基づいて、 SAP HANA データベースのバックアップを作成し、ポイントインタイムリカバリを実行できます。
+
+このプラグインは、 SAP HANA hdbsql クライアントを使用して、 SQL コマンドを実行し、データベースの整合性を確保し、 SAP HANA のバックアップカタログを管理します。このプラグインは、 SAP 認定ハードウェアアプライアンスとテーラードデータセンター統合（ TDI ）プログラムの両方でサポートされています。
+
+このプラグインは、 SAP HANA データベースノードにアクセスできるホストに、 Snap Creator エージェントの一部としてインストールされます。
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854420["『 Snap Creator Framework 4.3.3 SAP HANA Plug-in Operations Guide 』"]

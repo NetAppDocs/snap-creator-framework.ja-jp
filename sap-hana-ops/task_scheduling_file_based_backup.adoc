@@ -1,0 +1,23 @@
+---
+permalink: sap-hana-ops/task_scheduling_file_based_backup.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, file-based, backup 
+summary: SAP HANA 構成では、ファイルベースのバックアップやデータベース整合性チェックなどの追加の処理をスケジュール設定できます。ファイルベースのバックアップの処理は一定の間隔で実行するようにスケジュールを設定できます。 
+---
+= ファイルベースのバックアップのスケジュールを設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA 構成では、ファイルベースのバックアップやデータベース整合性チェックなどの追加の処理をスケジュール設定できます。ファイルベースのバックアップの処理は一定の間隔で実行するようにスケジュールを設定できます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Schedules * を選択し、 * Create * をクリックします。
+. [ ジョブの新規作成 ] ウィンドウで、ジョブの詳細を入力します。
++
+ファイル・ベースのバックアップ・ポリシーは ' デフォルトでは「 none 」に設定されています
+
++
+image::../media/creating_file_based_backup_schedules.gif[ファイルベースのバックアップスケジュールを作成しています]
+
+

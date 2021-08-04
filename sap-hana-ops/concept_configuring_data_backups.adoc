@@ -1,0 +1,19 @@
+---
+permalink: sap-hana-ops/concept_configuring_data_backups.html 
+sidebar: sidebar 
+keywords: configuring, configure, data, backups, back-ups 
+summary: 必要なコンポーネントをインストールしたあと、データバックアップを設定する必要があります 
+---
+= データバックアップを設定する
+:icons: font
+:imagesdir: ../media/
+
+
+必要なソフトウェアコンポーネントをインストールしたら、次の手順に従って設定を行います。
+
+. 専用のデータベースユーザと SAP HANA ユーザストアを設定します。
+. すべてのストレージコントローラで SnapVault レプリケーションを準備する。
+. セカンダリストレージコントローラでボリュームを作成します。
+. データベースボリュームの SnapVault 関係を初期化します。
+. Snap Creator を設定します。
+

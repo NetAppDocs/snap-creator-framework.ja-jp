@@ -1,0 +1,37 @@
+---
+permalink: administration/task_performing_single_file_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, file, restore, wizard 
+summary: Snap Creator の GUI を使用して、単一ファイルのリストア処理を実行できます。 
+---
+= 単一ファイルのリストア処理を実行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、単一ファイルのリストア処理を実行できます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Configurations * を選択します。
+. [ プロファイルと構成 ] ペインの [ 構成 ] タブで、構成ファイルを選択します。
+. [ * アクション * > * 復元 * （ Action * > * Restore * ） ] を選択
++
+右側のペインにリストアウィザードが開きます。
+
+. リストアウィザードを完了します。
++
+.. 「リストアの詳細」セクションで、コントローラまたは SVM 名、リストアボリューム名、ポリシー、リストア Snapshot コピー名を選択し、リストアタイプのリストから「 * Single File Restore * 」を選択します。
++
+image::../media/restore_wizard_restore_details.gif[リストアウィザードのリストアの詳細]
+
+.. リストアするファイルを選択します。
+.. ファイルのリストア先の場所を選択します。
+.. 概要を確認し、 [ 完了 ] をクリックします。
+
+
++
+リストア対象のアイテムがほかにもあるかどうかを確認する警告メッセージが表示されます。
+
+. リストアするアイテムがこれ以上ない場合は、 [ いいえ ] をクリックし、 [ リストアの確認 ] ページで [OK] をクリックします。
+. コンソールペインで、表示されたメッセージを確認して、選択したファイルが正常に復元されたことを確認します。
+

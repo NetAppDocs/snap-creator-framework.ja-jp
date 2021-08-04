@@ -1,0 +1,18 @@
+---
+permalink: administration/task_viewing_permissions_assigned_to_a_role_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, permission, gui, role, management 
+summary: Snap Creator の GUI を使用して、特定のロールに割り当てられているすべての Snap Creator 権限のリストを表示できます。 
+---
+= 特定のロールに割り当てられている Snap Creator の権限を表示しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、特定のロールに割り当てられているすべての Snap Creator 権限のリストを表示できます。
+
+. Snap Creator の GUI メインメニューから、 * Users and Roles * > * Role management * を選択します。
+. [** ロール管理 **] タブで、目的のロールを選択します。
+. 目的のロールを選択し、 [Role and Assigned permissions （ロールと割り当てられた権限） ] ペインで割り当てられている権限を表示します。
+

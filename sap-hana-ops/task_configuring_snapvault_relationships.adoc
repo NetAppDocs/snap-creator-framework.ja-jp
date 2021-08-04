@@ -1,0 +1,53 @@
+---
+permalink: sap-hana-ops/task_configuring_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: configuring, configure snapvault, relationships, snaprestore 
+summary: SnapVault 関係を設定するときは、プライマリストレージコントローラに有効な SnapRestore および SnapVault ライセンスがインストールされている必要があります。セカンダリストレージに有効な SnapVault ライセンスがインストールされている必要があります。 
+---
+= SnapVault 関係を設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapVault 関係を設定するときは、プライマリストレージコントローラに有効な SnapRestore および SnapVault ライセンスがインストールされている必要があります。セカンダリストレージに有効な SnapVault ライセンスがインストールされている必要があります。
+
+. プライマリおよびセカンダリストレージコントローラで SnapVault および NDMP を有効にします。
++
+[listing]
+----
+hana1a> options snapvault.enable on
+hana1a> ndmp on
+hana1a>
+hana1b> options snapvault.enable on
+hana1b> ndmpd on
+hana1b
+hana2b> options snapvault.enable on
+hana2b> ndmpd on
+hana2b>
+----
+. すべてのプライマリストレージコントローラで、セカンダリストレージコントローラへのアクセスを設定します。
++
+[listing]
+----
+hana1a> options snapvault.access host=hana2b
+hana1a>
+hana1b> options snapvault.access host=hana2b
+hana1b>
+----
++
+
+NOTE: レプリケーショントラフィックには専用のネットワークを使用することを推奨します。このような場合は、セカンダリストレージコントローラでこのインターフェイスのホスト名を設定する必要があります。hana2b の代わりに、ホスト名は hana2b-drep になります。
+
+. セカンダリストレージコントローラで、すべてのプライマリストレージコントローラのアクセスを設定します。
++
+[listing]
+----
+hana2b> options snapvault.access host=hana1a,hana1b
+hana2b>
+----
++
+
+NOTE: レプリケーショントラフィックには専用のネットワークを使用することを推奨します。このような場合、プライマリストレージコントローラでこのインターフェイスのホスト名を設定する必要があります。hana1b と hana1a の代わりに、ホスト名は hana1a と hana1b のリプレゼンテーションになります。
+
+

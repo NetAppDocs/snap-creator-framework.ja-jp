@@ -1,0 +1,25 @@
+---
+permalink: sap-hana-ops/concept_reviewing_available_backups_in_sap_hana_studio.html 
+sidebar: sidebar 
+keywords: reviewing, review, available, backups, sap, hana, studio 
+summary: ストレージ Snapshot バックアップのリストは、 SAP HANA Studio で確認できます。 
+---
+= SAP HANA Studio で使用可能なバックアップを確認します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ Snapshot バックアップのリストは、 SAP HANA Studio で確認できます。
+
+次の図で強調表示されているバックアップは、「 Backup-ANA_hourly_20140320103943 」という名前の Snapshot コピーを示しています。 このバックアップには、 SAP HANA システムの 3 つのデータボリュームすべての Snapshot コピーが含まれます。バックアップはセカンダリストレージでも使用できます。
+
+image::../media/sap_hana_backup_list_scfw_gui.gif[この図には説明が付随しています。]
+
+Snap Creator がストレージ Snapshot コピーを SAP HANA バックアップカタログに登録する際、 Snapshot コピー名はバックアップ ID として Snap Creator で使用されます。SAP HANA Studio では、ストレージの Snapshot バックアップがバックアップカタログに表示されます。外部バックアップ ID （ EBID ）の値は、次の図に示す Snapshot コピー名と同じです。
+
+image::../media/sap_hana_backup_catalog.gif[この図には説明が付随しています。]
+
+Snap Creator では、バックアップが実行されるたびに、異なるスケジュール（毎時、毎日など）に対して定義された保持ポリシーに基づいて、プライマリストレージとセカンダリストレージで Snapshot バックアップが削除されます。
+
+バックアップがプライマリストレージまたはセカンダリストレージに存在しない場合、 Snap Creator は SAP HANA バックアップカタログ内のバックアップも削除します。SAP HANA のバックアップカタログには、プライマリストレージやセカンダリストレージで使用できるバックアップがすべてカタログに表示されます。

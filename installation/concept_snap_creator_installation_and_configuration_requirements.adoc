@@ -1,0 +1,121 @@
+---
+permalink: installation/concept_snap_creator_installation_and_configuration_requirements.html 
+sidebar: sidebar 
+keywords: snap, creator, install, installation, configuration, requirements 
+summary: Snap Creator Framework をインストールする前に、ライセンス、ソフトウェア、およびハードウェアに関する特定のインストール要件と設定要件について理解しておく必要があります。 
+---
+= Snap Creator のインストールおよび構成の要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework をインストールする前に、ライセンス、ソフトウェア、およびハードウェアに関する特定のインストール要件と設定要件について理解しておく必要があります。
+
+
+
+== ライセンス要件
+
+Snap Creator にはライセンスは必要ありませんが、 Snap Creator の使用中に実行する操作によっては、次のライセンスが必要になる場合があります。
+
+* FlexClone （ボリュームクローニング）
+* Active IQ Unified Manager コアパッケージ（ネットアップ管理コンソールのデータ保護機能および Operations Manager コンソール用）
+* Open Systems SnapVault （ OSSV アクション用）
+* SnapDrive （ SnapDrive アクション用）
+* snapmirror （ SnapMirror 操作用）
+* SnapRestore （リストア用）
+* SnapVault （ SnapVault アクション用）
+
+
+オンラインの Interoperability Matrix を参照してください http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]サポートされているソフトウェアの詳細については、を参照してください。
+
+
+
+== ソフトウェア情報
+
+環境によっては、次のソフトウェアが必要になる場合があります。
+
+* Java （必須）
++
+
+NOTE: Snap Creator Framework 4.3.3 では OpenJDK と Oracle Java 1.8 Update 72 以降のみがサポートされます。
+
+* Data ONTAP （必須）
+* Microsoft .NET Framework の場合
+* オペレーティングシステム：
++
+
+NOTE: 現在サポートされているのは、米国ベースのオペレーティングシステムのみです。
+
++
+** UNIX プラットフォーム：
++
+
+NOTE: Snap Creator では、すべての UNIX プラットフォームに対して Bash シェルのみがサポートされます。
+
++
+*** AIX の場合
+*** HP-UX
+*** Linux の場合
+*** Solaris の場合
+
+
+** Microsoft Windows の場合
+
+
+* Web ブラウザ：
++
+** Internet Explorer の略
+** Firefox の場合
+
+
+
+
+オンラインの Interoperability Matrix を参照してください http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]サポートされているソフトウェアの詳細については、を参照してください。
+
+
+
+== ハードウェア要件
+
+Snap Creator ハードウェアの要件は次のとおりです。
+
+* Snap Creator サーバの要件：
++
+|===
+| ハードウェアコンポーネント | 最小（ Minimum ） | （推奨） 
+
+
+ a| 
+プロセッサ
+ a| 
+1 コア
+ a| 
+4 コア、 2 GHz 以上
+
+
+
+ a| 
+メモリ（ Snap Creator およびオペレーティングシステム用）
+ a| 
+2GB の RAM
+ a| 
+4GB の RAM
+
+
+
+ a| 
+ディスクスペース
+ a| 
+5 GB
+ a| 
+50GB 以上（保存するログの数に基づく）
+
+|===
+* Snap Creator エージェントの要件：
++
+プラグインが配備されていない場合、またはパッケージ化されたプラグインが使用されている場合は、最低 256 MB のメモリが必要です。
+
++
+パッケージ済みのプラグインでは、追加のメモリ要件は必要ありません。その他のプラグインの要件は、このほかにもあります。
+
+

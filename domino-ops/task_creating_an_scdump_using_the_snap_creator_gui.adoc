@@ -1,0 +1,86 @@
+---
+permalink: domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, using scdump, gathering, logs, compressed, format 
+summary: Snap Creatorscdump アクションを使用して、圧縮ファイルアーカイブにログを収集できます。アーカイブをテクニカルサポートまたは Snap Creator のエキスパートに送信して確認できます。 
+---
+= scdump を使用して、ログを圧縮形式で収集する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creatorscdump アクションを使用して、圧縮ファイルアーカイブにログを収集できます。アーカイブをテクニカルサポートまたは Snap Creator のエキスパートに送信して確認できます。
+
+バックアップとリストアの構成ファイルを作成しておく必要があります。
+
+scdump には、以下のファイルが含まれています。
+
+|===
+| ファイル。 | 説明 
+
+
+ a| 
+scdump.txt
+ a| 
+Snap Creator エージェントのバージョンとホストオペレーティングシステム、 Data ONTAP リリース、 Domino バージョンが含まれます。
+
+
+
+ a| 
+engine.log
+ a| 
+Snap Creator ワークフローエンジンの動作に関する情報が含まれています。
+
+
+
+ a| 
+gui.log
+ a| 
+Snap Creator の GUI 操作およびメッセージに関する情報が含まれています。複数のログを含めることができます。
+
+
+
+ a| 
+sc_server.log
+ a| 
+Snap Creator サーバの操作に関する詳細情報が含まれています。複数のログを含めることができます。
+
+
+
+ a| 
+アウトログ
+ a| 
+ジョブの詳細レベルの情報が含まれます。選択したプロファイルのすべての構成の出力ログが含まれます。
+
+
+
+ a| 
+デバッグログ
+ a| 
+詳細レベルの情報とデバッグに役立つ情報が含まれます。選択したプロファイルのすべての設定のデバッグログが含まれます。
+
+
+
+ a| 
+エラーログです
+ a| 
+ログのエラー情報が含まれます。選択したプロファイルのすべての設定のエラーログが含まれます。
+
+
+
+ a| 
+構成ファイル
+ a| 
+選択したプロファイル内のすべての構成ファイルが、グローバル構成ファイルも含めて含まれます。
+
+|===
+
+NOTE: 構成ファイルは scdump の入力ファイルですが、このユーティリティは親プロファイル内のすべての構成に関する情報を収集します。
+
+. Profiles and Configurations ペインで、構成ファイルを選択し、 * Actions * > * scdump * をクリックします。
++
+scdump は、ログおよびその他のファイルを圧縮ファイルアーカイブに収集します。
+
+. ダウンロードダイアログで、必要に応じて、 * 開く * または * 保存 * をクリックします。
+

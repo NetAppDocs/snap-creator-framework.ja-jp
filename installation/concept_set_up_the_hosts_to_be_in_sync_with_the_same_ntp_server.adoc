@@ -1,0 +1,19 @@
+---
+permalink: installation/concept_set_up_the_hosts_to_be_in_sync_with_the_same_ntp_server.html 
+sidebar: sidebar 
+keywords: synchronizing, synchronize, time, snap, creator, server, agent, hosts 
+summary: Snap Creator をインストールする前に、 Snap Creator サーバホストの時刻とエージェントホストの時刻が同期されていることを確認してください。これを行うには、ホストの時刻を同じ Network Time Protocol （ NTP ；ネットワークタイムプロトコル）サーバと同期します。 
+---
+= Snap Creator サーバおよびエージェントホストの時間の同期
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator をインストールする前に、 Snap Creator サーバホストの時刻とエージェントホストの時刻が同期されていることを確認してください。これを行うには、ホストの時刻を同じ Network Time Protocol （ NTP ；ネットワークタイムプロトコル）サーバと同期します。
+
+詳細については、次のドキュメントを参照してください。
+
+* clustered Data ONTAP ：お使いのバージョンの Data ONTAP に対応した『 clustered Data ONTAP ソフトウェアセットアップガイド』を参照してください。特に、システム時間の検証とクラスタ全体のシステム時間の同期に関する情報を参照してください。
+* Data ONTAP 7-Mode - 技術情報アーティクル 1011954 「 How to setup NTP time synchronization at 」を参照してください link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_set_up_NTP_time_synchronization_in_Data_ONTAP_7-Mode["Data ONTAP 7-Mode で NTP 時間の同期を設定する方法"]。
+

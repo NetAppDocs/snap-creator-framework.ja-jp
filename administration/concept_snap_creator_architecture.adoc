@@ -1,0 +1,19 @@
+---
+permalink: administration/concept_snap_creator_architecture.html 
+sidebar: sidebar 
+keywords: snap, creator, full-featured, server, agent, architecture, plug-ins, snapshot 
+summary: Snap Creator のサーバおよびエージェントは包括的なアーキテクチャを採用しており、 Snap Creator サーバ、 Snap Creator エージェント、プラグインの 3 つの主要コンポーネントで構成されています。 
+---
+= Snap Creator のアーキテクチャ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator のサーバおよびエージェントは包括的なアーキテクチャを採用しており、 Snap Creator サーバ、 Snap Creator エージェント、プラグインの 3 つの主要コンポーネントで構成されています。
+
+Snap Creator は、以下の概略図に示すように、さまざまなテクノロジや製品と連携および統合されます。
+
+image::../media/scfw_high_level_arch_41_refresh_administration.gif[scfw 高レベルアーキテクチャ 41 更新管理]
+
+概略図に示されているネットアップのソフトウェア製品はオプションです。ただし、 Snapshot テクノロジを除き、 Snap Creator Framework が機能するために他のソフトウェア製品は必要ありません。

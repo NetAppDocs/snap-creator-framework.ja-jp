@@ -1,0 +1,21 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_copying_existing_configuration_files_using_the_cli.html 
+sidebar: sidebar 
+keywords: cli, command-line, interface, configuration, file, copy 
+summary: コマンドラインインターフェイス（ CLI ）を使用して既存の構成ファイルをコピーし、新しいファイルの名前を変更することにより、新しい構成ファイルを作成できます。 
+---
+= 既存の構成ファイルをコピーして新しい構成ファイルを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+コマンドラインインターフェイス（ CLI ）を使用して既存の構成ファイルをコピーし、新しいファイルの名前を変更することにより、新しい構成ファイルを作成できます。
+
+. 設定ディレクトリに切り替えます。 cd install_path/scServer4.3/engine/configs`
+. ソース構成ファイル「 cp source_profile_name /configuration_Namet_profile_name/new_configuration_name 」をコピーします
++
+新しい構成ファイルの名前を指定する必要があります。
+
+. 管理するアプリケーションまたはデータベースで使用する新しい構成ファイルをカスタマイズします。
+

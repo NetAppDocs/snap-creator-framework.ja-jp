@@ -1,0 +1,34 @@
+---
+permalink: installation/task_starting_the_agent_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, agent, command, prompt 
+summary: Snap Creator エージェントは、バッチスクリプト（ scAgent.bat ）を実行することで、コマンドプロンプトから手動で起動できます。 
+---
+= コマンドプロンプトからエージェントを起動します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントは、バッチスクリプト（ scAgent.bat ）を実行することで、コマンドプロンプトから手動で起動できます。
+
+通常、この手順は、インストールプロセス中に [ サービスとしてエージェントを開始する *] オプションを選択しなかった場合にのみ使用してください。
+
+また、 Windows タスクスケジューラを使用して、起動時に実行するバッチスクリプト（ scAgent.bat ）をスケジュールすることもできます。Windows タスクスケジューラの使用の詳細については、 Windows オペレーティングシステムのドキュメントを参照してください。
+
+. コマンドプロンプトを開き、次のコマンドを入力します。
++
+[listing]
+----
+cd \install_path\scAgentrelease-version\bin\
+scAgent.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scAgent4.1.0\bin\
+scAgent.bat start
+----
+
+
+バッチスクリプト（ scAgent.bat ）はフォアグラウンドで Snap Creator を実行するため、 Snap Creator エージェントはコマンドプロンプトが開いているかぎり実行を継続します。コマンドプロンプトを閉じると、 Snap Creator エージェントが終了します。Snap Creator をバックグラウンドで実行するには、 Snap Creator エージェントサービスを使用する必要があります。

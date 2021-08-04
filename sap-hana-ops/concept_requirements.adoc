@@ -1,0 +1,34 @@
+---
+permalink: sap-hana-ops/concept_requirements.html 
+sidebar: sidebar 
+keywords: requirements, sap, hana, plug-in, create, backups, point-in-time, recovery, databases 
+summary: SAP HANA プラグインを使用すると、 HANA データベースのバックアップを作成し、ポイントインタイムリカバリを実行できます。 
+---
+= 要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA プラグインを使用すると、 HANA データベースのバックアップを作成し、ポイントインタイムリカバリを実行できます。
+
+SAP HANA プラグインは次の方法でサポートされます。
+
+* ホスト OS ： SUSE Linux Enterprise Server （ SLES ）、 32 ビットおよび 64 ビット
+* clustered Data ONTAP または Data ONTAP 7-Mode
+* NFS 経由で接続された SAP HANA データベースノードが少なくとも 1 つ必要です
+* SAP HANA Running Service Pack Stack （ SPS ） 7 以降
+
+
+
+NOTE: サポートに関する最新情報、および互換性マトリックスの表示については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]。
+
+* 必要なライセンス *
+
+プライマリストレージコントローラには、 SnapRestore と SnapVault のライセンスがインストールされている必要があります。セカンダリストレージに SnapVault ライセンスがインストールされている必要があります。
+
+Snap Creator および Snap Creator SAP HANA プラグインにはライセンスは必要ありません。
+
+* Snapshot バックアップの容量要件 *
+
+ストレージレイヤでのブロック変更率は、従来のデータベースの変更率と比較して高いと考える必要があります。列ストアのテーブルマージプロセスにより、ブロックの変更のみがディスクに書き込まれるよりもはるかに多くのデータが書き込まれます。利用可能な顧客データが増えるまで、変更率の現在の推定値は 1 日あたり 20~50% になります。

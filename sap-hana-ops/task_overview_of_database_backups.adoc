@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/task_overview_of_database_backups.html 
+sidebar: sidebar 
+keywords: snap, creator, backing, up, database, 
+summary: Snap Creator がデータベースをバックアップしている場合は、次の手順を実行します。 
+---
+= データベースのバックアップの概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator がデータベースをバックアップしている場合は、次の手順を実行します。
+
+. グローバルな同期バックアップ保存ポイント（ SAP HANA Snapshot コピー）を作成して、永続性レイヤ上で整合性のあるイメージを取得します。
+. すべてのデータボリュームのストレージ Snapshot コピーを作成します。
++
+この例では、両方のストレージコントローラに hana1a と hana1b の 3 つのデータボリュームが分散されています。
+
+. SAP HANA バックアップカタログ内のストレージ Snapshot バックアップを登録します。
+. SAP HANA の Snapshot コピーを削除します。
+. すべてのデータボリュームの SnapVault 更新を開始します。
+. SnapVault のステータスを確認し、終了するか設定可能なタイムアウトになるまで待機します。
+. プライマリストレージとセカンダリストレージでのバックアップの定義済み保持ポリシーに基づいて、 SAP HANA バックアップカタログからストレージの Snapshot コピーを削除し、バックアップを削除します。
+. ファイルシステムおよび SAP HANA のバックアップカタログ内の最も古いデータバックアップよりも古いすべてのログバックアップを削除します。
+

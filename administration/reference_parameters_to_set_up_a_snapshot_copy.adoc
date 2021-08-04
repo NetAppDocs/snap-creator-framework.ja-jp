@@ -1,0 +1,182 @@
+---
+permalink: administration/reference_parameters_to_set_up_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: parameter, snapshot, copy, snap, creator, server, retention, snapdrive 
+summary: Snap Creator サーバの Snapshot コピーのセットアップには、いくつかの構成ファイルパラメータが必要です。 
+---
+= Snapshot コピーのセットアップ用パラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバの Snapshot コピーのセットアップには、いくつかの構成ファイルパラメータが必要です。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+NTAP_SNAPSHOT_retention_age の設定になります
+ a| 
+ a| 
+Snapshot コピーの保持期間（日数）を定義できます。設定すると、 NTAP_SNAPSHOT_RETENTIONS パラメータで定義された数を超え、指定した保持期間（日数）よりも古い Snapshot コピーのみが削除されます。
+
+
+
+ a| 
+SnapDrive
+ a| 
+「 Y 」または「 N 」
+ a| 
+Data ONTAP API の代わりに SnapDrive を使用して、 Snapshot コピーを作成できます。
+
+
+
+ a| 
+snaps_discovery の応答に表示され
+ a| 
+「 Y 」または「 N 」
+ a| 
+ストレージ検出に SnapDrive を使用できます。SAN 環境または iSAN 環境では、 VALIDATE_VOLUMES パラメータを使用する場合は必須です。
+
+
+
+ a| 
+NTAP_SNAPSHOT_DISABLE_DISABLE の設定です
+ a| 
+「 Y 」または「 N 」
+ a| 
+Snap Creator による Snapshot コピーの作成を無効にします。これにより、 Snap Creator で SnapManager または SnapMirror for SnapVault を処理できるようになります。この設定を機能させるには、 SnapManager Snapshot コピーが、 snapshot_copy_name-policy_recent という命名規則に従う必要があります。
+
+
+
+ a| 
+NTAP_SNAPSHOT_NODELETE
+ a| 
+「 Y 」または「 N 」
+ a| 
+このパラメータは NTAP_SNAPSHOT_RETENTIONS パラメータよりも優先され、 Snapshot コピーが削除されなくなります。この変数を有効にすると、ボリュームがいっぱいになる可能性があります。
+
+
+
+ a| 
+NTAP_SNAPSHOT_DELETE_CMD
+ a| 
+ a| 
+Snapshot の保持数に基づいて、 Snap Creator ではなく SnapDrive 経由で Snapshot を削除します。 * 注：この SnapDrive コマンドで Snapshot の削除に使用されるすべてのボリューム（マウントドライブ）も構成ファイルに含める必要があります。
+
+
+
+ a| 
+NTAP_SNAPSHOT_DELETE_by_PY_ENCY_ONLY
+ a| 
+プライマリ
+| セカンダリ 
+
+
+| 両方 | N  a| 
+古い Snapshot コピーの削除を有効にします。このパラメータを使用するには、 NTAP_SNAPSHOT_retention_age パラメータを指定する必要があり、 Snapshot コピーの数ではなく、 Snapshot コピーの保持期間に基づいて強制的に削除します。
+
+
+
+ a| 
+NTAP_SNAPSHOT_DEPENDENCY_IGNORE
+ a| 
+「 Y 」または「 N 」
+ a| 
+backupDel アクションによる Snapshot コピーの削除にのみ適用されます。依存関係のある Snapshot コピーは、手動で削除できません。
+
+
+
+ a| 
+NTAP_SNAPSHOT_CREATE_CMD## の場合
+ a| 
+ a| 
+Snapshot コピーを作成し、ファイルシステムのバッファをフラッシュします。 ## は 1 ～ 99 の数値です。* 注：この設定は、 SnapDrive パラメータを有効にする場合に必要です。Data ONTAP API を使用してもまだ他のすべての処理を実行できますが、 SnapDrive オプションを使用すると Snapshot コピーが作成されます。
+
+
+
+ a| 
+NTAP_META_SNAPSHOT_CREATE_CMD##
+ a| 
+ a| 
+メタデータボリュームの Snapshot コピーを作成し、ファイルシステムのバッファをフラッシュします。 ## は 1 ～ 99 の数値です。
+
+
+
+ a| 
+NTAP_CONSISTENCY_GROUP_SNAPSHOT
+ a| 
+「 Y 」または「 N 」
+ a| 
+整合グループを使用して、複数のボリューム間で整合性のある Snapshot コピーを作成できるようにします。
+
+
+
+ a| 
+NTAP_CONSISTENCY_GROUP_SNAPSHOT_RETRY_COUNT
+ a| 
+ a| 
+障害発生時に整合グループ Snapshot を再試行する回数を指定します。
+
+
+
+ a| 
+NTAP_CONSISTENCY_GROUP_SNAPSHOT_RETRY_WAIT
+ a| 
+時間（秒）
+ a| 
+整合グループ Snapshot の再試行が毎回発生するまでの待機時間を指定します。
+
+
+
+ a| 
+NTAP_CONSISTENCY_GROUP_TIMEOUT
+ a| 
+（緊急
+| 中 
+
+
+| リーラ XD ）  a| 
+ストレージコントローラが整合性を確保しながら Snapshot コピーをグループ化するのを待機する時間を指定します。
+ a| 
+NTAP_CONSISTENCY_GROUP_wafl_sync
+
+
+
+ a| 
+「 Y 」または「 N 」
+ a| 
+cg-start の前に wafl 同期を通じて整合ポイント（ CP ）を強制し、整合グループの Snapshot コピーのパフォーマンスを改善します。* 注： DB2 プラグインを使用して整合グループのバックアップを実行する場合は、このパラメータを「 N 」に設定する必要があります。
+ a| 
+NTAP_SNAPSHOT_RESTORE_AUTO_DETECT に設定されています
+
+
+
+ a| 
+「 Y 」または「 N 」
+ a| 
+無効にすると、単一ファイルのリストアを実行する場合に、常に Single File SnapRestore （ SFSR ）が強制的に実行されます。
+ a| 
+NTAP_SNAPSHOT_cleanup の設定になります
+
+
+
+ a| 
+「 Y 」または「 N 」
+ a| 
+バックアップの失敗時に作成された Snapshot コピーを削除します。
+ a| 
+NTAP_USE_EXTERNAL_SNAPSHOT
+
+
+
+ a| 
+「 Y 」または「 N 」
+ a| 
+非 Snap Creator の Snapshot コピーのインポートを有効にします。最新の Snapshot コピーが一致します。
+ a| 
+NTAP_EXTERNAL_SNAPSHOT_REGEX の設定
+
+|===

@@ -1,0 +1,29 @@
+---
+permalink: administration/reference_error_starting_the_gui.html 
+sidebar: sidebar 
+keywords: unix, environment, snap, creator, gui, linux 
+summary: UNIX 環境では、 Snap Creator の GUI の起動時にエラーが発生することがあります。 
+---
+= Snap Creator の GUI の起動中にエラーが発生しました
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 環境では、 Snap Creator の GUI の起動時にエラーが発生することがあります。
+
+* * 問題 *
++
+UNIX 環境では、 Snap Creator の GUI を起動すると、 HTTP エラー 503 が表示されます。たとえば、 HTTP エラー 503Problem access/ です。理由： SERVICE_UNAVAIVAINAVAI
+
+* * 原因 *
++
+このエラーメッセージは、一時ファイルを保存するスペースが不足している場合に受信する可能性があります。
+
+* * 是正措置 *
++
+対応するオペレーティングシステムフォルダの temp フォルダに、十分なスペースがあるか確認してください。
+
+
+
+例： Linux 環境で、 /tmp を確認します。

@@ -1,0 +1,220 @@
+---
+permalink: administration/reference_snap_creator_gui_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, error, message, gui 
+summary: 次の表に、 Snap Creator の GUI エラーメッセージを示します。 
+---
+= Snap Creator の GUI エラーメッセージ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の表に、 Snap Creator の GUI エラーメッセージを示します。
+
+|===
+| エラーコード | 説明 / 解決策 
+
+
+ a| 
+GUI-00001
+ a| 
+構成ファイル内の暗号化されたパスワードが正しいことを確認してください。
+
+
+
+ a| 
+GUI-00002
+ a| 
+正しい Snap Creator 実行ファイルを使用していることを確認してください。/etc/snapcreatorgui.conf が正しいことを検証してください。
+
+
+
+ a| 
+GUI-00003
+ a| 
+ログと対応するプロファイルフォルダが存在することを確認してください。
+
+
+
+ a| 
+GUI-00004
+ a| 
+Snap Creator の home/logs/profilename が存在するかチェックします。
+
+
+
+ a| 
+GUI-00005
+ a| 
+対応するプロファイルと構成ファイルが configs ディレクトリにあるかチェックします。
+
+
+
+ a| 
+GUI-00006
+ a| 
+snapcreatorgui.conf ファイルがない場合は、 snapcreator profile setup を実行してください。
+
+
+
+ a| 
+GUI-00007
+ a| 
+構成ファイルが名前変更または削除されているかどうかを確認します。
+
+
+
+ a| 
+GUI-00008
+ a| 
+ユーザ名およびパスワードをチェックし、 snapcreator profile setup コマンドを実行したか確認してください。
+
+
+
+ a| 
+GUI-00009
+ a| 
+ファイルまたはフォルダに対する権限が存在するかどうかを確認してください。
+
+
+
+ a| 
+GUI-00010
+ a| 
+ファイルまたはフォルダに対する権限が存在するかどうかを確認してください。
+
+
+
+ a| 
+GUI-00011
+ a| 
+別のプロファイルを選択するか、既存のプロファイルを削除してください。
+
+
+
+ a| 
+GUI-00012
+ a| 
+configs ディレクトリがあるか、および snapcreator profile setup コマンドを実行したか確認します。
+
+
+
+ a| 
+GUI - 00013
+ a| 
+詳細についてはログを確認してください。
+
+
+
+ a| 
+GUI - 00014
+ a| 
+構成ファイルを閉じて、もう一度開きます。
+
+
+
+ a| 
+GUI-00015
+ a| 
+ファイルに対する権限をチェックし、ファイルが存在するかどうかを確認してください。
+
+
+
+ a| 
+GUI-00017
+ a| 
+vCenter が正しく、有効なデータセンターがあるかどうかを確認します。
+
+
+
+ a| 
+GUI - 00019
+ a| 
+再試行してください。取得中にデータストアが削除された可能性があります。
+
+
+
+ a| 
+GUI - 00020
+ a| 
+再試行してください。取得中にデータストアが削除された可能性があります。
+
+
+
+ a| 
+GUI-00021
+ a| 
+再試行してください。 vCenter が正しいことを確認してください。
+
+
+
+ a| 
+GUI-00022
+ a| 
+vCenter にデータストアを追加してください。
+
+
+
+ a| 
+GUI-00023
+ a| 
+再試行してください。 vCenter を確認してください。
+
+
+
+ a| 
+GUI-00024
+ a| 
+使用している vCloud Director のバージョンはサポートされていません。
+
+
+
+ a| 
+GUI - 00025
+ a| 
+正しいクレデンシャルを入力してやり直してください。
+
+
+
+ a| 
+GUI-00026
+ a| 
+vCD の組織が見つかりません。組織を作成して再試行してください。
+
+
+
+ a| 
+GUI - 00027
+ a| 
+vCenter クレデンシャルを確認します。
+
+
+
+ a| 
+GUI-00028
+ a| 
+コントローラの詳細 / NTAP_USERS をチェックしてください。
+
+
+
+ a| 
+GUI-00029
+ a| 
+vCloud Director の URL を確認してください。
+
+
+
+ a| 
+GUI - 00030
+ a| 
+組織の vDC が存在するかチェックしてください。
+
+
+
+ a| 
+GUI-00031
+ a| 
+vDC の vApps が存在するかチェックしてください。
+
+|===

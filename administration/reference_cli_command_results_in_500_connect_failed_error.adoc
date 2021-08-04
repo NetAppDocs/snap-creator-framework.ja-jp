@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_cli_command_results_in_500_connect_failed_error.html 
+sidebar: sidebar 
+keywords: unix, 500, error, connect, failed 
+summary: UNIX 環境で CLI コマンドを実行するときに、 500 Connect Failed というエラーが発生することがあります。 
+---
+= CLI コマンドを実行すると 500 Connect Failed エラーが発生します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 環境で CLI コマンドを実行するときに、 500 Connect Failed というエラーが発生することがあります。
+
+* * 問題 *
++
+UNIX 環境では、 CLI コマンドを実行しようとしましたが、 500 Connect Failed というエラーが発生します。例：
+
++
+[listing]
+----
+500 Connect failed: connect: Connection refused; Connection refused at //scServer4.1.0/snapcreator>SnapCreator/Service/Engine.pm line 152
+----
+* * 原因 *
++
+このエラーは、通常、 Snap Creator が選択されたポートでリスンしていない場合に発生します。
+
+* * 是正措置 *
++
+選択したポートで Snap Creator が実行されていることを確認してください。
+
+

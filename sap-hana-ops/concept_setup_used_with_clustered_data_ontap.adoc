@@ -1,0 +1,16 @@
+---
+permalink: sap-hana-ops/concept_setup_used_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: setup, sap, hana, clustered, data, ontap 
+summary: clustered Data ONTAP で使用するセットアップ 
+---
+= clustered Data ONTAP で使用するセットアップ
+:icons: font
+:imagesdir: ../media/
+
+
+次の図は、 clustered Data ONTAP で使用されているセットアップを示しています。このセットアップは、次の図に示す Storage Virtual Machine （ SVM ）とボリューム名を使用したシングルノードの SAP HANA 構成に基づいています。
+
+image::../media/sap_hana_cdot_setup.gif[に、 clustered Data ONTAP で使用されているセットアップを示します。このセットアップは、 Storage Virtual Machine （ SVM ）とボリューム名を使用したシングルノードの SAP HANA 構成に基づいています。]
+
+SnapVault の準備、開始、再開、リストアの方法は、 clustered Data ONTAP と Data ONTAP 7-Mode で異なります。これらの相違点については、このガイドの対応するセクションで説明します。

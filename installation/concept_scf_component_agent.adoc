@@ -1,0 +1,17 @@
+---
+permalink: installation/concept_scf_component_agent.html 
+sidebar: sidebar 
+keywords: snap, creator, agent 
+summary: Snap Creator エージェントは、通常、アプリケーションまたはデータベースがインストールされているホストと同じホストにインストールします。Agent は、プラグインが配置されている場所です。Snap Creator 内でエージェントが scAgent に短縮されることがあります。 
+---
+= Snap Creator エージェント
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントは、通常、アプリケーションまたはデータベースがインストールされているホストと同じホストにインストールします。Agent は、プラグインが配置されている場所です。Snap Creator 内でエージェントが scAgent に短縮されることがあります。
+
+エージェントは、 Snap Creator サーバから、アプリケーションの休止および休止解除コマンド、およびその他の PRE / POST コマンドを実行できます。プラグインを使用する場合は、 Snap Creator エージェントが必要です。
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["『 Snap Creator Framework 4.3.3 Administration Guide 』"]

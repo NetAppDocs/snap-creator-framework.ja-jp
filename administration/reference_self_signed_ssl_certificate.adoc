@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_self_signed_ssl_certificate.html 
+sidebar: sidebar 
+keywords: self-signed, ssl, certificate, url, issue, cause, corrective, action, system, ip, parameter 
+summary: 自己署名 SSL 証明書が URL と一致しません 
+---
+= 自己署名 SSL 証明書が URL と一致しません
+:icons: font
+:imagesdir: ../media/
+
+
+* * 問題 *
++
+Snap Creator Framework で提供される自己署名 SSL 証明書が URL と一致しません。
+
+* * 原因 *
++
+Snap Creator サービスで提供されている SSL 証明書の Common Name （ CN ；共通名）は別のマシン用であるため、ホスト名とは一致しません。
+
+* * 是正措置 *
++
+Snap Creator サーバおよび Snap Creator エージェントのインストール時に、ホスト名を解決するためのシステム IP パラメータが導入されました。
+
++
+.. System IP オプションで、 Snap Creator Framework がインストールされているシステム IP アドレスを入力します。
++
+*** SSL 証明書の共通名は、同じ IP アドレスを使用して作成できます。
+
+
+
+
+

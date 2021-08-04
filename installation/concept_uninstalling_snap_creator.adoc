@@ -1,0 +1,13 @@
+---
+permalink: installation/concept_uninstalling_snap_creator.html 
+sidebar: sidebar 
+keywords: unstalling, snap, creator 
+summary: Snap Creator は、 Windows システムおよび UNIX システムからアンインストールできます。 
+---
+= Snap Creator をアンインストールしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator は、 Windows システムおよび UNIX システムからアンインストールできます。

@@ -1,0 +1,26 @@
+---
+permalink: administration/task_deleting_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: delete, snap, creator, profile 
+summary: Snap Creator のプロファイルを削除できます。 
+---
+= プロファイルの削除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator のプロファイルを削除できます。
+
+プロファイルを削除すると、そのプロファイルに関連付けられている設定ファイルも削除されます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
++
+既存の Snap Creator プロファイルは、 Profiles and Configurations ペインに表示されます。
+
+. 削除するプロファイルを右クリックし、 * 削除 * を選択します。
+. 確認メッセージで [ はい ] をクリックします
++
+プロファイルおよび関連する構成ファイルは、 Snap Creator から完全に削除されます。
+
+

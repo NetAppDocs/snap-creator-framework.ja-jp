@@ -1,0 +1,23 @@
+---
+permalink: administration/task_deleting_backups.html 
+sidebar: sidebar 
+keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui, data 
+summary: 構成ファイルのバックアップコピーを削除できます。 
+---
+= バックアップを削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+構成ファイルのバックアップコピーを削除できます。
+
+. Snap Creator のグラフィカルユーザインターフェイス（ GUI ）のメインメニューから、 * Data * > * Backups * を選択します
+. [Backups] タブの [Profiles and Configurations] ペインで、プロファイルを展開し、構成ファイルを選択します。
+. 削除するバックアップを選択し、 * Delete * をクリックします。
++
+
+NOTE: 構成ファイルに複数の Data ONTAP が含まれている場合は、各 Data ONTAP で削除する Snapshot コピーを選択する必要があります。
+
+. 確認ウィンドウで [ はい ] をクリックします。
+

@@ -1,0 +1,32 @@
+---
+permalink: domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, creating, create, backup, restore, configuration 
+summary: 構成ファイルでは、バックアップおよびリストア処理に必要なほとんどの情報を指定します。構成ファイルは、 Snap Creator のバックアップおよびリストア処理の入力ファイルです。 
+---
+= バックアップとリストアの設定を作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+構成ファイルでは、バックアップおよびリストア処理に必要なほとんどの情報を指定します。構成ファイルは、 Snap Creator のバックアップおよびリストア処理の入力ファイルです。
+
+必要な数の構成ファイルを作成できますが、操作の入力として指定できるのは 1 つの構成ファイルのみです。構成ファイルは、 Snap Creator の GUI または Snap Creator の CLI のいずれかを使用して作成できます。
+
+
+NOTE: このマニュアルでは、 GUI を使用して構成ファイルを作成する方法を説明します。CLI の使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+構成ファイルは Snap Creatorprofiles で整理します。プロファイルおよび構成ファイルは、 Snap Creator のインストールディレクトリの \engine/configs サブディレクトリにあります。
+
+* UNIX ホストで、インストールファイルの展開先ディレクトリ
+* Windows ホストの場合、デフォルトで C ： \Program Files\NetApp\Snap Creator _Framework\scServer4.1.x
+
+
+* 関連情報 *
+
+link:concept_general_configuration_file_information.adoc["Snap Creator の GUI にログインします"]
+
+
+
+

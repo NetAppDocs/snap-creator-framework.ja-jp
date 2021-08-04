@@ -1,0 +1,52 @@
+---
+permalink: administration/reference_parameters_to_set_up_ossv.html 
+sidebar: sidebar 
+keywords: parameter, open, system, snapvault, ossv, enable, homedir, snapshot 
+summary: Open Systems SnapVault （ OSSV ）を設定するには、いくつかのパラメータが必要です。 
+---
+= OSSV を設定するパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Open Systems SnapVault （ OSSV ）を設定するには、いくつかのパラメータが必要です。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+NTAP_OSSV_enable の設定
+ a| 
+Y
+| N 
+
+
+ a| 
+OSSV 統合を有効化このパラメータは、 NTAP_OSSV_HOMEDIR パラメータと組み合わせて使用する必要があります。OSSV は、 Snap Creator を実行するホスト上にも必要です。OSSV では、ポリシー保持ロジックは、定義済みの Snap Creator ポリシーのみに基づいてポリシーを処理します。ポリシーオブジェクトはサポートされません。
+
+
+NOTE: OSSV パラメータを有効にした場合、パスはボリュームとして指定されます。Windows で OSSV のパスを指定する場合は、コロン（ : ）は使用しないでください。たとえば、パスが E ： \DB の場合は、 E\DB のように指定する必要があります。
+ a| 
+NTAP_OSSV_HOMEDIR に設定します
+ a| 
+/usr/snapvault
+
+
+
+ a| 
+OSSV ホームディレクトリのパスを設定します（ /usr/snapvault ）。
+ a| 
+NTAP_OSSV_FS_SNAPSHOT
+ a| 
+Y
+
+
+
+| N  a| 
+NTAP_OSSV_FS_SNAPSHOT_CREATE_CMD パラメータを設定する必要があります。このパラメータを使用すると、 Open System またはファイルシステムのコマンドを使用してファイルシステムの Snapshot コピーを作成できます。ファイルシステムの Snapshot コピーが、 SnapVault を使用してストレージシステムに転送されます。
+ a| 
+NTAP_OSSV_FS_SNAPSHOT_CREATE_CMD
+
+|===

@@ -1,0 +1,18 @@
+---
+permalink: domino-ops/concept_ibm_domino_backup_and_recovery_workflow.html 
+sidebar: sidebar 
+keywords: domino, ibm, backup, recovery, workflows 
+summary: IBM Domino プラグインを使用してバックアップを作成する前に、 Snap Creator サーバおよびエージェントソフトウェアをインストールし、ネットアップストレージをプロビジョニングする必要があります。ディザスタリカバリとアーカイブ用に Snapshot コピーをセカンダリストレージにレプリケートする場合は、 SnapMirror 関係と SnapVault 関係を設定する必要があります。 
+---
+= IBM Domino のバックアップとリカバリのワークフロー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM Domino プラグインを使用してバックアップを作成する前に、 Snap Creator サーバおよびエージェントソフトウェアをインストールし、ネットアップストレージをプロビジョニングする必要があります。ディザスタリカバリとアーカイブ用に Snapshot コピーをセカンダリストレージにレプリケートする場合は、 SnapMirror 関係と SnapVault 関係を設定する必要があります。
+
+
+NOTE: 特に SAN 環境では、 Snap Creator エージェントホスト上の SnapDrive を使用してデータベースをバックアップしたり、単一ファイルのリストア用に Snapshot コピーをマウントしたりすることができます。詳細については、を参照してください xref:concept_adding_commands_to_the_backup_and_restore_configuration.adoc[バックアップとリストアの設定にコマンドを追加する] および xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[SAN 環境で単一ファイルのリストアを実行する]。
+
+image::../media/ibm_domino_workflow.gif[IBM Domino のワークフロー]

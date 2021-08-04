@@ -1,0 +1,43 @@
+---
+permalink: sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: sap, hana, restore, restoring, databases, primary, storage, failure, clustered, data, ontap 
+summary: clustered Data ONTAP を実行しているプライマリストレージシステムに障害が発生した場合は、 SAP HANA データベースをリストアできます。 
+---
+= clustered Data ONTAP でプライマリストレージに障害が発生した場合のデータベースのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+clustered Data ONTAP を実行しているプライマリストレージシステムに障害が発生した場合は、 SAP HANA データベースをリストアできます。
+
+プライマリボリュームが完全に失われた場合は、新しいプライマリボリュームを作成し、バックアップボリュームからリストアする必要があります。
+
+. タイプがデータ保護のプライマリボリュームを作成します。
++
+[listing]
+----
+hana::> volume create -vserver hana1a -volume hana_data -aggregate aggr_sas_101 -size 300G -state online -type DP -policy default -autosize-mode grow_shrink -space-guarantee none
+-snapshot-policy none -foreground true
+[Job 6744] Job is queued: Create hana_data.
+[Job 6744] Job succeeded: Successful
+----
+. バックアップボリュームのすべてのデータをリストア
++
+[listing]
+----
+hana::> snapmirror restore -destination-path hana1a:hana_data -source-path hana2b:backup_hana_data -source-snapshot sc-backup-daily_20140505121000
+[Job 6746] Job is queued: snapmirror restore from source "hana2b:backup_hana_data" for the
+snapshot sc-backup-daily_20140505121000.
+
+hana::> job show -id 6746
+Owning
+Job ID Name                 Vserver    Node           State
+------ -------------------- ---------- -------------- ----------
+6746   SnapMirror restore   hana        hana01        Running
+       Description: snapmirror restore from source "hana2b:backup_hana_data" for the snapshot sc-backup-daily_20140505121000
+----
+
+
+リストアプロセスが終了したら、 SAP HANA を使用してリカバリを実行します。

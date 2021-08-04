@@ -1,0 +1,28 @@
+---
+permalink: administration/task_viewing_a_list_all_snap_creator_permissions_by_using_the_cli.html 
+sidebar: sidebar 
+keywords: snap, creator, snapcreator, permission, cli 
+summary: 特定のロールに割り当て可能なすべての Snap Creator 権限のリストを作成するには、コマンドラインインターフェイス（ CLI ）のみを使用します。 
+---
+= CLI を使用して、すべての Snap Creator 権限のリストを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+特定のロールに割り当て可能なすべての Snap Creator 権限のリストを作成するには、コマンドラインインターフェイス（ CLI ）のみを使用します。
+
+. 次のコマンドを入力します。
++
+'napcreator -- server host_name -- port port_number -- user sc_user_name -- passwd sc_passwd -- action permissionsList -verbose
+
++
+次に例を示します。
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 --action permList --verbose
+----
+

@@ -1,0 +1,25 @@
+---
+permalink: administration/task_deleting_retention_policies.html 
+sidebar: sidebar 
+keywords: delete, retention, policy, snap, creator, gui 
+summary: 保持ポリシーは削除できます。 
+---
+= 保持ポリシーを削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保持ポリシーは削除できます。
+
+. Snap Creator の GUI のメインメニューで、 * Policy * > * Policy Management * を選択します。
+. [* Policy Manager* ] タブで、ポリシーを選択し、 [ * 削除 * ] をクリックします。
++
+
+NOTE: 構成ファイルに割り当てられているポリシーを削除しようとすると、 GUI に次のエラーメッセージが表示されます。ポリシー名が構成に適用されているため、ポリシーを削除できません。ポリシーの適用を解除してから、そのポリシーを削除してください。
+
+. 確認ウィンドウで [ はい ] をクリックします。
++
+ポリシーが [ ポリシーマネージャ ] タブから削除されます。
+
+

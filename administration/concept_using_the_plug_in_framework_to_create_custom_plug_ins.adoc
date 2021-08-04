@@ -1,0 +1,42 @@
+---
+permalink: administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: plug-in, framework, snap, creator, reuse, quiesce, unquiesce, discover, scdump, restore, restore, clone, describe, restore 
+summary: プラグインフレームワークを使用すると、 Snap Creator 用の独自のプラグインを作成したり、既存のプラグインを再利用したりできます。Snap Creator では、このプラグインを使用して、特定のアプリケーションのバックアップとリカバリを処理できます。 
+---
+= プラグインフレームワークを使用してカスタムプラグインを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プラグインフレームワークを使用すると、 Snap Creator 用の独自のプラグインを作成したり、既存のプラグインを再利用したりできます。Snap Creator では、このプラグインを使用して、特定のアプリケーションのバックアップとリカバリを処理できます。
+
+プラグインフレームワークでは、次のメソッドを定義します。
+
+* quiesce - 特定のアプリケーションプラグインの休止を処理する手法
+* unquiesce - 特定のアプリケーションプラグインの休止解除を処理する手法
+* discover - 特定のアプリケーションプラグインのストレージオブジェクトに対する検出を処理する手法です
+* scdump - サポート情報、データベース、オペレーティングシステム、 SnapDrive の収集を処理する手法
+* restore - 特定のアプリケーションプラグインのリストアを処理する手法
+* restore_pre - 特定のアプリケーションプラグインのリストア前の操作を処理する手法（ Snap Creator のビルトインリストアの CLI を使用可能）
+* restore_post - 特定のアプリケーションプラグインのリストア後の操作を処理する手法（ Snap Creator のビルトインリストアの CLI を使用可能）
+* clone_pre - 特定のアプリケーションプラグインのクローニング前の操作を処理する手法
+* clone_post - 特定のアプリケーションプラグインのクローニング後の操作を処理する手法
+* describe - プラグインの実行内容を説明する手法。これは Perl プラグインの場合には任意ですが、 plug-ins/native の下にある標準のプラグインの場合には必須です。
+* clone_all - 特定のアプリケーションプラグインのクローニングを処理する手法（ビルトインクローニングインターフェイスは使用できません）
+* clone_cleanup - クローン操作が失敗した場合にクリーンアップを処理する手法です
+* restore_cleanup - リストア操作が失敗した場合にクリーンアップを処理する手法です
+
+
+
+NOTE: プラグインフレームワークでは、 Perl 、 PowerShell 、 Java 、 UNIX Shell 、 Python によるプログラミングをサポートしています。注：プラグインフレームワークを使用して、 Snap Creator 内にあるオブジェクトや機能を実装できます。
+
++ たとえば、エラー処理が利用可能です。つまり、プラグインでは、 Snap Creator で使用する標準的な実装を使用できます。これにより、プラグインの作成に必要な作業が削減されます。
+
+* Perl プラグインは、 /plug-ins/plug-in-name /plug-in.pm の下にインストールされます。
+* ネイティブプラグインは、 /plug-ins/native/plug-in.sh 、 plug-in.java.plug-in.bat などの下にインストールされます。
+* プラグインは、実行が想定される場所にインストールする必要があります。Snap Creator のセットアップによっては、 Snap Creator サーバまたは Snap Creator エージェントになる可能性もあります。
+
+
+プラグインフレームワーク、プラグイン、およびプラグインのユーザガイドの詳細については、を参照してください http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework のディスカッションコミュニティフォーラム"]。

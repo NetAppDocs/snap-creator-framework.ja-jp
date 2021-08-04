@@ -1,0 +1,65 @@
+---
+permalink: administration/reference_db2_plug_in.html 
+sidebar: sidebar 
+keywords: db2, plug-in, communicate, database 
+summary: DB2 プラグインは、 db2 コマンドを使用してデータベースと通信します。 
+---
+= DB2 プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+DB2 プラグインは、 db2 コマンドを使用してデータベースと通信します。
+
+次の表に、 DB2 プラグインのパラメータ、パラメータの設定、およびパラメータの説明を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+APP_NAME を使用している
+ a| 
+DB2
+ a| 
+アプリケーション名を提供します。
+
+
+
+ a| 
+DB2_databases （ DB2_databases ）
+ a| 
+db_name ： user_name
+ a| 
+DB2 データベースおよびユーザ名をリストします。複数のデータベースおよびユーザ名は、セミコロンで区切ったリストとして指定できます。たとえば、「 db1 ： user1 」、「 db2 ： user2 」のようになります。
+
+
+
+ a| 
+DB2_CMD と入力します
+ a| 
+path_to db2cli_cmd
+ a| 
+データベース接続の初期化に使用するパスを指定します。これにより、データベースでさらにコマンドを実行できます。
+
+* UNIX ベースの環境 : `d b2_install_directory/sqllib/bin/db2 ``
++
+たとえば '/home/db2inst1/sqllib/bin/db' のように指定します
+
+* Windows: 「 db2_install_directory\SQLLIB\bin\db2cmd.exe
++
+たとえば、「 C ： \" プログラムファイル "\IBM\SQLLIB\bin\db2cmd.exe" です
+
+
+
+パスが指定されていない場合は、 sqllib/db2 がパスとして使用されます。
+
+|===
+* 注 :* DB2 プラグインは ' デフォルトで Write Anywhere File Layout （ WAFL ）操作を処理しますDB2 プラグインを使用して整合グループのバックアップをバックアップする場合は、パラメータを NTAP_CONSISTENCY_GROUP_wafl_sync パラメータに設定しますこのパラメータを Y に設定すると、冗長な同期処理が追加で実行されます。
+
+サポートに関する最新情報や互換性マトリックスを確認するには、 Interoperability Matrix を参照してください。
+
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

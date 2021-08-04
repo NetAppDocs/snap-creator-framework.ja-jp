@@ -1,0 +1,136 @@
+---
+permalink: administration/reference_maxdb_plug_in.html 
+sidebar: sidebar 
+keywords: maxdb, plug-in, automates, backup, restore, operations 
+summary: MaxDB プラグインは、 MaxDB データベースのバックアップ処理とリストア処理を自動化します。 
+---
+= MaxDB プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MaxDB プラグインは、 MaxDB データベースのバックアップ処理とリストア処理を自動化します。
+
+
+NOTE: サポートに関する最新情報や互換性マトリックスを確認するには、 Interoperability Matrix を参照してください。
+
+MaxDB プラグインには次の機能があります。
+
+* MaxDB データベースのバックアップ、リストア、クローニングに使用する一元化されたフレームワーク
+* データベースとの統合およびアプリケーション整合性の提供
+* Snapshot テクノロジを使用した、データベースのポイントインタイムコピーの作成
+* 容量やファイル数に関係なく、 SnapRestore を使用して以前の Snapshot コピーをリストアし、アプリケーションと整合性のあるデータベースを数秒でリストアできるようになりました
+* FlexClone テクノロジを使用すると、 Snapshot コピーバックアップに基づいて、スペース効率に優れたデータベースのクローンを短時間で作成できます
+
+
+次の表に、 MaxDB プラグインのパラメータを示します。このパラメータの設定と説明が表示されます。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+APP_NAME を使用している
+ a| 
+MaxDB
+ a| 
+アプリケーション名を指定します。
+
+
+
+ a| 
+XUSER_ENABLE のようになります
+ a| 
+Y
+| N 
+
+
+ a| 
+MaxDB 用 X ユーザの使用を有効または無効にして、データベースユーザにパスワードが必要ないようにします。
+ a| 
+handle_logWRITER
+ a| 
+Y
+
+
+
+| N  a| 
+suspend logwriter （ N ）または resume logwriter （ Y ）操作を実行します。
+ a| 
+DBMCLICMD
+
+
+
+ a| 
+path_to dbmcli_cmd
+ a| 
+MaxDB の dbmcli コマンドへのパスを指定します。設定しない場合、検索パス上の dbmcli が使用されます。
+
+
+NOTE: Windows 環境では、パスを二重引用符（ "..." ）で囲む必要があります。
+ a| 
+SQLCLICMD
+
+
+
+ a| 
+path_to _sqlcli_cmd
+ a| 
+MaxDB の sqlcli コマンドのパスを指定します。設定しない場合、 sqlcli は検索パスで使用されます。
+ a| 
+MaxDB の更新 _HIST_LOG
+
+
+
+ a| 
+Y
+| N  a| 
+MaxDB バックアッププログラムに MaxDB 履歴ログを更新するかどうかを指示します。
+
+
+
+ a| 
+MaxDB データベース
+ a| 
+db_name ： user_name password
+ a| 
+バックアップするデータベースをユーザ名とパスワードで一覧表示します。複数のデータベースおよびユーザ名は、カンマで区切ったリストを使用して指定できます。たとえば、「 db1 ： user1 / password 、 db2 ： user2 / password 」と入力します。
+
+
+
+ a| 
+MaxDB の _check_snapshot_DIR
+ a| 
+例 : `+SID1 : directory[, directory...];[SID2: directory[, directory...]+`
+ a| 
+Snap Creator の Snapshot コピー処理が正常に完了したことを確認し、 Snapshot コピーが作成されたことを確認します。この環境 NFS のみ。このディレクトリには、 .snapshot ディレクトリが含まれている場所を指定する必要があります。
+
+複数のディレクトリを指定する場合は、カンマで区切って指定できます。複数のデータベースは、セミコロンで区切ったリストで指定できます。
+
+MaxDB 7.8 以降のバージョンでは、データベースバックアップ要求がバックアップ履歴で失敗とマークされています。
+
+
+
+ a| 
+MaxDB のバックアップテンプレート
+ a| 
+template_name の例 : 'na_snap
+ a| 
+各データベースのバックアップテンプレートを指定します。テンプレートはすでに存在している必要があり、外部タイプのバックアップテンプレートである必要があります。
+
+MaxDB 7.8 以降の Snapshot コピー統合を有効にするには、 MaxDB のバックグラウンドサーバ機能を持っていて、 MaxDB バックアップテンプレートをすでに設定している必要があります。
+
+
+
+ a| 
+MaxDB の BG_server_prefix
+ a| 
+bG_server_prefix の例： 'na_bg
+ a| 
+バックグラウンドサーバ名のプレフィックスを指定します。MaxDB のバックアップテンプレートパラメータを設定する場合は、 MaxDB の BG_server_prefix パラメータも設定する必要があります。プレフィックスを設定しない場合は ' デフォルト値の na_bg_database' が使用されます
+
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

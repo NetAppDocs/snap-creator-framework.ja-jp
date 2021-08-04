@@ -1,0 +1,120 @@
+---
+permalink: administration/reference_citrix_xen_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, restore, citrix, xenserver, virtual, machine, vm, citrix, xenserver, plug-in 
+summary: Snap Creator は、 Citrix XenServer プラグインを使用した、 Citrix XenServer 仮想マシン（ VM ）のバックアップおよびリストアをサポートしています。 
+---
+= Citrix XenServer プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator は、 Citrix XenServer プラグインを使用した、 Citrix XenServer 仮想マシン（ VM ）のバックアップおよびリストアをサポートしています。
+
+
+NOTE: サポートと互換性のマトリックスに関する最新情報は、 Interoperability Matrix を参照してください。
+
+Citrix XenServer プラグインは、 Windows と XenServer をサポートしています。
+
+Citrix XenServer プラグインを使用するときは、次の点に注意してください。
+
+* プロキシとしての Active IQ Unified Manager サーバはサポートされていません。
+* Open Systems SnapVault を使用したマウント、アンマウント、およびバックアップ処理、およびアーカイブログの管理はサポートされていません。
+* ボリュームリストア処理はサポートされていません。アプリケーションで定義したリストア処理のみがサポートされます。
+* 削除された VM をリストアできます。
+* XenCenter がインストールされているホストに Snap Creator エージェントがインストールされている必要があります。また、 XenServer に Snap Creator サーバがインストールされていない必要があります。
+* SC_AGENT_TIMEOUT には、デフォルト値である 600 以上の値を指定してください。
+* APP_DEFINED_RESTORE の値が Y の場合は、 GUI を使用した SnapVault のリストア処理はサポートされません。
+* プールマスターがサーバプール内で停止した場合、 Snap Creator 構成ファイルを新しいマスターサーバで手動で変更し、さらなるアクティビティを行う必要があります。
+* XenServer ツールがすべての VM にインストールされている必要があります。
+* SAN 環境でファイバチャネルを使用する場合は、 Snap Creator エージェントがインストールされているホストに plink.exe ツールをインストールし、システム環境変数に plink.exe のパスを追加する必要があります。
++
+システム環境変数に plink.exe パスを追加する方法の詳細については、 _Snap Creator Framework Installation Guide_. を参照してください。
+
+* VM の一時停止と一時停止解除の処理は、順次実行されます。
++
+複数の VM がある場合、バックアップ処理中に VM が一時停止状態になる時間は、 VM の数によって異なります。
+
+* ボリュームの自動検出がサポートされています。
+
+
+
+
+== サポートされる Citrix XenServer 構成
+
+次の Citrix XenServer 構成がサポートされています。
+
+* SAN
++
+** では、ストレージリポジトリごとに 1 つの仮想ディスクイメージ（ VDI ）を持つゲスト仮想マシンがサポートされます。
+** ストレージリポジトリごとに 1 つの VDI でデータディスクをサポートします
+
+
+* NAS
++
+** NFS マウントにインストールされているゲスト VM をサポートします。
+** NFS マウントのデータディスクをサポートします。
+
+
+
+
+
+
+== パラメータ
+
+次の表に、 Citrix XenServer プラグインのパラメータとその説明を示します。
+
+|===
+
+
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+xon_VMs
+ a| 
+ホスト IP ： VM#
+ a| 
+特定のホストの仮想マシンをスラッシュ（ / ）で区切って表示します。たとえば、 10.10.10.192 ： VM1/VM2/VM3
+
+
+
+ a| 
+xon_host_users
+ a| 
+ホスト IP ：ユーザ名 / パスワード
+ a| 
+に、 Xen ホストおよびそれに対応するユーザ名とパスワードを示します。
+
+
+
+ a| 
+xon_bin_path
+ a| 
+例： c ： \Program Files\Citrix\XenCenter\xe.exe
+ a| 
+XenServer 実行ファイル（ XE ）のパスを指定します。VM メタデータのインポートとエクスポートには XenCenter コンソールが必要です。
+
+
+
+ a| 
+xen メタデータパス
+ a| 
+たとえば、 c ： \scmetadata です
+ a| 
+仮想マシンのメタデータをダウンロードできるサーバ上のパスを指定します。
+
+
+
+ a| 
+xon_restore_VMs
+ a| 
+例： xenserver1 ： vm1 、 vm2 ； xenserver2 ： vm1 、 vm2
+ a| 
+リストアする VM が含まれています。このパラメータは、リストア処理の実行時にのみ必要です。
+
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

@@ -1,0 +1,21 @@
+---
+permalink: domino-ops/concept_create_a_domino_backup_using_snap_creator.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases 
+summary: データベースはオンデマンドでバックアップすることも、スケジュールに基づいてバックアップすることもできます。データベースのバックアップには、 Snap Creator の GUI または Snap Creator の CLI を使用します。 
+---
+= データベースをバックアップしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースはオンデマンドでバックアップすることも、スケジュールに基づいてバックアップすることもできます。データベースのバックアップには、 Snap Creator の GUI または Snap Creator の CLI を使用します。
+
+
+NOTE: このマニュアルでは、 GUI を使用してデータベースをバックアップする方法について説明します。CLI の使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+* 関連情報 *
+
+link:task_creating_a_domino_backup_using_the_snap_creator_gui.adoc["オンデマンドでのデータベースのバックアップ"]
+

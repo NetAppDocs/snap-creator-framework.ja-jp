@@ -1,0 +1,17 @@
+---
+permalink: administration/task_viewing_policies.html 
+sidebar: sidebar 
+keywords: retention, policy, view, list, snap, creator, gui 
+summary: 保持ポリシーのリストを表示できます。 
+---
+= 保持ポリシーを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保持ポリシーのリストを表示できます。
+
+. Snap Creator の GUI のメインメニューで、 * Policy * > * Policy Management * を選択します。
+. ポリシーマネージャタブで、ポリシーのリストを表示します。
+

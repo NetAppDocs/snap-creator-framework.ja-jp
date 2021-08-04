@@ -1,0 +1,31 @@
+---
+permalink: administration/reference_transport_layer_security_tls.html 
+sidebar: sidebar 
+keywords: cryptographic, flaw, transport, layer, security, tls, protocol 
+summary: Transport Layer Security の暗号化の欠陥 
+---
+= Transport Layer Security の暗号化の欠陥
+:icons: font
+:imagesdir: ../media/
+
+
+* * 問題 *
++
+TLS 1.0 には暗号化の欠陥がいくつかあります。攻撃者は、この脆弱性を悪用して、中間者攻撃を実行したり、影響を受けるサービスとクライアント間の通信を復号化したりする可能性があります。
+
+* * 原因 *
++
+リモートサービスは、 TLS 1.0 を使用して暗号化された接続を受け入れます。
+
+* * 是正措置 *
++
+Snap Creator には、 TLS 1.0 プロトコルを有効または無効にするオプションがあります。
+
++
+.. 下位互換性をサポートするには、 snapcreator.properties ファイルと agent.properties ファイルで enable_security_protocol_tls_V1 パラメータを Y に設定します。enable_security_protocol_ttls_V1 パラメータはデフォルトで N に設定されています。
+
+
+
+
+
+NOTE: enable_security_protocol_ttls_V1 パラメータは、 Snap Creator Framework 4.3.3 より前のリリースでのみ使用できます。Snap Creator Framework 4.3.3 が原因で発生する問題です。リリースでサポートされるのは Oracle Java と OpenJDK 1.8 以降のみです。 TLS 1.0 のサポートは Snap Creator Framework から削除されました。

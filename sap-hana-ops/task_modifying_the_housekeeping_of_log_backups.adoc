@@ -1,0 +1,21 @@
+---
+permalink: sap-hana-ops/task_modifying_the_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: sap, hana, modifying, modify, housekeeping, log, backups 
+summary: ログのクリーンアップ処理を無効にする場合は、不要なログバックアップの削除用に設定されたパラメータを変更できます。 
+---
+= 不要なログバックアップの削除を変更する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ログのクリーンアップ処理を無効にする場合は、不要なログバックアップの削除用に設定されたパラメータを変更できます。
+
+. 変更する SAP HANA プロファイルを選択します。
+. 変更する構成を選択し、 * SAP HANA Settings * をクリックします。
+. Enable log cleanup パラメータを編集し、 * Save * をクリックします。
++
+image::../media/modifying_housekeeping_of_logs.gif[不要なログバックアップの削除を変更する]
+
+

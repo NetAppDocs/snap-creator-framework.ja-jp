@@ -1,0 +1,18 @@
+---
+permalink: installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html 
+sidebar: sidebar 
+keywords: configuring, configure, unix, settings, create, creating, symbolic, links 
+summary: Snap Creator エージェントを UNIX オペレーティングシステム（ AIX 、 Linux 、 Solaris ）にインストールする場合、 IBM Domino プラグインが正常に動作するためには、 Domino の共有オブジェクトファイルにリンクするシンボリックリンク（ symlinks ）を 3 つ作成する必要があります。 
+---
+= UNIX 固有の設定：シンボリックリンクの作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントを UNIX オペレーティングシステム（ AIX 、 Linux 、 Solaris ）にインストールする場合、 IBM Domino プラグインが正常に動作するためには、 Domino の共有オブジェクトファイルにリンクするシンボリックリンク（ symlinks ）を 3 つ作成する必要があります。
+
+インストール手順は、オペレーティングシステムによって多少異なります。お使いのオペレーティングシステムに対応する手順を参照してください。
+
+
+NOTE: Domino は HP-UX オペレーティングシステムをサポートしていません。

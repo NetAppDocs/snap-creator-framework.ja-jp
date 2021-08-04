@@ -1,0 +1,120 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_agent_4_0_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 4.0.x, windows 
+summary: Windows 上の Snap Creator エージェント 4.0.x から直接アップグレードできます。 
+---
+= Windows での Snap Creator エージェント 4.0.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows 上の Snap Creator エージェント 4.0.x から直接アップグレードできます。
+
+* Snap Creator エージェントのディレクトリをバックアップしてバックアップデータが完全であることを確認する前に、 Snap Creator エージェントサービス（「 napcreatoragentservice 」）を停止しておきます。
++
+たとえば、サービススナップインを使用してサービスを停止できます。
+
++
+.. 「 * Start * > * Run * 」を選択し、「 ervices .msc 」と入力します。
+.. Snap Creator エージェントサービスを探して選択し、サービスを停止します。または、コマンドプロンプトを開いて次のコマンドを入力することもできます。
+
+
++
+[listing]
+----
+sc stop snapcreatoragentservice
+----
+* Snap Creator エージェントのディレクトリ（ C ： \Program Files\NetApp\Virtual Snap _Creator_Framework\scAgent4.0.x ）に、次のディレクトリと、関連付けられているすべてのサブディレクトリおよびファイルをバックアップしておく必要があります。
++
+** agent.conf ファイル（ ..\config\agent.conf ）
++
+
+NOTE: Snap Creator サーバが同じシステムにインストールされている場合は、 Snap Creator サーバ 4.0.x をアップグレードするときに、このファイルをすでにバックアップしている可能性があります
+
+** ログディレクトリ（有効な場合）（ ..\logs ）
+** Plug-ins ディレクトリ（ ..\plugins ）
+
+
+
+
+4.1 より前のバージョンの Snap Creator エージェントでは、 agent.conf というファイルを使用して、 Snap Creator の外部で Snap Creator エージェント上で実行される可能性のあるコマンドをリストしました。4.1 では、 allowed_command.config ファイルが使用されます。
+
+同様に、 Snap Creator エージェントが通信を許可されている agent.conf ファイルが表示されたホスト。デフォルトでは、 Snap Creator エージェントはすべての Snap Creator サーバとの通信を許可しました。ただし、以前のバージョンの Snap Creator でこの機能を使用するように選択した場合は、 agent.properties ファイルの authorized_hosts パラメータがこの機能を置き換えます。
+
+
+NOTE: これらのパラメータを使用しなかった場合は、新しいエージェントを簡単にインストールするだけで済みます。
+
+以降の手順で示すパスは、 Windows のデフォルトのインストールパスです。デフォルトを使用しなかった場合は、パス情報がインストールパスと異なることがあります。
+
+. Snap Creator エージェントサービスをまだ停止していない場合は停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+. Snap Creator （ Windows ）をアンインストールするには、 * Start * > * Programs * > * Snap Creator * > * Uninstall NetApp Snap Creator Framework * を選択します。
++
+詳細については、 Windows での Snap Creator のアンインストールに関する情報を参照してください。
+
+. 最新の Snap Creator エージェントをインストールします。
++
+詳細については、 Windows への Snap Creator エージェントのインストールに関する情報を参照してください。
+
+. バックアップした agent.conf ファイルのコピーをテキストエディタで開きます。
++
+agent.conf の例を次に示します。
+
++
+[listing]
+----
+host: scServer@Tampico
+command: sdcli.exe
+----
+. 新しい allowed_commands.config ファイル（ C ： \Program Files\NetApp\SnapManager Creator_Framework\scAgent4.1.x\etc\allowed_commands.config ）をテキストエディタで開き、 agent.conf のコマンドラインを allowed_commands.config ファイルにコピーします。ただし、最新の Snap Creator のセキュリティ強化により、コマンドが完全に認定されていることを確認してください。
++
+前述の例では、 allowed_command.config ファイルに次の情報を指定する必要があります。
+
++
+[listing]
+----
+command: "C:\Program Files\NetApp\SnapDrive\sdcli.exe"
+----
++
+
+NOTE: "[.code]`Program Files` の間のスペースのため、コマンドをカプセル化するには引用符を含める必要があります。コマンドにスペースが含まれていない場合は、引用符は必要ありません。
+
++
+必要に応じて、コマンドを個別の行に追加できます。
+
+. ファイルを保存して閉じます。
+. テキストエディタで agent.properties ファイル（ C ： \Program Files\NetApp\Virtual Creator_Framework\scAgent4.1.x \etc\agent.properties ）を開き、 authorized_hosts=* のデフォルトのエントリを変更して、 agent.conf ファイルのホスト設定を反映します。
++
+前述の例では、 authorized_hosts パラメータに次の値を指定する必要があります。
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Tampico
+----
++
+ホストは必要に応じて追加できます。複数のホスト名を指定する場合はカンマで区切ります。ホスト名と IP アドレスの両方がサポートされます。
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Tampico, 10.10.10.192, Fuji01
+----
+. ファイルを保存して閉じます。
+. 次のいずれかを実行して、 Snap Creator エージェントサービスを開始します。
++
+** サービススナップインを使用してサービスを開始します。
+** コマンドプロンプトで、次のコマンドを入力します。「 c start snapcreatoragentservice `* Note ： * allowed_commands.config ファイルまたは agent.properties ファイルに対する変更は、変更が行われたときに Snap Creator エージェントの再起動が必要です。
+
+
+
+
+* 関連情報 *
+
+xref:task_installing_snap_creator_agent_on_windows.adoc[Windows への Snap Creator エージェントのインストール]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[Windows での Snap Creator のアンインストール]

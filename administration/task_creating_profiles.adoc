@@ -1,0 +1,26 @@
+---
+permalink: administration/task_creating_profiles.html 
+sidebar: sidebar 
+keywords: profile, snap, creator, gui, configuration 
+summary: Snap Creator の GUI を使用して、構成ファイルを整理するためのプロファイルを作成できます。 
+---
+= プロファイルの作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、構成ファイルを整理するためのプロファイルを作成できます。
+
+Snap Creator の GUI を初めて開いたときに、新しいプロファイルを作成するように求める New Profile ダイアログボックスが自動的に表示されます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. [* プロファイルと構成 * （ * Profiles and Configurations * ） ] ペインで、 [ プロファイルの追加 * （ * Add Profile * ） ] をクリック
++
+[ 新規プロファイル（ New Profile ） ] ダイアログボックスが表示されます。
+
+. 新しいプロファイルの名前を入力し、 * OK * をクリックします。
++
+新しいプロファイルが [** プロファイルおよび構成 **s] ペインに表示され、構成ウィザードが右側のペインに表示されます。
+
+

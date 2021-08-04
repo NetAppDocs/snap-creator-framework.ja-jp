@@ -1,0 +1,83 @@
+---
+permalink: administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html 
+sidebar: sidebar 
+keywords: mysql, plug-in, net-mysql, interoperability, matrix 
+summary: MySQL プラグインは、 Net-MySQL を使用してデータベースと通信します。 
+---
+= MySQL プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL プラグインは、 Net-MySQL を使用してデータベースと通信します。
+
+MySQL プラグインは、複数データベースのバックアップおよびリストア処理はサポートしていません。サポートと互換性に関する最新情報については、 Interoperability Matrix を参照してください。
+
+Snap Creator 構成の場合、 MySQL データベースユーザには、 Super や reload などの権限と一緒にロックテーブル権限を付与する必要があります。
+
+次の表に、 MySQL プラグインのパラメータ、およびその設定を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+APP_NAME を使用している
+ a| 
+MySQL
+ a| 
+アプリケーション名
+
+
+
+ a| 
+mysql_databases
+ a| 
+db_name ： user_name password
+ a| 
+MySQL データベース、ユーザ名、およびパスワードのリスト。ユーザ名とパスワードをセミコロンで区切ったリストとして複数のデータベースを指定できます。たとえば、「 db1:user1/pwd1 ； db2 ： user2/pwd2 」と指定します。
+
+
+
+ a| 
+ホスト
+ a| 
+host_name
+ a| 
+データベースが格納されているホストの名前。 * 注： * VALIDATE_VOLUMES は host=localhost の場合にのみ正しく機能します。host=ip_address の場合、 VALIDATE_VOLUMES は MySQL データベースを検出しません。
+
+
+
+ a| 
+ポート
+ a| 
+db_name ： port_number
+ a| 
+データベースとリスニングポートのリスト。例：「 `db1:3307;DB2:3308` 」
+
+
+
+ a| 
+MASTER_SLAVE
+ a| 
+Y
+| N 
+
+
+ a| 
+バックアップデータベース環境を指定します。 Y に設定すると、マスターデータベースがバックアップされます。
+
+N に設定すると、スレーブデータベースがバックアップされるか、マスター / スレーブ設定が使用されません。
+
+
+NOTE: Snap Creator Framework のバックアップでは、 Master_slave オプションが有効になっている MySQL サーバ上の必要な MySQL バイナリログファイルが削除されます。Snap Creator Framework を使用した MySQL （マスター）データベースのバックアップでは、すべてのバイナリログファイルが削除され、リセット番号（ .000001 ）が設定された空のバイナリログファイルが 1 つだけ残ります。この問題のため、バックアップ処理後にスレーブサーバを起動できません。
+ a| 
+purge_binary_log
+ a| 
+Y
+
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

@@ -1,0 +1,21 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_file_based_backup.html 
+sidebar: sidebar 
+keywords: sap, hana, modifying, modify, change, changing, configuration, file-based, backup 
+summary: ファイルベースのバックアップ用に設定されたパラメータを変更できます。その後、スケジュールまたはオンデマンドでファイルベースのバックアップを実行すると、更新された情報が反映されます。 
+---
+= ファイルベースのバックアップの設定を変更しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイルベースのバックアップ用に設定されたパラメータを変更できます。その後、スケジュールまたはオンデマンドでファイルベースのバックアップを実行すると、更新された情報が反映されます。
+
+. SAP HANA プロファイルをクリックします。
+. 変更する構成を選択し、 * HANA File Based Backup Settings * をクリックします。
++
+image::../media/modifying_file_based_backup_configuration.gif[ファイルベースのバックアップ設定を変更しています]
+
+. 情報を編集し、 * 保存 * をクリックします。
+

@@ -1,0 +1,140 @@
+---
+permalink: administration/reference_parameters_to_set_up_cloning.html 
+sidebar: sidebar 
+keywords: parameter, snap, creator, server, cloning, operation 
+summary: Snap Creator サーバのクローニング処理をセットアップするには、いくつかのパラメータが必要です。 
+---
+= クローニング処理をセットアップするためのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバのクローニング処理をセットアップするには、いくつかのパラメータが必要です。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+NTAP_CLONE_RESERVE の提供
+ a| 
+なし
+| ファイル。 
+
+
+| ボリューム  a| 
+クローニングされたボリュームのスペースギャランティを指定します。
+ a| 
+NTAP_CLONE_reservation を実行する必要があります
+
+
+
+ a| 
+正しいです
+| いいえ  a| 
+true に設定すると、 cloneLun アクションが選択されている場合、クローニングされた LUN 用にスペースがリザーブされます。それ以外の場合、スペースはリザーブされません。
+
+
+
+ a| 
+NTAP_CLONE_IGROUP_MAP の場合
+ a| 
+ a| 
+ストレージシステム、ソースボリューム、 igroup を指定します。次に、この igroup が、ボリュームクローンに存在するソースボリュームまたはクローン LUN （「 controller1 ： src_volume1/igroup1 、 src_volume2/igroup1 、 src_volume3/igroup1 、 controller2 ： src_volume1/igroup2 、 src_volume2/igroup2 、 src_volume2/igroup2 、 src_volume2/igroup2 、 src_volume3/igroup2 ）にあるクローニングされた LUN にマッピングされます。* 注： *
+
+* LUN クローンの名前では、親のボリュームまたは LUN の名前のあとに、 _CLONE を付けます。つまり、ボリューム名が myvol の場合、クローン名は myvol_CLONE になります。
+* ボリュームクローン名は、 cl_ で始まり、 -YYYYMMDDHHMMSS で終わります。
+
+
+
+
+ a| 
+NTAP_CLONE_IGROUP_BACKUP
+ a| 
+Y
+| N 
+
+
+ a| 
+有効にすると、クローン（ボリュームと LUN ）が作成され、他の処理が完了したあとで削除されます。有効にしないと、処理が完了する前にクローンが削除されます。* 注：クローンをテープにバックアップする場合は、 Y に設定してくださいデータベースを更新する場合は、 N に設定します
+ a| 
+NTAP_CLONE_SECONDARY を使用します
+ a| 
+Y
+
+
+
+| N  a| 
+有効にすると、 SnapMirror 更新の完了後に、 SnapMirror デスティネーション上でクローンが作成されます。* 注：この設定は、 NTAP_SNAPMIRROR_USE_SNAPSHOT 、 NTAP_SNAPMIRROR_WAIT 、 NTAP_CLONE_SECONDARY_VOLUMES 、 cloneVol アクションと併用する必要があります。
+ a| 
+NTAP_CLONE_SECONDARY_VOLUMES
+
+
+
+ a| 
+ a| 
+この設定により、プライマリまたはセカンダリストレージシステムとセカンダリボリュームをマッピングします。Snap Creator がセカンダリボリュームを検出できるようにするには、この手順が必要です（例： controller1 ： controller1-sec/vol1/vol1 ； controller1 ： controller1-sec/vol2 ）。
+ a| 
+NTAP_NUM_vol_CLones の値です
+
+
+
+ a| 
+ a| 
+保持するボリュームクローンの数を指定します。これは、 Snapshot コピーの保持ポリシーと同様に機能します。* 注： * FlexClone ライセンスが必要なボリュームクローンでのみ使用できます。
+ a| 
+NTAP_NFS_EXPORT_HOST
+
+
+
+ a| 
+ホスト IP
+ a| 
+クローンのエクスポート先であるホスト名または IP アドレスです。これは、 NFS を使用してクローンボリュームをマウントするホストです。
+ a| 
+NTAP_NFS_EXPORT_ACCESS の設定が可能です
+
+
+
+ a| 
+ルート
+| 読み書き可能です | 読み取り専用です 
+
+
+ a| 
+NTAP_NFS_EXPORT_HOST で指定するホストに対して、クローンボリュームへのアクセスまたは権限が提供されます。
+
+* ルート
++
+root アクセスが許可されます。
+
+* 読み取り専用です
++
+読み取り専用アクセスが許可されます。
+
+* 読み書き可能です
++
+読み取り / 書き込みアクセスが許可されています。
+
+
+ a| 
+NTAP_NFS_EXPORT_PERSISTENT
+ a| 
+正しいです
+
+
+
+| いいえ  a| 
+NFS エクスポートを維持するかどうかを指定します。true を選択すると、クローンボリュームがエクスポートされ、ストレージコントローラ上の /etc/exports にあるファイルが更新されます。
+ a| 
+NTAP_DFM_EXPORT_ENABLE の設定
+
+
+
+ a| 
+Y
+| N  a| 
+CIFS を使用してクローンボリュームを共有するかどうかを設定します。
+
+|===

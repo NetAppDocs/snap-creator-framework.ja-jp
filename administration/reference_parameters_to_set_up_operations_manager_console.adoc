@@ -1,0 +1,56 @@
+---
+permalink: administration/reference_parameters_to_set_up_operations_manager_console.html 
+sidebar: sidebar 
+keywords: parameter, required, operation, manager, host, user, pwd, port 
+summary: Operations Manager コンソールをセットアップするには、いくつかのパラメータを指定する必要があります。 
+---
+= Operations Manager コンソールをセットアップするためのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager コンソールをセットアップするには、いくつかのパラメータを指定する必要があります。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+OM_HOST
+ a| 
+ a| 
+Operations Manager コンソールホストの名前または IP アドレス。
+
+
+
+ a| 
+OM_USER
+ a| 
+ a| 
+イベントの作成権限を持つ、 Operations Manager コンソールユーザのユーザ名。
+
+
+
+ a| 
+OM_PWD
+ a| 
+ a| 
+Operations Manager コンソールユーザのパスワード。* 注： * パスワードは 2 文字以上にする必要があります。
+
+
+
+ a| 
+OM_PORT
+ a| 
+ a| 
+Operations Manager コンソールとの通信に使用するポート。 Operations Manager コンソールは、デフォルトの http ポートとして 8088 、デフォルトの https ポートとして 8488 を使用します。
+
+
+
+ a| 
+om_event_generate
+ a| 
+Y
+| N 
+|===

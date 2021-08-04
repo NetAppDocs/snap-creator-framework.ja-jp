@@ -1,0 +1,25 @@
+---
+permalink: administration/reference_ibm_domino_plug_in.html 
+sidebar: sidebar 
+keywords: ibm, domino, plug-in, snap, creator, framework, backup, netapp, api, snapshot, snapmirror, snapvault 
+summary: Snap Creator Framework 用 IBM Domino プラグインは、ネットアップストレージ上に Domino データベース用の完全なバックアップ / リカバリ解決策を提供します。IBM Domino プラグインを使用すると、データベースを効率的にバックアップし、必要に応じてデータベースサーバをオフラインにすることなくリストアできます。このプラグインでは、 IBM が提供する API を使用してアプリケーションの整合性を確保しています。 
+---
+= IBM Domino プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework 用 IBM Domino プラグインは、ネットアップストレージ上に Domino データベース用の完全なバックアップ / リカバリ解決策を提供します。IBM Domino プラグインを使用すると、データベースを効率的にバックアップし、必要に応じてデータベースサーバをオフラインにすることなくリストアできます。このプラグインでは、 IBM が提供する API を使用してアプリケーションの整合性を確保しています。
+
+Snap Creator Framework に緊密に統合された、ネットアップの主要なデータ保護テクノロジを使用すると、 IBM Domino プラグインを使用して次の処理を実行できます。
+
+* アプリケーションと整合性のある Snapshot コピーをプライマリストレージに作成します
+* ディザスタリカバリとアーカイブ用に、 Snapshot コピーをセカンダリストレージにレプリケートします
+
+
+統合されたテクノロジには、 Snapshot 、 SnapMirror 、 SnapVault などがあります。
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12422115["『 Snap Creator Framework 4.1.2 IBM Domino Plug-in Operations Guide 』"]

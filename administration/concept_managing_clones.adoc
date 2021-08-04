@@ -1,0 +1,13 @@
+---
+permalink: administration/concept_managing_clones.html 
+sidebar: sidebar 
+keywords: managing, clones, creating, backup, deleting, unmounting 
+summary: 不要になったバックアップコピーは、作成したり、バックアップコピーのリストを表示したり、削除したりできます。 
+---
+= クローンの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローンの管理では、（ * Actions * 設定を使用して）クローンを作成したり、バックアップコピーをソースとしてマウントしたり、クローンを削除したり、クローンをアンマウントしたりできます。

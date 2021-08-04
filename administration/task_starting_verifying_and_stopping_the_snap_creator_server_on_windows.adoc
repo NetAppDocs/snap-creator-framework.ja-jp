@@ -1,0 +1,64 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, server, service, start, verify, stop, windows 
+summary: Snap Creator サーバサービスを開始および停止し、 Snap Creator サーバサービスが Windows システムで実行されているかどうかを確認することができます。 
+---
+= Windows 上での Snap Creator サーバの起動、検証、停止
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバサービスを開始および停止し、 Snap Creator サーバサービスが Windows システムで実行されているかどうかを確認することができます。
+
+. Snap Creator のグラフィカルユーザインターフェイス（ GUI ）が開いていない場合は、開いてください。
++
+.. Snap Creator サーバの URL を Web ブラウザに入力します。 "https://IP_address:gui_port"[]
++
+デフォルトのポートは 8443 です。
+
+.. Snap Creator の GUI のクレデンシャルを使用してログインします。
+
+
++
+Snap Creator の GUI が開くと、 Snap Creator サーバサービスが実行されています。
+
+. コマンドプロンプトで、 Snap Creator サーバのサービスを開始または停止し、 Snap Creator サーバのサービスが実行されているかどうかを必要に応じて確認します。
++
+|===
+| 状況 | 入力するコマンド 
+
+
+ a| 
+Snap Creator サーバのサービスを開始します
+ a| 
+SC start snapcreatorserverservice
+
+
+
+ a| 
+Snap Creator サーバサービスが実行されているかどうかを確認します
+ a| 
+SC クエリ snapcreatorserverservice
+
+
+
+ a| 
+Snap Creator サーバのサービスを停止します
+ a| 
+SC stop snapcreatorserverservice
+
+|===
++
+Snap Creator をフォアグラウンドで実行する場合は、 SC start コマンドではなく、次の手順を実行します。
+
++
+.. Snap Creator サーバがインストールされているホストでコマンドプロンプトを開き、 Snap Creator の Serverdirectory 「 cd \install_path\scServer4.3.0_bin\` 」に移動します
+.. Snap Creator サーバを起動するには、バッチスクリプト「 cServer.bat start 」を実行します
++
+コマンドプロンプトを閉じると、 Snap Creator サーバのサービスが停止します。バッチスクリプト（ scServer.bat ）は Snap Creator をフォアグラウンドで実行するため、コマンドプロンプトが開いている場合のみ Snap Creator サーバが実行されます。Snap Creator をバックグラウンドで実行するには、 Snap Creator サーバのサービスコマンドを使用する必要があります。
+
+
+
+

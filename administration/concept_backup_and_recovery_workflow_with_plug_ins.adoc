@@ -1,0 +1,26 @@
+---
+permalink: administration/concept_backup_and_recovery_workflow_with_plug_ins.html 
+sidebar: sidebar 
+keywords: backup, recovery, workflow, snap, creator, framework 
+summary: Snap Creator の GUI を使用して、バックアップおよびリカバリのプロセスをガイドラインとしてワークフローを使用できます。 
+---
+= バックアップとリカバリのワークフロー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、バックアップおよびリカバリのプロセスをガイドラインとしてワークフローを使用できます。
+
+これらのタスクを実行するには、 Snap Creator が実行され、 Snap Creator の GUI が開いている必要があります。サポートされていない場合は、 Web ブラウザに Snap Creator サーバの URL を入力します（"https://IP_address:gui_port"[] デフォルトのポートは 8443 ）です。次に、 Snap Creator の GUI クレデンシャルを使用してログインします。
+
+次の図は、プラグインを使用してシステムのバックアップとリカバリを実行する場合の全タスクを示しています。
+
+
+NOTE: ワークフローに記載されているタスクは、コマンドラインインターフェイス（ CLI ）からも実行できます。CLI の詳細については、 CLI コマンドラインの関連資料を参照してください。
+
+image::../media/sc_workflow_with_plugin.gif[プラグインを使用した SC ワークフロー]
+
+* 関連情報 *
+
+xref:reference_guidelines_for_using_the_snap_creator_command_line.adoc[Snap Creator コマンドラインインターフェイスの使用に関するガイドライン]

@@ -1,0 +1,102 @@
+---
+permalink: installation/task_upgrading_snap_creator_server_4_1_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.1.x, windows 
+summary: Windows 上で Snap Creator サーバ 4.1.x からアップグレードできます。 
+---
+= Windows での Snap Creator サーバ 4.1.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows 上で Snap Creator サーバ 4.1.x からアップグレードできます。
+
+* Snap Creator ディレクトリをバックアップしてバックアップデータが完全であることを確認する前に、 Snap Creator のサービス（「 napcreatorserverservice 」および「 Snapcreatoragentservice 」）を停止しておく必要があります。
++
+たとえば、サービススナップインを使用してサービスを停止できます。
+
++
+.. 「 * Start * > * Run * 」を選択し、「 ervices .msc 」と入力します。
+.. Snap Creator サービスを探して選択し、サービスを停止します。または、コマンドプロンプトを開いて次のコマンドを入力することもできます。
+
+
++
+[listing]
+----
+sc stop snapcreatorserverservice
+sc stop snapcreatoragentservice
+----
+* Snap Creator 4.1.x Server エンジンのサブディレクトリ（ C ： \Program Files\NetApp\SnapCreator _Framework\scServer4.1.x \engine ）内で、次のディレクトリおよび関連するすべてのサブディレクトリとファイルをバックアップしておく必要があります。
++
+** Snap Creator データベース（ ./snapcreator ）
+** Snap Creator サーバのプロパティ（ ..\etc ）
+** 構成ファイル（ ..\configs ）
+** ログ（ ..\logs ）
+** プラグインリポジトリ（有効な場合）（ ..\snapcreatorPlugin ）
+
+
+* （オプション） Snap Creator エージェントが Snap Creator サーバと同じホストにインストールされている場合は、 Snap Creator エージェントのディレクトリ（ C ： \Program Files\NetApp\Virtual \SnapCreator _Framework\scAgent4.1.x ）にある次のディレクトリと、関連するすべてのサブディレクトリおよびファイルをバックアップする必要があります。
++
+** Snap Creator エージェントのプロパティ（ ..\etc ）。 allowed_command.config ファイルと agent.properties ファイルが含まれています
+** ログ（ ..\logs ）
+** プラグイン（ ..\plugins ）
+
+
+* コマンドプロンプトから Snap Creator を手動で起動した場合は、コマンドプロンプトを閉じて停止する必要があります。
++
+
+NOTE: Snap Creator がサービスから起動された場合は、アンインストーラがアンインストールプロセスの一環としてサービスを停止します。
+
+
+
+以降の手順で示すパスは、 Windows のデフォルトのインストールパスです。デフォルト値を使用しなかった場合は、パス情報がインストールパスと異なることがあります。
+
+アップグレードプロセスが完了したら、次の点を考慮してください。
+
+* アップグレードされた Snap Creator データベースに「 in progress 」とマークされたタスクが含まれている場合、アップグレード・プロセスが完了しても、状態は同じままです。
+* 最新の Snap Creator のデフォルト管理者は、 Snap Creator 4.1 の管理者である必要があります。
++
+4.1.x ユーザが管理者でない場合は、 4.1.x ユーザにオペレータのロールが割り当てられます。
+
++
+.. Snap Creator サービスをまだ停止していない場合は停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+.. Snap Creator （ Windows ）をアンインストールするには、 * Start * > * Programs * > * Snap Creator * > * Uninstall NetApp Snap Creator Framework * を選択します。
++
+詳細については、 Windows での Snap Creator のアンインストールに関する情報を参照してください。
+
+.. 最新の Snap Creator サーバをインストールします。
++
+詳細については、 Windows への Snap Creator サーバのインストールに関する情報を参照してください。
+
+.. 最新の Snap Creator サーバのインストール時に Snap Creator サーバのサービスを開始するように選択した場合は、サービスを停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+.. C ： \Program Files\NetApp\Snap Creator _Framework\scServer4.1.x \engine/snapcreator にある最新の Snap Creator Server データベースフォルダを削除します。
+.. バックアップした Snap Creator 4.1 のデータベースディレクトリを、 C ： \Program Files\NetApp\SnapManager Create_Creator_Framework\scServer4.1.x\engine/snapcreator の最新の場所にコピーします。
+.. バックアップした Snap Creator 4.1 の設定ディレクトリを、 C ： \Program Files\NetApp\Virtual \SnapCreator _Framework\scServer4.1.x\engine/configs の最新の場所にコピーします。
+.. バックアップした Snap Creator 4.1 のログディレクトリを最新の場所（ C ： \Program Files\NetApp\Virtual Creator_Framework\scServer4.1.x\engine/logs ）にコピーします。
+.. コマンドプロンプトを開き、 C ： \Program Files\NetApp\SnapCreator _Framework\scServer4.1.x \engine ）の Snap Creator インストールパスにあるエンジンサブディレクトリにディレクトリを変更します。
+.. 次のコマンドを入力して、 Snap Creator をアップグレードします。 java -jar snapcreator.jar -upgrade
+
+
+
+
+アップグレードプロセスが完了したら、次のいずれかの方法で Snap Creator サーバサービスを開始します。
+
+* サービススナップインを使用してサービスを開始します。
+* コマンドプロンプトで、次のコマンドを入力します。
++
+[listing]
+----
+sc start snapcreatorserverservice
+----
+
+
+また、指定したポート上のローカルホストに移動することで、 Snap Creator Framework の GUI の起動を検証する必要があります (https://IP_address:gui_port)[]。
+
+HTTPS を使用して接続する必要があります。接続が HTTPS 接続に自動的にリダイレクトされず、 GUI が機能しません。

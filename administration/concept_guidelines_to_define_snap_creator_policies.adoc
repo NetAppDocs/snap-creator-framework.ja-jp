@@ -1,0 +1,38 @@
+---
+permalink: administration/concept_guidelines_to_define_snap_creator_policies.html 
+sidebar: sidebar 
+keywords: snap, creator, policies, guidelines, retendtion, snapshot 
+summary: Snap Creator のポリシーは、ユーザ定義の Snapshot コピーを保持することです。このポリシーは、プライマリストレージ上の Snapshot コピー、およびセカンダリストレージ上の SnapVault コピーと SnapMirror コピーに適用されます。ポリシーを使用して、保持する Snapshot コピーの数および Snapshot コピーの保持期間を定義できます。 
+---
+= Snap Creator のポリシーを定義するガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator のポリシーは、ユーザ定義の Snapshot コピーを保持することです。このポリシーは、プライマリストレージ上の Snapshot コピー、およびセカンダリストレージ上の SnapVault コピーと SnapMirror コピーに適用されます。ポリシーを使用して、保持する Snapshot コピーの数および Snapshot コピーの保持期間を定義できます。
+
+少なくとも 1 つのポリシーを * Snapshot Retention Count * フィールドに定義する必要があります。SnapVault の場合は、同じポリシーを異なる SnapVault 保持期間に関連付けることができます。たとえば、日単位の Snapshot コピーを作成してプライマリストレージに 7 日間保持し、セカンダリストレージに 1 カ月間保持するには、次のポリシーオプションと設定を使用する必要があります。
+
+* * Snapshot 保持数 * ：毎日： 7
+* * SnapVault 保持数 * ：毎日： 28
+
+
+Snapshot コピー削除後の最小日数を指定することもできます。上記の例に基づいて、次のオプションおよび設定を使用する必要があります。
+
+* * Snapshot の保持期間 * ： 7.
+* * SnapVault 保持期間 * ： 28
+
+
+構成ファイルで次のパラメータを設定して、経過時間に応じて Snapshot コピーの削除を指定することもできます。
+
+NTAP_SNAPSHOT_DELETE_by_age _ ONLY = primary | secondary | both
+
+
+NOTE: このパラメータは、 Snap Creator の GUI からは使用できません。Snapshot コピーのセットアップに使用する構成ファイルのパラメータの詳細については、関連資料を参照してください。
+
+Snap Creator では、一度に 1 つのポリシーのみを実行できます。最大期間は、環境がすべてのポリシーに適用するグローバルパラメータです。さらに、ポリシーを毎週設定するには、まず定義します。次に、 Snap Creator で cron またはタスクマネージャを使用し、 Snap Creator で週に 1 回呼び出します。このとき、 Snap Creator の変数 %snap_type を weekly に設定します。
+
+* 関連情報 *
+
+xref:reference_parameters_to_set_up_a_snapshot_copy.adoc[Snapshot コピーのセットアップ用パラメータ]

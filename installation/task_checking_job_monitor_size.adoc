@@ -1,0 +1,28 @@
+---
+permalink: installation/task_checking_job_monitor_size.html 
+sidebar: sidebar 
+keywords: checking, check, job, monitor, size 
+summary: Snap Creator の最新バージョンにアップグレードする前に、現在インストールされている Snap Creator のバージョンのジョブモニタサイズを確認する必要があります。 
+---
+= ジョブ監視のサイズを確認しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の最新バージョンにアップグレードする前に、現在インストールされている Snap Creator のバージョンのジョブモニタサイズを確認する必要があります。
+
+Snap Creator をアップグレードするときは、ジョブ監視データベースのデータが失われないように、ジョブ監視のサイズを以前の設定と同じかそれよりも大きく設定してください。Snap Creator が取得するジョブは、更新されたジョブ監視の最大サイズまでです。
+
+たとえば、 Snap Creator 4.0 でジョブモニタのサイズが 500 の場合は、最新の Snap Creator にアップグレードする際に、ジョブモニタのサイズを必ず 500 以上に設定してください。
+
+. 次のいずれかのオプションを実行して、ジョブモニタのサイズを確認します。
++
+** Snap Creator サーバのプロパティファイル（ /install_path/scServer4.1.x/engine/etc/snapcreator.properties ）を開き、 SNAPCREATOR_JOB_MONITOR_SIZE 変数を確認します。
+** Snap Creator の GUI のメインメニューで、 * Management * > * Job Monitor * を選択し、 * Size * をクリックします。
++
+[ ジョブモニタサイズ ] ダイアログボックスが開き、現在のサイズが上部のフィールドに表示されます。
+
+
+
+

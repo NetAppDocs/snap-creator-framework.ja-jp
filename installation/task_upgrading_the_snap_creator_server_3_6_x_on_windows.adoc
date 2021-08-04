@@ -1,0 +1,88 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_3_6_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 3.6.x, windows 
+summary: Windows 上の Snap Creator サーバ 3.6.x から直接アップグレードできます。 
+---
+= Windows での Snap Creator サーバ 3.6.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows 上の Snap Creator サーバ 3.6.x から直接アップグレードできます。
+
+* Snap Create のユーザ名に特殊文字が含まれている場合は、アップグレードの実行前にアルファベット（ a~z 、 A~Z ）のみを使用し、それらのユーザの名前を変更してください。
+* Snap Creator ディレクトリをバックアップしてバックアップデータが完全であることを確認する前に、 Snap Creator のサービス（「 napcreatorserverservice 」および「 Snapcreatoragentservice 」）を停止しておきます。
++
+たとえば、サービススナップインを使用してサービスを停止できます。
+
++
+.. 「 * Start * > * Run * 」を選択し、「 ervices .msc 」と入力します。
+.. Snap Creator サービスを探して選択し、サービスを停止します。または、コマンドプロンプトを開いて次のコマンドを入力することもできます。
+
+
++
+[listing]
+----
+sc stop snapcreatorserverservice
+sc stop snapcreatoragentservice
+----
+* Snap Creator 3.6.x Server ディレクトリ（ C ： \Program Files\NetApp\SnapManager Create_Creator_Framework\scServer3.6.x ）内で、次のディレクトリと関連するすべてのサブディレクトリおよびファイルをバックアップしておきます。
++
+** Snap Creator データベース（ ..\GUI\snapcreator ）
+** プロファイルと構成ファイル（ ..\configs ）
+** ログ（ ..\logs ） * メモ： * 作成した Snap Creator 3.6.x バックアップコピーは削除しないでください。
+
+
+* （オプション） Snap Creator エージェントが Snap Creator サーバと同じホストにインストールされている場合は、 agent.conf ファイル（ C ： \Program Files\NetApp\NetApp_Snap Creator _Framework\scServer3.6.x\config\agent.conf ）をバックアップする必要があります。
+
+
+以降の手順で示すパスは、 Windows のデフォルトのインストールパスです。デフォルト値を使用しなかった場合は、パス情報が異なる可能性があります。
+
+アップグレードプロセスが完了したら、次の点を考慮してください。
+
+* アップグレードされた Snap Creator データベースに「 in progress 」とマークされたタスクが含まれている場合、アップグレード・プロセスが完了しても、状態は同じままです。
+* 最新の Snap Creator のデフォルト管理者は、 Snap Creator 3.6.x の管理者である必要があります3.6.x ユーザが管理者ではない場合、アップグレードによってオペレータロールが 3.6.x ユーザに割り当てられます。
++
+.. Snap Creator サービスをまだ停止していない場合は停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+.. Snap Creator （ Windows ）をアンインストールするには、 * Start * > * Programs * > * Snap Creator * > * Uninstall NetApp Snap Creator Framework * を選択します。
++
+詳細については、 Windows での Snap Creator のアンインストールに関する情報を参照してください。
+
+.. 最新の Snap Creator サーバをインストールします。
++
+詳細については、 Windows への Snap Creator サーバのインストールに関する情報を参照してください。
+
+.. 最新の Snap Creator サーバのインストール時に Snap Creator サーバのサービスを開始するように選択した場合は、サービスを停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+.. 最新の Snap Creator Server データベースフォルダ（ C ： \Program Files\NetApp\Snap Creator _Framework\scServer4.1.x \engine/snapcreator ）を削除します。
+.. バックアップした Snap Creator 3.6.x データベースディレクトリを最新の場所にコピーします（ C ： \Program Files\NetApp\Virtual Creator_Framework\scServer4.1.x\engine/snapcreator ）。
+.. バックアップした Snap Creator 3.6.x のプロファイルと設定ディレクトリを最新の場所にコピーします（ C ： \Program Files\NetApp\SnapCreator _Framework\scServer4.1.x\engine\configs ）。
+.. バックアップした Snap Creator 3.6.x のログディレクトリを最新の場所にコピーします（ C ： \Program Files\NetApp\Virtual Creator_Framework\scServer4.1.x\engine\logs ）。
+.. コマンドプロンプトを開き、 Snap Creator のインストールパス（ C ： \Program Files\NetApp\SnapCreator _Framework\scServer4.1.x \engine ）のエンジンサブディレクトリにディレクトリを変更します。
+.. 次のコマンドを入力して、 Snap Creator をアップグレードします。 java -jar snapcreator.jar -upgrade
+
+
+
+
+アップグレードプロセスが完了したら、次のいずれかの方法で Snap Creator サーバサービスを開始します。
+
+* サービススナップインを使用してサービスを開始します。
+* コマンドプロンプトで、次のコマンドを入力します。 'c start snapcreatorserver'
+
+
+また、指定したポート上のローカルホストに移動することで、 Snap Creator Framework の GUI の起動を検証する必要があります (https://IP_address:gui_port)[]。
+
+HTTPS を使用して接続する必要があります。接続が HTTPS 接続に自動的にリダイレクトされず、 GUI が機能しません。
+
+* 関連情報 *
+
+xref:concept_installing_the_snap_creator_server.adoc[Snap Creator サーバをインストールします]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[Windows での Snap Creator のアンインストール]

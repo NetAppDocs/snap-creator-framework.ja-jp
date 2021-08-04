@@ -1,0 +1,13 @@
+---
+permalink: administration/concept_managing_snap_creator_server.html 
+sidebar: sidebar 
+keywords: managing, snap, creator, server, start, veridy, stop, port, windows, unix 
+summary: Windows および UNIX システムでは、 Snap Creator サーバの起動、検証、停止、およびサーバポートの変更を行うことができます。 
+---
+= Snap Creator サーバの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows および UNIX システムでは、 Snap Creator サーバの起動、検証、停止、およびサーバポートの変更を行うことができます。

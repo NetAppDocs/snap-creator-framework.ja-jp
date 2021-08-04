@@ -1,0 +1,23 @@
+---
+permalink: domino-ops/task_copying_files_to_restore_location.html 
+sidebar: sidebar 
+keywords: domino, ibm, copy, copying, file, data restore directory 
+summary: リストアするファイルの Snapshot コピーをマウントしたら、バックアップおよびリストア構成ファイルで指定したデータリストアディレクトリにファイルをコピーできます。 
+---
+= データ復元ディレクトリにファイルをコピーしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リストアするファイルの Snapshot コピーをマウントしたら、バックアップおよびリストア構成ファイルで指定したデータリストアディレクトリにファイルをコピーできます。
+
+. マウントされた Snapshot コピーから、リストア対象のファイルをコピーします。
+. バックアップおよびリストア構成ファイルで指定したデータ・リストア・ディレクトリにファイルを貼り付けます。
++
+次に、 R: ドライブにマウントされた Snapshot コピーから、構成ファイルで指定された Data Restore Directory にデータベースファイル T04.nsf をコピーする例を示します。
+
++
+image::../media/scfw_domino_copy_files_to_restore.gif[この図には説明が付随しています。]
+
+

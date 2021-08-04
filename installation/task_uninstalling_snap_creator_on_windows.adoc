@@ -1,0 +1,42 @@
+---
+permalink: installation/task_uninstalling_snap_creator_on_windows.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, windows 
+summary: Snap Creator は、 Windows の [ スタート ] メニューを使用してアンインストールできます。Windows のアンインストーラによって、インストールされている Snap Creator コンポーネントが削除されます（たとえば、 Snap Creator サーバと Snap Creator エージェントの両方がインストールされている場合、両方がアンインストールされます）。同様に、インストールされているコンポーネントが 1 つだけの場合、そのコンポーネントはアンインストールされます。 
+---
+= Windows での Snap Creator のアンインストール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator は、 Windows * Start * メニューを使用してアンインストールできます。Windows のアンインストーラによって、インストールされている Snap Creator コンポーネントが削除されます（たとえば、 Snap Creator サーバと Snap Creator エージェントの両方がインストールされている場合は、両方がアンインストールされます）。同様に、インストールされているコンポーネントが 1 つだけの場合、そのコンポーネントはアンインストールされます。
+
+* Snap Creator サーバのエンジンディレクトリ（ C ： \Program Files\NetApp\Virtual Creator_Framework\scServer4.1.0_engine ）にある次のディレクトリと、関連付けられているすべてのサブディレクトリおよびファイルをバックアップします。
++
+** Snap Creator データベース（ ./snapcreator ）
+** Snap Creator サーバのプロパティ（ ..\etc ）
+** 構成ファイル（ ..\configs ）
+** ログ（ ..\logs ）
+** プラグインリポジトリ（有効な場合）（ ..\snapcreatorPlugin ）
+
+
+* Snap Creator エージェントのディレクトリ（ C ： \Program Files\NetApp\Virtual \SnapCreator _Framework\scAgent4.1.0 ）に含まれている次のディレクトリと、関連するすべてのサブディレクトリおよびファイルをバックアップします。
++
+** ログ（ ..\logs ）
+** プラグイン（ ..\plugins ）
+** Snap Creator エージェントのプロパティ（ ..\etc ）。 allowed_command.config ファイルと agent.properties ファイルが含まれています
+
+
+* コマンドプロンプトから Snap Creator を手動で起動した場合は、コマンドプロンプトを閉じて Snap Creator を停止して終了します。
++
+
+NOTE: Snap Creator がサービスから起動された場合は、アンインストーラがアンインストールプロセスの一環としてサービスを停止します。
+
++
+.. Start * > * all programs * > * Snap Creator * > * Uninstall NetApp Snap Creator Framework * を選択します。
+.. Snap Creator をアンインストールする前にログファイルと構成ファイルをバックアップしたかどうかを尋ねるプロンプトが表示されたら、 * Yes * をクリックします。
+.. アンインストールプロセスが完了したら、 [*Close*]( 閉じる ) をクリックします。
+
+
+

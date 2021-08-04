@@ -1,0 +1,17 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, file-based, backup, database, integrity, checks 
+summary: SAP では、ブロックの整合性チェックを実行するために、ストレージベースの Snapshot バックアップと週次ファイルベースのバックアップを組み合わせることを推奨しています。ブロックの整合性チェックは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）またはコマンドラインインターフェイス（ CLI ）から実行できます。 
+---
+= SAP HANA のファイルベースのバックアップとデータベース整合性チェック
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP では、ブロックの整合性チェックを実行するために、ストレージベースの Snapshot バックアップと週次ファイルベースのバックアップを組み合わせることを推奨しています。ブロックの整合性チェックは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）またはコマンドラインインターフェイス（ CLI ）から実行できます。
+
+ファイルベースのデータバックアップ処理は、ファイルのバックアップコピーを保持する場合に使用されます。バックアップコピーを破棄する必要がある場合は、データベース整合性チェック処理を使用します。
+
+どちらか一方または両方の処理を設定できます。オンデマンドバックアップでは、どちらかの処理を選択できます。

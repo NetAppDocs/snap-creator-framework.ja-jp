@@ -1,0 +1,35 @@
+---
+permalink: domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, commands, backup, restore, configuration, supplemental, 
+summary: OS レベルでファイルシステムの整合性を確保するために、 Snap Creator のネイティブコマンドではなく SnapDrive コマンドを使用してバックアップを行うこともできます。 
+---
+= バックアップとリストアの設定にコマンドを追加する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+場合によっては、 Snap Creator で使用できないコマンドを実行しなければならないことがあります。Windows ホストで FC または iSCSI を使用している場合は、 Snap Creator の標準コマンドではなく SnapDrive コマンドを使用してバックアップを行い、 OS レベルでファイルシステムの整合性を確保することができます。
+
+
+
+== 補足コマンドを実行する場所
+
+追加コマンドは、デフォルトでは Snap Creator エージェントに対して実行されます。サーバ上で追加コマンドを実行するには、テキストサーバを指定してコマンドを前に実行し、続けてコロン（ : ）を入力します。たとえば、「 server ： C:\myscript.bat 」と入力します。
+
+Agent で補足コマンドを実行する場合は、 Agent の allowed_command.config ファイルにそのコマンドを含めることによって、コマンドの実行を明示的に許可する必要があります。サーバ上で追加コマンドを許可する必要はありません。
+
+
+
+== 補足コマンドを追加する場所
+
+Snap Creator の GUI または Snap Creator の CLI を使用して、バックアップおよびリストア構成にコマンドを追加できます。
+
+
+NOTE: このマニュアルでは、 GUI を使用してコマンドを追加する方法を示します。CLI の使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+* 関連情報 *
+
+link:concept_allowing_additional_commands_through_the_snap_creator_agent.adoc["Snap Creator エージェントに対して追加コマンドを許可します"]
+

@@ -1,0 +1,93 @@
+---
+permalink: administration/reference_parameters_to_set_up_snapmirror.html 
+sidebar: sidebar 
+keywords: parameter, snapmirror, snap, creator, server, update, cascading, volume 
+summary: Snap Creator サーバ用の SnapMirror をセットアップするには、いくつかのパラメータが必要です。 
+---
+= SnapMirror をセットアップするためのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバ用の SnapMirror をセットアップするには、いくつかのパラメータが必要です。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+NTAP_SNAPMIRROR_UPDATE
+ a| 
+「 Y 」または「 N 」
+ a| 
+SnapMirror の更新機能をオンまたはオフにすることができます。
+
+
+
+ a| 
+NTAP_SNAPMIRROR_Cascading_update がサポートされます
+ a| 
+「 Y 」または「 N 」
+ a| 
+カスケード SnapMirror の更新機能をオンまたはオフにすることができます。これは、 SnapVault デスティネーションボリュームを使用した SnapMirror 更新です。
+
+
+NOTE: これは clustered Data ONTAP ではサポートされていません。
+
+
+
+ a| 
+SNAPMIRROR_VOLUMES
+ a| 
+ a| 
+SnapMirror 更新を実行するソースストレージシステムおよびボリュームのリストを指定します（例： controller1 ： vol1 、 vol2 、 vol3 ； controller2 ： vol1 ； controller3 ： vol2 、 vol3 ）。* 注： * VMware プラグイン（ vSphere および vCloud ）の場合、値は auto ： detect に設定してください。
+
+
+
+ a| 
+snapmirror_cascading_volumes
+ a| 
+ a| 
+SnapVault デスティネーションストレージシステムおよびボリュームのリストを指定します。 SnapVault 更新後に SnapMirror 更新を実行するボリューム（ sec-controller1 ： vol1-sec 、 vol2 sec など）。ソースボリュームに複数のデスティネーションがある場合、カスケードレプリケーションではこのオプションはサポートされません。
+
+
+NOTE: これは clustered Data ONTAP ではサポートされていません。
+
+
+
+ a| 
+NTAP_SNAPMIRROR_WAIT
+ a| 
+ a| 
+SnapMirror デスティネーションでクローンを作成する前に、 SnapMirror 更新プロセスが完了するまでの待機時間（分）を指定します。 NTAP_CLONE_SECONDARY を Y に設定すると、 SnapMirror 更新が完了するまで Snap Creator は待機してから処理を続行します。
+
+
+NOTE: この設定を利用できるのは、 NTAP_CLONE_SECONDARY と cloneVol アクションを併用する場合のみです（現時点ではボリュームクローンのみがサポート対象）。
+
+
+
+ a| 
+NTAP_SNAPMIRROR_USE_SNAPSHOT
+ a| 
+「 Y 」または「 N 」
+ a| 
+このパラメータを enabled にすると、新しく作成した Snapshot コピーが SnapMirror 更新に使用され、 SnapMirror デスティネーション上に Snapshot コピーが作成されます。* 注： SnapMirror デスティネーション上でクローンを作成するには Snapshot コピーが必要なため、 NTAP_CLONE_SECONDARY を使用する場合はこの設定が必要になります。
+
+
+
+ a| 
+NTAP_SNAPMIRROR_MAX_transfer
+ a| 
+ a| 
+SnapMirror で使用できる最大帯域幅（ KBps ）を指定します。このパラメータを設定しないと、 SnapMirror は使用可能な最大帯域幅を使用します。
+
+
+
+ a| 
+snapmirror_qtree_include
+ a| 
+ a| 
+SnapMirror 更新に含めるプライマリストレージコントローラと qtree パスのリストを指定します（例： controller1 ： /vol/qtree/qtree1 、 /vol/volume/qtree2 ； controller2 ： /vol/volume/qtree1 ）。このオプションを使用しない場合は、ボリューム下のすべての qtree がバックアップされます。このオプションを使用してリストを指定すると、リストされている qtree のみがバックアップされます。残りの qtree は無視されます。
+
+|===

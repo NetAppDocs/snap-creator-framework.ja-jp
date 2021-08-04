@@ -1,0 +1,67 @@
+---
+permalink: administration/reference_archive_log_plug_in.html 
+sidebar: sidebar 
+keywords: archive, log, plug-in, snap, creator, archive 
+summary: アーカイブログのプラグインは、 Snap Creator のアーカイブログと連携します。アプリケーションやデータベースのログとは連携しません。 
+---
+= アーカイブログのプラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アーカイブログのプラグインは、 Snap Creator のアーカイブログと連携します。アプリケーションやデータベースのログとは連携しません。
+
+次の表に、 Archive log プラグインのパラメータ、およびその設定と説明を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+archive_log_enable
+ a| 
+Y
+| N 
+
+
+| ポリシー：経過時間）  a| 
+アーカイブログ管理（古いアーカイブログの削除）が有効になります。
+ a| 
+archive_log_retention の略
+
+
+
+ a| 
+日数
+ a| 
+アーカイブログを保持する日数を指定します。この設定は NTAP_SNAPSHOT_RETENTIONS 以上である必要があります。
+ a| 
+ARCHIVE_LOG_DIR
+
+
+
+ a| 
+change_info_directory/logs
+ a| 
+アーカイブログが格納されているディレクトリのパスを指定します。
+ a| 
+archive_log_EXT
+
+
+
+ a| 
+ファイル拡張子
+ a| 
+アーカイブログのファイル拡張子を指定します。たとえば、アーカイブログが 10192091019.log の場合は、このパラメータを log に設定します。
+ a| 
+archive_log_recursive_search
+
+
+
+ a| 
+Y
+| N  a| 
+サブディレクトリ内のアーカイブログを管理できます。アーカイブログがサブディレクトリにある場合は、このパラメータを使用します。
+
+|===

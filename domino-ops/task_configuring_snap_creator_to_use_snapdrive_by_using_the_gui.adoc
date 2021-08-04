@@ -1,0 +1,86 @@
+---
+permalink: domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, supplemental, commands 
+summary: コンフィギュレーションファイルを作成した後、コンフィギュレーションに追加コマンドを追加できます。このコマンドは、 Snap Creator サーバまたはエージェント上で実行できます。 
+---
+= コンフィギュレーションに追加コマンドを追加します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+コンフィギュレーションファイルを作成した後、コンフィギュレーションに追加コマンドを追加できます。このコマンドは、 Snap Creator サーバまたはエージェント上で実行できます。
+
+Agent で補足コマンドを実行するには、 Agent の allowed_command.config ファイルにコマンドを追加しておく必要があります。
+
+デフォルトでは、追加コマンドは Agent で実行されます。サーバ上で追加コマンドを実行するには、テキストサーバを指定してコマンドを前に実行し、続けてコロン（ : ）を入力します。たとえば、「 server ： C:\myscript.bat 」と入力します。サーバ上でコマンドを許可する必要はありません。
+
+Snap Creator の GUI または Snap Creator の CLI を使用して、バックアップおよびリストア構成にコマンドを追加できます。
+
+
+NOTE: このマニュアルでは、 GUI を使用してコマンドを追加する方法を示します。CLI の使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+. [ プロファイルと構成 ] ペインで構成ファイルを選択し、 [* コマンド ] タブをクリックします。
++
+使用できるコマンドタイプは次のとおりです。
+
++
+|===
+| コマンドタイプ | 説明 
+
+
+ a| 
+アプリケーションの休止
+ a| 
+プラグイン以外でのみ使用します。このコマンドタイプは無視してください。
+
+
+
+ a| 
+アプリケーションの休止を解除します
+ a| 
+プラグイン以外でのみ使用します。このコマンドタイプは無視してください。
+
+
+
+ a| 
+PRE Exit （終了前）
+ a| 
+致命的なエラーのあとに Snap Creator で何を実行するかを指定するコマンドには、このタイプを使用します。
+
+
+
+ a| 
+Snapshot コピーの作成
+ a| 
+独自の Snapshot コピー作成コマンドを実行するには、このタイプを使用します。
+
+|===
++
+
+NOTE: GUI で使用できるコマンドは、サポートされているコマンドの一部だけです。アプリケーション、アーカイブ、マウント / アンマウント、 POST の各コマンドの詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+. [* コマンド ] タブで、使用するコマンドタイプのセクションまでスクロールし、 [ * 追加 ] をクリックします。
+. 「 * ここにコマンドを追加 * 」と入力して、コマンドを入力します。
++
+SnapDrive for Windows を使用してバックアップを作成するには、 Snapshot コピー作成コマンド・タイプのセクションに次のように入力します。
+
++
+[listing]
+----
+"C:\Program Files\NetApp\SnapDrive\sdcli.exe" snap create -s %SNAME-%SNAP_TYPE_%SNAP_TIME -D F G H
+----
++
+ここで、
+
++
+** 「 C ： \Program Files\NetApp\SnapManager for \SnapDrive\sdcli.exe 」は、 SnapDrive CLI のデフォルトのインストールパスです。
+** %SNAME-%SNAME_%SNAP_TYPE_%SNAP_TIME には、構成ファイル名、 Snapshot ポリシー（時間、日、または月）、および Snapshot コピーが作成された日時から Snapshot コピー名を作成するように指定します。
+** D はスイッチ、 F G H はバックアップするデータのマウントポイントです。ヒント : サーバー上でコマンドを実行するには、コマンドの前にテキストサーバーを付加し、その後にコロン (:) を付けます。
+
+
+. 入力に問題がなければ、 *Enter* キーを押します。
+. 手順を繰り返します <<STEP_3F9C83DD05D84075AD0277213FD67C56,#step_3F9C83DD05D84075AD0277213FD67C56>> から <<STEP_FBEDD7AE105F42138EB35315EA9FA7CC,#step_FBEDD7AE105F42138EB35315EA9FA7CC>> 別のコマンドを追加します。
+. [ 構成コンテンツ ] ペインで [ 保存 ] をクリックして、変更を保存します。
+

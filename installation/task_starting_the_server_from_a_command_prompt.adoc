@@ -1,0 +1,34 @@
+---
+permalink: installation/task_starting_the_server_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, server, command, prompt 
+summary: バッチスクリプト（ scServer.bat ）を実行して、コマンドプロンプトから Snap Creator サーバを手動で起動することができます。 
+---
+= コマンドプロンプトからサーバーを起動します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バッチスクリプト（ scServer.bat ）を実行して、コマンドプロンプトから Snap Creator サーバを手動で起動することができます。
+
+通常、インストール時に [ サービスとしてサーバーを開始 ] オプションを選択しなかった場合にのみ、この手順に従う必要があります。
+
+また、 Windows タスクスケジューラを使用して、起動時に実行するバッチスクリプト（ scServer.bat ）のスケジュールを設定することもできます。Windows タスクスケジューラの使用の詳細については、 Windows オペレーティングシステムのドキュメントを参照してください。
+
+バッチスクリプト（ scServer.bat ）は Snap Creator をフォアグラウンドで実行するため、コマンドプロンプトが開いているかぎり、 Snap Creator サーバは実行を継続します。コマンドプロンプトを閉じると、 Snap Creator サーバが終了します。バックグラウンドで実行するには、 Snap Creator サーバサービスを使用する必要があります。
+
+. コマンドプロンプトを開き、次のコマンドを入力します。
++
+[listing]
+----
+cd \install_path\scServerrelease-version\bin\
+scServer.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scServer4.1.0\bin\
+scServer.bat start
+----
+

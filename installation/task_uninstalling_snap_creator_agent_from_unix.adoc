@@ -1,0 +1,42 @@
+---
+permalink: installation/task_uninstalling_snap_creator_agent_from_unix.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, agent, unix 
+summary: Snap Creator エージェントは、 UNIX からアンインストールするには、 Snap Creator エージェントのインストールフォルダを削除します。 
+---
+= UNIX での Snap Creator エージェントのアンインストール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントは、 UNIX からアンインストールするには、 Snap Creator エージェントのインストールフォルダを削除します。
+
+Snap Creator エージェントのディレクトリ（ /install_path/scAgent4.1.0 ）にある次のディレクトリと、関連するすべてのサブディレクトリおよびファイルをバックアップします。
+
+* ログ（ ./logs ）
+* プラグイン（ ./plugins ）
+* Snap Creator エージェントのプロパティ（ ./etc ）。 allowed_command.config ファイルと agent.properties ファイルが含まれています
+
+
+Snap Creator エージェントをアンインストールするには、次の手順を実行します。
+
+
+NOTE: 以降の手順で示すパスは、汎用のインストールパスを参照してください。これらのコマンドのパスを変更して、カスタマイズした Snap Creator エージェントのインストールパスを反映させることができます。
+
+. 次のスクリプトを使用して、 Snap Creator エージェントを停止します。
++
+[listing]
+----
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+. Snap Creator エージェントのインストールフォルダを削除します。
++
+たとえば、 Linux システムで次のコマンドを実行します。
+
++
+[listing]
+----
+rm -Rf /install_path/scAgent4.1.0
+----
+

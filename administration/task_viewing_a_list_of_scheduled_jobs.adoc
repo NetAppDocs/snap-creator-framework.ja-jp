@@ -1,0 +1,20 @@
+---
+permalink: administration/task_viewing_a_list_of_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: schedule, job, view, list, snap, creator, gui 
+summary: スケジュール済みジョブのリストを表示できます。 
+---
+= スケジュール済みジョブのリストを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スケジュール済みジョブのリストを表示できます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Schedules * を選択します。
+. [ スケジュール ] タブで、スケジュール済みジョブのリストを確認します。
++
+Last Run Result フィールドには、最後にスケジュールされたジョブのステータスが表示されます。フィールドの緑のチェックマークはジョブが正常に実行されたことを示し、赤の「 X 」はエラーが発生したことを示します。
+
+

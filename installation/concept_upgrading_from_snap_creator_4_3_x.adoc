@@ -1,0 +1,18 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_3_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.3 
+summary: 現在提供されているすべてのパッチリリースを含め、 Snap Creator 4.3.x からアップグレードできます。 
+---
+= Snap Creator 4.3.x からのアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+現在提供されているすべてのパッチリリースを含め、 Snap Creator 4.3.x からアップグレードできます。
+
+アップグレード手順は、 Snap Creator Framework 4.1.x および 4.3.x でも同じです
+
+
+NOTE: Snap Creator Framework 4.3.1 を 4.3.1 パッチリリースにアップグレードする場合は、 java -jar snapcreator.jar -upgrade コマンドの最後の実行手順を省略する必要があります。

@@ -1,0 +1,63 @@
+---
+permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
+summary: Snap Creator ジョブモニタでジョブのステータスを確認できます。ジョブの実行中はコンソール・ペインでジョブ・アクションのログを表示したり ' ジョブのアウト・ログでジョブ・アクションのログを表示したりできますいくつかの特殊なログも使用できます。 
+---
+= ジョブのステータスとログを表示しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator ジョブモニタでジョブのステータスを確認できます。ジョブの実行中はコンソール・ペインでジョブ・アクションのログを表示したり ' ジョブのアウト・ログでジョブ・アクションのログを表示したりできますいくつかの特殊なログも使用できます。
+
+GUI では、次のログを表示できます。
+
+|===
+| ログ | 説明 
+
+
+ a| 
+アウト
+ a| 
+ジョブの詳細レベル情報を指定します。
+
+
+
+ a| 
+デバッグ
+ a| 
+詳細レベルの情報に加えて、デバッグに役立つ情報を提供します。
+
+
+
+ a| 
+GUI
+ a| 
+Snap Creator の GUI 操作に関する情報を提供します。
+
+
+
+ a| 
+stderr
+ a| 
+標準エラーに書き込まれたエラーに関する情報を提供します（レポートペインのみ）。
+
+
+
+ a| 
+エラー
+ a| 
+すべてのエラー情報を提供します（レポートペインのみ）。
+
+|===
+Job Monitor ペインまたは Reports ペインを使用しない場合は、テキストエディタですべてのログを表示できます。ログは、 Snap Creator サーバのインストールディレクトリに格納されます。
+
+* 関連情報 *
+
+xref:task_using_the_snap_creator_job_monitor_to_review_logs.adoc[ジョブモニタでのジョブステータスとログの表示]
+
+xref:task_using_the_snap_creator_reports_option_to_view_logs.adoc[Reports ペインでログを表示します]
+
+xref:task_creating_an_scdump_using_the_snap_creator_gui.adoc[scdump を使用して、ログを圧縮形式で収集する]

@@ -1,0 +1,17 @@
+---
+permalink: administration/concept_managing_policies.html 
+sidebar: sidebar 
+keywords: managing, retention, policies, list, delete, policies, snapshot, snapvault 
+summary: 保持ポリシーを作成することも、ポリシーの一覧表示と削除を行うこともできます。 
+---
+= 保持ポリシーの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保持ポリシーを作成することも、ポリシーの一覧表示と削除を行うこともできます。
+
+保持ポリシーでは、通常、 Snapshot コピーを保持する数や保持期間など、 Snapshot の保持設定を定義します。たとえば、日次ポリシーでは、 30 日前までとする 30 日分の Snapshot コピーが保持される場合があります。（保持期間を設定すると、同じ日に作成された複数の Snapshot コピーについて、ある Snapshot コピーを 30 日前にしておく必要があると規定されたサービスレベル契約（ SLA ）が回避されます。）
+
+SnapVault を使用する場合は、 SnapVault コピーの保持設定もポリシーで定義されます。

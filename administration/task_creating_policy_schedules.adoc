@@ -1,0 +1,24 @@
+---
+permalink: administration/task_creating_policy_schedules.html 
+sidebar: sidebar 
+keywords: policy, schedule, snap, creator, gui 
+summary: 必要に応じて、 Snap Creator の GUI を使用してポリシースケジュールを作成することもできます。 
+---
+= ポリシースケジュールを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、 Snap Creator の GUI を使用してポリシースケジュールを作成することもできます。
+
+. Snap Creator の GUI のメインメニューで、 * Policy * > * Policy Schedules * を選択します。
+. [ ポリシースケジュール *] タブで、 [*Create] をクリックします。
+. スケジュール名を入力してアクションと頻度を選択し、 * 保存 * をクリックします。
++
+選択した頻度に応じて、スケジュールされたジョブを実行するための適切な時間フィールドを選択する必要があります。
+
++
+image::../media/add_policy_schedule.gif[ポリシースケジュールを追加します]
+
+

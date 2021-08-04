@@ -1,0 +1,52 @@
+---
+permalink: installation/task_creating_symbolic_links_for_domino_plug_in_on_aix_hosts.html 
+sidebar: sidebar 
+keywords: creating, create, symbolic, links, domino, plug-in, aix, hosts 
+summary: AIX ホスト上の Domino プラグインのシンボリックリンクを追加するには、この手順を実行する必要があります。 
+---
+= AIX ホスト上で Domino プラグイン用のシンボリックリンクを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AIX ホスト上の Domino プラグインのシンボリックリンクを追加するには、この手順を実行する必要があります。
+
+このドキュメントからコマンドを直接コピーして貼り付けないでください。エラー（改行やハードリターンによって誤って転送された文字など）が発生する可能性があります。コマンドをコピーしてテキストエディタに貼り付け、コマンドを確認してから、 CLI コンソールに入力します。
+
+
+NOTE: 以降の手順で示すパスは 32 ビットシステムを参照してください。 64 ビットシステムでは、 /usr/lib ではなく /usr/lib64 への simlinks を作成する必要があります。
+
+. 次のファイルの /usr/lib へのリンクを追加します。
++
+** libxmlproc_r.a
+** libndgts_r.a
+** libnote_r.a
+** libgsk8iccs_r.a (Domino 9.0 以降のみ ) シンボリックリンクを作成する一般的な方法は ln コマンドを使用することです
+
+
++
+ln -s /path/to /source_file /usr/lib/linked_file
+
++
++ 場所：
+
++
+** -s は ' シンボリック・リンクを作成するようにオペレーティング・システムに指示します
+** /path/to /source_file は、ファイル名を含む Domino ライブラリファイルの 1 つへのパスです。
+** linked_file は、リンクされているファイルの名前です。
++
+[listing]
+----
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libxmlproc_r.a /usr/lib/libxmlproc_r.a
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libndgts_r.a /usr/lib/libndgts_r.a
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libnotes_r.a /usr/lib/libnotes_r.a
+ln -s /opt/ibm/domino/notes/latest/linux/libgsk8iccs.so /usr/lib/libgsk8iccs_r.a
+----
+
+
+. 手順 1 に記載されたファイルへのパスを確認します。
++
+この例のコマンドでは、 AIX のデフォルトパスを使用していますが、インストール環境によって異なる場合があります。
+
+

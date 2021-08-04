@@ -1,0 +1,63 @@
+---
+permalink: administration/reference_snapmanager_for_microsoft_exchange_plug_in.html 
+sidebar: sidebar 
+keywords: snapmanager, microsoft, exchange, plug-in, centralize, backup, operation 
+summary: SnapManager for Microsoft Exchange プラグインを使用すると、 Snap Creator 経由で Microsoft Exchange Server のバックアップ処理を一元化できます。このプラグインを使用すると、 Snap Creator を通じて、 Exchange サーバ用の数十または数百の SnapManager を設定し、 1 つのインターフェイスからすべての Exchange 用 SnapManager のバックアップジョブとステータスを表示できます。 
+---
+= SnapManager for Microsoft Exchange プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Microsoft Exchange プラグインを使用すると、 Snap Creator 経由で Microsoft Exchange Server のバックアップ処理を一元化できます。このプラグインを使用すると、 Snap Creator を通じて、 Exchange サーバ用の数十または数百の SnapManager を設定し、 1 つのインターフェイスからすべての Exchange 用 SnapManager のバックアップジョブとステータスを表示できます。
+
+他のプラグインとは異なり、 SnapManager プラグイン（ SnapManager for Microsoft SQL Server および SnapManager for Microsoft Exchange ）は、 PowerShell を使用して SnapManager の既存のインストールと通信します。SnapManager プラグインを使用するには、 SnapManager 製品がすでにインストールされ、動作している必要があります。SnapManager プラグインでは、 new-backup PowerShell コマンドレットを使用して、 SnapManager 経由でバックアップを作成します。クローニングとリストアの処理は、いずれも引き続き SnapManager インターフェイスから実行する必要があります。
+
+
+NOTE: サポートに関する最新情報や互換性マトリックスを確認するには、 Interoperability Matrix を参照してください。
+
+SnapManager for Microsoft Exchange プラグインを使用するには、 SnapManager for Microsoft Exchange と同じホストに Snap Creator エージェントをインストールする必要があります。SC_AGENT_TIMEOUT には、 900 以上の値を設定してください。
+
+次の表に、 SnapManager for Microsoft Exchange プラグインのパラメータ、およびその設定と説明を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+SME_PS_CONF
+ a| 
+例：「 C ： \Program Files\NetApp\SnapManager for Exchange\ smeShell.psc1 」
+ a| 
+SnapManager for Microsoft Exchange の PowerShell 構成ファイルへのパスを指定します。
+
+
+
+ a| 
+se_backup_options のように指定します
+ a| 
+例：「 Server 'EX2K10-DAG01' -GenericNaming - Management Group 'tandard' -NoTruncateLogs $False-RetainBackups 8-StorageGroup 'DAG01_DB01' -BackupCopyRemoteCCRNode $False`
+ a| 
+SnapManager for Microsoft Exchange のバックアップオプションを指定します。 Snap Creator は、新規バックアップ用に PowerShell コマンドレットを使用します。
+
+
+
+ a| 
+sme _ server_name
+ a| 
+例 : EX2K10-DAG01'
+ a| 
+SnapManager for Microsoft Exchange サーバ名を指定します。
+
+
+
+ a| 
+SME_32bit
+ a| 
+Y
+| N 
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_profiles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, profile, menu, assign 
+summary: Snap Creator の GUI を使用して、 Snap Creator ユーザにプロファイルを割り当てることができます。 
+---
+= Snap Creator ユーザへのプロファイルの割り当て
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、 Snap Creator ユーザにプロファイルを割り当てることができます。
+
+. Snap Creator の GUI メインメニューから、 * Users and Roles * > * User Management * を選択します。
+. [ ユーザー管理 ] タブで目的のユーザー名を選択し、 [ プロファイルの割り当て ] をクリックします。
+. 目的のプロファイルを左の列から右の列に移動し、 * 保存 * をクリックします。
++
+列間でプロファイルを選択してドラッグするか、矢印をクリックして列間でプロファイルを移動できます。
+
+. ユーザーを選択し、割り当てられたプロファイルを [*Assigned Profiles and Roles*] ペインで表示して、プロファイルが割り当てられていることを確認します。
+

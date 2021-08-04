@@ -1,0 +1,19 @@
+---
+permalink: administration/task_viewing_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: snap, creator, profile, view 
+summary: 既存の Snap Creator プロファイルをリスト表示できます。 
+---
+= プロファイルの表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存の Snap Creator プロファイルをリスト表示できます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
++
+既存の Snap Creator プロファイルは、 Profiles and Configurations ペインに表示されます。
+
+

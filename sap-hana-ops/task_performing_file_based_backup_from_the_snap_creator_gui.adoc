@@ -1,0 +1,26 @@
+---
+permalink: sap-hana-ops/task_performing_file_based_backup_from_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: performing, perform, file-based, backup, snap, creator, gui, graphical, user, interface 
+summary: File ベースのバックアップは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）から実行できます。 
+---
+= Snap Creator の GUI からファイルベースのバックアップを実行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+File ベースのバックアップは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）から実行できます。
+
+HANA の [ ファイルベースのバックアップの設定 ] タブで [ ファイルベースのバックアップ ] パラメータを有効にしておく必要があります。
+
+. hana_database-backup 構成を選択します。
+. [ * アクション * > * ファイルベースのバックアップ * ] を選択します。
++
+image::../media/performing_file_based_backup_with_gui.gif[GUI を使用したファイルベースのバックアップの実行]
+
+. [ ポリシー ] オプションを [* なし *] に設定し、 [OK] をクリックします。
++
+image::../media/performing_file_based_backup_with_gui_2.gif[GUI を使用したファイルベースのバックアップの実行]
+
+

@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_cli_command_results_in_404_not_found_error.html 
+sidebar: sidebar 
+keywords: unix, cli, command, port, 404, error 
+summary: UNIX 環境では、 CLI コマンドを実行したときに 404 Not Found エラーが発生することがあります。 
+---
+= CLI コマンドを実行すると 404 Not Found エラーが表示されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 環境では、 CLI コマンドを実行したときに 404 Not Found エラーが発生することがあります。
+
+* * 問題 *
++
+UNIX 環境では CLI コマンドを実行しようとしたにもかかわらず、 404 Not Found エラーが発生します。例：
+
++
+[listing]
+----
+404 Not Found at //local/scServer4.1.0c/snapcreator>SnapCreator/Service/Engine.pm line 152
+----
+* * 原因 *
++
+このエラーは、通常、 Snap Creator 以外で選択したポートを使用している場合に発生します。
+
+* * 是正措置 *
++
+選択したポートで Snap Creator が実行されていること、およびこのポートを他に使用しているものがないことを確認してください。
+
+

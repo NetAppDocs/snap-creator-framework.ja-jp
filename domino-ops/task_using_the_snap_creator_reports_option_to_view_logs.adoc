@@ -1,0 +1,30 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, logs, report pane 
+summary: Snap CreatorReports ペインでは、ログをコンソールペインに表示するときと同じ形式で表示できます。エラーログと標準ログは、 Reports ペインで表示できます。 
+---
+= Reports ペインでログを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap CreatorReports ペインでは、ログをコンソールペインに表示するときと同じ形式で表示できます。エラーログと標準ログは、 Reports ペインで表示できます。
+
+. Snap Creator Framework のウィンドウの上部で、 * Reports * > * Logs * をクリックします。
+. Reports ペインで、プロファイル、設定ファイル、ログタイプ、およびログファイルを選択します。 ログタイプは次のとおりです。
++
+** * アウトログ * は、ジョブの詳細レベル情報を提供します。
+** * デバッグログ * は、詳細レベルの情報とデバッグに役立つ情報を提供します。
+** * stderr ログ * は、標準エラーに書き込まれたエラーに関する情報を提供します。
+** * エラー・ログ * はすべてのエラー情報を提供します。* 注意： * デバッグログ * を選択すると、ジョブのサイズに応じて、ブラウザの原因処理が遅くなったり応答しなくなったりすることがあります。
+
+
+. をクリックします
++
+** * 選択したログをダウンロードするには、選択したログをダウンロードします。
+** * GUI ログをダウンロード * して、 GUI ログをダウンロードします。ダウンロードダイアログで、必要に応じて、 * 開く * または * 保存 * をクリックします。
+
+
+

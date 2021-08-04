@@ -1,0 +1,21 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: modifying, modify, configuration, database, integrity, checks, sap, hana 
+summary: データベース整合性チェック用に設定されたパラメータを変更できます。以降にスケジュールまたはオンデマンドの整合性チェック処理では、更新された情報が反映されます。 
+---
+= データベース整合性チェックの設定の変更
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベース整合性チェック用に設定されたパラメータを変更できます。以降にスケジュールまたはオンデマンドの整合性チェック処理では、更新された情報が反映されます。
+
+. SAP HANA プロファイルをクリックします。
+. 変更する構成を選択し、 * HANA Integrity Check Settings * をクリックします。
++
+image::../media/modifying_database_integrity_check_configuration.gif[データベース整合性チェックの変更の設定]
+
+. 情報を編集し、 * 保存 * をクリックします。
+

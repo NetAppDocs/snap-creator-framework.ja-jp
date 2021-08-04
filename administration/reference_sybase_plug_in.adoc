@@ -1,0 +1,172 @@
+---
+permalink: administration/reference_sybase_plug_in.html 
+sidebar: sidebar 
+keywords: sybase, ase, plug-in, isql, command, database, parameter, user, server 
+summary: Sybase ASE プラグインは、 Sybase データベースとの連携に isql コマンドを使用しています。 
+---
+= Sybase ASE プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sybase ASE プラグインは、 Sybase データベースとの連携に isql コマンドを使用しています。
+
+
+NOTE: サポートに関する最新情報や互換性マトリックスを確認するには、 Interoperability Matrix を参照してください。
+
+次の表に、 Sybase プラグインのパラメータの一覧、設定、説明を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+SYBASE_USER
+ a| 
+user_name （ユーザー名
+ a| 
+isql コマンドを実行できるオペレーティングシステムユーザを指定します。このパラメータは UNIX では必須です。このパラメータは、 Snap Creator の Agentstart コマンドおよび stop コマンド（通常は root ユーザ）を実行しているユーザと、 isql コマンドを実行しているユーザが異なる場合に必要です。
+
+
+
+ a| 
+SYBASE_SERVER のことです
+ a| 
+data_sserver_name を選択します
+ a| 
+Sybase データ・サーバ名を指定します（ isql コマンドの -S オプション）例： 'p_test
+
+
+
+ a| 
+SYBASE_DATABASES
+ a| 
+db_name ： user_name password
+ a| 
+バックアップするインスタンス内のデータベースのリストを表示します。マスターデータベースが追加されます。たとえば、「 `D BAtest2 ： sa/53616c7404351e 」のようになります。「 + ALL 」という名前のデータベースを使用すると、データベースの自動検出が実行され、 sybsyntax 、 sybsystemdb 、 sybsystemprocs 、 tempdb の各データベースは除外されます。
+
+例 : `+all: sa/53616c71a6351e-`
+
+NTAP_PWD_PROTECTION パラメータを設定すると、暗号化パスワードがサポートされます。
+
+
+
+ a| 
+SYBASE_DATABASE_EXCLUDE
+ a| 
+データベース名
+ a| 
+ALL construct を使用する場合にデータベースを除外できるようにします。複数のデータベースを指定するには ' セミコロンで区切ったリストを使用しますたとえば 'pubs2;test_db1' と指定します
+
+
+
+ a| 
+Sybase_Tran ダンプ
+ a| 
+db_name ： direction_path
+ a| 
+Snapshot コピーの作成後に Sybase トランザクションダンプを実行できます。例： 'pubs2::/sybased者 /pubs2
+
+トランザクションダンプが必要な各データベースを指定する必要があります。
+
+
+
+ a| 
+SYBASE_TRAN_DUMP_FORMAT
+ a| 
+%S_%D_%T.cmn
+ a| 
+ダンプの命名規則を指定できます。次のキーを指定できます。
+
+* %S は SYBASE_SERVER のインスタンス名です
+* %D = SYBASE_DATABASES からのデータベース
+* %T = 一意のタイムスタンプ
+
+
+例 : '%S_%D_%T.log
+
+
+
+ a| 
+SYBASE_TRAN_DUMP_COMPRESSE_COMPRESS
+ a| 
+Y
+| N 
+
+
+ a| 
+標準の Sybase トランザクションダンプの圧縮を有効または無効にします。
+ a| 
+SYBASE_ISQL_CMD のようになります
+ a| 
+例： /opt/Sybase/OCS-15_0/bin/isql
+
+
+
+ a| 
+isql コマンドへのパスを定義します。
+ a| 
+Sybase の場合
+ a| 
+例： /Sybase
+
+
+
+ a| 
+Sybase をインストールする場所を指定します。
+ a| 
+SYBASE_LOGDIR のようになります
+ a| 
+例： /usr/local/ntap/scServer/logs
+
+
+
+ a| 
+Snap Creator のログを配置するディレクトリを定義します。
+ a| 
+SYBASE_MANIMANIEST
+ a| 
+例 : `D BAtest2 :/t_inf_NZL_devs/`
+
+
+
+ a| 
+マニフェストファイルを作成する必要のあるデータベースと、マニフェストファイルを配置する必要のある場所を指定します。
+ a| 
+SYBASE_MANIMANIT_FORMAT の場合
+ a| 
+%S__%D_%T.manifest 例 : '%S_%D_%T.manifest
+
+
+
+ a| 
+マニフェストファイルの命名規則を指定できます。次のキーを指定できます。
+
+* %S は SYBASE_SERVER のインスタンス名です
+* %D = SYBASE_DATABASES からのデータベース
+* %T = 一意のタイムスタンプ。 Snapshot コピーの命名に使用されるタイムスタンプと同じです
+
+ a| 
+SYBASE_MANIMANIT_DELETE
+ a| 
+Y
+
+
+
+| N  a| 
+Snapshot コピーの作成後にマニフェストを削除できます。Snapshot コピー内でマニフェストファイルをキャプチャし、常にバックアップで利用できるようにする必要があります。
+ a| 
+SYBASE_EXCLUDE tempdb の場合
+
+
+
+ a| 
+Y
+| N  a| 
+ユーザが作成した一時データベースの自動除外を有効にします。
+
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

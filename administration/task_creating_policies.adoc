@@ -1,0 +1,104 @@
+---
+permalink: administration/task_creating_policies.html 
+sidebar: sidebar 
+keywords: create, retention, policy, snap, creator, gui, guideline, policy, management 
+summary: Snap Creator の GUI を使用して新しい保持ポリシーを作成すると、保持数が異なる複数の Snapshot ポリシーを設定できます。 
+---
+= ポリシーを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して新しい保持ポリシーを作成すると、保持数が異なる複数の Snapshot ポリシーを設定できます。
+
+Snap Creator ポリシーを定義する際のガイドラインを理解しておく必要があります。
+
+. Snap Creator の GUI のメインメニューで、 * Policy * > * Policy Management * を選択します。
+. [* Policy Manager* ] タブで、 [* 作成 ] をクリックします。
+. 詳細を入力し、 * 保存 * をクリックします。
++
+image::../media/create_new_policy.gif[新しいポリシーを作成する]
+
++
+|===
+| フィールド | 説明 
+
+
+ a| 
+ポリシー名
+ a| 
+ポリシーの名前を指定します。
+
+
+
+ a| 
+バックアップタイプ
+ a| 
+（オプション）バックアップタイプを選択します。
+
+
+
+ a| 
+ポリシータイプ
+ a| 
+ポリシータイプを選択します。
+
+** * ローカル *
++
+プライマリストレージ上で Snapshot コピーを作成します。SnapMirror 関係または SnapVault 関係がない場合は、このタイプを選択してください。
+
+** SnapVault
++
+プライマリストレージに Snapshot コピーを作成し、 SnapVault 更新を実行します。構成内のすべてのボリュームで SnapVault 更新を有効にする必要があります。
+
+** SnapMirror
++
+プライマリストレージに Snapshot コピーを作成し、 SnapMirror 更新を実行します。構成内のすべてのボリュームで SnapMirror 更新を有効にする必要があります。
+
+
+
+
+
+ a| 
+ポリシースケジュール
+ a| 
+（オプション）使用するポリシースケジュールを選択します。ポリシースケジュールを指定しない場合、これらの処理は自動的には実行されません。
+
+
+
+ a| 
+Snapshot の保持数
+ a| 
+バックアップの保持数を入力します。
+
+
+
+ a| 
+Snapshot の保持期間
+ a| 
+バックアップを削除するために保持しておく必要のある最小期間を入力します。
+
+
+
+ a| 
+SnapVault 保持数
+ a| 
+ポリシータイプとして SnapVault を選択した場合は、 SnapVault の保持数を入力します。
+
+
+
+ a| 
+SnapVault の保持期間
+ a| 
+ポリシータイプとして SnapVault を選択した場合は、 SnapVault の保持期間を入力します。
+
+
+
+ a| 
+パラメータの追加 / 上書き
+ a| 
+ポリシーでは特定のパラメータを上書きできます。必要に応じて、このチェックボックスをオンにして、オーバーライドするパラメータを追加します。
+
+|===
+

@@ -1,0 +1,25 @@
+---
+permalink: installation/concept_scf_component_server.html 
+sidebar: sidebar 
+keywords: snap, creator, server 
+summary: Snap Creator 操作は、 Snap Creator サーバによって開始されます。 
+---
+= Snap Creator サーバ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 操作は、 Snap Creator サーバによって開始されます。
+
+通常、 Snap Creator サーバは物理ホストまたは仮想ホストにインストールされます。サーバは、 Snap Creator の GUI 、およびジョブ、スケジュール、ユーザ、ロール、プロファイルに関する情報の格納に必要なデータベースをホストし、 構成ファイル、およびプラグインのメタデータ。Snap Creator 内ではサーバが scServerに 短縮されることがあります。
+
+サーバは、 Snap Creator エージェントを通じて、休止または休止解除の処理をサポート対象のアプリケーション（データベース、 E メール、ハイパーバイザー、またはその他のカスタムアプリケーション）に送信します。サーバと Snap Creator エージェントの間の通信は、デフォルトでポート 9090 で行われますが、ニーズに合わせてポートをカスタマイズできます。
+
+Snap Creator サーバは、デフォルトで Data ONTAP API 呼び出しを使用してストレージシステムやその他のネットアップソフトウェア製品と通信します。Snap Creator サーバからストレージシステムへのコマンドは、ポート 80 またはポート 443 経由で実行され、 Snapshot 、 SnapVault 、および SnapMirror タイプのすべての機能が処理されてから、ストレージデバイスまたはプールに変更がコミットされます。
+
+Snap Creator サーバは、 Unified Manager API を介して Active IQ Unified Manager と通信します。
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["『 Snap Creator Framework 4.3.3 Administration Guide 』"]

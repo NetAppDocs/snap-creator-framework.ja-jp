@@ -1,0 +1,33 @@
+---
+permalink: administration/reference_snap_creator_server_or_agent_not_starting.html 
+sidebar: sidebar 
+keywords: snap, creator, server, agent, java 
+summary: Snap Creator サーバまたは Snap Creator エージェントが起動しないことがあります。 
+---
+= Snap Creator サーバまたはエージェントが起動しません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバまたは Snap Creator エージェントが起動しないことがあります。
+
+* * 問題 *
++
+Snap Creator サーバまたは Snap Creator エージェントは起動しません。
+
+* * 原因 *
++
+この問題の一般的な原因は、 Java がインストールされていないか、 Java のビットレベルが正しくインストールされていないか、インストールされている Java のバージョンが正しくないことです。
+
+* * 是正措置 *
++
+次のコマンドを実行して、 Java がインストールされていることを確認します。 java -version
+
++
+サポートされているバージョンの Java がインストールされていることを確認します。
+
++
+また、インストールされている Java のビットレベルが Snap Creator のビットレベルと一致していることを確認してください。たとえば、 64 ビットの Snap Creator がインストールされている場合は、 64 ビットの Java もインストールする必要があります。
+
+

@@ -1,0 +1,179 @@
+---
+permalink: domino-ops/reference_domino_plug_in_specific_errors.html 
+sidebar: sidebar 
+keywords: domino, ibm, troubleshooting, plug-ins, errors 
+summary: 一般的な Snap Creator エラーには、一般的な Snap Creator エラーと Domino プラグイン固有のエラーの 2 つのカテゴリがあります。Domino プラグイン固有のエラーには、通常、インストール前の問題、不正なデータベース、またはカスタムのリストアアクションに関する問題があります。 
+---
+= Domino プラグイン固有のエラーのトラブルシューティング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一般的な Snap Creator エラーには、一般的な Snap Creator エラーと Domino プラグイン固有のエラーの 2 つのカテゴリがあります。Domino プラグイン固有のエラーには、通常、インストール前の問題、不正なデータベース、またはカスタムのリストアアクションに関する問題があります。
+
+
+NOTE: 一般的な Snap Creator エラーの詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+
+
+== このプラットフォームで Domino プラグインがサポートされていない
+
+Domino プラグインの前提条件を満たしていない場合、通常このエラーが表示されます。一般に、次のようなエラーメッセージが表示されます。
+
+[listing]
+----
+Failed to load plug-in domino. Reason: ERROR: [ltd-00009] Domino plug-in
+couldn't be loaded. Reasons could be 1) Domino plug-in is not supported
+on this platform.
+----
+次のエラーメッセージが表示されることもわかっています。
+
+[listing]
+----
+ERROR: [tampico:9090(4.1.x)] SCF-00038: Application quiesce for
+plug-in [domino] failed with exit code [99], continuing with backup.
+----
+さらに、次のような機能もあります。
+
+[listing]
+----
+ERROR: [scf-00094] Application environment set for plug-in domino failed
+[ERROR: [scf-00060] unknown application object [app] / application domino at snapcreator.pl line 6410.
+----
+これらのエラーメッセージは、次のいずれかの条件が満たされていない場合に表示されます。
+
+* インストール前の手順が実行されなかったか、正しく実行されなかった：
++
+** UNIX ホストでは、 IBM Domino 共有オブジェクトファイルへのシンボリックリンクを作成する必要があります。
+** Windows ホストでは、 IBM Domino インストールパスを PATH 環境変数に追加する必要があります。詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["『 Snap Creator Framework 4.1.2 Installation Guide 』"]。
+
+
+* Domino のビットレベルが Snap Creator のビットレベルと異なります。たとえば、 32 ビット Domino を使用している場合は、 32 ビットの Snap Creator を使用する必要があります。
+
+
+
+
+== データベースが不正なため、 Snap Creator のバックアップに失敗します
+
+デフォルトでは、 1 つ以上のデータベースが整合性のない状態または破損している場合、バックアップ処理は失敗します。手順で説明したように、エラーが発生してもプラグインを強制的にバックアップ処理を続行できます link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["GUI を使用して構成ファイルを作成する作業"]。
+
+
+
+== カスタムアクションを使用した Domino のリストアが失敗する
+
+リストアパスが正しく設定されていない場合、通常はリストアエラーが発生します。パスに余分な文字とバックスラッシュがないかどうかを確認します。また、データ復元ディレクトリが正しく設定されていることを確認します。
+
+次のようなエラーが表示されます。
+
+[listing]
+----
+########## Custom plug-in action ##########
+[Thu Apr 19 16:05:55 2012] DEBUG: Restoring to current time.
+[Thu Apr 19 16:05:55 2012] DEBUG: Calling dominocore::postRestoreToTime with arguments(C:\Lotus\Domino\notes.ini,F:\Domino\data\,H:\changeinfo\fuji15-daily_20120419130836,-1,F:\Domino\data\restore\mail\dadams.nsf,UP-TO-THE-MINUTE,H:\changeinfo\logs\)
+[Thu Apr 19 16:05:55 2012] TRACE: Notes API initialized
+Applying Change info for:F:\Domino\data\restore\mail\dadams.nsf
+Error: unable to open file 'H:\changeinfo\fuji15-daily_20120419130836/restore_mail_dadams.nsf.info', for path 'F:\Domino\data\restore\mail\dadams.nsf'.
+Error:5114
+NSFRecoverDatabases failed for database:F:\Domino\data\restore\mail\dadams.nsf
+Recovery Manager: Recovery only supported for Backup Files.ERROR_CODE:5114
+[Thu Apr 19 16:05:55 2012] ERROR: [ltd-00008] Restoring databases finished with errors
+[Thu Apr 19 16:05:55 2012] ERROR: [scf-00154] Action custom for plugin domino failed with exit code 1, Exiting!
+[Thu Apr 19 16:05:55 2012] DEBUG: Exiting with error code - 2
+----
+
+
+== Domino プラグイン固有のエラー
+
+次の表に、 IBM Domino プラグイン固有のエラーメッセージをリファレンス形式で示します。
+
+|===
+| エラーコード | エラーメッセージです | 説明 / 解決策 
+
+
+ a| 
+ltd - 00001
+ a| 
+Domino プラグインは、 SNAP_TIMESTAMP_ONLY = N と一緒に使用することはできませんSNAP_TIMESTAMP_ONLY は Y に設定する必要があります
+ a| 
+詳細については、手順を参照してください link:task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3["task_using_or_GUI_To_create_a_configuration-file.md#step_81795CF9D6294AC891BC3D0CE4827CA3 を使用します"]。
+
+
+
+ a| 
+ltd - 00002
+ a| 
+データベースの休止がエラーで終了しました
+ a| 
+Domino プラグインはすべてのデータベースをバックアップモードにできませんでした。ログをチェックしエラーの正確な原因を特定するか、または Snap Creator をデバッグモードで実行しエラーを特定してください。
+
+
+
+ a| 
+ltd - 00003
+ a| 
+データベースの休止解除がエラーで終了しました
+ a| 
+Domino プラグインは、すべてのデータベースをバックアップモードから解除できませんでした。ログをチェックしエラーの正確な原因を特定するか、または Snap Creator をデバッグモードで実行しエラーを特定してください。
+
+
+
+ a| 
+ltd - 00004
+ a| 
+データベースを検出できませんでした
+ a| 
+アプリケーションエラーが原因でアプリケーション検出が失敗しました。構成とアプリケーションの設定を確認します。自動検出を無効にするには、 APP_AUTO_DISCOVERY = N に設定し VALIDATE_VOLUMES をコメントアウトします。
+
+
+
+ a| 
+ltd - 00005
+ a| 
+オペレーティングシステム情報の収集に失敗しました - $@
+ a| 
+オペレーティングシステム情報の収集中にエラーが発生し、 scdump アクションが失敗しました。ログをチェックし、コマンドの手動で実行を試してください。
+
+
+
+ a| 
+ltd - 00006
+ a| 
+SnapDrive 情報の収集に失敗しました - $@
+ a| 
+SnapDrive 情報の収集時にエラーが発生し、 scdump アクションが失敗しました。ログをチェックし、コマンドの手動で実行を試してください。
+
+
+
+ a| 
+ltd - 00008
+ a| 
+データベースのリストアがエラーで終了しました
+ a| 
+Domino プラグインはすべてのデータベースを正しくリストアできませんでした。ログをチェックしエラーの正確な原因を特定するか、または Snap Creator をデバッグモードで実行しエラーを特定してください。
+
+
+
+ a| 
+ltd - 00009
+ a| 
+Domino プラグインを root として実行することはできません
+ a| 
+次の理由が考えられます。
+
+* このプラットフォームで Domino プラグインがサポートされていない。
+* Domino プラグイン実行の前提条件が満たされていない。
+
+
+詳細については、を参照してください link:reference_domino_plug_in_specific_errors.html#domino-plug-in-is-not-supported-on-this-platform["このプラットフォームで Domino プラグインがサポートされていない"]。
+
+
+
+ a| 
+ltd - 00010
+ a| 
+データベースを開くときにエラーが発生しました
+ a| 
+ログをチェックしエラーの正確な原因を特定するか、または Snap Creator をデバッグモードで実行しエラーを特定してください。
+
+|===

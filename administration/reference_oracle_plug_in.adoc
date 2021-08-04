@@ -1,0 +1,127 @@
+---
+permalink: administration/reference_oracle_plug_in.html 
+sidebar: sidebar 
+keywords: oracle, plug-in, sql, plus, database, quiesce, unquiesce, oracle, database 
+summary: Oracle プラグインは、 SQL * Plus を使用してデータベースと通信し、バックアップ用に Oracle データベースの休止および休止解除を行います。 
+---
+= Oracle プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle プラグインは、 SQL * Plus を使用してデータベースと通信し、バックアップ用に Oracle データベースの休止および休止解除を行います。
+
+Snap Creator Oracle プラグインは、 Oracle の Automatic Storage Management （オフラインバックアップまたはオンラインバックアップ）および Real Application Clusters （ RAC ）データベース構成のオンラインバックアップをサポートしています。サポートと互換性に関する最新情報については、 Interoperability Matrix を参照してください。
+
+UNIX プラットフォームまたは Linux プラットフォームで C シェル（ csh ）と Oracle プラグインを使用するには、次の条件を満たす必要があります。
+
+* Snap Creator エージェントは、 root ユーザではなく Oracle ユーザとして起動する必要があります。
+* Oracle ユーザは、プラグインベースの SQL * Plus コマンドが機能するように、適切な環境変数（ ORACLE_HOME および ORACLE_SID ）を設定する必要があります。
++
+これは ~/.cshrc などのシェルスタートアップファイルを使用して実行できます。
+
+
+
+次の表に、 Oracle プラグインパラメータ、およびその設定を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+APP_NAME を使用している
+ a| 
+Oracle の場合
+ a| 
+アプリケーション名
+
+
+
+ a| 
+ORACLE_databases （ Oracle データベース
+ a| 
+db_name ： user_name
+ a| 
+Oracle データベースとユーザ名のリスト複数のデータベースとユーザ名は、セミコロンで区切ったリストとして指定できます。たとえば、「 db1 ： user1 ； db2 ： user2 」と指定します。
+
+
+
+ a| 
+SQLPLUS_CMD
+ a| 
+ a| 
+sqlplus コマンドへのパス
+
+
+
+ a| 
+CNTL_FILE_BACKUP _DIR のいずれかです
+ a| 
+ a| 
+ユーザーがバックアップ制御ファイルを保存するディレクトリへのパス Oracle ユーザーには ' このディレクトリに対する適切な権限が必要です
+
+
+
+ a| 
+ORA_TEMP
+ a| 
+ a| 
+一時ファイルを格納するディレクトリへのパス。例： /tmp Oracle ユーザには、このディレクトリに対する適切な権限が必要です。
+
+
+
+ a| 
+archive_log_only
+ a| 
+Y
+| N 
+
+
+| ポリシー： < Y | N  a| 
+スイッチログ操作のみを実行するように Oracle プラグインに通知します。この設定は、データバックアップとは別にアーカイブログバックアップを処理する場合に便利です。
+
+
+
+ a| 
+ORACLE_HOME を参照してください
+ a| 
+ a| 
+Oracle ホームディレクトリへのパス
+
+
+
+ a| 
+ORACLE_home_SID を入力します
+ a| 
+ a| 
+所定の System Identifier （ SID ；システム ID ）を持つ Oracle ホームディレクトリへのパス複数のデータベースのバックアップ時に、複数の Oracle ホームディレクトリを指定することが重要な場合があります。
+
+
+
+ a| 
+ORACLE_EXPORT パラメータ
+ a| 
+Y
+| N 
+
+
+ a| 
+環境パラメータの ORACLE_HOME および ORACLE_SID をエクスポートするには、 export コマンドを使用します。これは、 UNIX または Linux ベースの環境でのみ利用できます。
+ a| 
+ORACLE_BACKUPMODE
+ a| 
+
+
+
+ a| 
+Snap Creator ポリシーを使用してオフラインまたはオンラインのバックアップを構成するオプションです。デフォルトのオプションは online ですORACLE_BACKUPMODE = HOURLY ： ONLINE 、 DAILY ：オフライン
+ a| 
+ORACLE_SHUTDOWNABORT
+ a| 
+Y
+
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

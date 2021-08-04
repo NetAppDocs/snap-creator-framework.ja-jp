@@ -1,0 +1,21 @@
+---
+permalink: sap-hana-ops/task_performing_database_integrity_checks_from_snap_creator_command_line.html 
+sidebar: sidebar 
+keywords: sap, hana, performing, perform, database, integrity, checks, snap, creator, command, line 
+summary: Snap Creator のコマンドラインを使用してデータベース整合性チェックを実行できます。 
+---
+= Snap Creator コマンドラインからデータベース整合性チェックを実行します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator のコマンドラインを使用してデータベース整合性チェックを実行できます。
+
+. データベース整合性チェックを実行するには、次のコマンドを実行します。
++
+[listing]
+----
+./snapcreator --server localhost --port 8443 --user sc --passwd sc --profile hana_testing --config HANA_Test --action integrityCheck --policy none --verbose
+----
+

@@ -1,0 +1,87 @@
+---
+permalink: administration/reference_cli_command_results_in_500_cannot_locate_object_error.html 
+sidebar: sidebar 
+keywords: unix, 500, locate, error, cli, ssl, libraries 
+summary: UNIX 環境で、 CLI コマンドの実行後に「 500 cannot locate object 」というエラーが表示されることがあります。 
+---
+= CLI コマンドを実行すると、「 500 cannot locate object 」エラーが表示されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 環境で、 CLI コマンドの実行後に「 500 cannot locate object 」というエラーが表示されることがあります。
+
+* * 問題 *
++
+UNIX 環境で CLI コマンドを実行しようとしたにもかかわらず、次の例に示すように 500 cannot locate object エラーが表示される。
+
++
+[listing]
+----
+500 Can't locate object method "new" via package "LWP::Protocol::https::Socket"
+----
+* * 原因 *
++
+このエラーメッセージには次の 2 つの原因が考えられます。
+
++
+** このエラーメッセージの最も可能性の高い原因は、 CLI SSL ライブラリがリンクされていないことです。
+** エラーメッセージが SSL ライブラリがリンクされていないために表示された場合は、別の原因に HTTPS Perl ライブラリがない可能性があります。
+
+
+* * 是正措置 *
++
+問題にリンクするライブラリファイルを解決するには、 simlinks を手動で作成する必要があります。オペレーティングシステム管理者に問い合わせて、 libssl.so および libcrypto.so ファイルが存在することを確認します。SSL パッケージのインストールが必要になる場合があります。
+
++
+ファイルが存在する場合は、ファイルを手動でリンクする必要があります。これを行うには、使用しているオペレーティングシステムに応じて、次のいずれかのコマンドセットを実行します。
+
++
+** 32 ビットの場合：
++
+[listing]
+----
+cd /usr/lib
+ln -s libssl.so.1.0.0 libssl.so.6
+ln -s libcrypto.so.1.0.0 libcrypto.so.6
+----
+** 3264 の場合：
++
+[listing]
+----
+cd /usr/lib64
+ln -s libssl.so.1.0.0 libssl.so.6
+ln -s libcrypto.so.1.0.0 libcrypto.so.6
+----
+
+
+* * 是正措置 *
++
+欠落している HTTPS Perl ライブラリ問題を解決するには 'CPAN モードから LWP::Protocol::https ライブラリをインストールします
+
++
+次の手順を実行します。
+
++
+.. Linux サーバの SSH セッションを開き、次のコマンドを実行します。 perl-mcpan-e shell
++
+
+NOTE: CPAN を初めて使用した場合は、次のプロンプトが表示されます。
+
++
+[listing]
+----
+Would you like me to configure as much as possible automatically? [yes]
+----
++
+*Enter* キーを押して、デフォルトを受け入れます。CPAN シェルが開きます。
+
+.. 次のコマンドを実行します install LWP::Protocol: https
++
+必要なパッケージがダウンロードされてインストールされます。追加のパッケージが必要な場合は、 [yes] を選択してインストールするように求められることがあります。
+
+.. インストールが完了したら、 exit と入力して通常のシェルに戻ります。
+
+
+

@@ -1,0 +1,28 @@
+---
+permalink: installation/task_downloading_the_snap_creator_software.html 
+sidebar: sidebar 
+keywords: downloading, download, snap, creator, software 
+summary: Snap Creator ソフトウェアをネットアップサポートサイトからダウンロードします。Snap Creator は、 Snap Creator Framework の Software Download セクションに表示されます。 
+---
+= Snap Creator ソフトウェアのダウンロード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator ソフトウェアをネットアップサポートサイトからダウンロードします。Snap Creator は、 Snap Creator Framework の「ソフトウェアのダウンロード」セクションに記載されています。
+
+. ネットアップサポートサイトのソフトウェアページに移動します。
++
+Snap Creator は、「 * Downloads * > * Software * 」セクションに * Snap Creator Framework * と表示されます。
+
+. プラットフォームを選択し、 * Go * をクリックします。
+. ダウンロードする Snap Creator のバージョンを選択し、 * View & Download * をクリックします。
+. ソフトウェアのダウンロード手順で、 * 続行 * をクリックします。
+. エンドユーザライセンス契約を読んで同意します。
+. オペレーティングシステムとソフトウェアパッケージのビットレベルを選択します。
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com/["ネットアップサポートサイト： mysupport.netapp.com"]

@@ -1,0 +1,62 @@
+---
+permalink: domino-ops/task_running_snap_creator_by_using_the_custom_action.html 
+sidebar: sidebar 
+keywords: domino, ibm,using, use, snap, creator, custom, action complete, restore 
+summary: Snap Creator のカスタムアクションを使用して、 Snap Creator 以外から作成されたリストアの処理を完了できます。 
+---
+= Snap Creator のカスタムアクションを使用してリストア処理を完了します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator のカスタムアクションを使用して、 Snap Creator 以外から作成されたリストアの処理を完了できます。
+
+この操作は Snap Creator の CLI でのみ実行できます。
+
+. Snap Creator の CLI で、次のコマンドを入力します。 snapcreator.exe --action custom -server port -port port --user user-passwd password -profile profile --config --params snapname=snapshot_name datapath=datapathrestoret=u2m|su2m restoretime="mm/dd/YYYY HH ： MM ： SS" disablereplication|N=disablereplication|N
++
+ここで、
+
++
+** server は、 Snap Creator サーバのホスト名または IP アドレスです。
+** port は、 Snap Creator サーバを実行しているポート番号です。
+** user は Snap Creator ユーザの名前です。
+** password は、 Snap Creator ユーザのパスワードです。
++
+
+NOTE: クリアテキストでパスワードを入力しない場合は、 --passwd オプションを省略できます。コマンドを実行すると、 Snap Creator によりパスワードの入力を求められます
+
+** profile は、 Snap Creator プロファイルの名前です。
+** config は、 Snap Creator 構成ファイルの名前です。
+** snapshot_name は、ファイルのリストアに使用する Snapshot コピーの名前です。
+** datapath は、ファイルを復元するディレクトリのパス名です。
+** restoretype は、実行対象のリストアのタイプです。
++
+*** u2m を指定すると、 up-to-the-minute リストアが実行されます。
+*** su2m を指定すると、選択可能な最新の状態にリストアできます。-restoretime オプションで、 Domino トランザクションログの再生日時を MM/DD/YYYY HH ： MM ： SS 形式で指定します。たとえば、 2014 年 1 月 23 日 12 ： 45 ： 00 などです。
+
+
+** disablereplication は、 Domino レプリケーションを無効化します。
++
+*** N （デフォルト）を入力して、 Domino レプリケーションを許可します。このプラグインは、リストアされたデータベースファイルに対して既存の Domino レプリカ ID を使用します。
++
+
+NOTE: Domino レプリケーションを許可する別の方法として、このパラメータをコマンドから省略する方法があります。
+
+*** 「 Y 」を入力して Domino レプリケーションを無効にします。このプラグインは、リストアされたデータベースファイルに新しい Domino レプリカ ID を設定します。メモ：コマンドに -verbose を追加すると、リストア処理に関する追加情報が表示されます。それ以外の場合は、コマンドの実行が完了すると、すぐにコマンドプロンプトに戻ります。
+
+
+
+
++
+[listing]
+----
+snapcreator.exe --action custom --server Tampico --port 8443
+--user admin --profile Domino --config Nantes
+--params snapname=Nantes-Test_Policy_20140123121459
+datapath=F:\Domino\data\restore\mail\t04.nsf
+restoretype=su2m restoretime="01/23/2014 12:45:00"
+disablereplication=y
+----
+

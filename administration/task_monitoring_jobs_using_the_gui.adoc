@@ -1,0 +1,20 @@
+---
+permalink: administration/task_monitoring_jobs_using_the_gui.html 
+sidebar: sidebar 
+keywords: monitor, job, snap, creator, gui 
+summary: Snap Creator の GUI を使用して、 Snap Creator によって実行されているジョブのステータスを監視できます。 
+---
+= ジョブの監視
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、 Snap Creator によって実行されているジョブのステータスを監視できます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Job Monitor * を選択します。
++
+実行中のジョブのリストが表示されます。
+
+. 実行中のジョブを停止するには、ジョブを選択し、 * キャンセル * をクリックします。
+

@@ -1,0 +1,41 @@
+---
+permalink: administration/task_changing_the_snap_creator_server_port.html 
+sidebar: sidebar 
+keywords: snap, creator, server, snapcreator, properties, file, restart, server, installation, unix 
+summary: Snap Creator サーバが使用するポートを変更するには、 snapcreator.properties ファイルを編集してサーバを再起動します。 
+---
+= インストール後に Snap Creator サーバのポートを変更する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバが使用するポートを変更するには、 snapcreator.properties ファイルを編集してサーバを再起動します。
+
+Snap Creator サーバのポートを変更する手順は、 Windows と UNIX で同じです。次の手順では、 UNIX 環境の例を使用します。
+
+. Snap Creator サーバが稼働しているシステムにログインし、インストールディレクトリ内の etc サブディレクトリに移動します。
++
+[listing]
+----
+cd /install_path/scServer4.3.0/engine/etc
+----
+. テキストエディタを使用して、 snapcreator.properties ファイルを開きます。
+. 次のパラメータでポートの値（デフォルトは 8443 ）を新しいポートに変更します。
++
+[listing]
+----
+...
+SNAPCREATOR_STARTUP_PORT=8443
+...
+SNAPCREATOR_STORAGE_URL=https\://localhost\:8443/services/v1/StorageService
+...
+----
+. snapcreator.properties ファイルを保存して閉じます。
+. Snap Creator サーバを再起動します。
++
+[listing]
+----
+/install_path/scServer4.3.0/bin/scServer restart
+----
+

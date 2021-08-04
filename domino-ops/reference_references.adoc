@@ -1,0 +1,71 @@
+---
+permalink: domino-ops/reference_references.html 
+sidebar: sidebar 
+keywords: domino, ibm, more, information, snap creator 
+summary: Snap Creator の詳細については、リリース固有の情報を含むネットアップサポートサイトを参照してください。 
+---
+= 次の手順
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の詳細については、リリース固有の情報を含むネットアップサポートサイトを参照してください。
+
+* https://docs.netapp.com/us-en/snap-creator-framework/installation/index.html["『 Snap Creator Framework 4.3.3 Installation Guide 』"]
++
+Snap Creator エージェントおよび Snap Creator サーバのインストール方法について説明します。Snap Creator エージェントのインストールには、 IBM Domino プラグインが含まれています。
+
+* https://docs.netapp.com/us-en/snap-creator-framework/administration/index.html["『 Snap Creator Framework 4.3.3 Administration Guide 』"]
++
+インストールの完了後に Snap Creator Framework を管理する方法について説明します。
+
+* https://docs.netapp.com/us-en/snap-creator-framework/releasenotes.html["Snap Creator Framework 4.3 リリースノート"]
++
+の新機能、重要な注意事項、の既知の問題、および Snap Creator Framework 4.1.1 の制限事項について説明します。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP1506026["SnapDrive 7.1 for Windows インストールガイド"]
++
+SnapDrive for Windows のインストール方法について説明します。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-clus-peer/home.html["ONTAP 9 クラスタピアリングエクスプレスガイド"]
++
+クラスタと Storage Virtual Machine （ SVM ）間のピア関係を設定する簡単な方法について説明しています。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-cg/home.html["ONTAP 9 ボリュームディザスタリカバリ設定エクスプレスガイド"]
++
+SnapMirror レプリケーションのストレージシステムを準備する方法について説明します。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["ONTAP 9 ボリュームディザスタリカバリエクスプレスガイド"]
++
+SnapMirror リカバリのためのストレージ・システムの準備方法について説明します。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-buvault/home.html["ONTAP 9 SnapVault によるボリュームバックアップエクスプレスガイド"]
++
+SnapVault レプリケーションのストレージシステムを準備する方法について説明します。
+
+* http://www.netapp.com/in/media/tr-3917.pdf["ネットアップテクニカルレポート 3917 ：『 Best Practices for Domino on NetApp 』"]
++
+IBM Domino プラグインのベストプラクティスを紹介します。
+
+* http://www.netapp.com/us/media/tr-3588.pdf["テクニカルレポート 3588 ：『 Integrating Domino 8.5 for Windows 2008 with a NetApp Storage System 』"]
++
+IBM Domino 8.5 for Windows 2008 をネットアップストレージシステムに統合する方法について説明します。
+
+* http://www.netapp.com/us/media/tr-3691.pdf["テクニカルレポート 3691 ：『 Integrating IBM Domino 8.5 for Linux with a NetApp Storage System 』"]
++
+IBM Domino 8.0.2 for Linux とネットアップストレージシステムを統合する方法について説明します。
+
+* http://www.netapp.com/us/media/tr-3723.pdf["テクニカルレポート 3723 ：『 Deploying Domino 8.0.2 in an AIX and NetApp Environment Using NFS 』"]
++
+IBM Domino 8.0.2 for AIX をネットアップストレージシステムと統合する方法について説明します。
+
+* http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Snap Creator Framework のディスカッション"]
++
+他のユーザとの交流、質問、意見交換、リソース探し、 Snap Creator のベストプラクティスの共有を実現できます。
+
+* http://www.youtube.com/SnapCreatorTV["ネットアップのビデオ： SnapCreatorTV"]
++
+Snap Creator の主なテクノロジを紹介するビデオを視聴できます。
+
+

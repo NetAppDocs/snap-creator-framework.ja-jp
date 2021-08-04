@@ -1,0 +1,47 @@
+---
+permalink: administration/reference_ca_signed_ssl_certificate.html 
+sidebar: sidebar 
+keywords: ca-signed, ssl, certificate, snap, creator, framework 
+summary: Snap Creator Framework には CA 署名 SSL 証明書が必要です 
+---
+= Snap Creator Framework には CA 署名 SSL 証明書が必要です
+:icons: font
+:imagesdir: ../media/
+
+
+* * 問題 *
++
+Snap Creator Framework には、認証局（ CA ）が署名した SSL 証明書が必要です。
+
+* * 原因 *
++
+サーバの X.509 証明書に、既知のパブリック証明機関からの署名がありません。
+
+* * 是正措置 *
++
+Snap Creator Framework では、サードパーティの証明書のインストールがサポートされます。
+
++
+.. snapcreator.properties ファイルと agent.properties ファイルで、次のパラメータ値を更新します。
++
+snapcreator.properties ファイル：
+
++
+SNAPCREATOR_keystore.pass
+
++
+SNAPCREATOR_keystore.path
+
++
+agent.properties ファイル：
+
++
+keystore.file で保存されます
+
++
+keystore _pass のユーザ
+
+.. サーバとエージェントサービスを再起動します。
+
+
+

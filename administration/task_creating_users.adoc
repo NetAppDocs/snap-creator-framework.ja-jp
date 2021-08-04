@@ -1,0 +1,21 @@
+---
+permalink: administration/task_creating_users.html 
+sidebar: sidebar 
+keywords: snap, creator, profile, role, gui, user 
+summary: Snap Creator ユーザを作成し、 Snap Creator の GUI を使用して、ユーザへのプロファイルおよびロールの割り当てなどのいくつかの操作を実行できます。 
+---
+= Snap Creator ユーザを作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator ユーザを作成し、 Snap Creator の GUI を使用して、ユーザへのプロファイルおよびロールの割り当てなどのいくつかの操作を実行できます。
+
+. Snap Creator の GUI メインメニューから、 * Users and Roles * > * User Management * を選択します。
+. [ ユーザー管理 ] タブで、 [ * 追加 ] をクリックします。
+. [ 新規ユーザー ] ダイアログボックスで、ユーザー名のパスワードを入力し、 [ 保存 ] をクリックします。
++
+新しいユーザー名は、 [* ユーザー名 * ] の下の [* ユーザー * ] ウィンドウ枠に表示されます。
+
+

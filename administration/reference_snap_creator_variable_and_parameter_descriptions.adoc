@@ -1,0 +1,297 @@
+---
+permalink: administration/reference_snap_creator_variable_and_parameter_descriptions.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, variable, parameter, basic, configuration, description, snap, type, time, action 
+summary: Snap Creator には、基本構成に必要な変数とパラメータが組み込まれています。 
+---
+= Snap Creator の変数およびパラメータの説明
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator には、基本構成に必要な変数とパラメータが組み込まれています。
+
+|===
+| 変数（ variables ） | 説明 
+
+
+ a| 
+%SNAP_TYPE
+ a| 
+Snap Creator の実行時に使用されます。保持ポリシー（日単位、週単位、月単位）です。
+
+
+
+ a| 
+%SNAP_TIME
+ a| 
+すべての Snapshot コピーに確実に一意の名前が割り当てられるように、 Snapshot コピーの命名に使用されるタイムスタンプ（ yyyymmddhhmmss ）。バックアップレポートおよび Sybase トランザクションログのネーミングにも使用されます。
+
+
+
+ a| 
+% アクション
+ a| 
+Snap Creator の実行時に実行できる操作のリスト：（ backup
+
+
+
+| cloneVol のようになります | cloneLun のようになります 
+
+
+| アーチ | リストア 
+
+
+| backupDel | バックアップリスト 
+
+
+| cloneList の実行 | pmsetup 
+
+
+| OSSV ）  a| 
+%MSG
+
+
+
+ a| 
+電子メールや Tivoli などの他のプログラムにエラーメッセージを送信するために使用され、 SENDTRAP 関数でのみ使用できます。
+ a| 
+%user_defined
+
+|===
+次の表に、基本構成で使用される Snap Creator のパラメータを示します。
+
+|===
+
+
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+sname
+ a| 
+ a| 
+Snapshot コピーに固有な命名規則を指定します。命名規則に基づいて Snapshot コピーが削除されます。
+
+
+
+ a| 
+SNAP_TIMESTAMP_ONLY
+ a| 
+Y
+| N 
+
+
+ a| 
+「 Snapshot 命名規則」を「 Y 」に設定した場合、 Snapshot コピー名の末尾が「 YYYYMMDDHHMMSS 」になります。N に設定すると、新規 Snapshot コピーの名前は変更され、末尾が YYYYMMDDHHMMSS になります。
+ a| 
+個のボリューム
+ a| 
+
+
+
+ a| 
+Snapshot コピーを作成するプライマリストレージコントローラとボリュームをリスト表示します。次に例を示します。
+
+[listing]
+----
+controller1:vol1,vol2,vol3;
+controller2:vol1;
+controller3:vol2,vol3
+---- a| 
+volume_groups という 2 つのボリュームグループ
+ a| 
+vol_1 、 vol_2 、 vol_n
+
+
+
+ a| 
+複数のボリュームを 1 つのグループに定義します。複数のボリュームがカンマで区切ったリストとして指定されている例を次に示します。
+
+[listing]
+----
+VOLUMES_01=filer1:vol1,vol2,vol3;filer2:vol1
+VOLUMES_02=filer1:vol3,vol4
+VOLUMES_03=filer2:vol3,vol4
+VOLUME_GROUPS=VOLUMES_01,VOLUMES_02,VOLUMES_03
+----
+
+NOTE: volume_groups は、バックアップ処理でのみサポートされます。このパラメータを設定すると、 VOLUMES パラメータはバックアップ時に無視されます。
+ a| 
+NTAP_SNAPSHOT_ RETENTIONS を指定してください
+ a| 
+
+
+
+ a| 
+特定のポリシーで保持する Snapshot コピーの数を決定します。例：
+
+[listing]
+----
+daily:7,weekly:4,monthly:1
+---- a| 
+NTAP_USERS
+ a| 
+
+
+
+ a| 
+ストレージ・システムと、対応するユーザ名およびパスワードを一覧表示します。例：
+
+[listing]
+----
+controller1:joe/password1;
+controller2:bob/password2;
+controller3:ken/password3
+----
+
+NOTE: パスワードは 2 文字以上にする必要があります。
+ a| 
+NTAP_PWD_PROTECTION
+ a| 
+Y
+
+
+
+| N  a| 
+パスワード保護を有効または無効にします。すべてのパスワード（ストレージシステムとアプリケーションまたはプラグイン）を暗号化し、暗号化されたパスワードを構成ファイルに保存する必要があります。
+ a| 
+交通機関
+
+
+
+ a| 
+HTTP
+| HTTPS  a| 
+HTTP または HTTPS を使用してストレージコントローラに接続できます。 ** 注： ** HTTPS では openssl-devel ライブラリが必要となる場合があります。
+
+
+
+ a| 
+ポート
+ a| 
+ a| 
+ストレージコントローラが使用するポート番号を設定します。通常は 80 と 443 に設定します
+
+
+
+ a| 
+LOG_NUM
+ a| 
+ a| 
+Snap Creator が保持する .debug レポートおよび .out レポートの数を指定します
+
+
+
+ a| 
+CONFIG_TYPE
+ a| 
+プラグイン
+| 標準 
+
+
+ a| 
+設定タイプを指定します。プラグインと標準の 2 種類の設定があります。複数のプラグイン構成を使用すれば、休止および休止解除の複雑なバックアップワークフローを構築できます。
+ a| 
+CMODE_CLUSTER_USERS を使用しています
+ a| 
+
+
+
+ a| 
+（ clustered Data ONTAP では必須）プライマリおよびセカンダリの clustered Data ONTAP クラスタ、および対応するユーザ名とパスワードをリスト表示します。例：
+
+[listing]
+----
+cluster1:joe/password1;
+cluster2:bob/password2
+----
+
+NOTE: パスワードは 2 文字以上にする必要があります。
+ a| 
+CMODE_CLUSTER_NAME の形式で指定します
+ a| 
+
+
+
+ a| 
+（ clustered Data ONTAP では必須）プライマリ clustered Data ONTAP クラスタの名前を指定します
+ a| 
+CMODE_SNAPSHOT_FORM_DELETE
+ a| 
+Y
+
+
+
+| N  a| 
+clustered Data ONTAP の Snapshot コピーポリシーに基づいて削除する必要がある Snapshot コピーが確実に削除されるようにします。 Snapshot コピーにクローンなどの依存関係がある場合、 Snapshot コピーは削除されません。
+ a| 
+LOG_TRACE_ENABLE の 2 つのオプションがあります
+
+
+
+ a| 
+Y
+| N  a| 
+無効な場合にすべてのイベントのロギングを有効または無効にします。 Manage ONTAP 解決策 Result オブジェクトはログに記録されません。
+
+
+
+ a| 
+NTAP_TIMEOUT
+ a| 
+秒
+ a| 
+ストレージコントローラのすべての Manage ONTAP 解決策呼び出しのタイムアウト値を設定します。デフォルトは 60 秒です
+
+
+
+ a| 
+大域構成を使用します
+ a| 
+Y
+| N 
+
+
+ a| 
+グローバル設定を使用して値を格納できます
+ a| 
+連携アプリケーション
+ a| 
+
+
+
+ a| 
+構成およびフェデレーテッドアプリケーションのプロファイル名を、たとえば次のように設定して一覧表示します。
+
+[listing]
+----
+databases@db2;databases@oracle
+---- a| 
+CMODE_SET を実行しています
+ a| 
+Y
+
+
+
+| N  a| 
+clustered Data ONTAP と Data ONTAP 7-Mode のどちらの構成かを定義します
+ a| 
+allow_duplicate_SNAME
+
+
+
+ a| 
+Y
+| N  a| 
+（任意）重複する Snapshot 名を持つ構成ファイルを作成する機能を有効または無効にします。このパラメータは、グローバル（スーパーグローバルまたはプロファイルグローバル）構成ファイルでは機能しません。
+
+
+
+ a| 
+SNAPCREATOR_MISSEDJOB_RUN
+ a| 
+Y
+| N 
+|===

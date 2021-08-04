@@ -1,0 +1,13 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_0_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.0.x 
+summary: Snap Creator 4.0.x からアップグレードすると、データベーススキーマがアップグレードされます。 
+---
+= Snap Creator 4.0.x からアップグレードする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator 4.0.x からアップグレードすると、データベーススキーマがアップグレードされます。

@@ -1,0 +1,35 @@
+---
+permalink: domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, using, snapdrive, mount, snapshot, copy 
+summary: SnapDrive を使用して、リストアするファイルの Snapshot コピーをマウントできます。このファイルは、手動でデータリストアディレクトリにコピーできます。 
+---
+= SnapDrive を使用して Snapshot コピーをマウント
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive を使用して、リストアするファイルの Snapshot コピーをマウントできます。このファイルは、手動でデータリストアディレクトリにコピーできます。
+
+次の手順は、 SnapDrive for Windows を使用して Windows Server 2008 ホストに Snapshot コピーをマウントする方法を示しています。SnapDrive for Windows および Snap Creator エージェントがホスト上で実行されている必要があります。
+
+. サーバーマネージャーで、 * ストレージ * > * SnapDrive * > * physical_server_name * > * ディスク * をクリックします。
+. Disk Identification （ディスク識別）ペインで、リストアするファイルのコピーが含まれている Snapshot コピーに移動し、右クリックメニューから * Connect Disk * を選択します。
++
+ディスクの接続ウィザードが開きます。
+
++
+ディスクの接続ウィザードの次のページに進むには、「 * 次へ * 」をクリックします。前のページに戻るには、「戻る」をクリックします。
+
++
+
+TIP: Snapshot コピーの名前をメモします。この名前は、ファイルをデータリストアディレクトリにコピーするときに必要になります。
+
+. ［ Provide a Storage System Name ］ （ストレージシステム名）、 ［ LUN Path and Name ］ （ LUN パスと名前）ページで、必要に応じて LUN の説明を入力します。
+. [Select a LUN Type]( LUN タイプの選択 ) ページで ' デフォルトのままにします
+. LUN プロパティの選択ページで、 Snapshot コピーのドライブレターまたはマウントポイントを選択します。
+. iSCSI Initiator / FC Host Bus Adapter （ HBA ；ホストバスアダプタ）ページで、 iSCSI イニシエータまたは FC HBA を選択します。
+. 管理タイプページで、 LUN へのマッピングに使用する管理タイプを自動または手動で選択します。
+. 完了 * をクリックして、指定したマウント・ポイントに Snapshot コピーをマウントします。
+

@@ -1,0 +1,48 @@
+---
+permalink: domino-ops/concept_domino_database_restore_overview.html 
+sidebar: sidebar 
+keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror, snapvault, destination, directories 
+summary: IBM Domino プラグインは、データベースが格納されているボリュームの Snapshot コピーからデータベースファイルをリストアします。Snapshot のリストアが完了すると、 changeinfo ディレクトリに記録された変更がプラグインによって適用されます。 
+---
+= データベースのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM Domino プラグインは、データベースが格納されているボリュームの Snapshot コピーからデータベースファイルをリストアします。Snapshot のリストアが完了すると、 changeinfo ディレクトリに記録された変更がプラグインによって適用されます。
+
+
+
+== SnapMirror および SnapVault のリストア処理の概要
+
+Snap Creator を使用してデータの SnapMirror コピーをリストアすることはできません。ミラーコピーをリストアする場合は、先にミラーを解除してからデータを手動でリストアする必要があります。詳細については、を参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["ONTAP 9 ボリュームディザスタリカバリエクスプレスガイド"]。
+
+セカンダリストレージから SnapVault コピーをリストアする場合は、ポイントインタイムのボリュームリストアのみを実行できます。最新状態へのボリュームリストアや単一ファイルのリストアは実行できません。この制限を回避するには、最初にセカンダリストレージからプライマリストレージにリストアします。その後、プライマリストレージから、必要に応じて最新状態へのボリュームリストアまたは単一ファイルのリストアを実行できます。
+
+
+
+== デスティネーションディレクトリの概要
+
+通常、ボリュームリストアと単一ファイルリストアでは、デスティネーションディレクトリが異なります。宛先ディレクトリは、バックアップおよびリストア構成ファイルの Data Restore Directory パラメータで指定します（手順を参照） link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["TASK_Using_ザ _GUI_To_CREATE _A_configuration_file.md#step_E6C507729B3647FD8B2E8D0818F22D3B"]）：
+
+* ボリュームリストアの場合、 Data Restore Directory を Domino データディレクトリに設定する必要があります。
+* 単一ファイルのリストアの場合は、 Data Restore Directory を Domino データボリューム上のサブディレクトリに設定する必要があります。
+
+
+つまり、別のリストア・タイプを使用する場合は、データ・リストア・ディレクトリを変更して、各リストア・タイプの正しい設定を参照する必要があります。そうしないと、変更情報が正しく適用されず、リストア先のデータベースとデータの整合性が失われます。もちろん、必要に応じて、ボリュームのリストアと単一ファイルのリストアの設定を別々に作成することもできます。
+
+
+
+== リストアを実行する場所
+
+例外が 1 つあり、 Snap Creator の GUI または Snap Creator の CLI を使用してデータベースをリストアできます。SAN 環境で単一ファイルのリストアを実行する場合は、の説明に従って CLI を使用する必要があります xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[SAN 環境で単一ファイルのリストアを実行する]。
+
+
+NOTE: このマニュアルでは、 SAN 環境で単一ファイルのリストアを実行する場合にのみ CLI を使用する方法を示します。それ以外の場合は、 GUI を使用したデータベースのリストア方法が示されます。CLI の使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["『 Snap Creator Framework 4.1.2 Administration Guide 』"]。
+
+* 関連情報 *
+
+link:task_performing_point_in_time_volume_restore.adoc["ボリュームリストアを実行しています"]
+
+

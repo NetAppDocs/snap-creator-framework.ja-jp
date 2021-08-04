@@ -1,0 +1,52 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, service, start, verify, stop, windows 
+summary: Snap Creator エージェントサービスを開始および停止して、 Snap Creator エージェントサービスが Windows システムで実行されているかどうかを確認できます。 
+---
+= Windows での Snap Creator エージェントの起動、検証、停止
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントサービスを開始および停止して、 Snap Creator エージェントサービスが Windows システムで実行されているかどうかを確認できます。
+
+. コマンドプロンプトで、 Snap Creator エージェントサービスを開始または停止します。または、 Snap Creator エージェントサービスが実行されているかどうかを必要に応じて確認します。
++
+|===
+| 状況 | 入力するコマンド 
+
+
+ a| 
+Snap Creator エージェントサービスを開始します
+ a| 
+SC start snapcreatoragentservice
+
+
+
+ a| 
+Snap Creator エージェントサービスが実行されているかどうかを確認します
+ a| 
+SC クエリ snapcreatoragentservice
+
+
+
+ a| 
+Snap Creator エージェントサービスを停止します
+ a| 
+SC stop snapcreatoragentservice
+
+|===
++
+Snap Creator をフォアグラウンドで実行する場合は、 SC start コマンドではなく、次の手順を実行します。
+
++
+.. Snap Creator エージェントがインストールされているホストでコマンドプロンプトを開き、 Snap Creator の Agentdirectory ： cd `\install_path\scAgent4.3.0_bin\` に移動します
+.. Snap Creator エージェントサービスを開始するには、バッチスクリプト scAgent.bat start を実行します
++
+コマンドプロンプトを閉じると、 Snap Creator エージェントのサービスが停止します。バッチスクリプト（ scAgent.bat ）はフォアグラウンドで Snap Creator を実行するため、 Snap Creator エージェントはコマンドプロンプトが開いている場合にのみ実行されます。Snap Creator をバックグラウンドで実行するには、 Snap Creator エージェントサービスを使用する必要があります。
+
+
+
+

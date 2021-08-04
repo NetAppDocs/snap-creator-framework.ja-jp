@@ -1,0 +1,62 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_clustered_ontap.html 
+sidebar: sidebar 
+keywords: creating, create, snap, center, user, ontap 
+summary: clustered Data ONTAP の場合、 Snap Creator のユーザを作成する必要があります。ただし、作成するユーザのタイプは、 clustered Data ONTAP のバージョンによって異なります。ユーザには、クラスタユーザと Storage Virtual Machine （ SVM ）ユーザの 2 種類があります。 
+---
+= clustered Data ONTAP の Snap Creator ユーザを作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+clustered Data ONTAP の場合、 Snap Creator のユーザを作成する必要があります。ただし、作成するユーザのタイプは、 clustered Data ONTAP のバージョンによって異なります。ユーザには、クラスタユーザと Storage Virtual Machine （ SVM ）ユーザの 2 種類があります。
+
+使用している Data ONTAP のバージョンに対応する、 _Snap Creator Framework Administration Guide _ で定義されている適切なロールを持つ次のユーザを作成します。
+
+* clustered Data ONTAP 8.2 より前の Data ONTAP リリース：クラスタおよび SVM ユーザを作成
+* clustered Data ONTAP 8.2 以降： SVM ユーザを作成します。
+
+
+セキュリティを強化するには、 Snap Creator 専用の Data ONTAP ユーザおよびロールを作成する必要があります。または、 admin や vsadmin など、他のユーザアカウントを使用することもできます。
+
+CLI を使用した Snap Creator ロールの作成の詳細については、関連資料を参照してください。
+
+どちらのタイプのユーザも Data ONTAPI ライブラリにアクセスする必要があります。また、バージョンに関係なく、 clustered Data ONTAP の管理 LIF も必要です。
+
+2 人のユーザーは互換性がありません。たとえば、クラスタユーザは、 Snapshot コピーの作成など、特定の操作を実行するのに必要な API にはアクセスできません。これは、デフォルトのクラスタ管理者アカウントを使用する場合にも当てはまります。SVM アカウントが Snap Creator を正常に動作させるには、 * vsadmin * ロールまたはお客様が作成したロールを使用する必要があります。
+
+この手順は、 Snap Creator が使用されている SVM およびクラスタごとに 1 回実行する必要があります。
+
+以降の手順では admin ロールと vsadmin ロールを使用しますが、これらのロール名を作成したロールに置き換えることができます。
+
+
+NOTE: このドキュメントからコマンドを直接コピーして貼り付けないでください。エラー（改行やハードリターンによって誤って転送された文字など）が発生する可能性があります。この手順からコマンドをコピーしてテキストエディタに貼り付け、コマンドを確認してから、 CLI に入力します。
+
+. 次のコマンドとユーザパスワードを入力して、 SVM_nameSVM に適切なロール（ vsadmin またはユーザ用に作成されたロール）で SVM ユーザ svm_username01 を作成し、 ONTAPI ライブラリへのアクセスを有効にします。
++
+[listing]
+----
+security login create -username svm_username01
+-vserver svm_name -application ontapi
+-authmethod password -role vsadmin
+
+Please enter a password for user 'svm_username01':
+Please enter it again:
+----
+. _ （ clustered Data ONTAP 8.2 より前のバージョンの場合のみ） _ 次のコマンドとユーザパスワードを入力してクラスタユーザを作成します。
++
+[listing]
+----
+security login create -username svm_username02
+-vserver svm_clustername -application ontapi
+-authmethod password -role admin
+
+Please enter a password for user 'svm_username02':
+Please enter it again:
+----
+
+
+* 関連情報 *
+
+xref:reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.adoc[clustered Data ONTAP で Snap Creator ユーザのロールを作成するための CLI コマンド]

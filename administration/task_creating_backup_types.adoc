@@ -1,0 +1,21 @@
+---
+permalink: administration/task_creating_backup_types.html 
+sidebar: sidebar 
+keywords: backup, snap, creator, gui, policy, creating, type 
+summary: 必要に応じて、 Snap Creator の GUI を使用してバックアップタイプを作成し、ポリシーの目的を特定することもできます。 
+---
+= バックアップタイプを作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、 Snap Creator の GUI を使用してバックアップタイプを作成し、ポリシーの目的を特定することもできます。
+
+. Snap Creator の GUI メインメニューで、 * Policy * > * Backup Type * を選択します。
+. [ バックアップタイプ *] タブで、 [ * 追加 ] をクリックします。
+. 新しいバックアップ・タイプ名を入力し、 * OK * をクリックします。
++
+新しいバックアップタイプは、「 * バックアップタイプ * 」の下に表示されます。
+
+

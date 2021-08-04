@@ -1,0 +1,48 @@
+---
+permalink: administration/reference_parameters_to_set_up_netapp_management_console_data_protection_capability.html 
+sidebar: sidebar 
+keywords: parameter, netapp, management, console, protection, capability, ntap, update, set, backup, format 
+summary: NetApp Management Console のデータ保護機能を設定するには、いくつかのパラメータを設定する必要があります。 
+---
+= NetApp Management Console のデータ保護機能を設定するためのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Management Console のデータ保護機能を設定するには、いくつかのパラメータを設定する必要があります。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+NTAP_PM_UPDATE の場合
+ a| 
+Y
+| N 
+
+
+ a| 
+NetApp Management Console データ保護機能の更新をオンまたはオフにして、 Snap Creator の Snapshot コピーを NetApp Management Console データ保護機能に登録できます。* 注： NTAP_PM_UPDATE が有効な場合は、 NTAP_DFM_DATA_SET の設定が必要です。
+ a| 
+NTAP_DFM_DATA_SET の設定
+ a| 
+
+
+
+ a| 
+ストレージシステムと NetApp Management Console のデータ保護機能のデータセットをボリューム相関に一覧表示します。 controller1 ： Dataset1/vol1 、 vol2 、 controller1 ： dataset2/vol3
+ a| 
+NTAP_PM_run_backup の設定が可能です
+ a| 
+Y
+
+
+
+| N  a| 
+NetApp Management Console データ保護機能のバックアップを開始し、進捗状況とステータスを確認し、完了するまで待機します。
+ a| 
+NTAP_DFM_SNAPSHOT_FORMAT の設定
+
+|===

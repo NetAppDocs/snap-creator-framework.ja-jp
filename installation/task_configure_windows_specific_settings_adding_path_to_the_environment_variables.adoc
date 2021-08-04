@@ -1,0 +1,28 @@
+---
+permalink: installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html 
+sidebar: sidebar 
+keywords: configuring, configure, windows, settings, adding, add, path, environment, variables 
+summary: Windows に Snap Creator エージェントをインストールする場合は、 Domino バイナリファイルへのパスを Windows の環境変数に追加する必要があります。 
+---
+= Windows 固有の設定：環境変数へのパスの追加
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows に Snap Creator エージェントをインストールする場合は、 Domino バイナリファイルへのパスを Windows の環境変数に追加する必要があります。
+
+. Windows OS の詳細設定（ * My Computer * > * Properties * > * Advanced * > * Environment Variables * など）にアクセスし、 Path 変数に Domino パスを追加します。
++
+
+NOTE: システム変数の変更の詳細については、 Windows オペレーティングシステムのドキュメントを参照してください。
+
+
+
+Snap Creator エージェントのインストール後に環境変数に Domino パスを追加した場合は、 Snap Creator エージェントサービスを再起動する必要があります。たとえば、 Snap Creator エージェントがインストールされているホストでコマンドプロンプトを開き、次のコマンドを入力します。
+
+[listing]
+----
+sc stop SnapCreatorAgentService
+sc start SnapCreatorAgentService
+----

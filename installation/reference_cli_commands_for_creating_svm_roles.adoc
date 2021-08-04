@@ -1,0 +1,521 @@
+---
+permalink: installation/reference_cli_commands_for_creating_svm_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, svm, roles, role create 
+summary: 次の表に、新しい SVM ユーザのロールを作成するのに必要なコマンドを示します。 
+---
+= SVM ロールを作成するための CLI コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の表に、新しい SVM ユーザのロールを作成するのに必要なコマンドを示します。
+
+|===
+| コマンドディレクトリ名 | 実行するコマンド 
+
+
+ a| 
+追加ユーザ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "adduser" -vserver Snapcreator
+
+
+
+ a| 
+event generate-autosupport-log を指定します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "event generate-autosupport-log " -vserver Snapcreator
+
+
+
+ a| 
+LUN のコメント
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "LUN comment " -vserver Snapcreator
+
+
+
+ a| 
+lun create をクリックします
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 lun create 」 -vserver Snapcreator
+
+
+
+ a| 
+lun delete
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "lun delete " -vserver Snapcreator
+
+
+
+ a| 
+LUN ジオメトリ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "LUN geometry" -vserver Snapcreator
+
+
+
+ a| 
+LUN igroup add
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "LUN igroup add " -vserver Snapcreator
+
+
+
+ a| 
+lun igroup create を追加します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 lun igroup create 」 -vserver Snapcreator
+
+
+
+ a| 
+LUN igroup セット
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 lun igroup set 」 -vserver Snapcreator
+
+
+
+ a| 
+lun igroup show を参照してください
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "lun igroup show " -vserver Snapcreator
+
+
+
+ a| 
+LUN マップ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "LUN map " -vserver Snapcreator
+
+
+
+ a| 
+lun mapping show
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "LUN mapping show " -vserver Snapcreator
+
+
+
+ a| 
+lun modify を追加します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "lun modify " -vserver Snapcreator
+
+
+
+ a| 
+LUN の移動
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 lun move 」 -vserver Snapcreator
+
+
+
+ a| 
+LUN はオフラインです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 lun offline 」 -vserver Snapcreator
+
+
+
+ a| 
+LUN はオンラインです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "LUN online " -vserver Snapcreator
+
+
+
+ a| 
+LUN のサイズ変更
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 lun resize 」 -vserver Snapcreator
+
+
+
+ a| 
+lun show をクリックします
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "lun show " -vserver Snapcreator
+
+
+
+ a| 
+LUN のマッピング解除
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "lun unmap " -vserver Snapcreator
+
+
+
+ a| 
+ネットワーク
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "network " -vserver SnapCreator
+
+
+
+ a| 
+ネットワーク接続
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 network connections 」 -vserver SnapCreator
+
+
+
+ a| 
+ネットワーク接続がアクティブです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 network connections active 」 -vserver SnapCreator
+
+
+
+ a| 
+network connections listening show コマンドを使用します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 network connections listening show 」 -vserver SnapCreator
+
+
+
+ a| 
+Network Interface の略
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 network interface 」 -vserver SnapCreator
+
+
+
+ a| 
+ネットワークルーティンググループ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 network routing-groups 」 -vserver SnapCreator
+
+
+
+ a| 
+restore-file を選択します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "restore-file " -vserver Snapcreator
+
+
+
+ a| 
+SnapMirror
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "snapmirror" -vserver SnapCreator
+
+
+
+ a| 
+バージョン
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "version" -vserver Snapcreator
+
+
+
+ a| 
+ボリューム
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname " volume
+
+
+
+ a| 
+ボリュームのオートサイズ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume autosize 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリュームクローン
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume clone 」 -vserver Snapcreator
+
+
+
+ a| 
+volume clone create を実行します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume clone create 」 -vserver Snapcreator
+
+
+
+ a| 
+volume create を実行します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume create " -vserver Snapcreator
+
+
+
+ a| 
+ボリュームを削除します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume destroy " -vserver Snapcreator
+
+
+
+ a| 
+volume efficiency off コマンドを実行します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume efficiency off 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリューム効率化
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume efficiency on 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリューム効率化が開始されます
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume efficiency start 」 -vserver Snapcreator
+
+
+
+ a| 
+volume efficiency show のコマンドです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume efficiency show " -vserver Snapcreator
+
+
+
+ a| 
+ボリュームファイル
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname " volume file " -vserver Snapcreator
+
+
+
+ a| 
+ボリュームファイルクローン
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume file clone 」 -vserver Snapcreator
+
+
+
+ a| 
+volume file clone create を実行します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume file clone create 」 -vserver Snapcreator
+
+
+
+ a| 
+volume modify を使用します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume modify -vserver Snapcreator
+
+
+
+ a| 
+ボリュームマウント
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume mount 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリュームはオフラインです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume offline " -vserver Snapcreator
+
+
+
+ a| 
+volume show のコマンドです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume show " -vserver Snapcreator
+
+
+
+ a| 
+ボリュームサイズ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname " volume size " -vserver Snapcreator
+
+
+
+ a| 
+volume snapshot create を実行します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume snapshot create 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリューム Snapshot の削除
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume snapshot delete 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリューム Snapshot リストア
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 volume snapshot restore 」 -vserver Snapcreator
+
+
+
+ a| 
+ボリュームのアンマウント
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "volume unmount " -vserver Snapcreator
+
+
+
+ a| 
+vserver export-policy rule show
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver export-policy rule show 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver export-policy show のコマンドを入力します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver export-policy show 」 -vserver Snapcreator
+
+
+
+ a| 
+SVM FCP
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname "vserver fcp " -vserver Snapcreator
+
+
+
+ a| 
+vserver fcp initiator show のコマンドを入力します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver fcp initiator show 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver fcp show のコマンドです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver fcp show 」 -vserver Snapcreator
+
+
+
+ a| 
+SVM の FCP ステータス
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver fcp status 」 -vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi connection show
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi connection show 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi interface accesslist add
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi interface accesslist add 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi interface accesslist show を実行します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi interface accesslist show 」 -vserver Snapcreator
+
+
+
+ a| 
+SVM iSCSI iSNS クエリ
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi isns query 」 -vserver Snapcreator
+
+
+
+ a| 
+SVM iSCSI ノード名
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi nodename 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi session show のコマンド
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi session show 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver iscsi show のコマンドです
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi show 」 -vserver Snapcreator
+
+
+
+ a| 
+SVM の iSCSI ステータス
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver iscsi status 」 -vserver Snapcreator
+
+
+
+ a| 
+Vserver NFS
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver nfs 」 -vserver Snapcreator
+
+
+
+ a| 
+SVM の NFS ステータス
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver nfs status 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver services dns hosts show のコマンドを入力します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver services name-service dns hosts show 」 -vserver SnapCreator
+
+
+
+ a| 
+vserver services unix-group create
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver services name-service unix-group create 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-group show
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver services name-service unix-group show 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-user create
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver services name-service unix-user create 」 -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-user show のコマンドを使用します
+ a| 
+role create -role VSERVERRBACROLE_New -cmddirname 「 vserver services name-service unix-user show 」 -vserver Snapcreator
+
+|===

@@ -1,0 +1,34 @@
+---
+permalink: administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, backup, vcloud, vapp, vmware, director, api, vsphere, director, vcenter, vdc 
+summary: Snap Creator では、 VMware プラグインを使用した vCloud vApp のバックアップをサポートしています。vApp および仮想マシンのバックアップコピーは、 vCloud Director API または vSphere API を通じた VMware プラグインを使用して作成されます。 vCloud Director API は VMware vCloud Director 上で起動し、 vSphere API は VMware vCenter サーバ上で起動します。 
+---
+= VMware プラグインを使用した vCloud vApp のバックアップおよびリストア処理の要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator では、 VMware プラグインを使用した vCloud vApp のバックアップをサポートしています。vApp および仮想マシンのバックアップコピーは、 vCloud Director API または vSphere API を通じた VMware プラグインを使用して作成されます。 vCloud Director API は VMware vCloud Director 上で起動し、 vSphere API は VMware vCenter サーバ上で起動します。
+
+vApp のバックアップおよびリストア処理を正常に実行するには、構成ファイルで次の詳細を指定する必要があります。
+
+* vCloud の IP アドレスおよびクレデンシャル
+* vCloud の組織、 virtual data centers （ vDC ；仮想データセンター）、 vApp の名前
+
+
+
+NOTE: 複数の vCenter を vCloud に接続する場合は、すべての vCenter サーバのパスワードを同じにする必要があります。
+
+vCloud のバックアップ処理とリストア処理を実行するときは、以下の点を考慮してください。
+
+* VMware と vCloud を比較すると、バックアッププロセスとリストアプロセスはほぼ同じですが検出プロセスだけではありません。 vCloud のバックアップでは、 representational State Transfer （ REST ） API を使用して、 vCloud Director のメタデータを追加で検出する必要があります。
+* vCloud の詳細として、バックアップ対象の組織、 vDCs 、 vApp を指定する必要があります。
+* vDC がリストされている場合は、 vDC 内のすべての vApp がバックアップされます。
+* vCloud モジュールは、バックアップが必要な vApp に関連付けられている仮想マシンを検出して、バックアップリストに表示します。
+* バックアップ対象に選択した vApp が、同様にバックアップ対象として選択した組織または vDC に含まれている場合、 vApp は 1 回だけバックアップされます。
+
+
+
+NOTE: VMware プラグインを使用して Virtual Machine File System （ VMFS ）のリストア処理を実行する場合は、 LUN と同じサイズの LUN クローンを作成できる十分なスペースがボリューム内に必要です。

@@ -1,0 +1,60 @@
+---
+permalink: administration/reference_parameters_to_connect_to_vfiler_units_and_interface.html 
+sidebar: sidebar 
+keywords: several, parameter, snap, creator, sefver, vfiler, unit, interface, management, secondary 
+summary: Snap Creator サーバを vFiler ユニットおよびインターフェイスに接続するには、いくつかのパラメータが必要です。 
+---
+= vFiler ユニットおよびインターフェイスに接続するためのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバを vFiler ユニットおよびインターフェイスに接続するには、いくつかのパラメータが必要です。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+vFiler
+ a| 
+ a| 
+vFiler ユニットとそのホスティングストレージシステムまたはボリュームをリスト表示します。例： vFiler1@controller1 ： vol1 、 vol2 、 vol3 ； vFiler2@controller2 ： vol1 ； vFiler3@controller3 ： vol2 、 vol3** 注： **HTTPS は vFiler ユニットでサポートされていません。
+
+
+
+ a| 
+MANAGEMENT _ インターフェイス
+ a| 
+ a| 
+通信に使用されるプライマリストレージコントローラとその管理インターフェイスを表示します。例： MANAGEMENT_INTERFACES =controller1 ： controller1-mgmt ； controller2 ： controller2-mgmt
+
+
+
+ a| 
+secondary_interfaces
+ a| 
+ a| 
+プライマリストレージコントローラまたは vFiler ユニット、および SnapVault 関係と SnapMirror 関係のセカンダリインターフェイスのソースまたはデスティネーションを一覧表示します。例： controller1 ： controller1-source/controller2-destination
+
+
+NOTE: このセカンダリインターフェイスを使用するには、 SnapVault 関係と SnapMirror 関係が設定されている必要があります。Snap Creator では、 SnapMirror 関係と SnapVault 関係の管理は行われません。
+
+
+
+ a| 
+プロキシを使用（ _proxy ）
+ a| 
+Y
+| N 
+
+
+ a| 
+ストレージコントローラに直接ではなく Active IQ Unified Manager サーバのプロキシを通して API 呼び出しを実行できるようにします。このオプションを使用する場合、 NTAP_USERS は必要ありません。
+ a| 
+allow_ip_addr
+ a| 
+Y
+
+|===

@@ -1,0 +1,29 @@
+---
+permalink: administration/reference_snap_creator_agent_not_responding.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, responding, corrective, action 
+summary: Snap Creator エージェントが応答していません。 
+---
+= Snap Creator エージェントが応答しません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントが応答していません。
+
+* * 問題 *
++
+Snap Creator エージェントが応答していません。
+
+* * 是正措置 *
++
+次の点を確認します。
+
++
+** Snap Creator エージェントが実行されています。
+** 選択したポートはまだ使用されていません。
+** エージェントポート上の通信は、ファイアウォールを介して許可されます。
+
+
+

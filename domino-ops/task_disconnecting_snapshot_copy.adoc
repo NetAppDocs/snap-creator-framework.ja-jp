@@ -1,0 +1,20 @@
+---
+permalink: domino-ops/task_disconnecting_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, disconnecting, disconnect, snapshot, copy 
+summary: リストア処理が完了したら、マウントされている Snapshot コピーを切断する必要があります。 
+---
+= Snapshot コピーを切断しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リストア処理が完了したら、マウントされている Snapshot コピーを切断する必要があります。
+
+次の手順は、 Windows Server 2008 ホスト上のマウントされた Snapshot コピーを切断する方法を示しています。SnapDrive for Windows および Snap Creator エージェントがホスト上で実行されている必要があります。
+
+. サーバーマネージャーで、 * ストレージ * > * SnapDrive * > * physical_server_name * > * ディスク * をクリックします。
+. Disk Identification （ディスク識別）ペインで、マウントされたディスクを選択し、右クリックメニューの * Disconnect Disk （ディスクの切断） * をクリックします。
+. [ ディスクの切断 ] ダイアログで、 [ はい ] をクリックします。
+

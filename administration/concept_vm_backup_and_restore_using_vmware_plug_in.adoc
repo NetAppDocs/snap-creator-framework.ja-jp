@@ -1,0 +1,44 @@
+---
+permalink: administration/concept_vm_backup_and_restore_using_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, vmware, virtual, machines, vsphere, api, vmware, vcenter, credentials 
+summary: Snap Creator は、 VMware プラグインを使用した VMware 仮想マシンのバックアップをサポートしています。仮想マシンのバックアップは、 VMware vCenter Server の vSphere API を使用して実行されます。 
+---
+= VMware プラグインを使用した仮想マシンのバックアップおよびリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator は、 VMware プラグインを使用した VMware 仮想マシンのバックアップをサポートしています。仮想マシンのバックアップは、 VMware vCenter Server の vSphere API を使用して実行されます。
+
+仮想マシンのバックアップの場合、構成ファイルで次の詳細を指定する必要があります。
+
+* vCenter の IP アドレスまたはホスト名とクレデンシャル
+* vSphere 仮想マシン名およびデータストア名
+
+
+
+NOTE: Snap Creator による vCenter の検出は、 vCenter がデフォルトのポート（ 443 ）に設定されている場合にのみ実行されます。
+
+リストア処理の場合には、バックアップパラメータおよび Snapshot コピーの名前を指定する必要があります。
+
+VMware のバックアップおよびリストア処理を実行するときは、次の点に注意してください。
+
+* 表示された仮想マシンが利用できない場合は、プラグインにエラーメッセージが表示されます。失われた仮想マシンは、バックアップされていてもリストアできません。
+* データストアが表示されている場合は、データストア内のすべての仮想マシンがバックアップされます。
+* 表示されている仮想マシンまたは指定したデータストアに配置されている仮想マシンのみがバックアップされます。
+* バックアップ対象に選択した仮想マシンが、同様にバックアップ対象に選択したデータストアに含まれている場合、その仮想マシンは 1 回だけバックアップされます。
+* VMware プラグインは、 Network File System （ NFS ）データストアと VMware Virtual Machine File System （ VMFS ）データストアの両方をサポートしています。
++
+** NFS データストアでの仮想マシンのリストアは、ストレージシステムで Single File SnapRestore （ SFSR ）を使用するため、ホストのコピーを回避できます。
+** VMFS データストア上の仮想マシンをリストアするには、次の手順を実行します。
++
+... 特定のリストア Snapshot コピーに含まれている LUN の FlexClone または LUN クローンを使用します。
+... そのクローンをクラスタにマッピングします。
+... vCenter API 呼び出しを使用して、 VMFS データストアの Snapshot コピーのコンテンツを元の VMFS データストアにコピーします。
+
+
+
+
+

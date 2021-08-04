@@ -1,0 +1,49 @@
+---
+permalink: installation/task_creating_symbolic_links_for_domino_plug_in_on_linux_and_solaris_hosts.html 
+sidebar: sidebar 
+keywords: creating, create, symbolic, links, domino, plug-in, linux, solaris, hosts 
+summary: Linux ホストおよび Solaris ホスト上に Domino プラグインのシンボリックリンクを作成する場合は、この手順を実行する必要があります。 
+---
+= Linux ホストおよび Solaris ホストで Domino プラグインのシンボリックリンクを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux ホストおよび Solaris ホスト上に Domino プラグインのシンボリックリンクを作成する場合は、この手順を実行する必要があります。
+
+このドキュメントからコマンドを直接コピーして貼り付けないでください。エラー（改行やハードリターンによって誤って転送された文字など）が発生する可能性があります。コマンドをコピーしてテキストエディタに貼り付け、コマンドを確認してから、 CLI コンソールに入力します。
+
+
+NOTE: 以降の手順で示すパスは 32 ビットシステムを参照してください。 64 ビットシステムでは、 /usr/lib ではなく /usr/lib64 への simlinks を作成する必要があります。
+
+. 次のファイルの /usr/lib へのリンクを追加します。
++
+** libxmlproc.so
+** libndgts.so
+** libnote.so
+** libgsk8iccs.so (Domino 9.0 以降のみ ) シンボリックリンクを作成する一般的な方法は ln コマンドを使用することです
+
+
++
+ln -s /path/to /source_file /usr/lib/linked_file
+
++
++ 場所：
+
++
+** -s は ' シンボリック・リンクを作成するようにオペレーティング・システムに指示します
+** /path/to /source_file は、ファイル名を含む Domino ライブラリファイルの 1 つへのパスです。
+** linked_file は、リンクされているファイルの名前です。
++
+[listing]
+----
+ln -s /opt/ibm/domino/notes/latest/linux/libxmlproc.so /usr/lib/libxmlproc.so
+ln -s /opt/ibm/domino/notes/latest/linux/libndgts.so /usr/lib/libndgts.so
+ln -s /opt/ibm/domino/notes/latest/linux/libnotes.so /usr/lib/libnotes.so
+ln -s /opt/ibm/domino/notes/latest/linux/libgsk8iccs.so /usr/lib/libgsk8iccs.so
+----
+
+
+. 手順 1 に記載されたファイルへのパスを確認します。
+

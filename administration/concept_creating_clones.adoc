@@ -1,0 +1,17 @@
+---
+permalink: administration/concept_creating_clones.html 
+sidebar: sidebar 
+keywords: creating, clones, lunes, volumes, cloning, snapshot 
+summary: ボリュームまたは LUN をクローニングする方法は、新しいバックアップからも既存のバックアップからも 2 つあります。 
+---
+= クローンを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームまたは LUN をクローニングする方法は、新しいバックアップからも既存のバックアップからも 2 つあります。
+
+* 新しいバックアップからクローンを作成するには、まず Snapshot を作成し、その Snapshot コピーをクローニングして、そのクローンをマウントします。
+* 既存のバックアップからクローンを作成するには、既存の Snapshot コピーをクローニングして、そのクローンをマウントします。
+

@@ -1,0 +1,40 @@
+---
+permalink: sap-hana-ops/task_configuring_sap_hana_for_san_environments.html 
+sidebar: sidebar 
+keywords: configuring, sap, hana, san, environments 
+summary: データバックアップを設定したら、 Fibre Channel ストレージエリアネットワーク（ SAN ）を使用して SAP HANA システムがストレージコントローラに接続されている環境で、 Snap Creator 構成ファイルに新しいコマンドを追加する必要があります。 
+---
+= SAN 環境向けの SAP HANA の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データバックアップを設定したら、 Fibre Channel ストレージエリアネットワーク（ SAN ）を使用して SAP HANA システムがストレージコントローラに接続されている環境で、 Snap Creator 構成ファイルに新しいコマンドを追加する必要があります。
+
+Snap Creator が SAP HANA 内に配置したバックアップのセーブポイントがグローバルに同期化された場合、最後の手順は、 SAP HANA が /hana/data/SID/mnt00001/hdb00001/snapshot_databackup_0_1 ファイルを書き込む場合です。このファイルはストレージ上のデータボリュームの一部であるため、ストレージ Snapshot コピーの一部です。バックアップがリストアされた場合にリカバリを実行するには、このファイルが必須です。Linux ホストの「 X 」ファイルシステム（ XFS ）を使用してメタデータをキャッシングするため、ファイルはストレージレイヤですぐには認識されません。メタデータキャッシングの標準 XFS 設定は 30 秒です。
+
+Snap Creator では、 XFS メタデータキャッシュがディスクレイヤにフラッシュされるまで待機するポストアプリケーション休止コマンドを追加する必要があります。
+
+メタデータのキャッシングの設定を確認するには、次のコマンドを使用します。
+
+[listing]
+----
+stlrx300s8-2:/ # sysctl -A | grep xfssyncd_centisecs
+fs.xfs.xfssyncd_centisecs = 3000
+----
+. 構成ファイル（ install_path/scServersion _number /engine/configs ）で、 /bin/sleep コマンドを Post Commands セクションに追加します（次の例を参照）。
++
+[listing]
+----
+############################################################
+#     Post Commands      ############################################
+POST_NTAP_DATA_TRANSFER_CMD01=
+POST_APP_QUIESCE_CMD01=/bin/sleep 60
+POST_CLONE_CREATE_CMD01=
+----
++
+
+NOTE: fs.xfs.xfssyncd_centiseconds パラメータの値の 2 倍の待機時間を許可する必要があります。たとえば、デフォルト値の 30 秒では、 sleep コマンドは 60 秒で設定する必要があります。
+
+

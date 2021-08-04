@@ -1,0 +1,203 @@
+---
+permalink: administration/reference_information_required_to_configure_snap_creator.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, native, plug-in, oracle, db2, mysql, sybase, ase, domino, snapmanager, micorsoft, sql 
+summary: Snap Creator では、 Oracle 、 DB2 、 MySQL 、 Sybase ASE 、 Domino 、 SnapManager for Microsoft SQL Server 、 SnapManager for Microsoft Exchange 、 MaxDB 、 VMware （ vSphere および vCloud Director ）、 Red Hat KVM 、 Citrix XenServer 、および SAP HANAコミュニティプラグインはパッケージに含まれていないため、別途ダウンロードする必要があります。 
+---
+= Snap Creator の設定に必要なプラグイン情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator では、 Oracle 、 DB2 、 MySQL 、 Sybase ASE 、 Domino 、 SnapManager for Microsoft SQL Server 、 SnapManager for Microsoft Exchange 、 MaxDB 、 VMware （ vSphere および vCloud Director ）、 Red Hat KVM 、 Citrix XenServer 、および SAP HANAコミュニティプラグインはパッケージに含まれていないため、別途ダウンロードする必要があります。
+
+次の表に、プラグインのパラメータと設定を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+APP_NAME を使用している
+ a| 
+Oracle の場合
+| DB2 
+
+
+| MySQL | Domino | バイブ 
+
+
+| SMSQL | SME | Sybase の場合 
+
+
+| MaxDB | KVM の略 | Xen 
+
+
+| HANA < プラグイン >  a| 
+バックアップするアプリケーションを指定します。Snap Creator には、左記のアプリケーションのサポート機能が組み込まれています。APP_NAME を使用するか、 APP_QUIESCE_CMDXX 、 APP_UNQUIESCE_CMDXX 、 PRE_EXIT_CMDXX を設定することもできます。アプリケーションが Snap Creator で直接サポートされない場合は、プラグインを使用するか、独自のアプリケーション休止または休止解除コマンド、またはスクリプトを使用できます。<PLUG-IN> ：プラグインを /path/to/scServer_v<#>/scServerに コピーします
+| scAgent/plug-ins ディレクトリ。 APP_NAME パラメータでプラグインを指定します。コマンドまたはスクリプト： - - - - APP_QUIESCE_CMD01 = PATH_-to-QuiesCMD APP_UNQUIESCE_CMD01 = PATH_To _ UNQUIECMD PRE_EXIT_CMD01 = PATH_To _ UNQuiesCMD - - - - - 
+
+
+ a| 
+APP_IGNORE_ERROR
+ a| 
+Y
+| N 
+
+
+ a| 
+アプリケーションプラグインで発生するエラーを Snap Creator が無視するかどうかを指定します。複数のデータベースをバックアップする場合、さらには、いずれかのデータベースの休止または休止解除の処理が失敗した場合にバックアップを停止しない場合に役立ちます。
+ a| 
+APP_DEFINED_BACKUP
+ a| 
+Y
+
+
+
+| N  a| 
+アプリケーションプラグインでは、休止、 Snapshot コピーの作成、休止解除など、バックアップ処理全体が実行されることが想定されています。組み込みプラグインは、このようなバックアップをサポートしていません。
+ a| 
+APP_DEFINED_RESTORE の場合
+
+
+
+ a| 
+Y
+| N  a| 
+アプリケーションベースのリストア処理を有効にします。リストア処理が発生した場合、 Snap Creator はアプリケーションプラグインに要求を送信し、アプリケーションプラグインがその要求を処理します。
+
+
+
+ a| 
+APP_DEFINED_MOUNT
+ a| 
+Y
+| N 
+
+
+ a| 
+Snap Creator に組み込まれているマウント機能は無視されます。代わりに、プラグインが、ボリュームクローンや LUN クローンの作成など、すべてのマウント処理を実行します。組み込みプラグインは、このタイプのマウントをサポートしていません。
+ a| 
+APP_DEFINED_umount
+ a| 
+Y
+
+
+
+| N  a| 
+Snap Creator に組み込まれているアンマウント機能は無視されます。代わりに、プラグインが、ボリュームクローンや LUN クローンの削除など、すべてのアンマウント処理を実行します。組み込みプラグインは、このタイプのアンマウント処理をサポートしていません。
+ a| 
+APP_AUTO_DISCOVERY
+
+
+
+ a| 
+Y
+| N  a| 
+アプリケーションの自動検出を有効にします。Snap Creator はアプリケーションプラグインに検出要求を送信し、アプリケーションプラグインは、ストレージ構成の検出を実行します。構成ファイルに情報を保存する場合は、 APP_CONF_PERSISTENCE パラメータを使用することで、動的に実行することも、永続的に設定することもできます。
+
+
+
+ a| 
+APP_CONF_PERSISTENCE
+ a| 
+Y
+| N 
+
+
+ a| 
+永続的な自動検出を有効にします。これにより、構成ファイルの変更が動的に更新されます。
+ a| 
+APP_DEFINED_CLONE
+ a| 
+Y
+
+
+
+| N  a| 
+Snap Creator に組み込まれているクローニング機能は無視されます。代わりに、プラグインが、ボリュームクローンや LUN クローンの作成および削除など、すべてのクローン処理を実行します。組み込みプラグインは、このタイプのクローンをサポートしていません。
+ a| 
+fs_name
+
+
+
+ a| 
+プラグイン
+ a| 
+ファイルシステムの処理に使用されているプラグインを指定します。
+ a| 
+JAVA_HOME にアクセスします
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定では、 .class ファイルおよび .jar ファイルの実行に使用する Java Virtual Machine （ JVM ； Java 仮想マシン）を指定します。
+ a| 
+jvm_args
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定は、ネイティブの java.class または .jar ファイルが実行されるときの JVM 設定を制御します。デフォルト設定は、 -Xms32M -Xmx128M です。
+ a| 
+JAVA_CLASSPATH
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定では、 Java クラスパスを定義します。デフォルトでは、 plug-ins/native が設定され、この環境変数を使用して実行できます。この環境変数は、デフォルトに追加されます。
+ a| 
+META_DATA_VOLUME
+
+
+
+ a| 
+ a| 
+指定したボリュームの Snapshot コピーを有効にして、休止解除処理後に作成します。データの Snapshot コピーをさまざまなタイミングで作成する必要があるプラグインにとっては、この機能は大いに役立ちます。パラメータではボリュームだけでなく、コントローラも指定する必要があります（例： controller1 ： volume1 、 volume2 ； controller2 ： volume3 、 volume4 ； controller3 ： volume5 、 volume6` ）。
+ a| 
+PERL_HOME の形式で指定します
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定は、 Perl インタープリタを参照して .pl ファイルの実行に使用されます。
+ a| 
+PERL_OPTS
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定は、ネイティブの Perl ファイル実行時の Perl インタープリタの設定を制御します。追加設定のオプションには、 Perl インタープリタに渡すことができるディレクトリ（ -I ）が含まれます。
+ a| 
+python_home
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定は、 .py ファイルの実行に使用される Python インタープリタを参照します。
+ a| 
+Python_OPTS
+
+
+
+ a| 
+テキスト（ Text ）
+ a| 
+この設定は、ネイティブの Python ファイル実行時に Python インタープリタの設定を制御します。
+ a| 
+VALIDATE_VOLUMES
+
+|===

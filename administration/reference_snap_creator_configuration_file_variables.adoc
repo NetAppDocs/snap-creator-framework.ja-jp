@@ -1,0 +1,29 @@
+---
+permalink: administration/reference_snap_creator_configuration_file_variables.html 
+sidebar: sidebar 
+keywords: variable, parameter, snap, creator, configuration, file, snapshot 
+summary: 変数、パラメータ、およびコマンドは、 Snap Creator 構成ファイル内で定義できます。 
+---
+= Snap Creator 構成ファイルの変数、パラメータ、コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+変数、パラメータ、およびコマンドは、 Snap Creator 構成ファイル内で定義できます。
+
+Snap Creator 構成ファイルは動的に生成されるため、構成ファイル内に変数を作成したり、設定したりできます。
+
+たとえば、 ONTAPI の代わりに SnapDrive for Windows を使用して Snapshot コピーを作成する場合などです。Snapshot コピー名は一意である必要があるため、動的な変数を設定する必要があります。次に、 SnapDrive for Windows の設定例を示します。
+
+NTAP_SNAPSHOT_CREATE_CMD1= 「 c ： \Program Files/NetApp/SnapDrive/sdcli.exe 」 snap create -m fx1b4 -s %SNAME - %SNAME - %SNAP_TYPE_%SNAP_TIME -D E ：
+
+または
+
+NTAP_SNAPSHOT_CREATE_CMD1= 「 c ： \Program Files/NetApp/SnapDrive/sdcli.exe 」 snap create -m fx1b4 -s %SNAME - %snap_type_recent -D E ：
+
+Snapshot コピーの削除に Data ONTAP ではなく SnapDrive for Windows を使用する場合は、 NTAP_SNAPSHOT_DELETE_CMDparameter を使用できます。SnapDrive for Windows コマンドでは、 Snapshot コピー名の代わりに %snapname パラメータを使用する必要があります。
+
+次の例は、 SnapDrive for Windows の構成を示しています。
+
+NTAP _ SNAPSHOT_DELETE_CMD01 = C ： \Program Files\NetApp\SnapManager \ snap\sdcli " snap delete -s %snapname -D I ：

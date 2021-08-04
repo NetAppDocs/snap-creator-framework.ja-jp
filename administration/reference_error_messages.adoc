@@ -1,0 +1,22 @@
+---
+permalink: administration/reference_error_messages.html 
+sidebar: sidebar 
+keywords: error, messages, scf, repo, storage, agt, gui 
+summary: さまざまな Snap Creator の処理に関連するエラーメッセージに注意する必要があります。 
+---
+= エラーメッセージ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+さまざまな Snap Creator の処理に関連するエラーメッセージに注意する必要があります。
+
+各エラーメッセージには、エリアコードと一意の 5 桁の識別子が含まれています。たとえば、次のようになります。 error ： [<area code> - <unique area error identifier>] <error message> 。エリアコードは、エラーが発生した場所を識別します。各エリアコードは次のとおりです。
+
+* 「 cf 」： Snap Creator Framework
+* `re PO`: リポジトリ
+* 「ストレージ」：ストレージ
+* agt ： Snap Creator エージェント
+* `GUI: Snap Creator のグラフィカルユーザインターフェイス（ GUI ）
+

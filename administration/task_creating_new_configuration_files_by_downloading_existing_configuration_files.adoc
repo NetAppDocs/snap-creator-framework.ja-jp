@@ -1,0 +1,22 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html 
+sidebar: sidebar 
+keywords: configuration, file, downloading, gui, snap, creator 
+summary: Snap Creator の GUI を使用して、既存のファイルをダウンロードし、新しいファイル名でインポートすることで、新しい構成ファイルを作成できます。 
+---
+= 既存のコンフィギュレーションファイルをダウンロードして、新しいコンフィギュレーションファイルを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、既存のファイルをダウンロードし、新しいファイル名でインポートすることで、新しい構成ファイルを作成できます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. プロファイルと構成ペインで、構成ファイルを右クリックし、 * ダウンロード * を選択します。
+. ファイルを required-path/required-filename.ext. として保存します
++
+
+NOTE: この新しいファイルには、必ず一意の名前を指定してください。名前を変更しないと、元の構成ファイルが上書きされないように、ファイルがアップロードされる前に名前を変更してください。
+
+

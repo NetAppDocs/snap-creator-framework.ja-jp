@@ -1,0 +1,73 @@
+---
+permalink: administration/reference_pre_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap, clone, exit 
+summary: Snap Creator サーバには、複数の構成ファイルの PRE コマンドが含まれています。 
+---
+= PRE コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバには、複数の構成ファイルの PRE コマンドが含まれています。
+
+
+NOTE: Windows の場合 '`cmd.exe /c` は PRE コマンドの前に含める必要があります
+
+|===
+| コマンドを実行します | 説明 
+
+
+ a| 
+PRE_APP_QUIESCE _ CMD##
+ a| 
+アプリケーションのバックアップの開始前に実行する PRE コマンドです。 ## は、 01~99 の数字が入ります。
+
+
+
+ a| 
+NTAP_DFM_CMD## より前のコード
+ a| 
+Snapshot の前に実行する PRE コマンドです。 ## は、 01~99 の数字が入ります。すべての処理の前に実行されます。
+
+
+
+ a| 
+PRE _ APP _ UNQUIESCE _ CMD##
+ a| 
+アプリケーションのバックアップの停止前に実行する PRE コマンドです。 ## は、 01~99 の数字が入ります。
+
+
+
+ a| 
+NTAP_CLONE_DELETE_CMD## より前の PRE コマンドです
+ a| 
+これはクローニング前削除前のコマンドです。 ## は、 01~99 の数字が入ります。* 注： * clone delete コマンドは、（おそらくはテープへの）バックアップを実行するためにクローニングされた LUN をマウントできるよう、マウントスクリプトまたはマウントコマンドを呼び出す目的で使用されます。
+
+
+
+ a| 
+PRE_EXIT_CMD###
+ a| 
+これは、致命的なエラーの発生後、 Snap Creator を終了する前に実行されるオプションのコマンドです。これは、 Snap Creator の実行前の状態に戻す場合に役立ちます。 * 注： *
+
+* このコマンドを実行すると、エラーで Snap Creator が終了する前に、アプリケーションが通常運用モードに戻ります。
+* APP_NAME を使用している場合は、 SnapCreator で内部的に処理されるため、この設定が無視されます。
+
+
+
+
+ a| 
+PRE_RESTORE _CMD##
+ a| 
+これは、対話型のリストアを開始する前に実行できるオプションのコマンドです。これにより、リストアされるアプリケーションとの通信が可能になります。たとえば、リストアを実行する前にアプリケーションをシャットダウンできます。* 注： * MySQL プラグインではサポートされていません。
+
+
+
+ a| 
+PRE_CLONE _CREATE_CMD##
+ a| 
+このコマンドはオプションで、 ONTAPI クローニング処理が実行される前に実行できます。 ## は、 01~99 の数字が入ります。
+
+|===

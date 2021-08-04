@@ -1,0 +1,28 @@
+---
+permalink: administration/task_deleting_configuration_files.html 
+sidebar: sidebar 
+keywords: delete, configuration, file, profile, management 
+summary: プロファイルから構成ファイルを削除できます。 
+---
+= プロファイルから構成ファイルを削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルから構成ファイルを削除できます。
+
+
+IMPORTANT: 構成ファイルを削除すると、その構成に関連付けられているスケジュールもプロセスの一部として削除されます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. プロファイルと構成ペインで、プロファイルの内容を展開します。
++
+プロファイルに割り当てられた構成ファイルが、プロファイル名の下に表示されます。
+
+. 構成ファイルを右クリックし、 * 削除 * を選択します。
+. 確認ウィンドウで [ はい ] をクリックします。
++
+構成ファイルはプロファイル名の下のリストから削除され、 Snap Creator サーバから完全に削除されます。
+
+

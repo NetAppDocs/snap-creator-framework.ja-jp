@@ -1,0 +1,66 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: creating, create, snap, creator, user, ontap, 7-mode 
+summary: Snap Creator は、ストレージシステムとの通信に Data ONTAP API を使用しています。ユーザアカウントに必ず Snap Creator のみへのアクセスが許可されるようにするには、各ストレージコントローラ上に新しいロール、グループ、およびユーザを作成します。ロールがグループに割り当てられ、そのグループにユーザが含まれます。これにより、アクセスが制御され、 Snap Creator アカウントの範囲が制限されます。 
+---
+= Data ONTAP 7-Mode 用 Snap Creator ユーザを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator は、ストレージシステムとの通信に Data ONTAP API を使用しています。ユーザアカウントに必ず Snap Creator のみへのアクセスが許可されるようにするには、各ストレージコントローラ上に新しいロール、グループ、およびユーザを作成します。ロールがグループに割り当てられ、そのグループにユーザが含まれます。これにより、アクセスが制御され、 Snap Creator アカウントの範囲が制限されます。
+
+Snap Creator がインストールされているストレージコントローラごとに、この手順を 1 回実行する必要があります。
+
+Data ONTAP の CLI （ SSH 、コンソール接続、 Telnet ）を使用して 7-Mode の Data ONTAP 用の Snap Creator ユーザを作成するには、次の手順を実行します。
+
+
+NOTE: このドキュメントからコマンドを直接コピーして貼り付けることは避けてください。改行や返却が原因で誤って文字が転送される可能性があります。この手順からコマンドをコピーしてテキストエディタに貼り付け、コマンドを確認してから、 CLI に入力します。
+
+. 次のコマンドを実行して、ストレージシステム上で Snap Creator に必要な権限を定義するロールを作成します。
++
+[listing]
+----
+useradmin role add rolename -a login-\*,api-snapshot-\*,api-system-\*,
+api-ems-\*,api-snapvault-\*,api-snapmirror-\*,api-volume-\*,
+api-lun-\*,api-cg-\*,api-nfs-\*,api-file-\*,api-license-\*,
+api-net-\*api-clone-\*, api-options-get, api-wafl-sync
+----
++
+
+NOTE: この手順に示すコマンドには、 Snap Creator が使用するすべての API ロールが含まれています。ただし、必要なロールだけを指定することでユーザアクセスを制限できます（ SnapMirror を使用しない場合、 api-snapmirror- * は不要です）。
+
++
+[listing]
+----
+useradmin role add sc_role -a login-*,api-snapshot-*,api-system-*,api-ems-*,api-snapvault-*,api-snapmirror-*,api-volume-*,
+api-lun-*,api-cg-*,api-nfs-*,api-file-*,api-license-*, api-net-*, api-clone-*, api-options-get, api-wafl-sync
+----
+. 次のコマンドを実行して、ストレージシステム上に新しいグループを作成し、作成したロールを割り当てます。
++
+[listing]
+----
+useradmin group add groupname -r rolename
+----
++
+[listing]
+----
+useradmin group add snap_creator_group -r snap_creator_role
+----
+. 次のコマンドを実行してユーザアカウントを作成します。
++
+[listing]
+----
+useradmin user add username -g groupname
+----
++
+[listing]
+----
+useradmin user add snap_creator_user -g snap_creator_group
+----
+. アカウントのパスワードを入力します。
+
+
+Snap Creator の構成ファイルを作成する場合は、この制限されたアカウントを使用してください。

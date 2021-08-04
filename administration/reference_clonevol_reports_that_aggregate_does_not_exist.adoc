@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_clonevol_reports_that_aggregate_does_not_exist.html 
+sidebar: sidebar 
+keywords: clustered, data, ontap, storage, virtual, machine, svm, cloning, clonevol 
+summary: clustered Data ONTAP では、クローニングを行うために、アグリゲートを Storage Virtual Machine （ SVM ）に割り当てる必要があります。見つからない場合、 cloneVol アクションがエラーを返すことがあります。 
+---
+= cloneVol は、アグリゲートが存在しないと報告します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+clustered Data ONTAP では、クローニングを行うために、アグリゲートを Storage Virtual Machine （ SVM ）に割り当てる必要があります。見つからない場合、 cloneVol アクションがエラーを返すことがあります。
+
+* * 問題 *
++
+cloneVol アクションは、次の例に示すようなエラーを返します。
+
++
+[listing]
+----
+ERROR: com.netapp.snapcreator.storage.executor.ZapiExecutorException: netapp.manage.NaAPIFailedException: Aggregate [aggregate name] does not exist (errno=14420)
+----
+* * 原因 *
++
+クローニング目的でアグリゲートが SVM に割り当てられませんでした。
+
+* * 是正措置 *
++
+クローニングするためにアグリゲートを SVM に割り当てます。 vserver modify -vserver [vserver_name ] -aggr-list [aggregate_name ]
+
+

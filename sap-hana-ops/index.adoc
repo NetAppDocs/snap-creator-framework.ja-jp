@@ -1,0 +1,13 @@
+---
+permalink: sap-hana-ops/index.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, operations, guide, configure, use, backup, back, up, restore, databases 
+summary: SAP HANA プラグインを設定して使用し、 SAP HANA データベースをバックアップおよびリストアする方法について説明します。 
+---
+= 『 SAP HANA ® Plug-in Operations Guide 』を参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="Lead"]
+本書では、 SAP HANA データベースをバックアップおよびリストアするために、 Snap Creator 4.3.3 用 SAP HANA プラグインを設定および使用する方法について説明します。

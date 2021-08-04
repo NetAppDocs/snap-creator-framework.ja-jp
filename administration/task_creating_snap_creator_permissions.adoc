@@ -1,0 +1,26 @@
+---
+permalink: administration/task_creating_snap_creator_permissions.html 
+sidebar: sidebar 
+keywords: snap, creator, permission, cli 
+summary: ロールに割り当てることができる Snap Creator の権限は、コマンドラインインターフェイス（ CLI ）でのみ作成できます。 
+---
+= CLI を使用した Snap Creator の権限の作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ロールに割り当てることができる Snap Creator の権限は、コマンドラインインターフェイス（ CLI ）でのみ作成できます。
+
+. 権限を作成します。
++
+'napcreator -- server host_name -- port port_number -- user sc_user_name -- passwd sc_passwd -- action permAdd -permName permission_name -- perDesc perperpermission_description--verbose `
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 --action permAdd --permName backup
+--permDesc "Permission to run a backup" –verbose
+----
+

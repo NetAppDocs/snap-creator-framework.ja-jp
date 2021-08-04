@@ -1,0 +1,29 @@
+---
+permalink: domino-ops/task_creating_a_domino_backup_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases, on-demand, on, demand 
+summary: ネットアップストレージで使用可能になったデータベースはすぐにバックアップする必要があります。初期バックアップ後に、定期的なバックアップのスケジュールを設定できます。 
+---
+= オンデマンドでのデータベースのバックアップ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットアップストレージで使用可能になったデータベースはすぐにバックアップする必要があります。初期バックアップ後に、定期的なバックアップのスケジュールを設定できます。
+
+の説明に従って、バックアップ用の構成ファイルを作成しておく必要があります xref:task_using_the_gui_to_create_a_configuration_file.adoc[構成ファイルを作成しています]。
+
+. [ プロファイルと構成 ] ペインで構成ファイルを選択し、 [ * アクション * > * バックアップ * ] をクリックします。
+. [ 追加パラメータ ] ダイアログボックスで、 [ * ポリシー * ] ドロップダウンでバックアップ・ジョブのポリシーを選択し、 [OK] をクリックします。
++
+image::../media/scfw_domino_select_a_policy.gif[この図には説明が付随しています。]
+
++
+
+NOTE: 構成ファイルでポリシーを設定しておく必要があります。
+
++
+Snap Creator がバックアップジョブを開始します。ジョブ情報がコンソールペインに表示されます。
+
+

@@ -1,0 +1,18 @@
+---
+permalink: domino-ops/concept_snapmirror_and_snapvault_setup.html 
+sidebar: sidebar 
+keywords: domino, ibm, snapmirror, snapvault, setup 
+summary: SnapMirror は、地理的に離れたサイトのプライマリストレージからセカンダリストレージへのフェイルオーバー用に設計されたディザスタリカバリテクノロジです。SnapVault は、基準への準拠およびその他のガバナンス関連の目的で、ディスクツーディスクの Snapshot コピーレプリケーション用に設計されたアーカイブテクノロジです。 
+---
+= SnapMirror と SnapVault のセットアップ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror は、地理的に離れたサイトのプライマリストレージからセカンダリストレージへのフェイルオーバー用に設計されたディザスタリカバリテクノロジです。SnapVault は、基準への準拠およびその他のガバナンス関連の目的で、ディスクツーディスクの Snapshot コピーレプリケーション用に設計されたアーカイブテクノロジです。
+
+これらの製品で Snap Creator を使用するには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。
+
+
+NOTE: このセクションの手順では、 clustered Data ONTAP でレプリケーション関係を設定する方法について説明します。これらの関係の設定に関する情報は、 Data ONTAP 7-Mode で確認できます。

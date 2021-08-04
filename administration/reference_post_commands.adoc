@@ -1,0 +1,59 @@
+---
+permalink: administration/reference_post_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, post, command, quiescecmde, cmd, ntap, app, post, transfer 
+summary: Snap Creator サーバには、複数の構成ファイルの POST コマンドが用意されています。 
+---
+= POST コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator サーバには、複数の構成ファイルの POST コマンドが用意されています。
+
+|===
+| コマンドを実行します | 説明 
+
+
+ a| 
+POST_APP_QUIESCECMD##
+ a| 
+アプリケーションのバックアップの開始後に実行する POST コマンドです。 ## は、 01~99 の数字が入ります。
+
+
+
+ a| 
+NTAP_DFM_CMD## 後
+ a| 
+POST コマンドです。 ## は、 01~99 の数字が入ります。すべての処理の完了後に実行されます。
+
+
+
+ a| 
+POST_APP_UNQUIESCE _ CMD##
+ a| 
+アプリケーションのバックアップの停止後に実行する POST コマンドです。 ## は、 01~99 の数字が入ります。
+
+
+
+ a| 
+NTAP_NTAP_DFM_DATA_transfer_CMD## で送信します
+ a| 
+これは、 SnapVault または SnapMirror の転送後に実行されるデータ転送後のコマンドです。 ## は、 01~99 の数字が入ります。
+
+
+
+ a| 
+Post_restore_CMD##
+ a| 
+これは、対話型のリストアが完了したあとに実行できるオプションのコマンドです。このコマンドを使用すると、リストア対象のアプリケーションと相互に通信できます。リストアの完了後、アプリケーションの起動が必要になる場合があります。* 注： * MySQL プラグインではサポートされていません。
+
+
+
+ a| 
+POST_CLONE _CREATE_CMD##
+ a| 
+このコマンドはオプションで、 ONTAPI クローニング処理が発生したあとに実行できます。 ## は、 01~99 の数字が入ります。このコマンドを使用して、クローニングされたファイルシステムのマウントなどの処理を実行できます。
+
+|===

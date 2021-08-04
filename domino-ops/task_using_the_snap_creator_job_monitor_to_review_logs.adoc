@@ -1,0 +1,36 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, job, status, logs, monitor 
+summary: Snap Creator ジョブモニタは、ダッシュボードに似た Snap Creator ジョブ用のインターフェイスです。ジョブモニタを使用して、ジョブステータスを表示したり、ログをダウンロードしたりできます。 
+---
+= ジョブモニタでのジョブステータスとログの表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator ジョブモニタは、ダッシュボードに似た Snap Creator ジョブ用のインターフェイスです。ジョブモニタを使用して、ジョブステータスを表示したり、ログをダウンロードしたりできます。
+
+ジョブモニタには、次のようなジョブステータスが表示されます。
+
+* image:../media/scfw_domino_icon_job_in_progress.gif["この図には説明が付随しています。"] ジョブが進行中であることを示します。
+* image:../media/scfw_domino_icon_job_successful.gif["この図には説明が付随しています。"] 正常に完了したジョブを示します。
+* image:../media/scfw_domino_icon_job_completed_with_errors.gif["この図には説明が付随しています。"] エラーが発生して完了したジョブを示します。
+* image:../media/scfw_domino_icon_job_failed.gif["この図には説明が付随しています。"] 失敗したジョブを示します。
++
+.. Profiles and Configurations ペインで、構成ファイルを選択し、 Snap Creator Framework ウィンドウの上部にある * Management * > * Job Monitor * をクリックします。
++
+Job Monitor ペインが表示され、ジョブのステータスを確認できます。
+
+.. ジョブを選択し、 * Download Logs * > * Log_Type * をクリックします。 Log_Type は、次のいずれかです。
++
+*** * アウトログ * は、ジョブの詳細レベル情報を提供します。
+*** * デバッグログ * は、詳細レベルの情報とデバッグに役立つ情報を提供します。
+*** * GUI ログ * は、 Snap Creator の GUI 操作に関する情報を提供します。 GUI ログは、選択したジョブに固有のものではありません。
+
+
+.. ダウンロードダイアログで、必要に応じて、 * 開く * または * 保存 * をクリックします。
+
+
+

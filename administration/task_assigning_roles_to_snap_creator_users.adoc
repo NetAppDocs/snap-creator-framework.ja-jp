@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_roles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, user, gui, role, management 
+summary: Snap Creator の GUI を使用して、 Snap Creator ユーザにロールを割り当てることができます。 
+---
+= Snap Creator ユーザにロールを割り当てます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、 Snap Creator ユーザにロールを割り当てることができます。
+
+. Snap Creator の GUI メインメニューから、 * Users and Roles * > * User Management * を選択します。
+. [ ユーザー管理 ] タブで目的のユーザー名を選択し、 [ プロファイルの割り当て ] をクリックします。
+. 目的のロールを左の列から右の列に移動し、 * 保存 * をクリックします。
++
+列間でロールを選択してドラッグするか、矢印をクリックして列間でロールを移動できます。
+
+. ユーザーを選択し、割り当てられた役割を [*Assigned Profiles and Roles*] ペインで表示して、役割が割り当てられていることを確認します。
+

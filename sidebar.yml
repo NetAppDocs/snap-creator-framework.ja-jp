@@ -1,0 +1,650 @@
+---
+entries:
+- title: ホーム
+  url: "/index.html"
+- title: リリースノート
+  url: "/releasenotes.html"
+- title: インストール
+  url: "/installation/index.html"
+  entries:
+  - title: Snap Creator Framework の動作
+    url: "/installation/concept_what_snap_creator_does.html"
+    entries:
+    - title: Snap Creator のアーキテクチャ
+      url: "/installation/concept_snap_creator_architecture.html"
+      entries:
+      - title: Snap Creator サーバ
+        url: "/installation/concept_scf_component_server.html"
+      - title: Snap Creator エージェント
+        url: "/installation/concept_scf_component_agent.html"
+      - title: アプリケーション統合用のプラグイン
+        url: "/installation/concept_plug_ins_for_application_integration.html"
+  - title: Snap Creator をインストールする前の要件
+    url: "/installation/concept_preinstallation_requirements_for_snap_creator.html"
+    entries:
+    - title: Snap Creator のインストールおよび構成の要件
+      url: "/installation/concept_snap_creator_installation_and_configuration_requirements.html"
+    - title: Snap Creator ソフトウェアのダウンロード
+      url: "/installation/task_downloading_the_snap_creator_software.html"
+    - title: Data ONTAP 用 Snap Creator ユーザの作成
+      url: "/installation/concept_creating_a_snap_creator_user_for_data_ontap.html"
+      entries:
+      - title: Data ONTAP 7-Mode 用 Snap Creator ユーザを作成します
+        url: "/installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html"
+      - title: clustered Data ONTAP の Snap Creator ユーザを作成しています
+        url: "/installation/task_creating_a_snap_creator_user_for_clustered_ontap.html"
+    - title: Snap Creator ホストに Java をインストールしています
+      url: "/installation/task_installing_java_on_snap_creator_hosts.html"
+    - title: Snap Creator サーバおよびエージェントホストの時間の同期
+      url: "/installation/concept_set_up_the_hosts_to_be_in_sync_with_the_same_ntp_server.html"
+    - title: Domino プラグインの設定
+      url: "/installation/concept_configuring_settings_for_the_domino_plug_in.html"
+      entries:
+      - title: Windows 固有の設定：環境変数へのパスの追加
+        url: "/installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html"
+      - title: UNIX 固有の設定：シンボリックリンクの作成
+        url: "/installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html"
+        entries:
+        - title: Linux ホストおよび Solaris ホストで Domino プラグインのシンボリックリンクを作成する
+          url: "/installation/task_creating_symbolic_links_for_domino_plug_in_on_linux_and_solaris_hosts.html"
+        - title: AIX ホスト上で Domino プラグイン用のシンボリックリンクを作成する
+          url: "/installation/task_creating_symbolic_links_for_domino_plug_in_on_aix_hosts.html"
+  - title: Snap Creator サーバをインストールします
+    url: "/installation/concept_installing_the_snap_creator_server.html"
+    entries:
+    - title: Windows ホストに Snap Creator サーバをインストールする
+      url: "/installation/task_installing_the_snap_creator_server_on_a_windows_host.html"
+      entries:
+      - title: コマンドプロンプトからサーバーを起動します
+        url: "/installation/task_starting_the_server_from_a_command_prompt.html"
+    - title: UNIX ベースのシステムへの Snap Creator サーバのインストール
+      url: "/installation/task_installing_the_snap_creator_server_on_unix.html"
+  - title: Snap Creator エージェントをインストールします
+    url: "/installation/concept_install_snap_creator_agent.html"
+    entries:
+    - title: Windows への Snap Creator エージェントのインストール
+      url: "/installation/task_installing_snap_creator_agent_on_windows.html"
+      entries:
+      - title: コマンドプロンプトからエージェントを起動します
+        url: "/installation/task_starting_the_agent_from_a_command_prompt.html"
+    - title: UNIX ベースのシステムへの Snap Creator エージェントのインストール
+      url: "/installation/task_installing_the_snap_creator_agent_on_unix.html"
+    - title: インストール後に Snap Creator エージェントのポートを変更する
+      url: "/installation/task_changing_the_snap_creator_agent_port_after_installation.html"
+  - title: Snap Creator をアップグレードします
+    url: "/installation/concept_upgrading_snap_creator.html"
+    entries:
+    - title: ジョブ監視のサイズを確認しています
+      url: "/installation/task_checking_job_monitor_size.html"
+    - title: Snap Creator 3.6 より前のリリースからのアップグレード
+      url: "/installation/concept_upgrading_from_releases_earlier_than_snap_creator_3_6.html"
+    - title: Snap Creator 3.6.x からのアップグレード
+      url: "/installation/concept_upgrading_from_snap_creator_3_6_x.html"
+      entries:
+      - title: Windows での Snap Creator サーバ 3.6.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_server_3_6_x_on_windows.html"
+      - title: UNIX ベースのシステムでの Snap Creator サーバ 3.6.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_server_3_6_x_on_unix.html"
+      - title: Windows での Snap Creator エージェント 3.6.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_agent_3_6_x_on_windows.html"
+      - title: UNIX での Snap Creator エージェント 3.6.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_agent_3_6_x_on_unix.html"
+    - title: Snap Creator 4.0.x からアップグレードする
+      url: "/installation/concept_upgrading_from_snap_creator_4_0_x.html"
+      entries:
+      - title: Windows での Snap Creator サーバ 4.0.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_server_4_0_x_on_windows.html"
+      - title: UNIX ベースのシステムでの Snap Creator サーバ 4.0.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_server_4_0_x_on_unix.html"
+      - title: Windows での Snap Creator エージェント 4.0.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_agent_4_0_x_on_windows.html"
+      - title: UNIX での Snap Creator エージェント 4.0.x のアップグレード
+        url: "/installation/task_upgrading_the_snap_creator_agent_4_0_x_on_unix.html"
+    - title: Snap Creator 4.1.x からのアップグレード
+      url: "/installation/concept_upgrading_from_snap_creator_4_1.html"
+      entries:
+      - title: Windows での Snap Creator サーバ 4.1.x のアップグレード
+        url: "/installation/task_upgrading_snap_creator_server_4_1_x_on_windows.html"
+      - title: UNIX ベースのシステムでの Snap Creator サーバ 4.1.x のアップグレード
+        url: "/installation/task_upgrading_snap_creator_server_4_1_x_on_unix_based_systems.html"
+      - title: Windows での Snap Creator エージェント 4.1.x のアップグレード
+        url: "/installation/task_upgrading_snap_creator_agent_4_1_x_on_windows.html"
+      - title: UNIX ベースのシステムでの Snap Creator エージェント 4.1.x のアップグレード
+        url: "/installation/task_upgrading_snap_creator_agent_4_1_x_on_unix.html"
+    - title: Snap Creator 4.3.x からのアップグレード
+      url: "/installation/concept_upgrading_from_snap_creator_4_3_x.html"
+  - title: Snap Creator をアンインストールしています
+    url: "/installation/concept_uninstalling_snap_creator.html"
+    entries:
+    - title: Windows での Snap Creator のアンインストール
+      url: "/installation/task_uninstalling_snap_creator_on_windows.html"
+    - title: UNIX 上での Snap Creator のアンインストール
+      url: "/installation/concept_uninstalling_snap_creator_on_unix.html"
+      entries:
+      - title: UNIX での Snap Creator エージェントのアンインストール
+        url: "/installation/task_uninstalling_snap_creator_agent_from_unix.html"
+      - title: UNIX での Snap Creator サーバのアンインストール
+        url: "/installation/task_uninstalling_snap_creator_server_on_unix.html"
+  - title: CLI リファレンス
+    url: "/installation/concept_cli_reference.html"
+    entries:
+    - title: clustered Data ONTAP で Snap Creator ユーザのロールを作成するための CLI コマンド
+      url: "/installation/reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.html"
+      entries:
+      - title: クラスタロールを作成するための CLI コマンド
+        url: "/installation/reference_cli_command_for_creating_cluster_roles.html"
+      - title: SVM ロールを作成するための CLI コマンド
+        url: "/installation/reference_cli_commands_for_creating_svm_roles.html"
+- title: IBM ® Domino ® プラグインの処理
+  url: "/domino-ops/index.html"
+  entries:
+  - title: IBM Domino プラグインの概要
+    url: "/domino-ops/concept_ibm_domino_plug_in_overview.html"
+    entries:
+    - title: IBM Domino プラグインのバックアップ処理の概要
+      url: "/domino-ops/concept_backup_operations_using_domino_plug_in.html"
+    - title: IBM Domino プラグインのリストア処理の概要
+      url: "/domino-ops/concept_restore_operations_using_domino_plug_in.html"
+  - title: IBM Domino のバックアップとリカバリのワークフロー
+    url: "/domino-ops/concept_ibm_domino_backup_and_recovery_workflow.html"
+  - title: IBM Domino のバックアップとリストアを準備しています
+    url: "/domino-ops/concept_preparing_for_ibm_domino_backup_and_restore_operations.html"
+    entries:
+    - title: ストレージレイアウトの要件
+      url: "/domino-ops/reference_storage_layout_requirements.html"
+    - title: SnapMirror と SnapVault のセットアップ
+      url: "/domino-ops/concept_snapmirror_and_snapvault_setup.html"
+      entries:
+      - title: SnapMirror レプリケーションのためのストレージシステムの準備
+        url: "/domino-ops/task_preparing_storage_systems_for_snapmirror_replication.html"
+      - title: SnapVault レプリケーションのためのストレージシステムの準備
+        url: "/domino-ops/task_preparing_storage_systems_for_snapvault_replication.html"
+  - title: バックアップとリストアの設定を作成しています
+    url: "/domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html"
+    entries:
+    - title: Snap Creator の GUI にログインします
+      url: "/domino-ops/concept_general_configuration_file_information.html"
+    - title: 構成ファイルを作成しています
+      url: "/domino-ops/task_using_the_gui_to_create_a_configuration_file.html"
+    - title: バックアップとリストアの設定にコマンドを追加する
+      url: "/domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html"
+      entries:
+      - title: Snap Creator エージェントに対して追加コマンドを許可します
+        url: "/domino-ops/concept_allowing_additional_commands_through_the_snap_creator_agent.html"
+      - title: コンフィギュレーションに追加コマンドを追加します
+        url: "/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html"
+    - title: Domino トランザクションログのアーカイブコピーをクリーンアップしています
+      url: "/domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html"
+    - title: changeinfo ディレクトリをバックアップします
+      url: "/domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html"
+  - title: データベースをバックアップしています
+    url: "/domino-ops/concept_create_a_domino_backup_using_snap_creator.html"
+    entries:
+    - title: オンデマンドでのデータベースのバックアップ
+      url: "/domino-ops/task_creating_a_domino_backup_using_the_snap_creator_gui.html"
+    - title: バックアップのスケジュール設定
+      url: "/domino-ops/task_scheduling_actions_using_the_snap_creator_gui.html"
+  - title: データベースのリストア
+    url: "/domino-ops/concept_domino_database_restore_overview.html"
+    entries:
+    - title: ボリュームリストアを実行しています
+      url: "/domino-ops/task_performing_point_in_time_volume_restore.html"
+    - title: 単一ファイルのリストアを実行する
+      url: "/domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html"
+    - title: SAN 環境で単一ファイルのリストアを実行する
+      url: "/domino-ops/concept_single_file_restore_in_fc_iscsi_environments.html"
+      entries:
+      - title: SnapDrive を使用して Snapshot コピーをマウント
+        url: "/domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html"
+      - title: データ復元ディレクトリにファイルをコピーしています
+        url: "/domino-ops/task_copying_files_to_restore_location.html"
+      - title: Snap Creator のカスタムアクションを使用してリストア処理を完了します
+        url: "/domino-ops/task_running_snap_creator_by_using_the_custom_action.html"
+      - title: Snapshot コピーを切断しています
+        url: "/domino-ops/task_disconnecting_snapshot_copy.html"
+  - title: ジョブのステータスとログを表示しています
+    url: "/domino-ops/concept_accessing_snap_creator_log_files.html"
+    entries:
+    - title: ジョブモニタでのジョブステータスとログの表示
+      url: "/domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html"
+    - title: Reports ペインでログを表示します
+      url: "/domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html"
+    - title: scdump を使用して、ログを圧縮形式で収集する
+      url: "/domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html"
+  - title: Domino プラグイン固有のエラーのトラブルシューティング
+    url: "/domino-ops/reference_domino_plug_in_specific_errors.html"
+  - title: 次の手順
+    url: "/domino-ops/reference_references.html"
+- title: SAP HANA ® プラグインの運用
+  url: "/sap-hana-ops/index.html"
+  entries:
+  - title: SAP HANA のバックアップとリストア解決策の概要
+    url: "/sap-hana-ops/concept_sap_hana_backup_and_restore_solution_overview.html"
+    entries:
+    - title: SAP HANA システムのバックアップに関する考慮事項
+      url: "/sap-hana-ops/concept_considerations_for_backing_up_sap_hana_systems.html"
+    - title: NetApp 解決策の略
+      url: "/sap-hana-ops/concept_the_netapp_solution.html"
+    - title: 解決策コンポーネントをバックアップする
+      url: "/sap-hana-ops/concept_backup_solution_components.html"
+    - title: SAP HANA プラグインの概要
+      url: "/sap-hana-ops/concept_sap_hana_plug_in_overview.html"
+    - title: 要件
+      url: "/sap-hana-ops/concept_requirements.html"
+  - title: 必要なソフトウェアコンポーネントをインストールして設定する
+    url: "/sap-hana-ops/task_installing_and_configuring_required_software_components.html"
+    entries:
+    - title: このガイドで前提条件を設定します
+      url: "/sap-hana-ops/concept_setup_assumptions_in_this_guide.html"
+    - title: clustered Data ONTAP で使用するセットアップ
+      url: "/sap-hana-ops/concept_setup_used_with_clustered_data_ontap.html"
+  - title: データバックアップを設定する
+    url: "/sap-hana-ops/concept_configuring_data_backups.html"
+    entries:
+    - title: バックアップ・ユーザおよび hdbuserstore の設定
+      url: "/sap-hana-ops/task_configuring_the_backup_user_and_hdbuserstore.html"
+    - title: SnapVault 関係を設定しています
+      url: "/sap-hana-ops/task_configuring_snapvault_relationships.html"
+    - title: SnapVault 関係の開始
+      url: "/sap-hana-ops/concept_starting_the_snapvault_relationships.html"
+      entries:
+      - title: Data ONTAP 7-Mode を使用した SnapVault 関係の開始
+        url: "/sap-hana-ops/task_starting_the_snapvault_relationships_with_data_ontap_operating_in_7_mode.html"
+      - title: clustered Data ONTAP との SnapVault 関係の開始
+        url: "/sap-hana-ops/task_starting_the_snapvault_relationships_with_clustered_data_ontap.html"
+    - title: Snap Creator Framework と SAP HANA データベースのバックアップを設定する
+      url: "/sap-hana-ops/task_configuring_the_snap_creator_framework_and_sap_hana_database_backup.html"
+  - title: SAN 環境向けの SAP HANA の設定
+    url: "/sap-hana-ops/task_configuring_sap_hana_for_san_environments.html"
+  - title: ログバックアップを設定しています
+    url: "/sap-hana-ops/task_configuring_log_backups.html"
+    entries:
+    - title: 不要なログバックアップの削除
+      url: "/sap-hana-ops/concept_housekeeping_of_log_backups.html"
+    - title: 不要なログバックアップの削除を変更する
+      url: "/sap-hana-ops/task_modifying_the_housekeeping_of_log_backups.html"
+  - title: データベースのバックアップを実行中です
+    url: "/sap-hana-ops/concept_executing_database_backups.html"
+    entries:
+    - title: データベースのバックアップの概要
+      url: "/sap-hana-ops/task_overview_of_database_backups.html"
+    - title: Snap Creator の GUI を使用してデータベースをバックアップします
+      url: "/sap-hana-ops/task_backing_up_the_database_with_the_snap_creator_gui.html"
+    - title: Snap Creator コマンドラインを使用したデータベースのバックアップ
+      url: "/sap-hana-ops/task_backing_up_the_database_with_snap_creator_command_line.html"
+    - title: SAP HANA Studio で使用可能なバックアップを確認します
+      url: "/sap-hana-ops/concept_reviewing_available_backups_in_sap_hana_studio.html"
+  - title: SAP HANA のファイルベースのバックアップとデータベース整合性チェック
+    url: "/sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html"
+    entries:
+    - title: ファイルベースのバックアップの設定を変更しています
+      url: "/sap-hana-ops/task_modifying_configuration_for_file_based_backup.html"
+    - title: データベース整合性チェックの設定の変更
+      url: "/sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html"
+    - title: ファイルベースのバックアップのスケジュールを設定しています
+      url: "/sap-hana-ops/task_scheduling_file_based_backup.html"
+    - title: データベース整合性チェックのスケジュール設定
+      url: "/sap-hana-ops/task_scheduling_database_integrity_checks.html"
+    - title: Snap Creator の GUI からファイルベースのバックアップを実行しています
+      url: "/sap-hana-ops/task_performing_file_based_backup_from_the_snap_creator_gui.html"
+    - title: Snap Creator コマンドラインからファイルベースのバックアップを実行しています
+      url: "/sap-hana-ops/task_performing_file_based_backup_from_snap_creator_command_line.html"
+    - title: Snap Creator の GUI からデータベース整合性チェックを実行
+      url: "/sap-hana-ops/task_performing_database_integrity_checks_with_snap_creator_gui.html"
+    - title: Snap Creator コマンドラインからデータベース整合性チェックを実行します
+      url: "/sap-hana-ops/task_performing_database_integrity_checks_from_snap_creator_command_line.html"
+  - title: SAP HANA データベースのリストアとリカバリ
+    url: "/sap-hana-ops/task_restoring_and_recovering_sap_hana_databases.html"
+    entries:
+    - title: プライマリストレージからのデータベースのリストアとリカバリ
+      url: "/sap-hana-ops/task_restoring_and_recovering_databases_from_primary_storage.html"
+    - title: セカンダリストレージからのデータベースのリストアとリカバリ
+      url: "/sap-hana-ops/task_restoring_and_recovering_database_from_secondary_storage.html"
+    - title: リストア後に SnapVault 関係を再開します
+      url: "/sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html"
+      entries:
+      - title: Data ONTAP 7-Mode との SnapVault 関係を再開
+        url: "/sap-hana-ops/task_resuming_a_snapvault_relationship_with_data_ontap_operating_in_7_mode.html"
+      - title: clustered Data ONTAP との SnapVault 関係を再開
+        url: "/sap-hana-ops/task_resuming_a_snapvault_relationship_with_clustered_data_ontap.html"
+    - title: プライマリストレージの障害後のデータベースのリストア
+      url: "/sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html"
+      entries:
+      - title: Data ONTAP 7-Mode でプライマリストレージに障害が発生した場合のデータベースのリストア
+        url: "/sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_data_ontap_operating_in_7_mode.html"
+      - title: clustered Data ONTAP でプライマリストレージに障害が発生した場合のデータベースのリストア
+        url: "/sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html"
+  - title: SAP HANA プラグインのパラメータ
+    url: "/sap-hana-ops/reference_sap_hana_plug_in_parameters.html"
+  - title: トラブルシューティング
+    url: "/sap-hana-ops/reference_troubleshooting.html"
+  - title: 次の手順
+    url: "/sap-hana-ops/reference_where_to_go_next_sap_hana.html"
+- title: 管理
+  url: "/administration/index.html"
+  entries:
+  - title: Snap Creator Framework の動作
+    url: "/administration/concept_what_snap_creator_does.html"
+    entries:
+    - title: Snap Creator を使用するメリット
+      url: "/administration/concept_benefits_of_using_snap_creator.html"
+  - title: Snap Creator のアーキテクチャ
+    url: "/administration/concept_snap_creator_architecture.html"
+    entries:
+    - title: Snap Creator サーバの概要
+      url: "/administration/concept_what_snap_creator_server_overview.html"
+    - title: Snap Creator エージェントの概要
+      url: "/administration/concept_what_snap_creator_agent_is.html"
+    - title: アプリケーション統合用のプラグイン
+      url: "/administration/concept_scf_component_plug_ins_ag.html"
+  - title: Snap Creator サーバの管理
+    url: "/administration/concept_managing_snap_creator_server.html"
+    entries:
+    - title: Windows 上での Snap Creator サーバの起動、検証、停止
+      url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html"
+    - title: UNIX 上での Snap Creator サーバの起動、検証、停止
+      url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_unix.html"
+    - title: インストール後に Snap Creator サーバのポートを変更する
+      url: "/administration/task_changing_the_snap_creator_server_port.html"
+    - title: Snap Creator サーバのクレデンシャルの設定
+      url: "/administration/task_setting_snap_creator_server_credentials.html"
+  - title: Snap Creator エージェントの管理
+    url: "/administration/concept_managing_snap_creator_agent.html"
+    entries:
+    - title: Windows での Snap Creator エージェントの起動、検証、停止
+      url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html"
+    - title: UNIX 上での Snap Creator エージェントの起動、検証、停止
+      url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_unix.html"
+    - title: インストール後に Snap Creator エージェントのポートを変更する
+      url: "/administration/task_changing_the_snap_creator_agent_port_after_installation.html"
+    - title: Snap Creator エージェントのセキュリティ
+      url: "/administration/concept_snap_creator_agent_security.html"
+      entries:
+      - title: Snap Creator エージェントのセキュリティの管理
+        url: "/administration/task_managing_snap_creator_agent_security.html"
+      - title: デフォルトのキーストアのカスタマイズ
+        url: "/administration/task_customizing_the_default_keystore.html"
+  - title: バックアップとリカバリのワークフロー
+    url: "/administration/concept_backup_and_recovery_workflow_with_plug_ins.html"
+    entries:
+    - title: プロファイルの作成
+      url: "/administration/task_creating_profiles.html"
+    - title: グローバル構成ファイルを作成しています
+      url: "/administration/task_creating_global_configuration_files.html"
+    - title: 構成ファイルを作成しています
+      url: "/administration/task_creating_configuration_files_using_sc_gui.html"
+    - title: バックアップを作成しています
+      url: "/administration/task_creating_backups_using_the_snap_creator_gui.html"
+    - title: ジョブの監視
+      url: "/administration/task_monitoring_jobs_using_the_gui.html"
+    - title: ログの監視
+      url: "/administration/task_monitoring_logs_by_using_the_snap_creator_gui.html"
+    - title: スケジュール済みジョブを作成しています
+      url: "/administration/task_creating_scheduled_jobs_using_sc_gui.html"
+    - title: 保持ポリシーを作成します
+      url: "/administration/concept_creating_retention_policies.html"
+      entries:
+      - title: Snap Creator のポリシーを定義するガイドライン
+        url: "/administration/concept_guidelines_to_define_snap_creator_policies.html"
+      - title: バックアップタイプを作成しています
+        url: "/administration/task_creating_backup_types.html"
+      - title: ポリシースケジュールを作成します
+        url: "/administration/task_creating_policy_schedules.html"
+      - title: ポリシーを作成する
+        url: "/administration/task_creating_policies.html"
+      - title: ポリシーを割り当てます
+        url: "/administration/task_assigning_policies.html"
+    - title: クローンを作成します
+      url: "/administration/concept_creating_clones.html"
+      entries:
+      - title: 新しいバックアップからクローンを作成する
+        url: "/administration/task_creating_clones_from_a_new_backup.html"
+      - title: 既存のバックアップからクローンを作成する
+        url: "/administration/task_creating_clones_using_a_mounted_backup.html"
+    - title: リストア処理を実行しています
+      url: "/administration/concept_performing_restore_operations.html"
+      entries:
+      - title: ボリュームリストアを実行しています
+        url: "/administration/task_performing_volume_restore_using_the_gui.html"
+      - title: 単一ファイルのリストア処理を実行しています
+        url: "/administration/task_performing_single_file_restore_using_the_gui.html"
+      - title: アプリケーションで定義したリストア処理を実行しています
+        url: "/administration/task_performing_application_defined_restore_operations.html"
+  - title: ユーザアクセスの管理
+    url: "/administration/concept_managing_user_access.html"
+    entries:
+    - title: Snap Creator ユーザを作成しています
+      url: "/administration/task_creating_users.html"
+    - title: Snap Creator ユーザへのプロファイルの割り当て
+      url: "/administration/task_assigning_profiles_to_snap_creator_users.html"
+    - title: CLI を使用して、 Snap Creator ユーザおよび割り当てられたプロファイルのリストを表示する
+      url: "/administration/task_viewing_a_list_of_users_with_profiles_by_using_the_cli.html"
+    - title: Snap Creator のロールを作成しています
+      url: "/administration/task_creating_snap_creator_roles.html"
+    - title: Snap Creator ユーザにロールを割り当てます
+      url: "/administration/task_assigning_roles_to_snap_creator_users.html"
+    - title: Snap Creator ユーザおよび割り当てられているロールのリストを表示します
+      url: "/administration/task_viewing_a_list_of_snap_creator_users_by_using_the_gui.html"
+    - title: CLI を使用した、ロールに割り当てられた Snap Creator ユーザの表示
+      url: "/administration/task_viewing_user_names_assigned_to_a_role_by_using_the_cli.html"
+    - title: CLI を使用した Snap Creator の権限の作成
+      url: "/administration/task_creating_snap_creator_permissions.html"
+    - title: Snap Creator のロールに権限を割り当てます
+      url: "/administration/task_assigning_permissions_to_snap_creator_roles.html"
+    - title: CLI を使用して、すべての Snap Creator 権限のリストを作成します
+      url: "/administration/task_viewing_a_list_all_snap_creator_permissions_by_using_the_cli.html"
+    - title: 特定のロールに割り当てられている Snap Creator の権限を表示しています
+      url: "/administration/task_viewing_permissions_assigned_to_a_role_by_using_the_gui.html"
+  - title: プロファイルの管理
+    url: "/administration/concept_managing_profiles.html"
+    entries:
+    - title: プロファイルの作成
+      url: "/administration/task_creating_profiles.html"
+    - title: プロファイルの表示
+      url: "/administration/task_viewing_snap_creator_profiles.html"
+    - title: プロファイルの削除
+      url: "/administration/task_deleting_snap_creator_profiles.html"
+  - title: 構成ファイルの管理
+    url: "/administration/concept_managing_configuration_files.html"
+    entries:
+    - title: 構成ファイルを作成しています
+      url: "/administration/task_creating_configuration_files_using_sc_gui.html"
+    - title: 既存のコンフィギュレーションファイルをダウンロードして、新しいコンフィギュレーションファイルを作成します
+      url: "/administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html"
+    - title: 既存の構成ファイルをコピーして新しい構成ファイルを作成します
+      url: "/administration/task_creating_new_configuration_files_by_copying_existing_configuration_files_using_the_cli.html"
+    - title: プロファイルに割り当てられた構成ファイルのリストを表示する
+      url: "/administration/task_viewing_assigned_configuration_files_for_a_profile.html"
+    - title: プロファイルから構成ファイルを削除する
+      url: "/administration/task_deleting_configuration_files.html"
+  - title: 保持ポリシーの管理
+    url: "/administration/concept_managing_policies.html"
+    entries:
+    - title: バックアップタイプを作成しています
+      url: "/administration/task_creating_backup_types.html"
+    - title: ポリシースケジュールを作成します
+      url: "/administration/task_creating_policy_schedules.html"
+    - title: ポリシーを作成する
+      url: "/administration/task_creating_policies.html"
+    - title: ポリシーを割り当てます
+      url: "/administration/task_assigning_policies.html"
+    - title: 保持ポリシーを表示します
+      url: "/administration/task_viewing_policies.html"
+    - title: 保持ポリシーを削除しています
+      url: "/administration/task_deleting_retention_policies.html"
+  - title: バックアップの管理
+    url: "/administration/concept_managing_backups.html"
+    entries:
+    - title: バックアップする Snap Creator 情報
+      url: "/administration/reference_what_you_should_back_up.html"
+    - title: バックアップを作成しています
+      url: "/administration/task_creating_backups_using_the_snap_creator_gui.html"
+    - title: 構成ファイルのバックアップコピーのリストを表示する
+      url: "/administration/task_viewing_a_list_of_backup_copies_of_a_configuration_file.html"
+    - title: バックアップを削除する
+      url: "/administration/task_deleting_backups.html"
+  - title: スケジュールされたジョブの管理
+    url: "/administration/concept_managing_scheduled_jobs.html"
+    entries:
+    - title: スケジュール済みジョブを作成しています
+      url: "/administration/task_creating_scheduled_jobs_using_sc_gui.html"
+    - title: スケジュール済みのジョブを実行中です
+      url: "/administration/task_running_a_scheduled_job.html"
+    - title: スケジュール済みジョブのリストを表示します
+      url: "/administration/task_viewing_a_list_of_scheduled_jobs.html"
+    - title: スケジュール済みジョブを編集しています
+      url: "/administration/task_editing_scheduled_jobs.html"
+    - title: スケジュール済みジョブを削除しています
+      url: "/administration/task_deleting_scheduled_jobs.html"
+  - title: クローンの管理
+    url: "/administration/concept_managing_clones.html"
+    entries:
+    - title: 新しいバックアップからクローンを作成する
+      url: "/administration/task_creating_clones_from_a_new_backup.html"
+    - title: 既存のバックアップからクローンを作成する
+      url: "/administration/task_creating_clones_using_a_mounted_backup.html"
+    - title: クローンのアンマウント
+      url: "/administration/task_deleting_clones.html"
+  - title: Snap Creator の設定に必要なプラグイン情報
+    url: "/administration/reference_information_required_to_configure_snap_creator.html"
+    entries:
+    - title: アーカイブログのプラグイン
+      url: "/administration/reference_archive_log_plug_in.html"
+    - title: Citrix XenServer プラグイン
+      url: "/administration/reference_citrix_xen_plug_in.html"
+    - title: DB2 プラグイン
+      url: "/administration/reference_db2_plug_in.html"
+    - title: IBM Domino プラグイン
+      url: "/administration/reference_ibm_domino_plug_in.html"
+    - title: MaxDB プラグイン
+      url: "/administration/reference_maxdb_plug_in.html"
+    - title: MySQL プラグイン
+      url: "/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html"
+    - title: Oracle プラグイン
+      url: "/administration/reference_oracle_plug_in.html"
+    - title: Red Hat KVM プラグインのガイドライン
+      url: "/administration/reference_red_hat_kvm_plug_in.html"
+    - title: SAP HANA プラグイン
+      url: "/administration/reference_sap_hana_plug_in.html"
+    - title: SnapManager for Microsoft Exchange プラグイン
+      url: "/administration/reference_snapmanager_for_microsoft_exchange_plug_in.html"
+    - title: SnapManager for Microsoft SQL Server プラグイン
+      url: "/administration/reference_snapmanager_for_microsoft_sql_server_plug_in.html"
+    - title: Sybase ASE プラグイン
+      url: "/administration/reference_sybase_plug_in.html"
+    - title: VMware VIBE プラグイン
+      url: "/administration/reference_vmware_vibe_plug_in.html"
+      entries:
+      - title: VMware プラグインを使用した vCloud vApp のバックアップおよびリストア処理の要件
+        url: "/administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html"
+      - title: VMware プラグインを使用した仮想マシンのバックアップおよびリストア
+        url: "/administration/concept_vm_backup_and_restore_using_vmware_plug_in.html"
+    - title: プラグインフレームワークを使用してカスタムプラグインを作成する
+      url: "/administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html"
+    - title: ハイパーバイザープラグインを使用する場合に、 Snap Creator でマルチレベルのアプリケーション休止処理を実行するための設定
+      url: "/administration/task_configuring_snap_creator_for_multilevel_application_quiesce_operations.html"
+  - title: Snap Creator の問題に対するトラブルシューティング
+    url: "/administration/reference_troubleshooting_snap_creator_issues.html"
+    entries:
+    - title: エラー・メッセージの種類およびトラブルシューティング・ログです
+      url: "/administration/reference_logs.html"
+      entries:
+      - title: Snap Creator のダンプを実行しています
+        url: "/administration/task_running_a_snap_creator_dump.html"
+    - title: Snap Creator の GUI エラーに対するトラブルシューティング
+      url: "/administration/concept_troubleshooting_snap_creator_gui_errors.html"
+      entries:
+      - title: Snap Creator の GUI に接続できません
+        url: "/administration/reference_cannot_connect_to_the_gui.html"
+      - title: Snap Creator の GUI の起動中にエラーが発生しました
+        url: "/administration/reference_error_starting_the_gui.html"
+    - title: ネットワークの問題のトラブルシューティング
+      url: "/administration/reference_troubleshooting_network_issues.html"
+    - title: セキュリティの問題のトラブルシューティング
+      url: "/administration/concept_troubleshooting_security_issues.html"
+      entries:
+      - title: Transport Layer Security の暗号化の欠陥
+        url: "/administration/reference_transport_layer_security_tls.html"
+      - title: 自己署名 SSL 証明書が URL と一致しません
+        url: "/administration/reference_self_signed_ssl_certificate.html"
+      - title: Snap Creator Framework には CA 署名 SSL 証明書が必要です
+        url: "/administration/reference_ca_signed_ssl_certificate.html"
+    - title: Snap Creator サーバまたは Snap Creator エージェントの問題のトラブルシューティング
+      url: "/administration/concept_troubleshooting_snap_creator_server_or_agent_issues.html"
+      entries:
+      - title: Snap Creator サーバまたはエージェントが起動しません
+        url: "/administration/reference_snap_creator_server_or_agent_not_starting.html"
+      - title: Snap Creator エージェントが応答しません
+        url: "/administration/reference_snap_creator_agent_not_responding.html"
+      - title: Snap Creator のパスワードがリセットされました
+        url: "/administration/reference_snap_creator_password_reset.html"
+    - title: CLI コマンドエラーのトラブルシューティング
+      url: "/administration/concept_troubleshooting_cli_command_errors.html"
+      entries:
+      - title: CLI コマンドを実行すると、 403 Forbidden エラーが発生します
+        url: "/administration/reference_cli_command_results_in_403_forbidden_error.html"
+      - title: CLI コマンドを実行すると 404 Not Found エラーが表示されます
+        url: "/administration/reference_cli_command_results_in_404_not_found_error.html"
+      - title: CLI コマンドを実行すると、「 500 cannot locate object 」エラーが表示されます
+        url: "/administration/reference_cli_command_results_in_500_cannot_locate_object_error.html"
+      - title: CLI コマンドを実行すると 500 Connect Failed エラーが発生します
+        url: "/administration/reference_cli_command_results_in_500_connect_failed_error.html"
+    - title: cloneVol は、アグリゲートが存在しないと報告します
+      url: "/administration/reference_clonevol_reports_that_aggregate_does_not_exist.html"
+    - title: エラーメッセージ
+      url: "/administration/reference_error_messages.html"
+      entries:
+      - title: Snap Creator Framework のエラーメッセージ
+        url: "/administration/reference_snap_creator_framework_error_messages.html"
+      - title: Snap Creator エージェントのエラーメッセージ
+        url: "/administration/reference_snap_creator_agent_error_messages.html"
+      - title: リポジトリエラーメッセージ
+        url: "/administration/reference_repository_error_messages.html"
+      - title: ストレージエラーメッセージ
+        url: "/administration/reference_storage_error_messages.html"
+      - title: Snap Creator の GUI エラーメッセージ
+        url: "/administration/reference_snap_creator_gui_error_messages.html"
+  - title: Snap Creator 構成ファイルの変数、パラメータ、コマンド
+    url: "/administration/reference_snap_creator_configuration_file_variables.html"
+    entries:
+    - title: Snap Creator の変数およびパラメータの説明
+      url: "/administration/reference_snap_creator_variable_and_parameter_descriptions.html"
+    - title: Snap Creator エージェントのホストクライアントおよび Snap Creator サーバを設定するためのパラメータ
+      url: "/administration/reference_parameters_used_to_configure_the_client_and_server.html"
+    - title: vFiler ユニットおよびインターフェイスに接続するためのパラメータ
+      url: "/administration/reference_parameters_to_connect_to_vfiler_units_and_interface.html"
+    - title: クローニング処理をセットアップするためのパラメータ
+      url: "/administration/reference_parameters_to_set_up_cloning.html"
+    - title: イベント管理をセットアップするためのパラメータ
+      url: "/administration/reference_parameters_to_set_up_event_management.html"
+    - title: Operations Manager コンソールをセットアップするためのパラメータ
+      url: "/administration/reference_parameters_to_set_up_operations_manager_console.html"
+    - title: OSSV を設定するパラメータ
+      url: "/administration/reference_parameters_to_set_up_ossv.html"
+    - title: SnapMirror をセットアップするためのパラメータ
+      url: "/administration/reference_parameters_to_set_up_snapmirror.html"
+    - title: Snapshot コピーのセットアップ用パラメータ
+      url: "/administration/reference_parameters_to_set_up_a_snapshot_copy.html"
+    - title: SnapVault をセットアップするためのパラメータ
+      url: "/administration/reference_parameters_to_set_up_snapvault.html"
+    - title: NetApp Management Console のデータ保護機能を設定するためのパラメータ
+      url: "/administration/reference_parameters_to_set_up_netapp_management_console_data_protection_capability.html"
+    - title: APP コマンド
+      url: "/administration/reference_app_commands.html"
+    - title: mount コマンドおよび unmount コマンドを使用します
+      url: "/administration/reference_mount_and_unmount_commands.html"
+    - title: PRE コマンド
+      url: "/administration/reference_pre_commands.html"
+    - title: POST コマンド
+      url: "/administration/reference_post_commands.html"
+  - title: Snap Creator の用語
+    url: "/administration/reference_snap_creator_terminology.html"
+  - title: Snap Creator コマンドラインインターフェイスの使用に関するガイドライン
+    url: "/administration/reference_guidelines_for_using_the_snap_creator_command_line.html"
+    entries:
+    - title: ワークフローアクション用の Snap Creator CLI コマンド
+      url: "/administration/reference_snap_creator_cli_commands_for_workflow_actions.html"
+    - title: Snap Creator ユーザのアクセス管理に使用するコマンドです
+      url: "/administration/reference_cli_command_for_snap_creator_rbac_actions.html"
+- title: 法的通知
+  url: "/reference_legal_notices.html"

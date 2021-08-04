@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_policies.html 
+sidebar: sidebar 
+keywords: assign, retention, policy, configuration, snap, creator, gui, assignment 
+summary: Snap Creator の GUI を使用して、構成ファイルに保持ポリシーを割り当てることができます。 
+---
+= ポリシーを割り当てます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、構成ファイルに保持ポリシーを割り当てることができます。
+
+. Snap Creator の GUI のメインメニューで、 * Policy * > * Policy Assignments * を選択します。
+. プロファイルペインからプロファイルを選択します。
+. 右側のペインで適切なチェックボックスをオンにして、プロファイルに割り当てるポリシーを選択し、 ［ * 保存 * ］ をクリックします。
++
+構成ファイルがすでにプロファイルに存在する場合は、割り当てられたポリシーが構成ファイルの設定を上書きすることを通知するメッセージが表示されます。
+
+. [ はい ] をクリックして、ポリシーを割り当てます。
+

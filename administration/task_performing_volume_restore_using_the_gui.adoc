@@ -1,0 +1,35 @@
+---
+permalink: administration/task_performing_volume_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: volume, restore, snap, creator, gui, perform, wizard 
+summary: Snap Creator の GUI を使用してボリュームリストアを実行できます。 
+---
+= ボリュームリストアを実行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用してボリュームリストアを実行できます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. [* 構成 *] タブの [* プロファイルと構成 *] ペインで、構成ファイルを選択します。
+. [ * アクション * > * 復元 * （ Action * > * Restore * ） ] を選択
++
+リストアウィザードが右側のペインに表示されます。
+
+. リストアウィザードの各ページを設定し、リストアを実行します。
++
+.. リストアの詳細 * ページで、コントローラ / SVM 名、リストアボリューム名、ポリシー、リストア Snapshot コピー名を選択し、 * リストアタイプ * ドロップダウンリストから * ボリュームリストア * を選択します。
++
+image::../media/restore_wizard_restore_details.gif[リストアウィザードのリストアの詳細]
+
+.. 概要を確認し、 [ 完了 ] をクリックします。
+
+
++
+リストア対象のアイテムがほかにもあるかどうかを確認する警告メッセージが表示されます。
+
+. [ いいえ ] をクリックし、 [ リストアの確認 ] ページで [OK] をクリックします。
+. [*Console] ペインで、メッセージを表示してリストアが正常に完了したことを確認します。
+

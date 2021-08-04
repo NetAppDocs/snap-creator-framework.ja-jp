@@ -1,0 +1,33 @@
+---
+permalink: administration/task_creating_clones_using_a_mounted_backup.html 
+sidebar: sidebar 
+keywords: clone, volume, lun, existing, backup, server, snap, creator, configuration 
+summary: 既存のバックアップからボリュームまたは LUN をソースとしてクローニングできます。 
+---
+= 既存のバックアップからクローンを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存のバックアップからボリュームまたは LUN をソースとしてクローニングできます。
+
+* Snap Creator サーバがストレージシステムと通信している必要があります。
+* クローニング処理を実行するには、適切な権限で Snap Creator にログインする必要があります。
+
+
+このクローニング処理では、既存の Snapshot コピーをマウントし、既存のバックアップをクローニングします。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. [* 構成 *] タブの [* プロファイルと構成 *] ペインで、構成ファイルを選択します。
+. * アクション * > * マウント * を選択します。
+. 追加パラメータダイアログボックスで、マウントするバックアップを含むコントローラ、ボリューム、およびポリシーを選択し、マウント（クローニング）する Snapshot コピーを選択してから、 * OK * をクリックしてクローニングプロセスを開始します。
++
+image::../media/additional_parameters_clone_existing.png[追加のパラメータで既存のクローンを作成します]
+
++
+
+NOTE: 選択した Snapshot コピー名を記録します。バックアップをアンマウントするときは、同じ Snapshot コピー名を選択する必要があります。
+
+. [* Console * （コンソール * ） ] ペインで、クローニングプロセスが正常に完了したことを確認します。
+

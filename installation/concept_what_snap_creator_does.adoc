@@ -1,0 +1,37 @@
+---
+permalink: installation/concept_what_snap_creator_does.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, description 
+summary: Snap Creator Framework を使用すると、あらかじめパッケージ化されたカスタムプラグインを使用することで、 Windows および UNIX / （ AIX 、 HP-UX 、 Linux 、 Solaris\ ）のさまざまな環境におけるさまざまなサードパーティ製アプリケーション、データベース、ハイパーバイザーのデータ保護を標準化し、簡易化できます。 
+---
+= Snap Creator Framework の動作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework を使用すると、あらかじめパッケージ化されたカスタムプラグインを使用できるため、 Windows および UNIX （ AIX 、 HP-UX 、 Linux 、 Solaris ）のさまざまな環境で、さまざまなサードパーティ製アプリケーション、データベース、ハイパーバイザーのデータ保護を標準化し、簡易化できます。
+
+Snap Creator は、 Snapshot 、 SnapVault 、 Open Systems SnapVault 、 SnapMirror の各機能に加え、 NetApp Management Console のデータ保護機能、 Operations Manager コンソール、 FlexClone を活用することで、以下の機能を実現します。
+
+* アプリケーションと整合性のあるデータ保護
++
+重要な情報をバックアップするための一元化された解決策。既存のアプリケーションアーキテクチャと統合して、データの整合性を確保し、運用コストを削減します。
+
+* 拡張性
++
+モジュラ型アーキテクチャとポリシーベースの自動化により、迅速な統合を実現します。
+
+* クラウドへの対応
++
+オペレーティングシステムに依存しない Snap Creator 機能。物理プラットフォームと仮想プラットフォームをサポートし、 IT サービス環境およびクラウド環境との相互運用性を実現します。
+
+* クローニング機能
++
+スペース効率に優れたデータクローニングは、開発とテストを目的としてサポートされています。
+
+
+
+次の図は、 Snap Creator Framework のコンポーネントを示しています。
+
+image::../media/scfw_overview_41_refresh_installation.gif[scfw の概要 41 のリフレッシュインストール]

@@ -1,0 +1,13 @@
+---
+permalink: administration/concept_managing_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: start, verify, snap, creator, agent, port, managing, unix, windows 
+summary: Windows および UNIX システムでは、 Snap Creator エージェントの起動、検証、停止、エージェントポートの変更、およびエージェントセキュリティの管理を行うことができます。 
+---
+= Snap Creator エージェントの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows および UNIX システムでは、 Snap Creator エージェントの起動、検証、停止、エージェントポートの変更、およびエージェントセキュリティの管理を行うことができます。

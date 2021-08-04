@@ -1,0 +1,76 @@
+---
+permalink: installation/task_upgrading_snap_creator_server_4_1_x_on_unix_based_systems.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.1.x, unix, unix-based 
+summary: UNIX ベースのシステムでは、 Snap Creator サーバ 4.1.x からアップグレードできます。 
+---
+= UNIX ベースのシステムでの Snap Creator サーバ 4.1.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX ベースのシステムでは、 Snap Creator サーバ 4.1.x からアップグレードできます。
+
+* Snap Creator のディレクトリをバックアップする前に Snap Creator のプロセスを停止し、バックアップデータが確実に完了するようにしておきます。
++
+たとえば、次のコマンドを入力します。
+
++
+[listing]
+----
+/install_path/scServer4.1.0/bin/scServer stop
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+* Snap Creator 4.1.x Server エンジンのサブディレクトリ（ /install_path/scServer4.1.x/engine ）内で、次のディレクトリおよび関連するすべてのサブディレクトリとファイルをバックアップしておきます。
++
+** Snap Creator データベース（ ./snapcreator ）
+** Snap Creator サーバのプロパティ（ /etc ）
+** 構成ファイル（ ./configs ）
+** ログ（ ./logs ）
+** プラグインリポジトリ（有効な場合）（ ./snapcreatorPlugin ） * 注： * 作成した Snap Creator 4.1.x のバックアップコピーは削除しないでください。
+
+
+
+
+次の手順で指定するパスは、デフォルトのインストールパスを示しています。デフォルト値を使用しなかった場合は、パス情報がインストールパスと異なることがあります。
+
+アップグレードプロセスが完了したら、次の点を考慮してください。
+
+* アップグレードされた Snap Creator データベースに「 in progress 」とマークされたタスクが含まれている場合、アップグレード・プロセスが完了しても、状態は同じままです。
+* 最新の Snap Creator のデフォルトの管理者は、 Snap Creator 4.1.x の管理者である必要があります
++
+4.1.x ユーザが管理者でない場合は、 4.1.x ユーザにオペレータのロールが割り当てられます。
+
++
+.. Snap Creator プロセスをまだ停止していない場合は停止します。
++
+プロセスの停止については、このトピックで前述した詳細を参照してください。
+
+.. 最新バージョンの Snap Creator をインストールします。 Snap Creator サーバは起動しません。
++
+詳細については、 UNIX への Snap Creator サーバのインストールに関する情報を参照してください。
+
+.. バックアップした Snap Creator 4.1.x データベースディレクトリを最新の場所（ /install_path/scServer4.1.x/engine/snapcreator ）にコピーします。
+.. バックアップした 4.1.x 設定ディレクトリを最新の場所（ /install_path/scServer4.1.x/engine/configs ）にコピーします。
+.. バックアップした 4.1.x ログディレクトリを最新の場所（ /install_path/scServer4.1.x/engine/logs ）にコピーします。
+.. Snap Creator のインストールパスの /install_path/scServer4.1.x/engine に、ディレクトリをエンジンサブディレクトリに変更します。
+.. 次のコマンドを入力して、 Snap Creator をアップグレードします。 java -jar snapcreator.jar -upgrade
+
+
+
+
+アップグレードプロセスが完了したら、次のコマンドを入力して Snap Creator サーバを起動します。
+
+[listing]
+----
+/install_path/scServer4.1.x/bin/scServer start
+----
+また、 Snap Creator 4.1.x のインストールディレクトリも削除してください。
+
+
+IMPORTANT: 古いバージョンにリバートする必要がないことが確実に確認されるまで、バックアップコピーを削除しないでください。
+
+また、指定したポート上のローカルホストに移動することで、 Snap Creator Framework の GUI の起動を検証する必要があります (https://IP_address:gui_port)[]。
+
+HTTPS を使用して接続する必要があります。接続が HTTPS 接続に自動的にリダイレクトされず、 GUI が機能しません。

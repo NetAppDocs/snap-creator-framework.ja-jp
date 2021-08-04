@@ -1,0 +1,8 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+---
+= Snap Creator Framework 4.3.3
+
+
+Snap Creator Framework の情報ライブラリへようこそ。ここでは、 Snap Creator のインストール方法とセットアップ方法、 Snap Creator Sever および Agent の管理方法、 IBM Domino プラグインの設定方法および使用方法など、 Snap Creator Framework 4.3.3 ソフトウェアのマニュアルを示します。

@@ -1,0 +1,67 @@
+---
+permalink: administration/reference_snapmanager_for_microsoft_sql_server_plug_in.html 
+sidebar: sidebar 
+keywords: snapmanager, microsoft, sql, server, plug-in, backup, operation, program 
+summary: SnapManager for Microsoft SQL Server プラグインを使用すると、 Snap Creator 経由で Microsoft SQL Server のバックアップ処理を一元化できます。このプラグインを使用すると、 Snap Creator を通じて、 Microsoft SQL Server 用の数十または数百の SnapManager を設定し、 1 つのインターフェイスから SnapManager for Microsoft SQL のすべてのバックアップジョブとステータスを表示できます。 
+---
+= SnapManager for Microsoft SQL Server プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Microsoft SQL Server プラグインを使用すると、 Snap Creator 経由で Microsoft SQL Server のバックアップ処理を一元化できます。このプラグインを使用すると、 Snap Creator を通じて、 Microsoft SQL Server 用の数十または数百の SnapManager を設定し、 1 つのインターフェイスから SnapManager for Microsoft SQL のすべてのバックアップジョブとステータスを表示できます。
+
+他のプラグインとは異なり、 SnapManager プラグイン（ SnapManager for Microsoft SQL Server および SnapManager for Microsoft Exchange ）は、 PowerShell を使用して SnapManager の既存のインストールと通信します。SnapManager プラグインを使用するには、 SnapManager 製品がすでにインストールされ、動作している必要があります。SnapManager プラグインでは、 new-backup PowerShell コマンドレットを使用して、 SnapManager 経由でバックアップを作成します。クローニングとリストアの処理は、いずれも引き続き SnapManager インターフェイスから実行する必要があります。
+
+
+NOTE: サポートに関する最新情報や互換性マトリックスを確認するには、 Interoperability Matrix を参照してください。
+
+SnapManager for Microsoft SQL Server プラグインを使用するときは、次の点を考慮する必要があります。
+
+* Snap Creator エージェントは、 SnapManager for Microsoft SQL Server と同じホストにインストールする必要があります。SC_AGENT_TIMEOUT には、 900 以上の値を設定してください。
+* PowerShell は、 Windows PowerShell のデフォルトのインストール場所（ C ： \WINDOWS\system32\WindowsPowerShell\v1.0 など）にインストールされている必要があります。
+
+
+次の表に、 SnapManager for Microsoft SQL Server プラグインのパラメータ、およびその設定を示します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+SMSQL_PS_CONF
+ a| 
+例：「 C ： \Program Files\NetApp\SnapManager for SQL Server\smsqlShell.psc1 」
+ a| 
+SnapManager for Microsoft SQL Server の PowerShell 構成ファイルへのパスを指定します。
+
+
+
+ a| 
+SMSQL_Backup_options
+ a| 
+例： -svr 'QL' -d 'sql\SharePoint' 、 '1' 、 'WSS_Content' -RetainBackups 7-lb-bksif -RetainSnapofSnapInfo 8-trlog-gen-mgmt standard
+ a| 
+SnapManager for Microsoft SQL Server のバックアップオプションを指定します。 Snap Creator は、新規バックアップ用に PowerShell コマンドレットを使用します。
+
+
+
+ a| 
+SMSQL_server_name
+ a| 
+例： SQL\SharePoint
+ a| 
+SnapManager for Microsoft SQL Server の名前を指定します。
+
+
+
+ a| 
+SMSQL_32bit
+ a| 
+Y
+| N 
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

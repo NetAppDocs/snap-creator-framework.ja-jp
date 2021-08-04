@@ -1,0 +1,21 @@
+---
+permalink: administration/task_deleting_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: delete, schedule, job, management 
+summary: スケジュール済みジョブを削除することができます。 
+---
+= スケジュール済みジョブを削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スケジュール済みジョブを削除することができます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Schedules * を選択します。
+. [ スケジュール ] タブで、スケジュールされたジョブのリストからジョブを選択し、 [* 削除 ] をクリックします。
+. 確認ウィンドウで [ はい ] をクリックします。
++
+スケジュール済みのジョブがリストから削除されます。
+
+

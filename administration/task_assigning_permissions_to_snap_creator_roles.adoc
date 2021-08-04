@@ -1,0 +1,22 @@
+---
+permalink: administration/task_assigning_permissions_to_snap_creator_roles.html 
+sidebar: sidebar 
+keywords: assign, permission, snap, creator, gui, role, gui, permission 
+summary: Snap Creator の GUI を使用して、 Snap Creator ロールに権限を割り当てることができます。 
+---
+= Snap Creator のロールに権限を割り当てます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、 Snap Creator ロールに権限を割り当てることができます。
+
+. Snap Creator の GUI メインメニューから、 * Users and Roles * > * Role management * を選択します。
+. [ 役割管理 ] タブで目的の役割を選択し、 [ * 権限の割り当て * ] をクリックします。
+. 目的の権限を左の列から右の列に移動し、 * 保存 * をクリックします。
++
+列間で権限を選択してドラッグするか、矢印をクリックして列間で権限を移動できます。
+
+. ロールを選択し、 [ ロールと割り当てられた権限 ] ペインで割り当てられた権限を表示して、権限が割り当てられていることを確認します。
+

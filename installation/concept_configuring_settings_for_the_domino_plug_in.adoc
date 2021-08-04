@@ -1,0 +1,22 @@
+---
+permalink: installation/concept_configuring_settings_for_the_domino_plug_in.html 
+sidebar: sidebar 
+keywords: configuring, configure, settings 
+summary: 特定の設定を行う必要があるのは、 Snap Creator エージェントのインストールに含まれている IBM Domino プラグインを使用する場合のみです。 
+---
+= Domino プラグインの設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+特定の設定を行う必要があるのは、 Snap Creator エージェントのインストールに含まれている IBM Domino プラグインを使用する場合のみです。
+
+
+NOTE: Snap Creator サーバと Snap Creator エージェントは、異なるホストにインストールすることを推奨します。
+
+オペレーティングシステムに応じて、 IBM Domino プラグイン用の Snap Creator エージェントをインストールする前に、これらの設定を行う必要があります。
+
+* Windows 環境の場合は、環境変数に Domino パスを追加する必要があります。
+* UNIX 環境の場合は、 Domino の共有オブジェクトファイルにリンクするシンボリックリンクを作成する必要があります。
+

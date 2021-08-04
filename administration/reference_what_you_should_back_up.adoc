@@ -1,0 +1,36 @@
+---
+permalink: administration/reference_what_you_should_back_up.html 
+sidebar: sidebar 
+keywords: create, backup, copy, snap, creator, directories, information, server, snapcreator 
+summary: Snap Creator の特定のディレクトリのバックアップコピーを作成して、 Snap Creator のデータを損失なしで確実にリストアできるようにすることを推奨します。 
+---
+= バックアップする Snap Creator 情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の特定のディレクトリのバックアップコピーを作成して、 Snap Creator のデータを損失なしで確実にリストアできるようにすることを推奨します。
+
+次のディレクトリのバックアップコピーを作成する必要があります。
+
+* Snap Creator サーバ 4.3 エンジンのサブディレクトリは次のとおりです。
++
+** Snap Creator データベース（ ./snapcreator ）
+** Snap Creator サーバのプロパティ（ ..\etc ）
+** プロファイルと構成（ ..\configs ）
+** ログ（ ..\logs ）
+** プラグインリポジトリ（有効な場合）（ ..\snapcreatorPlugin ）
+
+
+* Snap Creator エージェントのディレクトリ：
++
+** Snap Creator エージェントのプロパティ（ ..\etc ）
+** ログ（有効な場合）（ ..\logs ）
+** プラグイン（ ..\plugins ）
+
+
+
+
+
+NOTE: Snap Creator のデータを一貫してバックアップするためには、 Snap Creator のサービスやプロセスを停止できる場合に最適にバックアップをスケジュールする必要があります。

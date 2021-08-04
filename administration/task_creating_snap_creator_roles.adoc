@@ -1,0 +1,21 @@
+---
+permalink: administration/task_creating_snap_creator_roles.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, creating, role 
+summary: Snap Creator の GUI を使用して、 Snap Creator ロールを作成できます。 
+---
+= Snap Creator のロールを作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の GUI を使用して、 Snap Creator ロールを作成できます。
+
+. Snap Creator の GUI メインメニューから、 * Users and Roles * > * Role management * を選択します。
+. [ 役割の管理 ] タブで、 [ * 追加 ] をクリックします。
+. [ 役割の追加 ] ダイアログボックスで、役割名と概要を入力し、 [ 保存 ] をクリックします。
++
+[* 役割 * （ * Roles * ） ] パネルに新しい役割が表示されます。
+
+

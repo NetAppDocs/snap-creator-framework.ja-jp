@@ -1,0 +1,17 @@
+---
+permalink: sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html 
+sidebar: sidebar 
+keywords: resuming, resume, restart, snapvault, relationship, after, restore 
+summary: 最新の Snapshot バックアップを使用していないリストアを実行すると、プライマリストレージシステムの SnapVault 関係が削除されます。 
+---
+= リストア後に SnapVault 関係を再開します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+最新の Snapshot バックアップを使用していないリストアを実行すると、プライマリストレージシステムの SnapVault 関係が削除されます。
+
+リストアとリカバリのプロセスが完了したら、 SnapVault 関係を再開して、 Snap Creator でバックアップを再度実行できるようにする必要があります。そうしないと、プライマリストレージシステムで SnapVault 関係が検出されなくなるため、 Snap Creator はエラーメッセージを問題に出力します。
+
+必要なデータ転送は差分転送に基づいて行われます。これは、ソースボリュームとデスティネーションボリュームの間に共通の Snapshot コピーが残っている場合に該当します。

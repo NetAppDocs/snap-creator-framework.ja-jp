@@ -1,0 +1,100 @@
+---
+permalink: administration/reference_parameters_used_to_configure_the_client_and_server.html 
+sidebar: sidebar 
+keywords: parameter, snap, creator, agent, host, client, port 
+summary: Snap Creator エージェントのホストクライアントおよび Snap Creator サーバを設定するためのパラメータを理解しておく必要があります。 
+---
+= Snap Creator エージェントのホストクライアントおよび Snap Creator サーバを設定するためのパラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントのホストクライアントおよび Snap Creator サーバを設定するためのパラメータを理解しておく必要があります。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+SC_AGENT_##
+ a| 
+ホスト名または IP_address ： port
+ a| 
+1 つの構成を使用して、複数のリモートホスト上でコマンドまたはタスクを同時に実行します。タスクとは、定義済みのプラグイン（ APP_NAME パラメータ）または _CMD コマンドで指定されたコマンド（例： NTAP_SNAPSHOT_CREATE_CMD01 ）です。
+
+リモートホストを指定するには、ホストの名前または IP アドレスのあとにコロンを入力し、さらに Snap Creator エージェントがリスンしているポートを入力する必要があります。
+
+たとえば、 SC_AGENT_NUMBER = IP アドレス：ポート
+
+SC_AGENT_01 = エージェント IP ：エージェントポート
+
+SC_AGENT_02 = エージェント IP ：エージェントポート
+
+リモートホスト上で Snap Creator エージェントを起動するには、 <path to scAgent_v<#>>/bin/scAgent start コマンドを実行します。
+
+
+
+ a| 
+SC_CLONE_TARGET
+ a| 
+クローンターゲットのホスト名または IP_address ： port
+ a| 
+クローン処理を有効にします。 ｛ pre でパラメータ * cloneVol * を使用します
+
+
+
+| Post ｝ _CLONE_CREATE_CMDxx パラメータを使用すれば、リモートサイドでリモートストレージオブジェクトを管理できます（ファイルシステムのマウントやアンマウントなど）。クローンターゲットを指定するには、ホストの名前または IP アドレスのあとにコロンを入力し、さらに Snap Creator エージェントのリスニングポートを入力する必要があります。  a| 
+SC_AGENT_TIMEOUT
+ a| 
+時間（秒）
+
+
+
+ a| 
+エージェントサービスのタイムアウトを秒単位で指定します。実装されたクライアント / サーバアーキテクチャは、タイムアウトメカニズムを使用します。これは、指定された間隔でクライアントが応答しないと、サーバは失敗し、タイムアウトメッセージが表示されることを意味します。ただし、クライアント上のタスクは中止されず、さらに調査が必要になります。
+
+デフォルトでは、タイムアウトは 300 秒に設定されています。負荷の高いサーバや長時間実行されているタスク（ユーザが作成したスクリプトや複雑な SnapDrive 処理など）があるサーバでは、タイムアウトを延長し、要件に応じてこの値を変更する必要があります。
+
+このパラメータには、処理の最大所要時間を設定します（たとえば、休止に 1 、 800 分かかる場合は、このパラメータを 1800 に設定する必要があります）。
+
+
+NOTE: 一部のプラグインには、 SC_AGENT_TIMEOUT 値について固有の要件があります。
+ a| 
+SC_AGENT_ウォッチドッグ 有効化
+ a| 
+「 Y 」または「 N 」
+
+
+
+ a| 
+SC_AGENT_watchdog_enable パラメータは、 Snap Creator エージェントのバージョンが 4.1 より前の場合にのみ適用されます。このパラメータは、 watchdog プロセスを有効または無効にします。Snap Creator エージェント 4.1 以降では、 watchdog プロセスが常に有効になっているため、このパラメータは無視されます。パラメータが有効（ Y に設定）で、 Snap Creator エージェントのバージョンが 4.1 以降の場合、 watchdog プロセスは Snap Creator エージェントが休止要求を受信した時点で開始されます。
+
+watchdog プロセスは、 SC_AGENT_UNQUIESCE_TIMEOUT パラメータをタイムアウトとして使用し、アプリケーションを休止解除します。パラメータが無効（つまり N に設定）で、 Snap Creator エージェントのバージョンが 4.1 より前の場合、 Watchdog プロセスはアプリケーションの休止を解除しますが、 scAgent/etc/agent.properties のパスから operation_timeout_in/msec パラメータ（デフォルト： 1 時間）を使用します。
+
+
+NOTE: SC_AGENT_watchdog_enable パラメータは、 Snap Creator エージェント 4.1 では廃止され、 Snap Creator エージェント 4.0 でのみ使用できます。Snap Creator エージェント 4.1 以降では、このパラメータに設定された値に関係なく、 watchdog プロセスが有効になっています（ハードコードされているため）。
+ a| 
+SC_AGENT_UNQUIESCE_TIMEOUT
+ a| 
+時間（秒）
+
+
+
+ a| 
+休止解除のタイムアウトを秒単位で指定します。Snap Creator エージェント 4.1 より前のバージョンでは、このパラメータは、 SC_AGENT_watchdog_enable が Y に設定されている場合にのみ使用されますSnap Creator エージェント 4.1 以降では、 Snap Creator エージェントの watchdog プロセスが常にオンであるため、パラメータは常に適用されます。 Snap Creator エージェントとの通信が不可能で、アプリケーションが休止状態の場合、 Snap Creator エージェントは、サーバと通信せずに、アプリケーションを自動的に通常モードの動作に戻します。デフォルトでは、休止解除タイムアウトは、 SC_AGENT_TIMEOUT パラメータの値、さらに 5 秒に設定されています。
+ a| 
+SC_TMP_DIR
+ a| 
+「 Y 」または「 N 」
+
+
+
+ a| 
+ユーザ定義の代替の一時ディレクトリを使用して、 Snap Creator 関連のファイルを格納できます。ユーザがディレクトリを作成し、ユーザアクセスを管理します。プラグインは、一時ファイルを使用してデータベースとやり取りします。一時ファイルはホストのデフォルトの temp ディレクトリ内に作成され、すべてのユーザに書き込みアクセスが許可されています。一時ディレクトリがいっぱいの場合、 Snap Creator は一時ファイルの作成中にエラーを表示します。
+ a| 
+SC_AGENT_LOG_ENABLE
+ a| 
+「 Y 」または「 N 」
+
+|===

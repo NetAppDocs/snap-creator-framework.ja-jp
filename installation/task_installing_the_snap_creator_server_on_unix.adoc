@@ -1,0 +1,179 @@
+---
+permalink: installation/task_installing_the_snap_creator_server_on_unix.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server, unix, unix-based 
+summary: UNIX プラットフォーム（ AIX 、 HP-UX 、 Linux 、 Solaris ）の場合、 Snap Creator のインストールプロセスでは、 Snap Creator のソフトウェアパッケージ（ Snap Creator サーバと Snap Creator エージェントの両方を含む .tar ファイル）を展開し、セットアップスクリプトを実行してサービスを開始し、ポートを検証します。 
+---
+= UNIX ベースのシステムへの Snap Creator サーバのインストール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX プラットフォーム（ AIX 、 HP-UX 、 Linux 、 Solaris ）の場合、 Snap Creator のインストールプロセスでは、 Snap Creator のソフトウェアパッケージ（ Snap Creator サーバと Snap Creator エージェントの両方を含む .tar ファイル）を展開し、セットアップスクリプトを実行してサービスを開始し、ポートを検証します。
+
+JRE 1.8 Update 72 以降がインストールされている必要があります。
+
+インストールを実行するユーザーは、インストールを実行するための十分なアクセス権と権限を持っている必要があります。
+
+
+NOTE: 初期セットアップを実行するには、 root レベルの権限が必要です。
+
+Snap Creator サーバのデフォルトのポートは 8443 です。netstat または類似のツールを使用して、使用するネットワークポートが HTTPS をサポートしており、使用可能で、まだ使用されていないことを確認できます（ UNIX ホストの場合、「 netstat -nap|grep 8443 」と入力できます）。
+
+Snap Creator をダウンロードしておく必要があります。
+
+UNIX サービス（サーバおよびエージェント）機能は、 Snap Creator サーバおよび Snap Creator エージェント用の起動スクリプトを提供します。起動スクリプトは UNIX シェルスクリプト（ Bourne シェル）で記述されており、 Snap Creator でサポートされているすべての UNIX 環境で実行できます。
+
+. ダウンロードした Snap Creatortar.gz ファイルを、 Snap Creator サーバのインストール先にコピーします。
++
+.. サブディレクトリを作成します。 mkdir snap_creator_directoryサブ ディレクトリを作成します。
++
+mkdir snap_creator_directory
+
++
+[listing]
+----
+mkdir /SC_41
+----
+.. 新たに作成したディレクトリに Snap Creatortar.gz ファイルをコピーします。
++
+[listing]
+----
+cp NetApp_Snap_Creator_Frameworkrelease-os.tar.gz
+/snap_creator_directory
+----
++
+[listing]
+----
+cp NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz
+/SC_41
+----
+
+
+. Snap Creator Framework の .tar ファイルが格納されているディレクトリに移動し、ファイルを展開します。
++
+
+NOTE: UNIX 環境によっては、 tar コマンドを入力する前にファイルを解凍しなければならない場合があります。
+
++
+[listing]
+----
+cd snap_creator_directory
+tar -xvf NetApp_Snap_Creator_Frameworkrelease-os.tar.gz
+----
++
+** snap_creator_directory は、 Snap Creator のインストール先です。
+** release は、 Snap Creator ソフトウェアパッケージの現在のリリースです。
+** OS はオペレーティングシステムです。
++
+[listing]
+----
+cd /sc_41
+tar -xvf NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz
+----
+
+
++
+これにより、サーバとエージェントの両方のソフトウェアが抽出されます。通常、 Snap Creator サーバのみが設定されます。エージェントは通常、保護対象のデータベースまたはアプリケーションサーバ上に存在します。次の例を参照してください。
+
++
+[+]
+
++
+[listing]
+----
+NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz  scServer4.1.0
+scAgent4.1.0
+----
+. Snap Creator の初期セットアップを実行します。
++
+[listing]
+----
+cd scServer*
+./snapcreator --setup
+Welcome to the NetApp Snap Creator Framework release-version!
+\#\#\# Installation options \#\#\#
+01. NetApp Snap Creator Framework release-version Server
+02. NetApp Snap Creator Framework release-version Remote CLI
+Select install option (enter a number or "q" to quit):
+----
++
+Snap Creator サーバをインストールするには「 01 」と入力します。
+
++
+** オプション 01 では、 Snap Creator ユーザおよびパスワードを設定し、 Snap Creator サーバの実行に使用する GUI ポートを指定して、 Snap Creator サーバの初期セットアップを実行し、その他のパラメータを設定します。
+** オプション 02 により、 Snap Creator サーバがローカルバイナリとしてセットアップされ、ローカルシステムの CLI からリモートの Snap Creator サーバへ問題コマンドを実行できるようになります。
+
+
+. ここに y を入力して、エンドユーザライセンス契約に同意します。
++
+[listing]
+----
+END USER LICENSE AGREEMENT
+...the EULA displays...
+
+Do you accept the End User License Agreement (y|n): <Enter y>
+
+Enter controller serial number (Recommended): <OPTIONAL: Enter serial number for one of your storage controllers>
+----
+. コントローラのシリアル番号を入力します。
++
+コントローラのシリアル番号は、 Snap Creator のプロパティファイルに組み込まれており、サポート出力とログ出力に含まれています。この情報は、あとで発生する可能性のある問題のトラブルシューティングに役立ちます。
+
+. サーバポート、システム IP 、および Java ビンパスを入力し、プロンプトに進みます。
++
+[listing]
+----
+Enter Snap Creator server port [8443]: <Enter server port>
+
+Enable job monitor (Y|N): <Enter Y>
+
+Enter job monitor size, how many jobs to allow [100]: <Enter the number of jobs from 1-1000>
+----
++
+
+NOTE: Job Monitor size * に指定できる最大値は 10 、 000 ですが、最大値として 1000 を指定することを推奨します。
+
++
+[listing]
+----
+Enter scServer Administrator Username: <Enter the Administrator username>
+Enter password for snap_creator_administrator: <Enter the password>
+Confirm password for snap_creator_administrator: <Enter the password again>
+
+Enter JAVA Bin Path: /usr/java/default/bin
+Enter Your System IP: 10.232.30.18
+INFO: Updated NetApp Snap Creator Framework release-version
+/install_path/scServerrelease-version/engine/etc/snapcreator.properties
+INFO: Updated NetApp Snap Creator Framework release-version
+/install_path/scServerrelease-version/bin/scServer
+
+INFO: To start scServer please do the following:
+
+/install_path/scServerrelease-version/bin/scServer start
+
+INFO: To access NetApp Snap Creator Framework release-version GUI goto https://hostname:gui_port
+----
+. Snap Creator Framework サーバを起動します。
++
+[listing]
+----
+/install_path/scServerrelease-version/bin/scServer start
+Checking Status of scServer:
+Running
+----
+. 指定したポート上のローカルホストに移動して、 Snap Creator Framework の GUI の起動を検証します（例： https://10.12.123.123:8443)[]。
++
+HTTPS を使用して接続する必要があります。接続しないと GUI が機能しません。
+
++
+通信がファイアウォールを経由する場合は、ネットワークポートを開きます。
+
+
+
+* 関連情報 *
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[Snap Creator ホストに Java をインストールしています]
+
+xref:task_downloading_the_snap_creator_software.adoc[Snap Creator ソフトウェアのダウンロード]

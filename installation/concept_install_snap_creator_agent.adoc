@@ -1,0 +1,18 @@
+---
+permalink: installation/concept_install_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, agent 
+summary: Snap Creator エージェントは、 Windows ホストと UNIX ホストにインストールできます。 
+---
+= Snap Creator エージェントをインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator エージェントは、 Windows ホストと UNIX ホストにインストールできます。
+
+
+IMPORTANT: 1 つのホストに複数のエージェントをインストールして実行することは可能ですが、ホストごとに 1 つのエージェントを使用することを推奨します。
+
+IBM Domino プラグインを使用する場合、このプラグインを使用するには、 Snap Creator エージェントを Domino データフォルダ以外の場所にインストールする必要があります。

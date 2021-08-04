@@ -1,0 +1,56 @@
+---
+permalink: administration/task_managing_snap_creator_agent_security.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, server, manage, security, install, snapdrive 
+summary: Snap Creator で使用できるコマンドを追加することで、 Snap Creator エージェントのセキュリティ設定を管理できます。通信を特定の Snap Creator サーバに限定することもできます。 
+---
+= Snap Creator エージェントのセキュリティの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator で使用できるコマンドを追加することで、 Snap Creator エージェントのセキュリティ設定を管理できます。通信を特定の Snap Creator サーバに限定することもできます。
+
+Snap Creator エージェントのセキュリティを管理する手順は、 Windows と UNIX で同じです。次の手順では、 UNIX 環境の例を使用します。
+
+. Snap Creator エージェントが実行されているシステムにログインし、インストールディレクトリ内の etc サブディレクトリに移動します。
++
+「 cd /install_path/scAgent4.3.0.0/etc 」を参照してください
+
+. Snap Creator で使用できるコマンドを追加するには、次の手順を実行します。
++
+.. テキストエディタで allowed_command.config ファイルを開きます。
+.. 必要に応じてコマンドを追加し、各コマンドを別々の行に入力します。
++
+
+NOTE: allowed_command.config ファイルに入力するコマンドでは大文字と小文字が区別され、大文字と小文字の区別と引用符を含めて、構成ファイル内のコマンドと完全に一致している必要があります。
+
++
+コマンド： C ： \Program Files\NetApp\SnapManager \snapDrive\sdcli.exe
+
++
+
+NOTE: コマンドにスペースを含める場合は、コマンドを引用符で囲む必要があります。
+
+.. ファイルを保存して閉じます。
+
+
+. 通信を特定の Snap Creator サーバに限定する場合は、次の手順を実行します。
++
+.. テキストエディタで agent.properties ファイルを開きます。
+.. authorized_hosts パラメータを変更する場合は、カンマを使用してホスト名を区切ります。
++
+ホスト名と IP アドレスの両方がサポートされます。
+
++
+authorized_hosts = Lyon 、 10.10.10.192 、 FujO01
+
+.. ファイルを保存して閉じます。
+
+
+. Snap Creator エージェントを再起動します。
++
+「 /install_path/scAgent4.3.0/bin/scAgentrestart 」を参照してください
+
+

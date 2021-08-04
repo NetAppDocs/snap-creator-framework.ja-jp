@@ -1,0 +1,185 @@
+---
+permalink: administration/reference_vmware_vibe_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, virtual, machine, vmware, windows, linux, vcenter, ha 
+summary: Snap Creator は、 VMware VIBE プラグインを使用した VMware 仮想マシンおよび vApp のバックアップをサポートします。VMware プラグインは、仮想マシンと vSphere および vApps と vCloud Director の両方の組み合わせに対応する統合プラグインです。 
+---
+= VMware VIBE プラグイン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator は、 VMware VIBE プラグインを使用した VMware 仮想マシンおよび vApp のバックアップをサポートします。VMware プラグインは、仮想マシンと vSphere および vApps と vCloud Director の両方の組み合わせに対応する統合プラグインです。
+
+VMware VIBE プラグインを使用するときは、次の点を考慮してください。
+
+* VMware プラグインは、 Windows および Linux でのみサポートされています。
++
+Windows 以外または Linux 以外の Snap Creator サーバを使用している場合、 VMware プラグインを実行するには、 Snap Creator の Windows エージェントまたは Linux エージェントが必要です。
+
+* プロキシとしての Unified Manager サーバはサポートされていません。
+* Open Systems SnapVault を使用したマウント、アンマウント、およびバックアップ処理とアーカイブログの管理はサポートされていません。
+* VMware プラグインを使用した VMware HA はテストされていないため、サポートされていません。
+* VMware vCenter リンクモードおよび VMware プラグインの組み合わせはテストされていないため、サポートされていません。
+* VMware プラグインは、 raw device mapping （ RDM ； raw デバイスマッピング）をサポートしていません。
+* ボリュームは自動検出を使用して検出されます。
++
+検出されたデスティネーションボリュームは、 SnapMirror 関係にない場合は表示できません。dpstatus コマンドを使用して、 SnapMirror 関係を確認できます。SnapMirror 関係が存在しない場合は、まず SnapMirror 関係を作成する必要があります。
+
+* リストア処理を実行する前に、すべての VMware Snapshot コピーを削除する必要があります。
+* リストア処理の完了後、リストアした仮想マシンおよび vApp の Snap Creator バックアップを実行し、新しい環境をクリーンアップしてすべての VMware Snapshot コピーを削除する必要があります。
++
+VMware プラグインを使用しても VMware Snapshot コピーをクリーンアップできずにエラーが表示される場合は、 VMware Snapshot コピーを手動で削除する必要があります。VMware プラグインによって VMware スナップショットコピーの削除が 100% 保証されるわけではありません。これは、 VMware 問題と呼ばれています。
+
+* VMware プラグインがサポートしているのは、 32 ビットの Snap Creator と 32 ビットの Linux システムの組み合わせ、および 64 ビットの Snap Creator と 64 ビットの Linux システムの組み合わせのみです。
+* 削除された仮想マシンはリストアできません。
+* ボリュームリストア処理はサポートされていません。アプリケーションで定義したリストア処理のみがサポートされます。
+* SC_AGENT_TIMEOUT パラメータの値は、 1 、 800 以上に設定してください。
+* VIBE_VMWARE_SNAPSHOT パラメータ（ VMware snapshot オプション）のデフォルト値は N です
+* APP_DEFINED_RESTORE の値が Y の場合は、グラフィカルユーザインターフェイス（ GUI ）を使用した SnapVault のリストア処理はサポートされません。
+* GUI を使用して SnapMirror と SnapVault の構成を作成する場合、 SnapMirror と SnapVault の関係は自動的には検出されないため、 SnapMirror と SnapVault のパラメータを手動で入力する必要があります。
+* VMware プラグインによって、 ISO でマウントされたパスがデータストアとして検出されます。
+
+
+次の表に、 VMware VIBE プラグインのパラメータ、パラメータ設定、およびパラメータについて説明します。
+
+|===
+| パラメータ | 設定 | 説明 
+
+
+ a| 
+VIBE_DYNAMIC VOLUMES _ UPDATE
+ a| 
+Y または n デフォルト：設定されていません
+ a| 
+このパラメータを N に設定すると、動的なボリューム更新は実行されません。つまり、 VOLUMES 、 SNAPVAULT_VOLUMES 、 SNAPMIRROR_VOLUMES 、 NTAP_DFM_DATA_SET の各パラメータを手動で設定する必要があります。
+
+
+
+ a| 
+VIBE_NOPING
+ a| 
+デフォルト： N
+ a| 
+VMware プラグインまたはストレージコントローラへの ping に Internet Control Message Protocol （ ICMP ）を使用しないように指定します。
+
+
+
+ a| 
+VIBE_VCLOUD_IPADDR
+ a| 
+該当なし
+ a| 
+へのログインに使用する vCloud Director の IP アドレスまたはホスト名を指定します（ vCloud のみ）。
+
+
+
+ a| 
+VIBE_VCLOUD_USER
+ a| 
+該当なし
+ a| 
+vCloud Director へのログインに使用するユーザ名を指定します（ vCloud のみ）。@org または @system （最上位の vCloud データベース）を設定する必要があります。
+
+
+NOTE: バックアップ処理とリストア処理を実行するには、 vCloud Director のシステム管理者のユーザ名を使用する必要があります。組織の管理者クレデンシャルまたはその他のユーザクレデンシャルを使用している場合、これらの処理は失敗します。
+
+例 : 「 administrator@system` 」
+
+
+
+ a| 
+VIBE_VCLOUD_PASSWD
+ a| 
+該当なし
+ a| 
+指定した VIBE_VCLOUD_USER に関連付けられたパスワードを指定します（ vCloud のみ）。
+
+
+
+ a| 
+VIBE_VCENTER_USER
+ a| 
+該当なし
+ a| 
+vCenter へのログインに使用するユーザ名を指定します。
+
+
+
+ a| 
+VIBE_VCENTER_PASSWD
+ a| 
+該当なし
+ a| 
+指定した VIBE_VCENTER_USER に関連付けられているパスワードを指定します。
+
+
+
+ a| 
+VIBE_VCLOUD_NAMES の機能を使用します
+ a| 
+該当なし
+ a| 
+バックアップする組織名、仮想データセンター名、 vApp オブジェクト名を一覧表示します（ vCloud のみ）。例：「 org ： VDC1 、 VDC2 ： VAPP1 、 VAPP2 、 Org2 ： VDC3 ： ORG3 ： VAPP6 」
+
+
+
+ a| 
+VIBE_VSPHERE_NAMES
+ a| 
+該当なし
+ a| 
+に、 vCenter 単位でバックアップするデータストアと仮想マシンを示します（ vSphere のみ）。例：「 VCENTER1 ： DS1 ： VM1 ； VCENTER2 ； DS2 、 DS3 ：； VCENTER3 ： VM4
+
+
+
+ a| 
+VIBE_TRIM_VSPHERE_NAMES の名前
+ a| 
+該当なし
+ a| 
+に、 vCenter ごとのバックアップから削除する仮想マシンを示します（ vSphere のみ）。例：「 VCENTER1 ： VM99 」、「 VCENTER2 ： VM5 、 vm12 」
+
+
+
+ a| 
+VIBE_RESTORE_INTERVAL
+ a| 
+デフォルトは「 30 秒」です
+ a| 
+リストアチェックの間隔を指定します。
+
+
+
+ a| 
+VIBE_RESTORE_TIME の設定
+ a| 
+デフォルト： '3600 秒
+ a| 
+リストア処理が完了するまでの待機時間の合計を指定します。
+
+
+
+ a| 
+VIBE_VMWARE_SNAPSHOT
+ a| 
+デフォルト： N
+ a| 
+バックアップ中に VMware スナップショットコピーを作成します。
+
+
+
+ a| 
+VIBE_IGNORE_exportfs = Y または N
+ a| 
+デフォルト： N
+ a| 
+このパラメータは、 Snap Creator の VIBE 構成ファイルに手動で追加する必要があります。
+
+値が Y に設定されている場合、 Data ONTAP 7-Mode 構成では、コントローラの exportfs 値は無視されます。代わりに、 Data ONTAP はボリュームエクスポートパスを /vol/datastore_name としてマッピングします。この場合、データストア名はバックアップ用に指定されます。vFiler ユニットを使用している古い環境では、個々のデータストアの exportfs 情報を vFiler ユニットから取得できないため、この方法が使用されることがあります。代わりに、 vfiler0 にクエリに基づいてパスをマッピングする必要があります。
+
+|===
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["Interoperability Matrix Tool ： mysupport.netapp.com/matrix"]

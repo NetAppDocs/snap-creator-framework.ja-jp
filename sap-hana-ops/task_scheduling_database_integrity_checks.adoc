@@ -1,0 +1,23 @@
+---
+permalink: sap-hana-ops/task_scheduling_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, schedule, database, integrity, checks 
+summary: SAP HANA 構成では、ファイルベースのバックアップやデータベース整合性チェックなどの追加の処理をスケジュール設定できます。データベース整合性チェック処理は一定の間隔で実行するようにスケジュールを設定できます。 
+---
+= データベース整合性チェックのスケジュール設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA 構成では、ファイルベースのバックアップやデータベース整合性チェックなどの追加の処理をスケジュール設定できます。データベース整合性チェック処理は一定の間隔で実行するようにスケジュールを設定できます。
+
+. Snap Creator の GUI のメインメニューで、 * Management * > * Schedules * を選択し、 * Create * をクリックします。
+. [ ジョブの新規作成 ] ウィンドウで、ジョブの詳細を入力します。
++
+整合性チェック・ポリシーは ' デフォルトでは「 none 」に設定されています
+
++
+image::../media/creating_database_integrity_checks_schedules.gif[データベース整合性チェックのスケジュールを作成しています]
+
+

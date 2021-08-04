@@ -1,0 +1,26 @@
+---
+permalink: installation/concept_preinstallation_requirements_for_snap_creator.html 
+sidebar: sidebar 
+keywords: preinstallation, requirements, before, install 
+summary: Snap Creator をインストールする前に、システムライセンス、ソフトウェア、およびハードウェアの要件を考慮する必要があります。 
+---
+= Snap Creator をインストールする前の要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator をインストールする前に、システムライセンス、ソフトウェア、およびハードウェアの要件を考慮する必要があります。
+
+また、 Snap Creator をインストールする前に、次の作業を実行してください。
+
+* Snap Creator ソフトウェアをダウンロードします。
+* Data ONTAP ユーザを作成します。
+* Snap Creator サーバおよびエージェントホストに Oracle Java または OpenJDK をインストールします。
+* Snap Creator サーバおよびエージェントホストの時間を同期します。
+* IBM Domino プラグインの設定を行います（ Domino プラグインを使用している場合のみ必要）。
+* UNIX 環境用の Secure Sockets Layer （ SSL ）ライブラリを追加します（ UNIX プラットフォームで CLI を使用して Snap Creator を実行する場合のみ必要）。
++
+詳細については、『 Snap Creator Framework Administration Guide 』の「 _Troubleshooting_Section 」を参照してください。
+
+

@@ -1,0 +1,113 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_agent_4_0_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 4.0.x, unix 
+summary: UNIX 上の Snap Creator エージェント 4.0.x から直接アップグレードできます。 
+---
+= UNIX での Snap Creator エージェント 4.0.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 上の Snap Creator エージェント 4.0.x から直接アップグレードできます。
+
+* Snap Creator エージェントのディレクトリをバックアップする前に Snap Creator エージェントを停止し、バックアップされたデータが確実に完了するようにしておきます。
++
+たとえば、次のコマンドを入力します。
+
++
+[listing]
+----
+/install_path/scAgent4.0.x/bin/scAgent stop
+----
+* Snap Creator エージェントのディレクトリ（ /install_path/scAgent4.0.x ）に、次のディレクトリと、関連するすべてのサブディレクトリおよびファイルをバックアップしておく必要があります。
++
+** agent.conf ファイル（ ./config/agent.conf ）
+** ログディレクトリ（有効な場合）（ ./logs ）
+** Plug-ins ディレクトリ（ ./plugins ）
+
+
+
+
+4.1 より前のバージョンの Snap Creator エージェントでは、 agent.conf というファイルを使用して、 Snap Creator の外部で Snap Creator エージェント上で実行される可能性のあるコマンドをリストしました。4.1 では、 allowed_command.config ファイルが使用されます。
+
+同様に、 Snap Creator エージェントが通信を許可されている agent.conf ファイルが表示されたホスト。デフォルトでは、 Snap Creator エージェントはすべての Snap Creator サーバとの通信を許可しました。ただし、旧バージョンの Snap Creator でこの機能を使用するように選択した場合は、 agent.properties ファイルの authorized_hosts パラメータがこの機能に置き換えられます。
+
+
+NOTE: これらのパラメータを使用しなかった場合は、新しいエージェントを簡単にインストールするだけで済みます。
+
+次の手順で指定するパスは、デフォルトのインストールパスを示しています。以下のコマンドで入力するパスは、インストールパスと異なる場合があります。
+
+. Snap Creator エージェントをまだ停止していない場合は停止します。
++
+詳細については、このトピックで前述の説明を参照してください。
+
+. 最新の Snap Creator エージェントをインストールします。ただし、 Snap Creator エージェントは起動しないでください。
++
+詳細については、 UNIX への Snap Creator エージェントのインストールに関する情報を参照してください。
+
+. バックアップした agent.conf ファイルのコピーをテキストエディタで開きます。
++
+agent.conf ファイルの例を次に示します。
+
++
+[listing]
+----
+host: scServer@Lyon
+command: rc_domino
+----
+. 新しい allowed_commands.config ファイル（ /install_path/scAgent4.1.x /etc/allowed_commands.config ）をテキストエディタで開き、 agent.conf から allowed_commands.config ファイルにコマンドラインをコピーします。ただし、最新の Snap Creator でのセキュリティの強化により、コマンドが完全に認定されていることを確認してください。
++
+前述の例では、 allowed_command.config ファイルに次の情報を指定する必要があります。
+
++
+[listing]
+----
+command: /etc/init.d/rc_domino
+----
++
+
+NOTE: コマンドにスペースが含まれている場合は、コマンドを引用符で囲む必要があります。
+
++
+必要に応じて、コマンドを個別の行に追加できます。
+
++
+変更を行った後、ファイルを保存して閉じます。
+
+. テキストエディタで agent.properties ファイル（ /install_path/scAgent4.1.x /etc/agent.properties ）を開き、 authorized_hosts=* のデフォルトエントリを変更して、 agent.conf ファイル内のホストの設定を反映します。
++
+前述の例では、 authorized_hosts パラメータに次の値を指定する必要があります。
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Lyon
+----
++
+ホストは必要に応じて追加できます。複数のホスト名を指定する場合はカンマで区切ります。ホスト名と IP アドレスの両方がサポートされます。
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Lyon, 10.10.10.192, Fuji01
+----
++
+変更を行った後、ファイルを保存して閉じます。
+
+. 次のコマンドを入力して、 Snap Creator エージェントを起動します。
++
+[listing]
+----
+/install_path/scAgent4.1.x/bin/scAgent start
+----
++
+
+NOTE: allowed_command.config ファイルまたは agent.properties ファイルを変更する場合、変更を行ったときには Snap Creator エージェントを再起動する必要があります。
+
+
+
+* 関連情報 *
+
+xref:task_installing_the_snap_creator_agent_on_unix.adoc[UNIX ベースのシステムへの Snap Creator エージェントのインストール]

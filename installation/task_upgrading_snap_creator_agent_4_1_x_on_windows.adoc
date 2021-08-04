@@ -1,0 +1,74 @@
+---
+permalink: installation/task_upgrading_snap_creator_agent_4_1_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, snap, creator, agent, 4.1.x, windows 
+summary: Windows 上で Snap Creator エージェント 4.1.x からアップグレードできます。 
+---
+= Windows での Snap Creator エージェント 4.1.x のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows 上で Snap Creator エージェント 4.1.x からアップグレードできます。
+
+* Snap Creator エージェントのディレクトリをバックアップしてバックアップデータが完全であることを確認する前に、 Snap Creator エージェントサービス（「 napcreatoragentservice 」）を停止しておきます。
++
+たとえば、サービススナップインを使用してサービスを停止できます。
+
++
+.. 「 * Start * > * Run * 」を選択し、「 ervices .msc 」と入力します。
+.. Snap Creator エージェントサービスを探して選択し、サービスを停止します。または、コマンドプロンプトを開いて次のコマンドを入力することもできます。
+
+
++
+[listing]
+----
+sc stop snapcreatoragentservice
+----
+* Snap Creator エージェントのディレクトリ（ C ： \Program Files\NetApp\Virtual Snap _Creator_Framework\scAgent4.1.x ）内に、次のディレクトリと、関連付けられているすべてのサブディレクトリおよびファイルをバックアップしておきます。
++
+** Snap Creator エージェントのプロパティ（ ..\etc ）。 allowed_command.config ファイルと agent.properties ファイルが含まれています
+** ログ（ ..\logs ）
+** プラグイン（ ..\plugins ） * 注： * 作成した Snap Creator 4.1.x のバックアップコピーは削除しないでください。
+
+
+
+
+以降の手順で示すパスは、 Windows のデフォルトのインストールパスです。デフォルト値を使用しなかった場合は、パス情報がインストールパスと異なることがあります。
+
+. Snap Creator エージェントサービスをまだ停止していない場合は停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+. Snap Creator （ Windows ）をアンインストールするには、 * Start * > * Programs * > * Snap Creator * > * Uninstall NetApp Snap Creator Framework * を選択します。
++
+詳細については、 Windows での Snap Creator のアンインストールに関する情報を参照してください。
+
+. 最新の Snap Creator エージェントをインストールします。
++
+詳細については、 Windows への Snap Creator エージェントのインストールに関する情報を参照してください。
+
+. 最新の Snap Creator サーバのインストール時に Snap Creator エージェントのサービスを開始するように選択した場合は、サービスを停止します。
++
+サービスの停止については、このトピックで前述した詳細を参照してください。
+
+. バックアップされた Snap Creator 4.1.x のログディレクトリを最新の場所（ C ： \Program Files\NetApp\Virtual Creator_Framework\scAgent4.1.x \logs ）にコピーします。
+. バックアップされた Snap Creator 4.1.x プラグインディレクトリを最新の場所（ C ： \Program Files\NetApp\Virtual Creator_Framework\scAgent4.1.x プラグイン）にコピーします。
+. バックアップされた Snap Creator 4.1.x エージェントのプロパティディレクトリを最新の場所（ C ： \Program Files\NetApp\Virtual Creator_Framework\scAgent4.1.x など）にコピーします。
+. 次のいずれかを実行して、 Snap Creator エージェントサービスを開始します。
++
+** サービススナップインを使用してサービスを開始します。
+** コマンドプロンプトで、次のコマンドを入力します。
++
+[listing]
+----
+sc start snapcreatoragentservice
+----
+
+
++
+
+NOTE: allowed_command.config ファイルまたは agent.properties ファイルを変更する場合、変更を行ったときには Snap Creator エージェントを再起動する必要があります。
+
+

@@ -1,0 +1,30 @@
+---
+permalink: administration/task_performing_application_defined_restore_operations.html 
+sidebar: sidebar 
+keywords: vmware, kvm, xen, plug-in, snap, creator, gui 
+summary: VMware 、 KVM 、 Xen のプラグインを使用している場合、 Snap Creator の GUI を使用してアプリケーションで定義したリストア処理を実行できます。 
+---
+= アプリケーションで定義したリストア処理を実行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware 、 KVM 、 Xen のプラグインを使用している場合、 Snap Creator の GUI を使用してアプリケーションで定義したリストア処理を実行できます。
+
+特定の VMware 環境では、リストア処理に時間がかかることがあります。このような場合は、 Snap Creator の CLI を使用するか、バックアップ用とリストア用の 2 つのエージェントをセットアップします。
+
+
+NOTE: GUI を使用した VMware のリストア処理は、 Snap Creator エージェントの場合にのみサポートされます。
+
+. Snap Creator の GUI メインメニューから、 * Management * > * Configurations * を選択します。
+. [* 構成 *] タブの [ プロファイルと構成 ] ペインで、構成ファイルを選択します。
+. [ * アクション * > * 復元 * （ Action * > * Restore * ） ] を選択
++
+右側のペインに [ アプリケーション定義の復元 ] ダイアログボックスが表示されます。
+
+. リストアの詳細を入力し、「 * OK * 」をクリックします。
++
+image::../media/restore_application_defined.gif[リストアアプリケーションが定義されました]
+
+

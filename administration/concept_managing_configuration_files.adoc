@@ -1,0 +1,15 @@
+---
+permalink: administration/concept_managing_configuration_files.html 
+sidebar: sidebar 
+keywords: create, copy, download, list, delete, configuration, managing, files 
+summary: 構成ファイルを作成、コピー、ダウンロード、リスト表示、削除できます。 
+---
+= 構成ファイルの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+構成ファイルを作成、コピー、ダウンロード、リスト表示、削除できます。
+
+構成ファイルは Snap Creator の中心となるもので、サポートされているプラグインの実行、必要な変数の指定、 Snapshot コピーにキャプチャされるボリュームの定義など、 Snap Creator の動作に影響するように設定されたパラメータで構成されます。

@@ -1,0 +1,13 @@
+---
+permalink: installation/concept_cli_reference.html 
+sidebar: sidebar 
+keywords: cli, reference 
+summary: このセクションには、コマンドラインインターフェイスから Snap Creator を使用するための参照情報が記載されています。 
+---
+= CLI リファレンス
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このセクションには、コマンドラインインターフェイスから Snap Creator を使用するための参照情報が記載されています。

@@ -1,0 +1,27 @@
+---
+permalink: installation/concept_upgrading_snap_creator.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator 
+summary: Snap Creator の最新バージョンには、サポートされているさまざまなバージョンからアップグレードできます。 
+---
+= Snap Creator をアップグレードします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator の最新バージョンには、サポートされているさまざまなバージョンからアップグレードできます。
+
+
+NOTE: コミュニティサイトにあるリリースからアップグレードできるかどうかについて不明な点がある場合は、ネットアップコミュニティフォーラムをご利用ください。ネットアップコミュニティフォーラムには、次のアドレスからアクセスできます。 https://communities.netapp.com/community/products_and_solutions/databases_and_enterprise_apps/snapcreator[]
+
+Snap Creator の最新バージョンにアップグレードする前に、現在インストールされている Snap Creator のバージョンのジョブモニタサイズを確認してください。Snap Creator をアップグレードするときは、ジョブ監視データベースのデータが失われないように、ジョブ監視のサイズを以前の設定と同じかそれよりも大きくする必要があります。
+
+また、 Snap Creator をアップグレードする場合は、同じオペレーティングシステム環境を使用するホスト上でアップグレードを実行する必要があります。たとえば、 Windows 環境でアップグレードを実行する場合、バックアップデータをコピーするときは、 UNIX ベースのシステムではなく Windows 環境にもデータをコピーして戻す必要があります。
+
+
+IMPORTANT: Snap Creator にはダウングレード（リバート）オプションはありません。アップグレードプロセスでは、複数のファイルをバックアップします。Snap Creator の以前のバージョンにリバートする必要がないことが確実に確認されるまで、バックアップファイルを保持しておくことが重要です。
+
+* 関連情報 *
+
+xref:task_checking_job_monitor_size.adoc[ジョブ監視のサイズを確認しています]

@@ -1,0 +1,35 @@
+---
+permalink: administration/task_creating_clones_from_a_new_backup.html 
+sidebar: sidebar 
+keywords: clone, volume, lun, snapshot, copy, create, profile, configuration 
+summary: 新しい Snapshot コピーからボリュームまたは LUN をクローニングできます。 
+---
+= 新しいバックアップからクローンを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しい Snapshot コピーからボリュームまたは LUN をクローニングできます。
+
+* Snap Creator サーバがストレージシステムと通信している必要があります。
+* クローニング処理を実行するには、適切な権限で Snap Creator にログインする必要があります。
+
+
+このクローニング処理では、新しい Snapshot コピーをクローニングします。
+
+. Snap Creator のグラフィカルユーザインターフェイス（ GUI ）のメインメニューから、 * Management * > * Configurations * を選択します。
+. [* プロファイルと構成 * （ * Profiles and Configuration * ） ] ペインで、構成ファイルを選択します。
+. [* Clone settings * （クローン設定 * ） ] タブに移動し、設定が正しく設定されていることを確認します。
++
+image::../media/clone_settings.gif[クローン設定]
+
+. 必要なクローンのタイプに応じて、 * Actions * を選択し、次のいずれかのオプションを選択します。
++
+** LUN クローン
+** ボリュームクローン
+
+
+. 追加パラメータ（ Additional Parameters ）ダイアログボックスで適切なポリシーを選択し、 * OK * をクリックしてクローニングプロセスを開始します。
+. [* Console * （コンソール * ） ] ペインで、クローニングプロセスが正常に完了したことを確認します。
+
