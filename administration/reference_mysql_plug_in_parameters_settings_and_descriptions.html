@@ -157,7 +157,12 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
+  <script src='/ja-jp/snap-creator-framework/js/version-dropdown.js'></script>
   <script src='/ja-jp/snap-creator-framework/js/product-family.js'></script>
+  <script src='/ja-jp/snap-creator-framework/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/snap-creator-framework/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/snap-creator-framework/js/jszip.min.js'></script>
+  <script src='/ja-jp/snap-creator-framework/js/pdf-ux.js'></script>
 </head>
 
 
@@ -273,9 +278,6 @@
       </div>
       <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
         <div class="n-language-selector-menu">
-          <div class="n-language-selector-menu__header">
-            <span class="n-language-selector-menu__title">言語を選択</span>
-          </div>
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
@@ -287,10 +289,6 @@
                 </li></ul>
             </li>
           </ul>
-          <div class="menu__footer">
-            <p>選択中の言語: 日本語
-            </p>
-          </div>
         </div>
       </div>
     </div><!-- End Language Selector -->
@@ -327,31 +325,6 @@
   <!-- End property bar -->
 </header>
 
-        <div class="ie-utility">
-  <div class="ie-menu">
-    <div class="n-breadcrumb">
-      <ul class="n-breadcrumb__list">
-        <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">ホーム</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">ドキュメント</a>
-        </li>
-        
-
-        <li class="n-breadcrumb__list-item">
-          <a href="/ja-jp/snap-creator-framework/">Snap&nbsp;Creator&nbsp;Framework</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          MySQL プラグイン
-        </li>
-      </ul>
-    </div>
-
-    <div style="clear: both"></div><!-- Main needs to have height -->
-  </div>
-</div>
-
 
         <main id="n-main-content" class="n-main-content">
           <!-- Start Documentation Content -->
@@ -360,98 +333,77 @@
   
   <div class="col-md-3" >
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDF<span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">サイト</span>
-    </div>
-    <li>
-      <a target="_blank" href="/ja-jp/snap-creator-framework/pdfs/fullsite-sidebar/Snap_Creator_Framework_4_3_3.pdf" >
-        <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
-        Snap Creator Framework 4.3.3
-      </a>
-    </li>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ja-jp/snap-creator-framework/pdfs/fullsite-sidebar/Snap_Creator_Framework_4_3_3.pdf" >
+          <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
 
 
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/インストール.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             インストール
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework_の動作.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator Framework の動作
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_のアーキテクチャ.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator のアーキテクチャ
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -459,19 +411,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_をインストールする前の要件.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator をインストールする前の要件
           </a>
-        </li>
-        <span>
           
 
 
@@ -479,29 +428,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Data_ONTAP_用_Snap_Creator_ユーザの作成.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Data ONTAP 用 Snap Creator ユーザの作成
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -513,67 +458,58 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Domino_プラグインの設定.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Domino プラグインの設定
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/UNIX_固有の設定_シンボリックリンクの作成.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             UNIX 固有の設定：シンボリックリンクの作成
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -581,43 +517,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_サーバをインストールします.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator サーバをインストールします
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Windows_ホストに_Snap_Creator_サーバをインストールする.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Windows ホストに Snap Creator サーバをインストールする
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -626,10 +555,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -637,43 +565,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_エージェントをインストールします.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator エージェントをインストールします
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Windows_への_Snap_Creator_エージェントのインストール.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Windows への Snap Creator エージェントのインストール
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -684,10 +605,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -695,19 +615,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_をアップグレードします.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator をアップグレードします
           </a>
-        </li>
-        <span>
           
 
 
@@ -715,33 +632,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_3_6_x_からのアップグレード.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 3.6.x からのアップグレード
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -749,33 +662,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_4_0_x_からアップグレードする.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 4.0.x からアップグレードする
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -783,33 +692,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_4_1_x_からのアップグレード.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 4.1.x からのアップグレード
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -818,10 +723,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -829,57 +733,49 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_をアンインストールしています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator をアンインストールしています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/UNIX_上での_Snap_Creator_のアンインストール.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             UNIX 上での Snap Creator のアンインストール
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -887,65 +783,56 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/CLI_リファレンス.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             CLI リファレンス
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/clustered_Data_ONTAP_で_Snap_Creator_ユーザのロールを作成するための_CLI_コマンド.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             clustered Data ONTAP で Snap Creator ユーザのロールを作成するための CLI コマンド
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -953,51 +840,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/IBM___Domino___プラグインの処理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             IBM ® Domino ® プラグインの処理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/IBM_Domino_プラグインの概要.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             IBM Domino プラグインの概要
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1007,57 +881,49 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/IBM_Domino_のバックアップとリストアを準備しています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             IBM Domino のバックアップとリストアを準備しています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SnapMirror_と_SnapVault_のセットアップ.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SnapMirror と SnapVault のセットアップ
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1065,19 +931,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/バックアップとリストアの設定を作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             バックアップとリストアの設定を作成しています
           </a>
-        </li>
-        <span>
           
 
 
@@ -1085,29 +948,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/バックアップとリストアの設定にコマンドを追加する.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             バックアップとリストアの設定にコマンドを追加する
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1118,10 +977,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1129,29 +987,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/データベースをバックアップしています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             データベースをバックアップしています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1159,19 +1013,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/データベースのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             データベースのリストア
           </a>
-        </li>
-        <span>
           
 
 
@@ -1179,43 +1030,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SAN_環境で単一ファイルのリストアを実行する.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAN 環境で単一ファイルのリストアを実行する
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1223,31 +1069,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/ジョブのステータスとログを表示しています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             ジョブのステータスとログを表示しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1258,10 +1100,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1269,57 +1110,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SAP_HANA___プラグインの運用.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA ® プラグインの運用
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SAP_HANA_のバックアップとリストア解決策の概要.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA のバックアップとリストア解決策の概要
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1327,29 +1155,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/必要なソフトウェアコンポーネントをインストールして設定する.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             必要なソフトウェアコンポーネントをインストールして設定する
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1357,19 +1181,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/データバックアップを設定する.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             データバックアップを設定する
           </a>
-        </li>
-        <span>
           
 
 
@@ -1377,29 +1198,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SnapVault_関係の開始.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SnapVault 関係の開始
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1408,10 +1225,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1421,29 +1237,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/ログバックアップを設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             ログバックアップを設定しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1451,33 +1263,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/データベースのバックアップを実行中です.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             データベースのバックアップを実行中です
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1485,41 +1293,37 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SAP_HANA_のファイルベースのバックアップとデータベース整合性チェック.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA のファイルベースのバックアップとデータベース整合性チェック
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1527,19 +1331,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/SAP_HANA_データベースのリストアとリカバリ.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             SAP HANA データベースのリストアとリカバリ
           </a>
-        </li>
-        <span>
           
 
 
@@ -1547,29 +1348,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/リストア後に_SnapVault_関係を再開します.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             リストア後に SnapVault 関係を再開します
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1577,39 +1374,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/プライマリストレージの障害後のデータベースのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             プライマリストレージの障害後のデータベースのリストア
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1622,10 +1414,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1633,49 +1424,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             管理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework_の動作.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator Framework の動作
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1683,31 +1461,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_のアーキテクチャ.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator のアーキテクチャ
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1715,33 +1489,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_サーバの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator サーバの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1749,19 +1519,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_エージェントの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator エージェントの管理
           </a>
-        </li>
-        <span>
           
 
 
@@ -1771,39 +1538,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_エージェントのセキュリティ.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator エージェントのセキュリティ
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1811,19 +1573,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/バックアップとリカバリのワークフロー.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             バックアップとリカバリのワークフロー
           </a>
-        </li>
-        <span>
           
 
 
@@ -1841,35 +1600,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/保持ポリシーを作成します.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             保持ポリシーを作成します
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1877,29 +1632,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/クローンを作成します.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             クローンを作成します
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1907,41 +1658,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/リストア処理を実行しています.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             リストア処理を実行しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1949,47 +1695,43 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/ユーザアクセスの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             ユーザアクセスの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1997,31 +1739,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/プロファイルの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             プロファイルの管理
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2029,35 +1767,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/構成ファイルの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             構成ファイルの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2065,37 +1799,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/保持ポリシーの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             保持ポリシーの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2103,33 +1833,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/バックアップの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             バックアップの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2137,35 +1863,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/スケジュールされたジョブの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             スケジュールされたジョブの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2173,31 +1895,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/クローンの管理.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             クローンの管理
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2205,19 +1923,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_の設定に必要なプラグイン情報.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator の設定に必要なプラグイン情報
           </a>
-        </li>
-        <span>
           
 
 
@@ -2229,18 +1944,14 @@
 
 
 
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">このページ</span>
-</div>
-
-<li class="active">
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/ja-jp/snap-creator-framework/pdfs/pages/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.pdf" >
-    <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
-    MySQL プラグイン
+    <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
-
+</ul>
   
 
 
@@ -2258,29 +1969,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/VMware_VIBE_プラグイン.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             VMware VIBE プラグイン
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2291,10 +1998,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2302,43 +2008,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_の問題に対するトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator の問題に対するトラブルシューティング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/エラー_メッセージの種類およびトラブルシューティング_ログです.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             エラー・メッセージの種類およびトラブルシューティング・ログです
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2346,29 +2045,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_の_GUI_エラーに対するトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator の GUI エラーに対するトラブルシューティング
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2378,31 +2073,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/セキュリティの問題のトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             セキュリティの問題のトラブルシューティング
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2410,31 +2101,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_サーバまたは_Snap_Creator_エージェントの問題のトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator サーバまたは Snap Creator エージェントの問題のトラブルシューティング
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2442,33 +2129,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/CLI_コマンドエラーのトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             CLI コマンドエラーのトラブルシューティング
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2478,45 +2161,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/エラーメッセージ.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             エラーメッセージ
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2524,55 +2202,51 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_構成ファイルの変数_パラメータ_コマンド.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator 構成ファイルの変数、パラメータ、コマンド
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2582,29 +2256,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snap-creator-framework/pdfs/sidebar/Snap_Creator_コマンドラインインターフェイスの使用に関するガイドライン.pdf" 
             
           >
-            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="16" height="16"/>
             Snap Creator コマンドラインインターフェイスの使用に関するガイドライン
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
+      </ul>
+    
+
+  
+
+
+
           
-
-
-
-
-
-
-          
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2612,25 +2291,44 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-</ul>
-
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/snap-creator-framework/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
 <script>
-  $("#toggleContainerPdf li.active").parents('li').toggle('display');
-  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snap-creator-framework/index.html">
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snap-creator-framework/index.html">
         ホーム
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snap-creator-framework/releasenotes.html">
         リリースノート
@@ -3279,7 +2977,7 @@
       </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snap-creator-framework/reference_legal_notices.html">
         法的通知
       </a></li></ul>
-
+</div>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -3289,6 +2987,30 @@
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
     <!-- Begin of page container -->
     <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/snap-creator-framework/">Snap&nbsp;Creator&nbsp;Framework</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          MySQL プラグイン
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
       <div class="ie-nmt-disclaimer">
   <span>
     <div class="ie-nmt-disclaimer-container">
@@ -3311,18 +3033,20 @@
 <p class="page-details">
   
     
-    <time datetime="2021-08-04 23:09:26 +0000">08/04/2021</time>
+    <time datetime="2022-01-17 14:11:52 +0000">01/17/2022</time>
     
   
 
 <span>寄稿者
+  <a target="_blank" href="https://github.com/NetAppZacharyWambold">
+    <img  class="avatar avatar-small"
+          alt="NetAppZacharyWambold"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/73244192?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
-
-
-  <span>
-    <a target="_blank" href="/ja-jp/snap-creator-framework/pdfs/pages/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.pdf" role="button">
-      <img src="/ja-jp/snap-creator-framework/images/pdf.png" width="20" height="20"/>このページの PDF をダウンロード</a>
-  </span>
 
 
 </p>
@@ -3453,11 +3177,11 @@ Snap Creator Framework のバックアップでは、 Master_slave オプショ�
   
   <!-- Start Page Toolbar -->
   <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <div class="page-nav-contribute-title">寄稿する</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/snap-creator-framework/images/github.png" class="github-icon" />このページを編集する</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[MySQL プラグイン](https://docs.netapp.com/ja-jp/snap-creator-framework/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html)" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/snap-creator-framework/images/github.png" class="github-icon" />ドキュメントの変更をリクエストする</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >貢献する方法を学ぶ</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[MySQL プラグイン](https://docs.netapp.com/ja-jp/snap-creator-framework/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snap-creator-framework/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snap-creator-framework/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/snap-creator-framework/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
@@ -3482,7 +3206,7 @@ Snap Creator Framework のバックアップでは、 Master_slave オプショ�
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
 
 </ul>
