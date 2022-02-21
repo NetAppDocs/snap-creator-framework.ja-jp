@@ -2,7 +2,7 @@
 permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
 sidebar: sidebar 
 keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
-summary: Snap Creator ジョブモニタでジョブのステータスを確認できます。ジョブの実行中はコンソール・ペインでジョブ・アクションのログを表示したり ' ジョブのアウト・ログでジョブ・アクションのログを表示したりできますいくつかの特殊なログも使用できます。 
+summary: 'Snap Creator ジョブモニタでジョブのステータスを確認できます。ジョブの実行中はコンソール・ペインでジョブ・アクションのログを表示したり " ジョブのアウト・ログでジョブ・アクションのログを表示したりできますいくつかの特殊なログも使用できます。' 
 ---
 = ジョブのステータスとログを表示しています
 :icons: font
