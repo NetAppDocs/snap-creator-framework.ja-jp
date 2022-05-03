@@ -5,6 +5,7 @@ keywords: sap, hana, modifying, modify, housekeeping, log, backups
 summary: ログのクリーンアップ処理を無効にする場合は、不要なログバックアップの削除用に設定されたパラメータを変更できます。 
 ---
 = 不要なログバックアップの削除を変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

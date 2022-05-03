@@ -5,6 +5,7 @@ keywords: clone, volume, lun, existing, backup, server, snap, creator, configura
 summary: 既存のバックアップからボリュームまたは LUN をソースとしてクローニングできます。 
 ---
 = 既存のバックアップからクローンを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, gui, snapdrive, windows
 summary: Snap Creator の GUI を使用して、ボリュームリストア、単一ファイルのリストア、アプリケーションで定義したリストアの各処理を実行できます。 
 ---
 = リストア処理を実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

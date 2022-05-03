@@ -5,6 +5,7 @@ keywords: sap, hana, backup, restore, solution, overview
 summary: 今日、企業の SAP アプリケーションには 24 時間 365 日、ノンストップの可用性が求められています。データボリュームの増大や、システムバックアップなどの日常的なメンテナンス作業に関係なく、一貫したレベルのパフォーマンスが求められます。 
 ---
 = SAP HANA のバックアップとリストア解決策の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

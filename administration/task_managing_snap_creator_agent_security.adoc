@@ -5,6 +5,7 @@ keywords: snap, creator, agent, server, manage, security, install, snapdrive
 summary: Snap Creator で使用できるコマンドを追加することで、 Snap Creator エージェントのセキュリティ設定を管理できます。通信を特定の Snap Creator サーバに限定することもできます。 
 ---
 = Snap Creator エージェントのセキュリティの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

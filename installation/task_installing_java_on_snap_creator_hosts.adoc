@@ -5,6 +5,7 @@ keywords: installing, install, java, snap, creator, hosts
 summary: OpenJDK と Oracle Java Runtime Environment （ JRE ） 1.8 Update 72 以降が、すべての Snap Creator サーバとエージェントホストにインストールされている必要があります。Transport Layer Security \ （ TLS\ ）の脆弱性を回避するために、 Snap Creator サーバおよびエージェントホストに JRE 1.8 Update 72 をこれ以降のバージョンにインストールすることを推奨します。 
 ---
 = Snap Creator ホストに Java をインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

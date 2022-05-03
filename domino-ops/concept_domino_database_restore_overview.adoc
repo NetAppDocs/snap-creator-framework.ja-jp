@@ -5,6 +5,7 @@ keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror,
 summary: IBM Domino プラグインは、データベースが格納されているボリュームの Snapshot コピーからデータベースファイルをリストアします。Snapshot のリストアが完了すると、 changeinfo ディレクトリに記録された変更がプラグインによって適用されます。 
 ---
 = データベースのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -44,5 +45,5 @@ NOTE: このマニュアルでは、 SAN 環境で単一ファイルのリスト
 * 関連情報 *
 
 link:task_performing_point_in_time_volume_restore.adoc["ボリュームリストアを実行しています"]
-
-
+link:task_performing_point_in_time_single_file_restore_with_nfs.adoc["単一ファイルのリストアを実行する"]
+link:concept_single_file_restore_in_fc_iscsi_environments.adoc["SAN 環境で単一ファイルのリストアを実行する"]

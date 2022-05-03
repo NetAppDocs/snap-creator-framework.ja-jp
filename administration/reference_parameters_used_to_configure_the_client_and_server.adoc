@@ -5,6 +5,7 @@ keywords: parameter, snap, creator, agent, host, client, port
 summary: Snap Creator エージェントのホストクライアントおよび Snap Creator サーバを設定するためのパラメータを理解しておく必要があります。 
 ---
 = Snap Creator エージェントのホストクライアントおよび Snap Creator サーバを設定するためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

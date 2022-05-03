@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, agent, windows
 summary: Windows インストーラを使用して、 Snap Creator エージェントを Windows ホストにインストールできます。 
 ---
 = Windows への Snap Creator エージェントのインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, storage, layout, requirements,
 summary: 一般的な IBM Domino 環境には、 Domino データ用に 1 つ、 Domino トランザクションログ用に 1 つ、プラグインの changeinfo ディレクトリ用に 1 つ以上の Domino ボリュームがあります。多くのサイトには、 Domino DAOS 用のボリュームとビューの再構築用のボリュームがあります。 
 ---
 = ストレージレイアウトの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

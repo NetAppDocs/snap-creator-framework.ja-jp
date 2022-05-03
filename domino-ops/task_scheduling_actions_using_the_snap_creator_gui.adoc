@@ -5,6 +5,7 @@ keywords: domino, ibm, scheduling, schedule, backups
 summary: 初期バックアップを実行したあとに、定期的なバックアップジョブのスケジュールを設定できます。 
 ---
 = バックアップのスケジュール設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

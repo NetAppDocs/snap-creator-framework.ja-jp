@@ -5,6 +5,7 @@ keywords: manage, scheduled, jobs, listing, running, deleting, managing
 summary: スケジュールされたジョブを管理するには、ジョブを作成し（バックアップ処理を自動化する）し、それらのジョブのリスト作成、表示、実行、および削除を行います。 
 ---
 = スケジュールされたジョブの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

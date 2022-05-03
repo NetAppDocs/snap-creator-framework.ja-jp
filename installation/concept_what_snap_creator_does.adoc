@@ -5,6 +5,7 @@ keywords: snap, creator, framework, description
 summary: Snap Creator Framework を使用すると、あらかじめパッケージ化されたカスタムプラグインを使用することで、 Windows および UNIX / （ AIX 、 HP-UX 、 Linux 、 Solaris\ ）のさまざまな環境におけるさまざまなサードパーティ製アプリケーション、データベース、ハイパーバイザーのデータ保護を標準化し、簡易化できます。 
 ---
 = Snap Creator Framework の動作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

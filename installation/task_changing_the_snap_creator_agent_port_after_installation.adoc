@@ -5,6 +5,7 @@ keywords: changing, change, snap, creator, agent, port, after, post, installatio
 summary: Snap Creator エージェントがリスンしているポートを変更するには、 Snap Creatoragent.properties ファイルで変更を行い、エージェントを再起動します。 
 ---
 = インストール後に Snap Creator エージェントのポートを変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

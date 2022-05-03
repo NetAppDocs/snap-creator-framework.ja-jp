@@ -5,6 +5,7 @@ keywords: plug-in, framework, snap, creator, reuse, quiesce, unquiesce, discover
 summary: プラグインフレームワークを使用すると、 Snap Creator 用の独自のプラグインを作成したり、既存のプラグインを再利用したりできます。Snap Creator では、このプラグインを使用して、特定のアプリケーションのバックアップとリカバリを処理できます。 
 ---
 = プラグインフレームワークを使用してカスタムプラグインを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

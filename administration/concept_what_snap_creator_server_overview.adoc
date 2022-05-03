@@ -5,6 +5,7 @@ keywords: snap, creator, server, framework, overview, gui
 summary: Snap Creator サーバは、 Snap Creator Framework のメインエンジンです。 
 ---
 = Snap Creator サーバの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

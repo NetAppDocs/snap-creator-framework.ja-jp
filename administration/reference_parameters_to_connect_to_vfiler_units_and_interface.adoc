@@ -5,6 +5,7 @@ keywords: several, parameter, snap, creator, sefver, vfiler, unit, interface, ma
 summary: Snap Creator サーバを vFiler ユニットおよびインターフェイスに接続するには、いくつかのパラメータが必要です。 
 ---
 = vFiler ユニットおよびインターフェイスに接続するためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

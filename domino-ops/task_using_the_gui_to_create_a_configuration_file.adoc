@@ -5,6 +5,7 @@ keywords: domino, ibm,creating, create, configuraiton, file
 summary: IBM Domino データベースをバックアップする前に、構成ファイルを作成する必要があります。構成ファイルは、 Snap Creator のバックアップおよびリストア処理の入力ファイルです。 
 ---
 = 構成ファイルを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: ibm, domino, plug-in, snap, creator, framework, backup, netapp, api, s
 summary: Snap Creator Framework 用 IBM Domino プラグインは、ネットアップストレージ上に Domino データベース用の完全なバックアップ / リカバリ解決策を提供します。IBM Domino プラグインを使用すると、データベースを効率的にバックアップし、必要に応じてデータベースサーバをオフラインにすることなくリストアできます。このプラグインでは、 IBM が提供する API を使用してアプリケーションの整合性を確保しています。 
 ---
 = IBM Domino プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

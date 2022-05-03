@@ -5,6 +5,7 @@ keywords: edit, schedule, job, snap, creator, gui
 summary: スケジュール済みジョブを編集することができます。 
 ---
 = スケジュール済みジョブを編集しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

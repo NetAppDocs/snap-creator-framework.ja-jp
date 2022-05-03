@@ -5,6 +5,7 @@ keywords: domino, ibm, allowing, allow, additional, commands, snap, creator, age
 summary: Snap Creator エージェントに対して補足コマンドを実行するには、エージェントの allowed_command.config ファイルにそのコマンドを含めることで、コマンドの実行を明示的に許可する必要があります。 
 ---
 = Snap Creator エージェントに対して追加コマンドを許可します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

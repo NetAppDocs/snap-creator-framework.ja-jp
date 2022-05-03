@@ -5,6 +5,7 @@ keywords: global, configuration, storage, controller, file, create, backup, supe
 summary: グローバル構成ファイルを作成して、ストレージコントローラ、 Storage Virtual Machine （ SVM ）、または VMware クレデンシャル設定をバックアップポリシーから分離できます。 
 ---
 = グローバル構成ファイルを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

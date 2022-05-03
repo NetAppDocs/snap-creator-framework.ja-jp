@@ -5,6 +5,7 @@ keywords: downloading, download, snap, creator, software
 summary: Snap Creator ソフトウェアをネットアップサポートサイトからダウンロードします。Snap Creator は、 Snap Creator Framework の Software Download セクションに表示されます。 
 ---
 = Snap Creator ソフトウェアのダウンロード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

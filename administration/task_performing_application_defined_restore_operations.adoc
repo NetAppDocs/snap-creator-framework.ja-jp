@@ -5,6 +5,7 @@ keywords: vmware, kvm, xen, plug-in, snap, creator, gui
 summary: VMware 、 KVM 、 Xen のプラグインを使用している場合、 Snap Creator の GUI を使用してアプリケーションで定義したリストア処理を実行できます。 
 ---
 = アプリケーションで定義したリストア処理を実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

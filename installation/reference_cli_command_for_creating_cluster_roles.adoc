@@ -5,6 +5,7 @@ keywords: cli, commands, creating, cluster, roles, role create
 summary: 次の表に、新しいクラスタユーザのロールを作成するのに必要なコマンドを示します。 
 ---
 = クラスタロールを作成するための CLI コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

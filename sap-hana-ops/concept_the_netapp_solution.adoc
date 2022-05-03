@@ -5,6 +5,7 @@ keywords: netapp, solution, sap, hana
 summary: NetApp Snapshot ™テクノロジを使用すれば、データベースバックアップを数分で作成できます。Snapshot コピーではデータブロックは移動されないため、 Snapshot コピーの作成に要する時間はデータベースのサイズに左右されません。 
 ---
 = NetApp 解決策の略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

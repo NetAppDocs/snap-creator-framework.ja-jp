@@ -5,6 +5,7 @@ keywords: snap, creator, backing, up, database,
 summary: Snap Creator がデータベースをバックアップしている場合は、次の手順を実行します。 
 ---
 = データベースのバックアップの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

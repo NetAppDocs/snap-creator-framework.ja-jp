@@ -5,6 +5,7 @@ keywords: troubleshoot, snap, creator, information, log, error
 summary: Snap Creator の問題のトラブルシューティングには、 Snap Creator のログおよびエラーメッセージの情報を使用します。 
 ---
 = Snap Creator の問題に対するトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

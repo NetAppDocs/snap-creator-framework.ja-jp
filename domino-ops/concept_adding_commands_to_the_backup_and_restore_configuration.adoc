@@ -5,6 +5,7 @@ keywords: domino, ibm, adding, commands, backup, restore, configuration, supplem
 summary: OS レベルでファイルシステムの整合性を確保するために、 Snap Creator のネイティブコマンドではなく SnapDrive コマンドを使用してバックアップを行うこともできます。 
 ---
 = バックアップとリストアの設定にコマンドを追加する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -32,4 +33,4 @@ NOTE: このマニュアルでは、 GUI を使用してコマンドを追加す
 * 関連情報 *
 
 link:concept_allowing_additional_commands_through_the_snap_creator_agent.adoc["Snap Creator エージェントに対して追加コマンドを許可します"]
-
+link:task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.adoc["コンフィギュレーションに追加コマンドを追加します"]

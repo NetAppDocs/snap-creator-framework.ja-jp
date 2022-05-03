@@ -5,6 +5,7 @@ keywords: configuring, configure, windows, settings, adding, add, path, environm
 summary: Windows に Snap Creator エージェントをインストールする場合は、 Domino バイナリファイルへのパスを Windows の環境変数に追加する必要があります。 
 ---
 = Windows 固有の設定：環境変数へのパスの追加
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

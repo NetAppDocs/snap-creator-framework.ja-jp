@@ -5,6 +5,7 @@ keywords: snap, creator, support, backup, vmware, virtual, machines, vsphere, ap
 summary: Snap Creator は、 VMware プラグインを使用した VMware 仮想マシンのバックアップをサポートしています。仮想マシンのバックアップは、 VMware vCenter Server の vSphere API を使用して実行されます。 
 ---
 = VMware プラグインを使用した仮想マシンのバックアップおよびリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

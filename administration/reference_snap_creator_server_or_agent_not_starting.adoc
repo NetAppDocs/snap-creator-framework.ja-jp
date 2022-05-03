@@ -5,6 +5,7 @@ keywords: snap, creator, server, agent, java
 summary: Snap Creator サーバまたは Snap Creator エージェントが起動しないことがあります。 
 ---
 = Snap Creator サーバまたはエージェントが起動しません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

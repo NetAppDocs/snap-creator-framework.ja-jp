@@ -5,6 +5,7 @@ keywords: unix, snap, creator, gui, https
 summary: UNIX 環境では、 Snap Creator の GUI に接続できない場合があります。問題の原因を調査する際には、特定の条件が存在することを確認する必要があります。 
 ---
 = Snap Creator の GUI に接続できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

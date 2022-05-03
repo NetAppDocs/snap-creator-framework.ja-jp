@@ -5,6 +5,7 @@ keywords: starting, start, server, command, prompt
 summary: バッチスクリプト（ scServer.bat ）を実行して、コマンドプロンプトから Snap Creator サーバを手動で起動することができます。 
 ---
 = コマンドプロンプトからサーバーを起動します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

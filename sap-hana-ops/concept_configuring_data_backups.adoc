@@ -5,6 +5,7 @@ keywords: configuring, configure, data, backups, back-ups
 summary: 必要なコンポーネントをインストールしたあと、データバックアップを設定する必要があります 
 ---
 = データバックアップを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

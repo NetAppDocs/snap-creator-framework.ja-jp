@@ -5,6 +5,7 @@ keywords: resuming, resume, snapvault, relationship, clustered, data, ontap
 summary: 最新のバックアップ以外の Snapshot バックアップを使用してリストアする場合は、 Snap Creator でバックアップの続行を継続できるように SnapVault 関係を再開する必要があります。 
 ---
 = clustered Data ONTAP との SnapVault 関係を再開
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

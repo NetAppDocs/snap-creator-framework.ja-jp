@@ -5,6 +5,7 @@ keywords: parameter, snap, creator, server, cloning, operation
 summary: Snap Creator サーバのクローニング処理をセットアップするには、いくつかのパラメータが必要です。 
 ---
 = クローニング処理をセットアップするためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

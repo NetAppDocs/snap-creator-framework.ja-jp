@@ -5,6 +5,7 @@ keywords: domino, ibm, adding, supplemental, commands
 summary: コンフィギュレーションファイルを作成した後、コンフィギュレーションに追加コマンドを追加できます。このコマンドは、 Snap Creator サーバまたはエージェント上で実行できます。 
 ---
 = コンフィギュレーションに追加コマンドを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

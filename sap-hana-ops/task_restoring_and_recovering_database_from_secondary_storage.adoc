@@ -5,6 +5,7 @@ keywords: sap, hana, restore, restoring, recover, recovering, databases, seconda
 summary: セカンダリストレージからデータベースをリストアおよびリカバリできます。 
 ---
 = セカンダリストレージからのデータベースのリストアとリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

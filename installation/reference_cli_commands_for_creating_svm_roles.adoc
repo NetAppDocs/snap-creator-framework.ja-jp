@@ -5,6 +5,7 @@ keywords: cli, commands, creating, svm, roles, role create
 summary: 次の表に、新しい SVM ユーザのロールを作成するのに必要なコマンドを示します。 
 ---
 = SVM ロールを作成するための CLI コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

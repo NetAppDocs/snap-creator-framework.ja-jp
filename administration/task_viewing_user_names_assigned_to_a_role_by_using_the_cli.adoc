@@ -5,6 +5,7 @@ keywords: snap, creator, command-line, interface, cli
 summary: 各ロールに割り当てられているすべての Snap Creator ユーザのリストを表示するには、コマンドラインインターフェイス（ CLI ）のみを使用します。 
 ---
 = CLI を使用した、ロールに割り当てられた Snap Creator ユーザの表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

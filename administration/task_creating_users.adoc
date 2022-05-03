@@ -5,6 +5,7 @@ keywords: snap, creator, profile, role, gui, user
 summary: Snap Creator ユーザを作成し、 Snap Creator の GUI を使用して、ユーザへのプロファイルおよびロールの割り当てなどのいくつかの操作を実行できます。 
 ---
 = Snap Creator ユーザを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

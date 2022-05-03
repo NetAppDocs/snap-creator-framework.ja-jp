@@ -5,6 +5,7 @@ keywords: hypervisoer, virtualization, plug-in, vmware, vcloud, multilevel, appl
 summary: ハイパーバイザー（仮想化とも呼ばれる）プラグイン（ VMware （ VMware vCloud Director および VMware vSphere ）、 KVM 、および Citrix XenServer ）を使用していて、複数レベルのアプリケーションの休止およびバックアップ処理を実行する場合は、このタイプのセットアップ用に Snap Creator を設定する必要があります。 
 ---
 = ハイパーバイザープラグインを使用する場合に、 Snap Creator でマルチレベルのアプリケーション休止処理を実行するための設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: mysql, plug-in, net-mysql, interoperability, matrix
 summary: MySQL プラグインは、 Net-MySQL を使用してデータベースと通信します。 
 ---
 = MySQL プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

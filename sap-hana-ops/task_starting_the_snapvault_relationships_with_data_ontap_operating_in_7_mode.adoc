@@ -5,6 +5,7 @@ keywords: sap, hana, starting, snapvault, relationship, data, ontap, operating, 
 summary: セカンダリストレージシステムに対して実行したコマンドを使用して、 SnapVault 関係を開始できます。 
 ---
 = Data ONTAP 7-Mode を使用した SnapVault 関係の開始
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

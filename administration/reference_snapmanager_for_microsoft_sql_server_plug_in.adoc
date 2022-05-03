@@ -5,6 +5,7 @@ keywords: snapmanager, microsoft, sql, server, plug-in, backup, operation, progr
 summary: SnapManager for Microsoft SQL Server プラグインを使用すると、 Snap Creator 経由で Microsoft SQL Server のバックアップ処理を一元化できます。このプラグインを使用すると、 Snap Creator を通じて、 Microsoft SQL Server 用の数十または数百の SnapManager を設定し、 1 つのインターフェイスから SnapManager for Microsoft SQL のすべてのバックアップジョブとステータスを表示できます。 
 ---
 = SnapManager for Microsoft SQL Server プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

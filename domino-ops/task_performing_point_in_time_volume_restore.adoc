@@ -5,6 +5,7 @@ keywords: domino, ibm, volume, restore
 summary: IBM Domino プラグインを使用して、主要なすべてのストレージタイプについて、ポイントインタイム、最新の状態へのリストア、または選択可能な最新の状態へのボリュームのリストアを実行できます。 
 ---
 = ボリュームリストアを実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

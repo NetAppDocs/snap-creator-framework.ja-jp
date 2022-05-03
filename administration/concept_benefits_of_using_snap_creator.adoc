@@ -5,6 +5,7 @@ keywords: benefits, using, snap, creator, framework, hypervisors, applications, 
 summary: Snap Creator Framework は、さまざまなストレージ要件に対応するシンプルで柔軟なソフトウェアフレームワークを提供します。 
 ---
 = Snap Creator を使用するメリット
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

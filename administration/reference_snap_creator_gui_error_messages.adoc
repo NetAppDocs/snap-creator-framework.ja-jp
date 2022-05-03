@@ -5,6 +5,7 @@ keywords: snap, creator, gui, error, message, gui
 summary: 次の表に、 Snap Creator の GUI エラーメッセージを示します。 
 ---
 = Snap Creator の GUI エラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

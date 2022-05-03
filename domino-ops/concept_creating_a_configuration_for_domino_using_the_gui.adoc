@@ -5,6 +5,7 @@ keywords: domino, ibm, creating, create, backup, restore, configuration
 summary: 構成ファイルでは、バックアップおよびリストア処理に必要なほとんどの情報を指定します。構成ファイルは、 Snap Creator のバックアップおよびリストア処理の入力ファイルです。 
 ---
 = バックアップとリストアの設定を作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -26,7 +27,7 @@ NOTE: このマニュアルでは、 GUI を使用して構成ファイルを作
 * 関連情報 *
 
 link:concept_general_configuration_file_information.adoc["Snap Creator の GUI にログインします"]
-
-
-
-
+link:task_using_the_gui_to_create_a_configuration_file.adoc["構成ファイルを作成しています"]
+link:concept_adding_commands_to_the_backup_and_restore_configuration.adoc["バックアップとリストアの設定にコマンドを追加する"]
+link:task_setting_the_snap_creator_archive_log_management_settings.adoc["Domino トランザクションログのアーカイブコピーをクリーンアップしています"]
+link:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc["changeinfo ディレクトリをバックアップします"]

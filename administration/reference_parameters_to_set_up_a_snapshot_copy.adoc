@@ -5,6 +5,7 @@ keywords: parameter, snapshot, copy, snap, creator, server, retention, snapdrive
 summary: Snap Creator サーバの Snapshot コピーのセットアップには、いくつかの構成ファイルパラメータが必要です。 
 ---
 = Snapshot コピーのセットアップ用パラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

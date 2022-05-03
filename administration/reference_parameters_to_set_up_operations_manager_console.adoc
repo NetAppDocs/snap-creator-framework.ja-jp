@@ -5,6 +5,7 @@ keywords: parameter, required, operation, manager, host, user, pwd, port
 summary: Operations Manager コンソールをセットアップするには、いくつかのパラメータを指定する必要があります。 
 ---
 = Operations Manager コンソールをセットアップするためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

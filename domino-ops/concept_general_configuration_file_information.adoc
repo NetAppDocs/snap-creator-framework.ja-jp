@@ -5,6 +5,7 @@ keywords: domino, ibm, logging into, Snap Creator, GUI, login
 summary: Web ブラウザを使用して、 Snap Creator の GUI にログインします。管理者に連絡して、 Snap Creator サーバの IP アドレス、ポート、ログインのクレデンシャルを確認してください。 
 ---
 = Snap Creator の GUI にログインします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

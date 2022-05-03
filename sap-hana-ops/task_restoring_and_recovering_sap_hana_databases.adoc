@@ -5,6 +5,7 @@ keywords: sap, hana, restoring, restore, recovering, recover, databases
 summary: SAP HANA Studio と Snap Creator を使用して、 SAP HANA データベースのリストアとリカバリを行います。 
 ---
 = SAP HANA データベースのリストアとリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

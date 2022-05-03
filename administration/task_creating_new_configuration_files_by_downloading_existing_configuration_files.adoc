@@ -5,6 +5,7 @@ keywords: configuration, file, downloading, gui, snap, creator
 summary: Snap Creator の GUI を使用して、既存のファイルをダウンロードし、新しいファイル名でインポートすることで、新しい構成ファイルを作成できます。 
 ---
 = 既存のコンフィギュレーションファイルをダウンロードして、新しいコンフィギュレーションファイルを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, preparing, prepare, ibm, domino, backup, restore
 summary: IBM Domino プラグインを導入する前に、ストレージシステムとホストがリソースの最小要件を満たしていることを確認してください。また、データベース用のストレージシステムのレイアウトを設定し、必要に応じて SnapMirror 関係と SnapVault 関係を設定する必要があります。 
 ---
 = IBM Domino のバックアップとリストアを準備しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sap, hana, starting, start, snapvault, relationship, clustered, data, 
 summary: SnapVault 関係を開始する前に、 SnapMirror ポリシーを定義する必要があります。 
 ---
 = clustered Data ONTAP との SnapVault 関係の開始
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

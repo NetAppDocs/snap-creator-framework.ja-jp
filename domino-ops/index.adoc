@@ -5,6 +5,7 @@ keywords: domino, ibm, plug-in, operations, guide, configure, use, backup, back 
 summary: IBM Domino プラグインを設定して使用する方法、および IBM Domino データベースをバックアップおよびリストアする方法について説明します。 
 ---
 = 『 IBM ® Domino ® Plug-in Operations Guide 』
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: executing, database, backups
 summary: SAP HANA データベースは、 Snap Creator の GUI またはコマンドラインを使用してバックアップできます。バックアップのスケジュールを設定するには、 GUI でスケジューラを使用するか、 cron などの外部スケジューラとコマンドラインを組み合わせて使用します。 
 ---
 = データベースのバックアップを実行中です
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

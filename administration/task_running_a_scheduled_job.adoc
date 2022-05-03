@@ -5,6 +5,7 @@ keywords: schedule, job, run, snap, creator, gui
 summary: スケジュール済みジョブを実行できます。 
 ---
 = スケジュール済みのジョブを実行中です
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

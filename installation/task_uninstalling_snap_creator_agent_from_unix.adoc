@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, agent, unix
 summary: Snap Creator エージェントは、 UNIX からアンインストールするには、 Snap Creator エージェントのインストールフォルダを削除します。 
 ---
 = UNIX での Snap Creator エージェントのアンインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: backup, solution, components, sap, hana
 summary: Snap Creator Backup 解決策 for SAP HANA は、ストレージベースの Snapshot コピーを使用した SAP HANA データファイルのバックアップ、セカンダリのオフサイトのバックアップ先へのデータファイルのバックアップ、 HANA データベースログバックアップ機能を使用した SAP HANA ログファイルのバックアップ、ファイルベースのバックアップを使用したデータベースブロックの整合性チェックで構成されます。 不要なデータファイル、ログファイルのバックアップ、 SAP HANA のバックアップカタログの削除も可能です。 
 ---
 = 解決策コンポーネントをバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

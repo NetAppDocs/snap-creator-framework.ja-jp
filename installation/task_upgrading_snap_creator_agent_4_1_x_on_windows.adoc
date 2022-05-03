@@ -5,6 +5,7 @@ keywords: upgrading, snap, creator, agent, 4.1.x, windows
 summary: Windows 上で Snap Creator エージェント 4.1.x からアップグレードできます。 
 ---
 = Windows での Snap Creator エージェント 4.1.x のアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

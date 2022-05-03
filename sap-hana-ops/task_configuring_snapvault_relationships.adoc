@@ -5,6 +5,7 @@ keywords: configuring, configure snapvault, relationships, snaprestore
 summary: SnapVault 関係を設定するときは、プライマリストレージコントローラに有効な SnapRestore および SnapVault ライセンスがインストールされている必要があります。セカンダリストレージに有効な SnapVault ライセンスがインストールされている必要があります。 
 ---
 = SnapVault 関係を設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

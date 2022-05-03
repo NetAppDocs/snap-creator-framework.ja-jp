@@ -5,6 +5,7 @@ keywords: cli, commands, create, creating, role
 summary: clustered Data ONTAP で Snap Creator ユーザを作成する際には、各種コマンドを実行して、新しいクラスタユーザまたは SVM ユーザのロールを作成する必要があります。 
 ---
 = clustered Data ONTAP で Snap Creator ユーザのロールを作成するための CLI コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

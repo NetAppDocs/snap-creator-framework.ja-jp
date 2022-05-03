@@ -5,6 +5,7 @@ keywords: configuring, sap, hana, san, environments
 summary: データバックアップを設定したら、 Fibre Channel ストレージエリアネットワーク（ SAN ）を使用して SAP HANA システムがストレージコントローラに接続されている環境で、 Snap Creator 構成ファイルに新しいコマンドを追加する必要があります。 
 ---
 = SAN 環境向けの SAP HANA の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

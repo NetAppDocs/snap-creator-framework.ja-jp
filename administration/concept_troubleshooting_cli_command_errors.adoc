@@ -5,6 +5,7 @@ keywords: errors, cli, troubleshoot, troubleshooting, command
 summary: CLI コマンドの実行時に発生する可能性があるエラーと、そのトラブルシューティング方法を理解しておく必要があります。 
 ---
 = CLI コマンドエラーのトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

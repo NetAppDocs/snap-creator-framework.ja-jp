@@ -5,6 +5,7 @@ keywords: parameter, netapp, management, console, protection, capability, ntap, 
 summary: NetApp Management Console のデータ保護機能を設定するには、いくつかのパラメータを設定する必要があります。 
 ---
 = NetApp Management Console のデータ保護機能を設定するためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

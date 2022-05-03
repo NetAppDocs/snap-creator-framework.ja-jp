@@ -5,6 +5,7 @@ keywords: delete, retention, policy, snap, creator, gui
 summary: 保持ポリシーは削除できます。 
 ---
 = 保持ポリシーを削除しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

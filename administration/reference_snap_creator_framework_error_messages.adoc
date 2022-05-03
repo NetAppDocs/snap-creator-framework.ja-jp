@@ -5,6 +5,7 @@ keywords: snap, creator, framework, error, message, troubleshoot, issue, scf, se
 summary: Snap Creator Framework のエラーメッセージは、発生した問題のトラブルシューティングに役立ちます。 
 ---
 = Snap Creator Framework のエラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: backup, snap, creator, gui, policy, creating, type
 summary: 必要に応じて、 Snap Creator の GUI を使用してバックアップタイプを作成し、ポリシーの目的を特定することもできます。 
 ---
 = バックアップタイプを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

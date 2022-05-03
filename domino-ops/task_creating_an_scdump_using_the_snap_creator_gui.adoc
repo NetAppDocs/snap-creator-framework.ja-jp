@@ -5,6 +5,7 @@ keywords: domino, ibm, using scdump, gathering, logs, compressed, format
 summary: Snap Creatorscdump アクションを使用して、圧縮ファイルアーカイブにログを収集できます。アーカイブをテクニカルサポートまたは Snap Creator のエキスパートに送信して確認できます。 
 ---
 = scdump を使用して、ログを圧縮形式で収集する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

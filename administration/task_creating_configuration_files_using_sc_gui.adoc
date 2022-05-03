@@ -5,6 +5,7 @@ keywords: configuration, file, wizard, gui, management
 summary: 設定ウィザードを使用して構成ファイルを作成できます。 
 ---
 = 構成ファイルを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

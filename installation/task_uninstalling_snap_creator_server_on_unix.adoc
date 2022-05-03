@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, server, unix
 summary: Snap Creator サーバを UNIX からアンインストールするには、 Snap Creator サーバのインストールフォルダを削除します。 
 ---
 = UNIX での Snap Creator サーバのアンインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

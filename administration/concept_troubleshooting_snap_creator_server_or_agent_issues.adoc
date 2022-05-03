@@ -5,6 +5,7 @@ keywords: encounter, issues, snap, creator, server, agent, troubleshoot, issues,
 summary: Snap Creator サーバまたは Snap Creator エージェントで問題が発生する可能性があります。これらの問題について理解し、トラブルシューティングの方法を把握しておく必要があります。 
 ---
 = Snap Creator サーバまたは Snap Creator エージェントの問題のトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

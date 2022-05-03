@@ -5,6 +5,7 @@ keywords: command-line, interface, cli, snap, creator, workflow, command, backup
 summary: Command-Line Interface （ CLI ；コマンドラインインターフェイス）コマンドを使用して、 Graphical User Interface （ GUI ；グラフィカルユーザインターフェイス）に基づいて、 Snap Creator のさまざまなワークフローアクションを実行できます。 
 ---
 = ワークフローアクション用の Snap Creator CLI コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: unix, environment, snap, creator, gui, linux
 summary: UNIX 環境では、 Snap Creator の GUI の起動時にエラーが発生することがあります。 
 ---
 = Snap Creator の GUI の起動中にエラーが発生しました
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

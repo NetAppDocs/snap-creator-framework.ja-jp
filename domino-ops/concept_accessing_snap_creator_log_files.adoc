@@ -5,6 +5,7 @@ keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log
 summary: 'Snap Creator ジョブモニタでジョブのステータスを確認できます。ジョブの実行中はコンソール・ペインでジョブ・アクションのログを表示したり " ジョブのアウト・ログでジョブ・アクションのログを表示したりできますいくつかの特殊なログも使用できます。' 
 ---
 = ジョブのステータスとログを表示しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

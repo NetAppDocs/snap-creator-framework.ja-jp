@@ -5,6 +5,7 @@ keywords: unix, cli, command, 403, forbidden, error, username, password, incorre
 summary: UNIX 環境では、 CLI コマンドの実行時に 403 Forbidden エラーが発生することがあります。 
 ---
 = CLI コマンドを実行すると、 403 Forbidden エラーが発生します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

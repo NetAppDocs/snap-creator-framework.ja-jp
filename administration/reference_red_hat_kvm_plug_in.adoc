@@ -5,6 +5,7 @@ keywords: kernel, kvm, virtualization, linux, snap, creator, virsh, command, plu
 summary: Kernel-based Virtual Machine （ KVM ）は、 Linux カーネルの仮想化解決策です。Snap Creator は、 KVM プラグインを使用してゲスト仮想マシンのバックアップおよびリストアを行います。 
 ---
 = Red Hat KVM プラグインのガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: local, retention, policy, configuration, snap, creator, gui, copy, lun
 summary: （構成ファイル内にある）ローカル保持ポリシーを使用している場合は、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）スケジューラを使用してスケジュールを作成し、タスクを実行できます。Snap Creator サーバに含まれるスケジューラは、バックアップ（ Snapshot コピー）、 LUN クローン、ボリュームクローン、アプリケーションで定義されたクローン、 Open Systems SnapVault （ OSSV ）転送、アーカイブジョブ、カスタムアクションをスケジュールできます。 
 ---
 = スケジュール済みジョブを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

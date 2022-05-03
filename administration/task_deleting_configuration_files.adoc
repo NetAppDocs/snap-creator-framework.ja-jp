@@ -5,6 +5,7 @@ keywords: delete, configuration, file, profile, management
 summary: プロファイルから構成ファイルを削除できます。 
 ---
 = プロファイルから構成ファイルを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

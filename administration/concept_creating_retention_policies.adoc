@@ -5,6 +5,7 @@ keywords: creating, retention, policies, local, configuration
 summary: （構成ファイルに含まれる）ローカル保持ポリシーの代わりにポリシーオブジェクトを使用する場合は、保持ポリシーを作成できます。 
 ---
 = 保持ポリシーを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: uninstalling, uninstall, snap, creator, windows
 summary: 'Snap Creator は、 Windows の [ スタート ] メニューを使用してアンインストールできます。Windows のアンインストーラによって、インストールされている Snap Creator コンポーネントが削除されます（たとえば、 Snap Creator サーバと Snap Creator エージェントの両方がインストールされている場合、両方がアンインストールされます）。同様に、インストールされているコンポーネントが 1 つだけの場合、そのコンポーネントはアンインストールされます。' 
 ---
 = Windows での Snap Creator のアンインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

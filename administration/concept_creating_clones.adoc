@@ -5,6 +5,7 @@ keywords: creating, clones, lunes, volumes, cloning, snapshot
 summary: ボリュームまたは LUN をクローニングする方法は、新しいバックアップからも既存のバックアップからも 2 つあります。 
 ---
 = クローンを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

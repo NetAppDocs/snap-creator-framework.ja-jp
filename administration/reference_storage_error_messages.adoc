@@ -5,6 +5,7 @@ keywords: storage troubleshoot, error, message
 summary: ストレージ関連のエラーメッセージは、発生した問題のトラブルシューティングに役立ちます。 
 ---
 = ストレージエラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

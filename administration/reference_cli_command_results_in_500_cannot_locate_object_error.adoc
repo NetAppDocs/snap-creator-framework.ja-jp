@@ -5,6 +5,7 @@ keywords: unix, 500, locate, error, cli, ssl, libraries
 summary: UNIX 環境で、 CLI コマンドの実行後に「 500 cannot locate object 」というエラーが表示されることがあります。 
 ---
 = CLI コマンドを実行すると、「 500 cannot locate object 」エラーが表示されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

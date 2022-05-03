@@ -5,6 +5,7 @@ keywords: snap, creator, agent, error, message, aft, sc_agentconfiguration, para
 summary: 次の表に、 Snap Creator エージェントのエラーメッセージを示します。 
 ---
 = Snap Creator エージェントのエラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

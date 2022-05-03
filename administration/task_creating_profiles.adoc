@@ -5,6 +5,7 @@ keywords: profile, snap, creator, gui, configuration
 summary: Snap Creator の GUI を使用して、構成ファイルを整理するためのプロファイルを作成できます。 
 ---
 = プロファイルの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

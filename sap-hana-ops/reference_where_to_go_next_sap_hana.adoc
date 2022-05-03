@@ -5,6 +5,7 @@ keywords: more information, snap, creator, release, notes, support
 summary: Snap Creator の詳細については、リリース固有の情報を含むネットアップサポートサイトを参照してください。 
 ---
 = 次の手順
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

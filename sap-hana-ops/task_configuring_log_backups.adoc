@@ -5,6 +5,7 @@ keywords: configuring, log, backups
 summary: ログバックアップは、プライマリストレージとは別のストレージシステムに保存する必要があります。データのバックアップに使用するストレージシステムも、ログのバックアップに使用できます。 
 ---
 = ログバックアップを設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

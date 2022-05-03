@@ -5,6 +5,7 @@ keywords: preinstallation, requirements, before, install
 summary: Snap Creator をインストールする前に、システムライセンス、ソフトウェア、およびハードウェアの要件を考慮する必要があります。 
 ---
 = Snap Creator をインストールする前の要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

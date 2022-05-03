@@ -5,6 +5,7 @@ keywords: snap, creator, agent, quiesce, server, plug-in, multi-tenant
 summary: 通常、 Snap Creator エージェントは、アプリケーションまたはデータベースがインストールされたホストにインストールされ、 Snap Creator サーバから所定のアプリケーションへの休止コマンドおよび休止解除コマンドを処理します。このホストにはプラグインが配置されます。Snap Creator 内でエージェントが scAgent に短縮されることがあります。 
 ---
 = Snap Creator エージェントの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

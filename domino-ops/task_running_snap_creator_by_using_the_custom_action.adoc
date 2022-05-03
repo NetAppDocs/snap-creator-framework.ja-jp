@@ -5,6 +5,7 @@ keywords: domino, ibm,using, use, snap, creator, custom, action complete, restor
 summary: Snap Creator のカスタムアクションを使用して、 Snap Creator 以外から作成されたリストアの処理を完了できます。 
 ---
 = Snap Creator のカスタムアクションを使用してリストア処理を完了します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

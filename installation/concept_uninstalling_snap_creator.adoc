@@ -5,6 +5,7 @@ keywords: unstalling, snap, creator
 summary: Snap Creator は、 Windows システムおよび UNIX システムからアンインストールできます。 
 ---
 = Snap Creator をアンインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

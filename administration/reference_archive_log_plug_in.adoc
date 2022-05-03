@@ -5,6 +5,7 @@ keywords: archive, log, plug-in, snap, creator, archive
 summary: アーカイブログのプラグインは、 Snap Creator のアーカイブログと連携します。アプリケーションやデータベースのログとは連携しません。 
 ---
 = アーカイブログのプラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

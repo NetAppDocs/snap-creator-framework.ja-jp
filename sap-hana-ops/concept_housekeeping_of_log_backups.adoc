@@ -5,6 +5,7 @@ keywords: housekeeping, log, backups
 summary: SAP HANA での不要なログバックアップの削除は、 HANA Studio の機能、または選択したバックアップよりも古いすべてのバックアップを削除できる SQL ステートメントに基づいています。 
 ---
 = 不要なログバックアップの削除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

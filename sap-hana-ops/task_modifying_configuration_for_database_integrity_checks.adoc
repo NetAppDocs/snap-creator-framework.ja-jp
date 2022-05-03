@@ -5,6 +5,7 @@ keywords: modifying, modify, configuration, database, integrity, checks, sap, ha
 summary: データベース整合性チェック用に設定されたパラメータを変更できます。以降にスケジュールまたはオンデマンドの整合性チェック処理では、更新された情報が反映されます。 
 ---
 = データベース整合性チェックの設定の変更
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: performing, perform, file-based, backup, snap, creator, gui, graphical
 summary: File ベースのバックアップは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）から実行できます。 
 ---
 = Snap Creator の GUI からファイルベースのバックアップを実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

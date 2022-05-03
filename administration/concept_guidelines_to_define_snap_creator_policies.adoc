@@ -5,6 +5,7 @@ keywords: snap, creator, policies, guidelines, retendtion, snapshot
 summary: Snap Creator のポリシーは、ユーザ定義の Snapshot コピーを保持することです。このポリシーは、プライマリストレージ上の Snapshot コピー、およびセカンダリストレージ上の SnapVault コピーと SnapMirror コピーに適用されます。ポリシーを使用して、保持する Snapshot コピーの数および Snapshot コピーの保持期間を定義できます。 
 ---
 = Snap Creator のポリシーを定義するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

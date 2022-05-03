@@ -5,6 +5,7 @@ keywords: snap, creator, server, agent, https, multitenant, environment, self-si
 summary: Snap Creator サーバは HTTPS 経由でのみ Snap Creator エージェントと通信します。これにより、セキュアで暗号化された通信が実現します。この機能はマルチテナント環境で重要です。自己署名証明書を使用すると、 Snap Creator エージェントで独自に生成した証明書を使用できます。 
 ---
 = Snap Creator エージェントのセキュリティ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

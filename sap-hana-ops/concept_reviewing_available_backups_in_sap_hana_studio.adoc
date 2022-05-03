@@ -5,6 +5,7 @@ keywords: reviewing, review, available, backups, sap, hana, studio
 summary: ストレージ Snapshot バックアップのリストは、 SAP HANA Studio で確認できます。 
 ---
 = SAP HANA Studio で使用可能なバックアップを確認します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

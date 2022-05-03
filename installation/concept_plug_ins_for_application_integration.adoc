@@ -5,6 +5,7 @@ keywords: plug-in, application, integration
 summary: プラグインを使用すると、アプリケーションやデータベースを整合性のある状態にすることができます。Snap Creator には、すでにバイナリファイルに含まれているプラグインがいくつか含まれているため、追加のインストールは必要ありません。 
 ---
 = アプリケーション統合用のプラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

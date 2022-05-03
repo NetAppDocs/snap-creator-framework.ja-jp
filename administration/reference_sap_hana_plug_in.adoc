@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, backup, point-in-time, recovery, sql
 summary: SAP HANA プラグインを使用すると、ストレージの Snapshot コピーに基づいて、 SAP HANA データベースのバックアップを作成し、ポイントインタイムリカバリを実行できます。 
 ---
 = SAP HANA プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

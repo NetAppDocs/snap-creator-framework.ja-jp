@@ -5,6 +5,7 @@ keywords: snap, creator, permission, gui, role, management
 summary: Snap Creator の GUI を使用して、特定のロールに割り当てられているすべての Snap Creator 権限のリストを表示できます。 
 ---
 = 特定のロールに割り当てられている Snap Creator の権限を表示しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

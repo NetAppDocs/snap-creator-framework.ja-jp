@@ -5,6 +5,7 @@ keywords: domino, ibm, performing, single-file, restore, single, file, san
 summary: SAN 環境で単一ファイルのリストアを実行する場合は、 SnapDrive を使用して、 Snap Creator エージェントホストに Snapshot コピーをマウントできます。 
 ---
 = SAN 環境で単一ファイルのリストアを実行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

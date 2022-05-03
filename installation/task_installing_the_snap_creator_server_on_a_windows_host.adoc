@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, server, windows, hosts
 summary: Windows インストーラを使用して、 Snap Creator サーバを Windows ホストにインストールできます。 
 ---
 = Windows ホストに Snap Creator サーバをインストールする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

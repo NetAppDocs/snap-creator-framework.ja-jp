@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, server
 summary: Snap Creator サーバは、 Windows ホストと UNIX ホストにインストールできます。 
 ---
 = Snap Creator サーバをインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, permission, cli
 summary: ロールに割り当てることができる Snap Creator の権限は、コマンドラインインターフェイス（ CLI ）でのみ作成できます。 
 ---
 = CLI を使用した Snap Creator の権限の作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, overview
 summary: SAP HANA プラグインは Snap Creator Framework と連携して、ネットアップストレージのバックエンドに依存する SAP HANA データベースのバックアップ解決策を提供しますSnap Creator によって作成された Snapshot バックアップは HANA Catalog に登録され、 HANA Studio に表示されます。 
 ---
 = SAP HANA プラグインの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

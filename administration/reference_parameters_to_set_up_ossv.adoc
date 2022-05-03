@@ -5,6 +5,7 @@ keywords: parameter, open, system, snapvault, ossv, enable, homedir, snapshot
 summary: Open Systems SnapVault （ OSSV ）を設定するには、いくつかのパラメータが必要です。 
 ---
 = OSSV を設定するパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

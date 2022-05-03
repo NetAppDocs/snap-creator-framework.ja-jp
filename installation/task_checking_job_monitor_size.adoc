@@ -5,6 +5,7 @@ keywords: checking, check, job, monitor, size
 summary: Snap Creator の最新バージョンにアップグレードする前に、現在インストールされている Snap Creator のバージョンのジョブモニタサイズを確認する必要があります。 
 ---
 = ジョブ監視のサイズを確認しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

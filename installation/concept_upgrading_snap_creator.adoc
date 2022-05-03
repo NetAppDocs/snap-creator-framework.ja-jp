@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator
 summary: Snap Creator の最新バージョンには、サポートされているさまざまなバージョンからアップグレードできます。 
 ---
 = Snap Creator をアップグレードします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sap, hana, peforming, database, integrity, checks, snap, creator, gui,
 summary: データベース整合性チェックは、 Snap Creator のグラフィカルユーザインターフェイス（ GUI ）から実行できます。 
 ---
 = Snap Creator の GUI からデータベース整合性チェックを実行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

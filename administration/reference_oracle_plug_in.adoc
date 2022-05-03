@@ -5,6 +5,7 @@ keywords: oracle, plug-in, sql, plus, database, quiesce, unquiesce, oracle, data
 summary: Oracle プラグインは、 SQL * Plus を使用してデータベースと通信し、バックアップ用に Oracle データベースの休止および休止解除を行います。 
 ---
 = Oracle プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

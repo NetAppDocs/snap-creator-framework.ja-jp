@@ -5,6 +5,7 @@ keywords: unix, cli, command, port, 404, error
 summary: UNIX 環境では、 CLI コマンドを実行したときに 404 Not Found エラーが発生することがあります。 
 ---
 = CLI コマンドを実行すると 404 Not Found エラーが表示されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

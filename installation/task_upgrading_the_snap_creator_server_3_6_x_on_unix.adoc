@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, server, 3.6.x, unix, unix-based
 summary: UNIX ベースのシステムでは、 Snap Creator サーバ 3.6.x から直接アップグレードできます。 
 ---
 = UNIX ベースのシステムでの Snap Creator サーバ 3.6.x のアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

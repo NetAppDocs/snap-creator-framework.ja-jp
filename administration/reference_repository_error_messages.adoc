@@ -5,6 +5,7 @@ keywords: table, repository, error, message, global, configuration, repo
 summary: 次の表に、リポジトリのエラーメッセージを示します。 
 ---
 = リポジトリエラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

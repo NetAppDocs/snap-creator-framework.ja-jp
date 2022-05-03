@@ -5,6 +5,7 @@ keywords: domino, ibm, copy, copying, file, data restore directory
 summary: リストアするファイルの Snapshot コピーをマウントしたら、バックアップおよびリストア構成ファイルで指定したデータリストアディレクトリにファイルをコピーできます。 
 ---
 = データ復元ディレクトリにファイルをコピーしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

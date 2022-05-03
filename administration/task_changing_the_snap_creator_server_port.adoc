@@ -5,6 +5,7 @@ keywords: snap, creator, server, snapcreator, properties, file, restart, server,
 summary: Snap Creator サーバが使用するポートを変更するには、 snapcreator.properties ファイルを編集してサーバを再起動します。 
 ---
 = インストール後に Snap Creator サーバのポートを変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

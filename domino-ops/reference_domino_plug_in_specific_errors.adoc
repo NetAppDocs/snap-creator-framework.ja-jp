@@ -5,6 +5,7 @@ keywords: domino, ibm, troubleshooting, plug-ins, errors
 summary: 一般的な Snap Creator エラーには、一般的な Snap Creator エラーと Domino プラグイン固有のエラーの 2 つのカテゴリがあります。Domino プラグイン固有のエラーには、通常、インストール前の問題、不正なデータベース、またはカスタムのリストアアクションに関する問題があります。 
 ---
 = Domino プラグイン固有のエラーのトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

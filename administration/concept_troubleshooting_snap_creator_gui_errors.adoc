@@ -5,6 +5,7 @@ keywords: unix, environments, snap, creator, gui, troubleshoot, errors, troubles
 summary: UNIX 環境では、 Snap Creator の GUI へのアクセス時にエラーが発生することがあります。これらのエラーについて理解し、トラブルシューティングの方法を把握しておく必要があります。 
 ---
 = Snap Creator の GUI エラーに対するトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: backup, recovery, workflow, snap, creator, framework
 summary: Snap Creator の GUI を使用して、バックアップおよびリカバリのプロセスをガイドラインとしてワークフローを使用できます。 
 ---
 = バックアップとリカバリのワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

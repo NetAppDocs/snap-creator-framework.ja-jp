@@ -5,6 +5,7 @@ keywords: configuring, configure, settings
 summary: 特定の設定を行う必要があるのは、 Snap Creator エージェントのインストールに含まれている IBM Domino プラグインを使用する場合のみです。 
 ---
 = Domino プラグインの設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

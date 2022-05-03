@@ -5,6 +5,7 @@ keywords: snap, creator, agent
 summary: Snap Creator エージェントは、通常、アプリケーションまたはデータベースがインストールされているホストと同じホストにインストールします。Agent は、プラグインが配置されている場所です。Snap Creator 内でエージェントが scAgent に短縮されることがあります。 
 ---
 = Snap Creator エージェント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: delete, schedule, job, management
 summary: スケジュール済みジョブを削除することができます。 
 ---
 = スケジュール済みジョブを削除しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

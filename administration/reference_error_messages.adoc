@@ -5,6 +5,7 @@ keywords: error, messages, scf, repo, storage, agt, gui
 summary: さまざまな Snap Creator の処理に関連するエラーメッセージに注意する必要があります。 
 ---
 = エラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

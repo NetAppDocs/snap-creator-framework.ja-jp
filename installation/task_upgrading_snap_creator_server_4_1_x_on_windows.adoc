@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, server, 4.1.x, windows
 summary: Windows 上で Snap Creator サーバ 4.1.x からアップグレードできます。 
 ---
 = Windows での Snap Creator サーバ 4.1.x のアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

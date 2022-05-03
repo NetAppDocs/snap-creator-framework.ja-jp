@@ -5,6 +5,7 @@ keywords: managing, retention, policies, list, delete, policies, snapshot, snapv
 summary: 保持ポリシーを作成することも、ポリシーの一覧表示と削除を行うこともできます。 
 ---
 = 保持ポリシーの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

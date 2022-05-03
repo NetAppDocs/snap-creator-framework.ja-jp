@@ -5,6 +5,7 @@ keywords: retention, policy, view, list, snap, creator, gui
 summary: 保持ポリシーのリストを表示できます。 
 ---
 = 保持ポリシーを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

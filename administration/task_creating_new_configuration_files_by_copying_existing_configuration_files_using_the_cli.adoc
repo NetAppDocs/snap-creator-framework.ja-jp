@@ -5,6 +5,7 @@ keywords: cli, command-line, interface, configuration, file, copy
 summary: コマンドラインインターフェイス（ CLI ）を使用して既存の構成ファイルをコピーし、新しいファイルの名前を変更することにより、新しい構成ファイルを作成できます。 
 ---
 = 既存の構成ファイルをコピーして新しい構成ファイルを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

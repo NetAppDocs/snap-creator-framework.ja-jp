@@ -5,6 +5,7 @@ keywords: parameter, management, snap, creator, server, event, ntap, asup, error
 summary: Snap Creator サーバのイベント管理を設定するには、いくつかのパラメータが必要です。 
 ---
 = イベント管理をセットアップするためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

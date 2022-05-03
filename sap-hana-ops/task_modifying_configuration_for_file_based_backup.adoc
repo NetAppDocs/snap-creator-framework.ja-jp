@@ -5,6 +5,7 @@ keywords: sap, hana, modifying, modify, change, changing, configuration, file-ba
 summary: ファイルベースのバックアップ用に設定されたパラメータを変更できます。その後、スケジュールまたはオンデマンドでファイルベースのバックアップを実行すると、更新された情報が反映されます。 
 ---
 = ファイルベースのバックアップの設定を変更しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

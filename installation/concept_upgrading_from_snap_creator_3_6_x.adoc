@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, 3.6
 summary: Snap Creator 3.6.x からアップグレードすると、データベーススキーマがアップグレードされ、すべての構成ファイルのパスワードが最新の Snap Creator との互換性を維持するように更新されます。 
 ---
 = Snap Creator 3.6.x からのアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: db2, plug-in, communicate, database
 summary: DB2 プラグインは、 db2 コマンドを使用してデータベースと通信します。 
 ---
 = DB2 プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

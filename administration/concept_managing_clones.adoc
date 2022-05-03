@@ -5,6 +5,7 @@ keywords: managing, clones, creating, backup, deleting, unmounting
 summary: 不要になったバックアップコピーは、作成したり、バックアップコピーのリストを表示したり、削除したりできます。 
 ---
 = クローンの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

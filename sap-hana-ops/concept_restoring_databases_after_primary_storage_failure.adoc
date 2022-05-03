@@ -5,6 +5,7 @@ keywords: restoring, restore, database, primary, storage, failure
 summary: プライマリストレージに障害が発生した場合、またはプライマリストレージのボリュームからすべての Snapshot コピーが削除された場合、 Snap Creator はリストアを処理できません。これは、プライマリストレージシステムに SnapVault 関係がなくなるためです。 
 ---
 = プライマリストレージの障害後のデータベースのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

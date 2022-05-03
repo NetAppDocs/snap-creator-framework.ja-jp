@@ -5,6 +5,7 @@ keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap
 summary: Snap Creator サーバには、複数の構成ファイルの PRE コマンドが含まれています。 
 ---
 = PRE コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, server, unix, unix-based
 summary: UNIX プラットフォーム（ AIX 、 HP-UX 、 Linux 、 Solaris ）の場合、 Snap Creator のインストールプロセスでは、 Snap Creator のソフトウェアパッケージ（ Snap Creator サーバと Snap Creator エージェントの両方を含む .tar ファイル）を展開し、セットアップスクリプトを実行してサービスを開始し、ポートを検証します。 
 ---
 = UNIX ベースのシステムへの Snap Creator サーバのインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: volume, restore, snap, creator, gui, perform, wizard
 summary: Snap Creator の GUI を使用してボリュームリストアを実行できます。 
 ---
 = ボリュームリストアを実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

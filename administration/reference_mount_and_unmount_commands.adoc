@@ -5,6 +5,7 @@ keywords: cloning, mount_cmd, unmount_cmd, command, snap, creator, pre, post
 summary: クローニングを実行するときは、 Snap Creator の PRE コマンドまたは POST コマンドではなく、 MOUNT_CMD コマンドと UMOUNT_CMD コマンドを使用してください。 
 ---
 = mount コマンドおよび unmount コマンドを使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

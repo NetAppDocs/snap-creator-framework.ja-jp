@@ -5,6 +5,7 @@ keywords: restoring, restore, databases, primary, storage, failure, data, ontap,
 summary: Data ONTAP 7-Mode を実行しているプライマリストレージシステムで障害が発生した場合、 SAP HANA データベースをリストアできます。 
 ---
 = Data ONTAP 7-Mode でプライマリストレージに障害が発生した場合のデータベースのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

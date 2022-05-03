@@ -5,6 +5,7 @@ keywords: domino, ibm, using, snapdrive, mount, snapshot, copy
 summary: SnapDrive を使用して、リストアするファイルの Snapshot コピーをマウントできます。このファイルは、手動でデータリストアディレクトリにコピーできます。 
 ---
 = SnapDrive を使用して Snapshot コピーをマウント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

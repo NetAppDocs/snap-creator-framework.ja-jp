@@ -5,6 +5,7 @@ keywords: considerations, backup, backing, up, sap, hana
 summary: SAP HANA 管理者は、信頼性の高いレベルのサービスを提供し、バックアップによるダウンタイムやパフォーマンスの低下を最小限に抑える必要があります。 
 ---
 = SAP HANA システムのバックアップに関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

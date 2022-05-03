@@ -5,6 +5,7 @@ keywords: create, copy, download, list, delete, configuration, managing, files
 summary: 構成ファイルを作成、コピー、ダウンロード、リスト表示、削除できます。 
 ---
 = 構成ファイルの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

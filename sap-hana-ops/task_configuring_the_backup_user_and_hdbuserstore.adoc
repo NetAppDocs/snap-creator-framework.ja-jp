@@ -5,6 +5,7 @@ keywords: configuring, configure, backup, user, hdbususerstore
 summary: Snap Creator でバックアップ処理を実行するには、 HANA データベース内に専用のデータベースユーザを設定する必要があります。2 番目の手順では、このバックアップユーザの SAP HANA ユーザストアキーを設定する必要があります。このユーザストアキーは、 Snap Creator SAP HANA プラグインの構成内で使用されます。 
 ---
 = バックアップ・ユーザおよび hdbuserstore の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

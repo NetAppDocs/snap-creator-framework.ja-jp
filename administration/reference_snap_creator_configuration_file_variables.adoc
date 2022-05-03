@@ -5,6 +5,7 @@ keywords: variable, parameter, snap, creator, configuration, file, snapshot
 summary: 変数、パラメータ、およびコマンドは、 Snap Creator 構成ファイル内で定義できます。 
 ---
 = Snap Creator 構成ファイルの変数、パラメータ、コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

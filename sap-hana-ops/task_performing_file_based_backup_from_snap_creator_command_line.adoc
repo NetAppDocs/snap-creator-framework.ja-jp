@@ -5,6 +5,7 @@ keywords: sap, hana, performing, file-based, backup, snap, creator, command, lin
 summary: Snap Creator のコマンドラインを使用してファイルベースのバックアップを実行できます。 
 ---
 = Snap Creator コマンドラインからファイルベースのバックアップを実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: assign, retention, policy, configuration, snap, creator, gui, assignme
 summary: Snap Creator の GUI を使用して、構成ファイルに保持ポリシーを割り当てることができます。 
 ---
 = ポリシーを割り当てます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, viewing, view, logs, report pane
 summary: Snap CreatorReports ペインでは、ログをコンソールペインに表示するときと同じ形式で表示できます。エラーログと標準ログは、 Reports ペインで表示できます。 
 ---
 = Reports ペインでログを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

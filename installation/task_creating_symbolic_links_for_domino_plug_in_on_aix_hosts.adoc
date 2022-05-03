@@ -5,6 +5,7 @@ keywords: creating, create, symbolic, links, domino, plug-in, aix, hosts
 summary: AIX ホスト上の Domino プラグインのシンボリックリンクを追加するには、この手順を実行する必要があります。 
 ---
 = AIX ホスト上で Domino プラグイン用のシンボリックリンクを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

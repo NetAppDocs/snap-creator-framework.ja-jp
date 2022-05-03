@@ -5,6 +5,7 @@ keywords: domino, ibm, backup, recovery, workflows
 summary: IBM Domino プラグインを使用してバックアップを作成する前に、 Snap Creator サーバおよびエージェントソフトウェアをインストールし、ネットアップストレージをプロビジョニングする必要があります。ディザスタリカバリとアーカイブ用に Snapshot コピーをセカンダリストレージにレプリケートする場合は、 SnapMirror 関係と SnapVault 関係を設定する必要があります。 
 ---
 = IBM Domino のバックアップとリカバリのワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

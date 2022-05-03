@@ -5,6 +5,7 @@ keywords: app, command
 summary: 次の表に、アプリケーション（ APP ）コマンドを示します 
 ---
 = APP コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

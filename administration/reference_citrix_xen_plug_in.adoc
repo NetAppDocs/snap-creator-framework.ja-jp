@@ -5,6 +5,7 @@ keywords: snap, creator, support, backup, restore, citrix, xenserver, virtual, m
 summary: Snap Creator は、 Citrix XenServer プラグインを使用した、 Citrix XenServer 仮想マシン（ VM ）のバックアップおよびリストアをサポートしています。 
 ---
 = Citrix XenServer プラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

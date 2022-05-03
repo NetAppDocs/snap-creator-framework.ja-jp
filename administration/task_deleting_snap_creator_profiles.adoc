@@ -5,6 +5,7 @@ keywords: delete, snap, creator, profile
 summary: Snap Creator のプロファイルを削除できます。 
 ---
 = プロファイルの削除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

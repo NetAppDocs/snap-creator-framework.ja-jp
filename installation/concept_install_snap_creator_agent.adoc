@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, agent
 summary: Snap Creator エージェントは、 Windows ホストと UNIX ホストにインストールできます。 
 ---
 = Snap Creator エージェントをインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: schedule, job, view, list, snap, creator, gui
 summary: スケジュール済みジョブのリストを表示できます。 
 ---
 = スケジュール済みジョブのリストを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

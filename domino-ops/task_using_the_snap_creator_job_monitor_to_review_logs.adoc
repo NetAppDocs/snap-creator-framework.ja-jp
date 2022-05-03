@@ -5,6 +5,7 @@ keywords: domino, ibm, viewing, view, job, status, logs, monitor
 summary: Snap Creator ジョブモニタは、ダッシュボードに似た Snap Creator ジョブ用のインターフェイスです。ジョブモニタを使用して、ジョブステータスを表示したり、ログをダウンロードしたりできます。 
 ---
 = ジョブモニタでのジョブステータスとログの表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

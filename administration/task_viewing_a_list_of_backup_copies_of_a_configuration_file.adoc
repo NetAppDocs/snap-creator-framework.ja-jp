@@ -5,6 +5,7 @@ keywords: backup, copy, ontap, volume, configuration, file, data
 summary: 構成ファイルに定義されている ONTAP のバックアップコピーのリストを表示できます。また、使用可能なバックアップに関する詳細情報を取得したり、要件に基づいて特定のバックアップの名前を変更したりすることもできます。 
 ---
 = 構成ファイルのバックアップコピーのリストを表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: clustered, data, ontap, storage, virtual, machine, svm, cloning, clone
 summary: clustered Data ONTAP では、クローニングを行うために、アグリゲートを Storage Virtual Machine （ SVM ）に割り当てる必要があります。見つからない場合、 cloneVol アクションがエラーを返すことがあります。 
 ---
 = cloneVol は、アグリゲートが存在しないと報告します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

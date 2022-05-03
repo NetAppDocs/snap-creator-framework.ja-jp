@@ -5,6 +5,7 @@ keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui,
 summary: 構成ファイルのバックアップコピーを削除できます。 
 ---
 = バックアップを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

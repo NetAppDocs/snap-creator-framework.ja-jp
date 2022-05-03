@@ -5,6 +5,7 @@ keywords: snap, creator, snapcreator, permission, cli
 summary: 特定のロールに割り当て可能なすべての Snap Creator 権限のリストを作成するには、コマンドラインインターフェイス（ CLI ）のみを使用します。 
 ---
 = CLI を使用して、すべての Snap Creator 権限のリストを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

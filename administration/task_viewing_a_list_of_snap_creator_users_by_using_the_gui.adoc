@@ -5,6 +5,7 @@ keywords: snap, creator, user, gui, assign, profile, role
 summary: Snap Creator の GUI を使用して、 Snap Creator ユーザおよびユーザに割り当てられているロールのリストを表示できます。 
 ---
 = Snap Creator ユーザおよび割り当てられているロールのリストを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

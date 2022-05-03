@@ -5,6 +5,7 @@ keywords: domino, ibm, backing up, backup, databases, on-demand, on, demand
 summary: ネットアップストレージで使用可能になったデータベースはすぐにバックアップする必要があります。初期バックアップ後に、定期的なバックアップのスケジュールを設定できます。 
 ---
 = オンデマンドでのデータベースのバックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

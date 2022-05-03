@@ -5,6 +5,7 @@ keywords: starting, start, agent, command, prompt
 summary: Snap Creator エージェントは、バッチスクリプト（ scAgent.bat ）を実行することで、コマンドプロンプトから手動で起動できます。 
 ---
 = コマンドプロンプトからエージェントを起動します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

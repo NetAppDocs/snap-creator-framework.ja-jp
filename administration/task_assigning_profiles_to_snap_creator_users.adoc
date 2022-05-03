@@ -5,6 +5,7 @@ keywords: snap, creator, gui, profile, menu, assign
 summary: Snap Creator の GUI を使用して、 Snap Creator ユーザにプロファイルを割り当てることができます。 
 ---
 = Snap Creator ユーザへのプロファイルの割り当て
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

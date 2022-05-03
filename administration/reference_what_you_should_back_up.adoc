@@ -5,6 +5,7 @@ keywords: create, backup, copy, snap, creator, directories, information, server,
 summary: Snap Creator の特定のディレクトリのバックアップコピーを作成して、 Snap Creator のデータを損失なしで確実にリストアできるようにすることを推奨します。 
 ---
 = バックアップする Snap Creator 情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

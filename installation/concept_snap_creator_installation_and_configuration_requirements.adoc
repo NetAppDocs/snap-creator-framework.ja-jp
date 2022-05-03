@@ -5,6 +5,7 @@ keywords: snap, creator, install, installation, configuration, requirements
 summary: Snap Creator Framework をインストールする前に、ライセンス、ソフトウェア、およびハードウェアに関する特定のインストール要件と設定要件について理解しておく必要があります。 
 ---
 = Snap Creator のインストールおよび構成の要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sap, hana, restore, restoring, recover, recovering, database, primary,
 summary: プライマリストレージからデータベースをリストアおよびリカバリできます。 
 ---
 = プライマリストレージからのデータベースのリストアとリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

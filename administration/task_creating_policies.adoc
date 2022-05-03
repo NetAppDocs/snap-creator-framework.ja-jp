@@ -5,6 +5,7 @@ keywords: create, retention, policy, snap, creator, gui, guideline, policy, mana
 summary: Snap Creator の GUI を使用して新しい保持ポリシーを作成すると、保持数が異なる複数の Snapshot ポリシーを設定できます。 
 ---
 = ポリシーを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

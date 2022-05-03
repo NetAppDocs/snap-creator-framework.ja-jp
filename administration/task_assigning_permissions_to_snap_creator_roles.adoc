@@ -5,6 +5,7 @@ keywords: assign, permission, snap, creator, gui, role, gui, permission
 summary: Snap Creator の GUI を使用して、 Snap Creator ロールに権限を割り当てることができます。 
 ---
 = Snap Creator のロールに権限を割り当てます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

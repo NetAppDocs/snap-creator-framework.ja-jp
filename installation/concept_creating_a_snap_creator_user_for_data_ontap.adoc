@@ -5,6 +5,7 @@ keywords: creating, create, snap, creator, user
 summary: Snap Creator をインストールする前に、 Data ONTAP 用の Snap Creator ユーザを作成する必要があります。Snap Creator ユーザを作成するプロセスは、システムで Data ONTAP 7-Mode と clustered Data ONTAP のどちらを実行しているかによって異なります。 
 ---
 = Data ONTAP 用 Snap Creator ユーザの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: domino, ibm, backup, operations, ibm, understanding
 summary: 他のバックアップテクノロジとは異なり、 IBM Domino プラグインでは、バックアップ処理中にデータベースにデータを書き込むことができます。バックアップ処理中に、 changeinfo という一時ディレクトリにデータベースへの変更を記録することにより、バックアップとアプリケーションデータの整合性を確保します。リストア時に、 Snapshot コピーからデータをリストアしたあと、それらの変更がデータベースに適用されます。 
 ---
 = IBM Domino プラグインのバックアップ処理の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, creator, gui, creating, role
 summary: Snap Creator の GUI を使用して、 Snap Creator ロールを作成できます。 
 ---
 = Snap Creator のロールを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

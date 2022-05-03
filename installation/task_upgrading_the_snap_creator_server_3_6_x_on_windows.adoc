@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, server, 3.6.x, windows
 summary: Windows 上の Snap Creator サーバ 3.6.x から直接アップグレードできます。 
 ---
 = Windows での Snap Creator サーバ 3.6.x のアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

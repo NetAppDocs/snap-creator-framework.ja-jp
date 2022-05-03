@@ -5,6 +5,7 @@ keywords: sap, hana, scheduling, schedule, database, integrity, checks
 summary: SAP HANA 構成では、ファイルベースのバックアップやデータベース整合性チェックなどの追加の処理をスケジュール設定できます。データベース整合性チェック処理は一定の間隔で実行するようにスケジュールを設定できます。 
 ---
 = データベース整合性チェックのスケジュール設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

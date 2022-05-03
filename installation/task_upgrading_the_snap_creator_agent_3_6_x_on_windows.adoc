@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, agent, 3.6.x, windows
 summary: Windows では Snap Creator エージェント 3.6.x から直接アップグレードできます。 
 ---
 = Windows での Snap Creator エージェント 3.6.x のアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

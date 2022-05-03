@@ -5,6 +5,7 @@ keywords: snap, creator, security, features, rbac, snapcreator
 summary: Snap Creator のセキュリティ機能には、ロールベースアクセス制御（ RBAC ）などがあります。この機能を使用すると、 Snap Creator 内でユーザアクセスを管理できます。 
 ---
 = ユーザアクセスの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

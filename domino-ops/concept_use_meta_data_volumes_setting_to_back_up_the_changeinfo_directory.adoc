@@ -5,6 +5,7 @@ keywords: domino, ibm, backing up, backup, changeinfo, directory
 summary: changeinfo ディレクトリをバックアップする場合は、ディレクトリを含むボリュームをメタデータボリュームとして設定する必要があります。これにより、 IBM Domino プラグインに対して、データベースファイルの Snapshot コピーの作成後に changeinfo ボリュームの Snapshot コピーを作成するよう指示します。 
 ---
 = changeinfo ディレクトリをバックアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

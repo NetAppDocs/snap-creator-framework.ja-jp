@@ -5,6 +5,7 @@ keywords: managing, backups, backup, copies,
 summary: 不要になったバックアップコピーは、作成したり、バックアップコピーのリストを表示したり、削除したりできます。 
 ---
 = バックアップの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: policy, schedule, snap, creator, gui
 summary: 必要に応じて、 Snap Creator の GUI を使用してポリシースケジュールを作成することもできます。 
 ---
 = ポリシースケジュールを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

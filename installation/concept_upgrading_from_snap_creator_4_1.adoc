@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, 4.1
 summary: 現在利用可能なすべてのパッチレベルを含め、 Snap Creator 4.1.x からアップグレードできます。 
 ---
 = Snap Creator 4.1.x からのアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

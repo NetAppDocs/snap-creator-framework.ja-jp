@@ -5,6 +5,7 @@ keywords: sap, hana, restore, restoring, databases, primary, storage, failure, c
 summary: clustered Data ONTAP を実行しているプライマリストレージシステムに障害が発生した場合は、 SAP HANA データベースをリストアできます。 
 ---
 = clustered Data ONTAP でプライマリストレージに障害が発生した場合のデータベースのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

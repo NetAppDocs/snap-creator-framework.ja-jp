@@ -5,6 +5,7 @@ keywords: upgrading, upgrade, snap, creator, 4.0.x
 summary: Snap Creator 4.0.x からアップグレードすると、データベーススキーマがアップグレードされます。 
 ---
 = Snap Creator 4.0.x からアップグレードする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

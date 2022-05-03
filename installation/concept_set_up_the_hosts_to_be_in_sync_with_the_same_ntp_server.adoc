@@ -5,6 +5,7 @@ keywords: synchronizing, synchronize, time, snap, creator, server, agent, hosts
 summary: Snap Creator をインストールする前に、 Snap Creator サーバホストの時刻とエージェントホストの時刻が同期されていることを確認してください。これを行うには、ホストの時刻を同じ Network Time Protocol （ NTP ；ネットワークタイムプロトコル）サーバと同期します。 
 ---
 = Snap Creator サーバおよびエージェントホストの時間の同期
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

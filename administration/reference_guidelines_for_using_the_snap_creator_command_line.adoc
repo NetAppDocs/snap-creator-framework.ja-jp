@@ -5,6 +5,7 @@ keywords: snap, creator, command-line, functionality, gui, cli, backup, lun
 summary: Snap Creator のコマンドライン機能を使用すると、グラフィカルユーザインターフェイス（ GUI ）を使用せずにさまざまな操作を実行できます。たとえば、コマンドラインインターフェイス（ CLI ）から、バックアップ、クローンボリュームまたは LUN を作成し、構成ファイルをインポートできます。 
 ---
 = Snap Creator コマンドラインインターフェイスの使用に関するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

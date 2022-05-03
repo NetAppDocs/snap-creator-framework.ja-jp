@@ -5,6 +5,7 @@ keywords: troubleshooting
 summary: トラブルシューティングのセクションでは、エラーコード、エラーメッセージに関する情報を提供し、問題を解決するための概要または解決策を紹介します。 
 ---
 = トラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

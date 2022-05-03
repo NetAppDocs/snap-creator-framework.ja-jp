@@ -5,6 +5,7 @@ keywords: snap, creator, server
 summary: Snap Creator 操作は、 Snap Creator サーバによって開始されます。 
 ---
 = Snap Creator サーバ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

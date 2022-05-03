@@ -5,6 +5,7 @@ keywords: clone, volume, lun, snapshot, copy, create, profile, configuration
 summary: 新しい Snapshot コピーからボリュームまたは LUN をクローニングできます。 
 ---
 = 新しいバックアップからクローンを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

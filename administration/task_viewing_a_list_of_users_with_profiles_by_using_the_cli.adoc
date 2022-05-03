@@ -5,6 +5,7 @@ keywords: snap, creator, command, line, interface, cli
 summary: プロファイルを持つすべての Snap Creator ユーザアカウントのリストを表示するには、コマンドラインインターフェイス（ CLI ）のみを使用します。 
 ---
 = CLI を使用して、 Snap Creator ユーザおよび割り当てられたプロファイルのリストを表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

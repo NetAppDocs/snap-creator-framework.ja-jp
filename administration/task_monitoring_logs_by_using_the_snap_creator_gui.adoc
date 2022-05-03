@@ -5,6 +5,7 @@ keywords: profile, configuration, snap, creator, gui, monitor, log, out, debug, 
 summary: Snap Creator の GUI を使用して、すべてのプロファイルおよび構成のログを表示できます。 
 ---
 = ログの監視
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

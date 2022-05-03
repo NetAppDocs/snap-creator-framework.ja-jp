@@ -5,6 +5,7 @@ keywords: creating, create, symbolic, links, domino, plug-in, linux, solaris, ho
 summary: Linux ホストおよび Solaris ホスト上に Domino プラグインのシンボリックリンクを作成する場合は、この手順を実行する必要があります。 
 ---
 = Linux ホストおよび Solaris ホストで Domino プラグインのシンボリックリンクを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

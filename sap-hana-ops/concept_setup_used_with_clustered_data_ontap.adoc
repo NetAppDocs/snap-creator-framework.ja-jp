@@ -5,6 +5,7 @@ keywords: setup, sap, hana, clustered, data, ontap
 summary: clustered Data ONTAP で使用するセットアップ 
 ---
 = clustered Data ONTAP で使用するセットアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

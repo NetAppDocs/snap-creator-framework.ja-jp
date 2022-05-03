@@ -5,6 +5,7 @@ keywords: domino, ibm, cleaning up, purging, archives, archived, copies, transac
 summary: Domino トランザクションログを使用している場合、 IBM Domino プラグインは、最新の状態へのリストア処理で使用するために、 Domino トランザクションログのコピーを changeinfo ディレクトリにアーカイブします。Snap Creator が不要になったトランザクションログのコピーをクリーンアップするには、トランザクションログの管理を有効にする必要があります。 
 ---
 = Domino トランザクションログのアーカイブコピーをクリーンアップしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

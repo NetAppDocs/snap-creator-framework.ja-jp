@@ -5,6 +5,7 @@ keywords: parameter, snapmirror, snap, creator, server, update, cascading, volum
 summary: Snap Creator サーバ用の SnapMirror をセットアップするには、いくつかのパラメータが必要です。 
 ---
 = SnapMirror をセットアップするためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

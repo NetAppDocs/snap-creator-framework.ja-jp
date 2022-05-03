@@ -5,6 +5,7 @@ keywords: sap, hana, plug-in, operations, guide, configure, use, backup, back, u
 summary: SAP HANA プラグインを設定して使用し、 SAP HANA データベースをバックアップおよびリストアする方法について説明します。 
 ---
 = 『 SAP HANA ® Plug-in Operations Guide 』を参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

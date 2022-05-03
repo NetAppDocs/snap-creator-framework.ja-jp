@@ -5,6 +5,7 @@ keywords: requirements, sap, hana, plug-in, create, backups, point-in-time, reco
 summary: SAP HANA プラグインを使用すると、 HANA データベースのバックアップを作成し、ポイントインタイムリカバリを実行できます。 
 ---
 = 要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

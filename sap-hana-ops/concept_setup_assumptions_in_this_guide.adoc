@@ -5,6 +5,7 @@ keywords: setup, assumptions
 summary: 一般的な Snap Creator のインストールでは、サーバが 1 つのホストにインストールされ、エージェントが別のホストにインストールされていると想定していますが、このガイドで使用しているセットアップは、 SAP HANA マルチノードアプライアンスに基づいています。 
 ---
 = このガイドで前提条件を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

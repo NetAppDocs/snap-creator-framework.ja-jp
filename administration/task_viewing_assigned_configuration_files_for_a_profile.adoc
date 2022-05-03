@@ -5,6 +5,7 @@ keywords: configuration, file, assign, profile
 summary: プロファイルに割り当てられている構成ファイルのリストを表示できます。 
 ---
 = プロファイルに割り当てられた構成ファイルのリストを表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

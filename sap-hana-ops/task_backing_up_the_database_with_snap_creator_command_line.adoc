@@ -5,6 +5,7 @@ keywords: backing up, database, snap, creator, command, line
 summary: Snap Creator のコマンドラインを使用してデータベースをバックアップすることもできます。 
 ---
 = Snap Creator コマンドラインを使用したデータベースのバックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

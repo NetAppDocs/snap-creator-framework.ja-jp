@@ -5,6 +5,7 @@ keywords: installing, install, configuring, configure, required, software
 summary: Snap Creator Framework および SAP HANA プラグインを使用した SAP HANA 解決策のバックアップおよびリストアでは、 Snap Creator ソフトウェアコンポーネントと SAP HANA hdbsql クライアントソフトウェアをインストールする必要があります。 
 ---
 = 必要なソフトウェアコンポーネントをインストールして設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

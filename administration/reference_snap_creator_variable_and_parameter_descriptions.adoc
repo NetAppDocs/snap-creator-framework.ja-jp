@@ -5,6 +5,7 @@ keywords: snap, creator, built-in, variable, parameter, basic, configuration, de
 summary: Snap Creator には、基本構成に必要な変数とパラメータが組み込まれています。 
 ---
 = Snap Creator の変数およびパラメータの説明
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

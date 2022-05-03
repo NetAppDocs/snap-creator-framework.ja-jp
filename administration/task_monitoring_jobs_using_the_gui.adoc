@@ -5,6 +5,7 @@ keywords: monitor, job, snap, creator, gui
 summary: Snap Creator の GUI を使用して、 Snap Creator によって実行されているジョブのステータスを監視できます。 
 ---
 = ジョブの監視
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

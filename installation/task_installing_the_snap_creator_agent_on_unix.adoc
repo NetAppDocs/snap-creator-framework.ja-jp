@@ -5,6 +5,7 @@ keywords: installing, install, snap, creator, agent, unix
 summary: Snap Creator エージェントは、あらゆるオープンシステムプラットフォーム（ AIX 、 HP-UX 、 Linux 、 Solaris ）で動作します。 
 ---
 = UNIX ベースのシステムへの Snap Creator エージェントのインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

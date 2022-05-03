@@ -5,6 +5,7 @@ keywords: snap, creator, gui, file, restore, wizard
 summary: Snap Creator の GUI を使用して、単一ファイルのリストア処理を実行できます。 
 ---
 = 単一ファイルのリストア処理を実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

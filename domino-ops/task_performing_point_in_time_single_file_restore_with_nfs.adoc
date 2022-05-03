@@ -5,6 +5,7 @@ keywords: snap creator, ibm, domino, plug-in, perfomring, single-file, single, f
 summary: IBM Domino プラグインを使用して、 NFS 環境のデータベースに対して、ポイントインタイムリストア、最新の状態へのリストア、または選択可能な最新の状態への単一ファイルのリストアを実行できます。 
 ---
 = 単一ファイルのリストアを実行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: sap, hana, performing, perform, database, integrity, checks, snap, cre
 summary: Snap Creator のコマンドラインを使用してデータベース整合性チェックを実行できます。 
 ---
 = Snap Creator コマンドラインからデータベース整合性チェックを実行します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

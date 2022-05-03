@@ -5,6 +5,7 @@ keywords: parameter, snapvault, update, volume, relationship
 summary: SnapVault をセットアップするには、いくつかのパラメータが必要です。 
 ---
 = SnapVault をセットアップするためのパラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

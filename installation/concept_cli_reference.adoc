@@ -5,6 +5,7 @@ keywords: cli, reference
 summary: このセクションには、コマンドラインインターフェイスから Snap Creator を使用するための参照情報が記載されています。 
 ---
 = CLI リファレンス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

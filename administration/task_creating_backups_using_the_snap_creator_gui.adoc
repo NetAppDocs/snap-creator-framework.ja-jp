@@ -5,6 +5,7 @@ keywords: create, backup, snap, creator, gui, configuration, backup, action, par
 summary: Snap Creator の GUI を使用してバックアップを作成できます。 
 ---
 = バックアップを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
