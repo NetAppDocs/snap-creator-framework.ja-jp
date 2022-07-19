@@ -299,7 +299,7 @@ TIP: Domino 環境は、数百、数千のデータベースで構成される�
 
 .. SnapVault コピーをアーカイブするには、 * Snapshot * をクリックします。
 .. アーカイブ Snapshot コピーのポリシーを指定してください。
-.. 手順は次の手順に記載されています<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13>>。
+.. 手順は次の手順に記載されています,13。
 .. SnapVault wait time * に、 Snap Creator が SnapVault の処理が完了するまで待機する時間を分単位で入力します。
 .. セカンダリストレージへのレプリケーションを実行する前に、 SnapMirror 関係と SnapVault 関係をセットアップしておく必要があります。詳細については、を参照してください xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror と SnapVault のセットアップ]。
 
