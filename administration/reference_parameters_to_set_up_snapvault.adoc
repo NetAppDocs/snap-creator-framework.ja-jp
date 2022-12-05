@@ -13,27 +13,28 @@ summary: SnapVault をセットアップするには、いくつかのパラメ�
 [role="lead"]
 SnapVault をセットアップするには、いくつかのパラメータが必要です。
 
+[cols="20,30,50"]
 |===
 | パラメータ | 設定 | 説明 
 
 
- a| 
-NTAP_SNAPVAULT_UPDATE
- a| 
-Y
-| N 
+| NTAP_SNAPVAULT_UPDATE | （はい / いいえ） | SnapVault 更新機能をオンまたはオフにすることができます。 
 
 
  a| 
-SnapVault 更新機能をオンまたはオフにすることができます。
+NTAP_allow_MIRROVAULT_AS_MIRROR
+ a| 
+（はい / いいえ）
+ a| 
+mirror-vault保護ポリシータイプをSnapVault またはSnapMirrorとして使用できます。（デフォルト）N：SnapVault のmirror-vault保護ポリシータイプを有効にします。y：SnapMirrorのmirror-vault保護ポリシータイプを有効にします。
+
+
+
  a| 
 SnapVault ボリューム
  a| 
-
-
-
  a| 
-SnapVault の更新を実行するソースストレージシステムおよびボリュームを表示します（例： controller1 ： vol1 、 vol2 、 vol3 ； controller2 ： vol1 ； controller3 ： vol2 、 vol3 ）。* 注： *
+SnapVault の更新を実行するソースストレージシステムおよびボリュームを表示します（例： controller1 ： vol1 、 vol2 、 vol3 ； controller2 ： vol1 ； controller3 ： vol2 、 vol3 ）。
 
 * SnapVault および SnapMirror の更新が機能するには、関係が存在している必要があります。
 +
@@ -43,47 +44,47 @@ Snap Creator では、これらの関係の作成は行われません。
 * vSphere または vCloud の場合は、値を auto ： detect に設定します。
 * ホスト名は FQDN ではなく、短縮形のホスト名（ストレージコントローラのコマンドプロンプトで表示される名前）を使用する必要があります。
 
+
+
+
  a| 
 SnapVault_qtree_include
  a| 
-
-
-
  a| 
 SnapVault 更新に含める必要のある、ソースストレージシステムと qtree パスを一覧表示します。このオプションを指定しない場合、関係が設定されていれば、ボリュームに含まれるすべての qtree が SnapVault によって保存されます。次の例のように列挙した qtree は SnapVault によって保存され、残りは SnapVault で無視されます。 controller1 ： /vol/qtree/qtree1 、 /vol/volume/qtree2 ； controller2 ： /vol/volume/qtree1
+
+
+
  a| 
 NTAP_SNAPVAULT_RETENTIONS の設定
  a| 
-
-
-
  a| 
 指定したポリシーに対して保持する SnapVault セカンダリ上の Snapshot コピーの数を決定します（例： daily ： 21 、 weekly ： 12 、 monthly ： 3 ）。
+
+
+
  a| 
 NTAP_SNAPVAULT_retention_age
  a| 
-
-
-
  a| 
 SnapVault Snapshot コピーの保持期間（日数）を定義できます。設定すると、 NTAP_SNAPVAULT_RETENTIONS の定義数を超え、指定した保持期間（日数）よりも古い SnapVault Snapshot コピーのみが削除されます。
+
+
+
  a| 
 NTAP_SNAPVAULT_SNAPSHOT
  a| 
-Y
-
-
-
-| N  a| 
+（はい / いいえ）
+ a| 
 SnapVault Snapshot コピーの使用を有効にします。 Snapshot コピーとは、ストレージコントローラの SnapVault スケジューラと互換性のある Snapshot コピーです。このオプションを使用すると、 Snapshot コピーの削除は、 Snap Creator ではなくストレージコントローラによって処理されます。さらに、 Snapshot コピーは、 sv_<POLICY>.<##> のような名前になります。ポリシー名は NTAP_SNAPSHOT_RETENTIONS パラメータで規定され、保持設定がストレージコントローラの SnapVault スケジュールにも適用されます。
+
+
+
  a| 
 NTAP_SNAPVAULT_NODELETE
-
-
-
  a| 
-Y
-| N  a| 
+（はい / いいえ）
+ a| 
 NTAP_SNAPVAULT_RETENTIONS が無視され、 Snapshot コピーが削除されなくなります。オン原因のままにしておくと、ボリュームのスペースが使い果たされる可能性があります。
 
 
@@ -91,22 +92,24 @@ NTAP_SNAPVAULT_RETENTIONS が無視され、 Snapshot コピーが削除され�
  a| 
 NTAP_SNAPVAULT_RESTORE_WAIT
  a| 
-Y
-| N 
-
-
+（はい / いいえ）
  a| 
 SnapVault のリストアの場合に、処理が完了するまで Snap Creator を強制的に待機させます。これは、 SnapVault のリストアが完了すると、プライマリストレージ上に作成された不要なリストア Snapshot コピーを削除するよう、 Snap Creator からメッセージが表示されるため推奨されます。
+
+
+
  a| 
 NTAP_SNAPVAULT_WAIT
  a| 
-
-
-
  a| 
 SnapVault セカンダリ上に Snapshot コピーを作成する前に、 SnapVault 更新プロセスが完了するまでの待機時間（分）。
+
+
+
  a| 
 NTAP_SNAPVAULT_MAX_transfer の設定を行います
  a| 
+ a| 
+SnapVault で使用できる最大帯域幅（kbps）。この値を設定しないと、SnapVault は利用可能な帯域幅を最大限使用します。
 
 |===

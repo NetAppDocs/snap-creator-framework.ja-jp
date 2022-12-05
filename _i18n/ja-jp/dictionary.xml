@@ -3193,7 +3193,6 @@
   <block id="fecc8aff3c88a0445bf428ef692f1cea" category="paragraph">NTAP_SNAPVAULT_UPDATE</block>
   <block id="dbd64b7506acb36055eca79b8b364a18" category="paragraph">SnapVault 更新機能をオンまたはオフにすることができます。</block>
   <block id="d1ba6e7eb95663aa596dd570add83f9a" category="paragraph">SnapVault ボリューム</block>
-  <block id="a1fc7f749c5ea5718722bdebdc587614" category="paragraph">SnapVault の更新を実行するソースストレージシステムおよびボリュームを表示します（例： controller1 ： vol1 、 vol2 、 vol3 ； controller2 ： vol1 ； controller3 ： vol2 、 vol3 ）。* 注： *</block>
   <block id="487eb327be46517fae6f993840d60362" category="list-text">SnapVault および SnapMirror の更新が機能するには、関係が存在している必要があります。</block>
   <block id="b3b87058bbcfac523b85dde91deb1c09" category="paragraph">Snap Creator では、これらの関係の作成は行われません。</block>
   <block id="1ea062b82f2f00248618134e362b06c1" category="list-text">SnapMirror 関係や SnapVault 関係で使用するホスト名は、 VOLUMES 、 SNAPMIRROR_VOLUMES 、 SNAPVAL_VOLUMES の各オプションで指定した名前と同じにする必要があります。また、 Snap Creator を実行するホストが、対象のホスト名を解決できる必要があります。</block>
@@ -4597,4 +4596,9 @@
   <block id="3fa7ec916163970da88e2e2759209761" category="sidebar">IBM ® Domino ® プラグインの処理</block>
   <block id="3cc13999b80491b390e27e7298102ccb" category="sidebar">SAP HANA ® プラグインの運用</block>
   <block id="7258e7251413465e0a3eb58094430bde" category="sidebar">管理</block>
+  <block id="eae66b4b74b6b82ce35a83d2757f6d46" category="cell">（はい / いいえ）</block>
+  <block id="0fed4fd40330e62e1aa81d896b62ecb5" category="paragraph">NTAP_allow_MIRROVAULT_AS_MIRROR</block>
+  <block id="069d4fc9438ae257bab719c9b98b55ff" category="paragraph">mirror-vault保護ポリシータイプをSnapVault またはSnapMirrorとして使用できます。（デフォルト）N：SnapVault のmirror-vault保護ポリシータイプを有効にします。y：SnapMirrorのmirror-vault保護ポリシータイプを有効にします。</block>
+  <block id="6235e974fbd5143adbb2a8573ca76e9a" category="paragraph">SnapVault の更新を実行するソースストレージシステムおよびボリュームを表示します（例： controller1 ： vol1 、 vol2 、 vol3 ； controller2 ： vol1 ； controller3 ： vol2 、 vol3 ）。</block>
+  <block id="2a8806d1dbd2f7d98c2367f622afe0f8" category="paragraph">SnapVault で使用できる最大帯域幅（kbps）。この値を設定しないと、SnapVault は利用可能な帯域幅を最大限使用します。</block>
 </blocks>
