@@ -82,6 +82,6 @@ SnapDrive for Windows を使用してバックアップを作成するには、 
 
 
 . 入力に問題がなければ、 *Enter* キーを押します。
-. 手順を繰り返します ,#step_3F9C83DD05D84075AD0277213FD67C56 から ,#step_FBEDD7AE105F42138EB35315EA9FA7CC 別のコマンドを追加します。
+. 手順を繰り返します <<STEP_3F9C83DD05D84075AD0277213FD67C56,#step_3F9C83DD05D84075AD0277213FD67C56>> から <<STEP_FBEDD7AE105F42138EB35315EA9FA7CC,#step_FBEDD7AE105F42138EB35315EA9FA7CC>> 別のコマンドを追加します。
 . [ 構成コンテンツ ] ペインで [ 保存 ] をクリックして、変更を保存します。
 
