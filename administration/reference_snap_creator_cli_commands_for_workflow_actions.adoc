@@ -15,6 +15,7 @@ Command-Line Interface （ CLI ；コマンドラインインターフェイス�
 
 次の表に、 Snap Creator の GUI ベースのワークフローアクションを実行するための CLI コマンドを示します。
 
+[cols="15,40,45"]
 |===
 | ワークフロー領域 | アクション / 説明 | コマンドおよび関連するパラメータ 
 
@@ -26,8 +27,7 @@ Command-Line Interface （ CLI ；コマンドラインインターフェイス�
  a| 
 [listing]
 ----
-
-                  snapcreator
+snapcreator
 --server IP
 --port Port
 --user User
@@ -40,8 +40,8 @@ Command-Line Interface （ CLI ；コマンドラインインターフェイス�
 ----
 
 
- a| 
-Open Systems SnapVault バックアップを作成します。 Open Systems SnapVault を使用してバックアップ操作を実行します。これには Snap Creator エージェントが必要です。Snap Creator サーバは Snap Creator エージェントと通信し、 SnapVault の更新を実行します。プライマリバックアップコピーは作成されません。
+|   a| 
+Open Systems SnapVault のバックアップを作成します。Open Systems SnapVault を使用してバックアップ処理を実行します。これには Snap Creator エージェントが必要です。Snap Creator サーバは Snap Creator エージェントと通信し、 SnapVault の更新を実行します。プライマリバックアップコピーは作成されません。
  a| 
 [listing]
 ----
@@ -55,12 +55,10 @@ snapcreator
 --action ossv
 --policy Policy
 --verbose
----- a| 
-バックアップ（続き）
+----
 
 
-
- a| 
+|   a| 
 バックアップコピーを削除する（手動）。既存のバックアップを手動で削除します。この処理はメニュー方式です。
  a| 
 [listing]
@@ -75,11 +73,11 @@ snapcreator
 --action backupDel
 --policy Policy
 --verbose
----- a| 
+----
+
+
+|   a| 
 バックアップコピーを（自動的に）削除する
-
-
-
  a| 
 [listing]
 ----
@@ -97,8 +95,11 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
----- a| 
-バックアップコピーをリストします。プライマリおよびセカンダリストレージシステム上の Snap Creator バックアップコピーをリストします。
+----
+
+
+|   a| 
+バックアップコピーをリストします。プライマリストレージシステムとセカンダリストレージシステム上のSnap Creatorのバックアップコピーを一覧表示します。
  a| 
 [listing]
 ----
@@ -115,7 +116,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 バックアップコピーをマウント既存のバックアップに対してマウント処理を実行します。バックアップに基づいたボリュームクローンを作成し、 MOUNT_CMD コマンドを使用して Snap Creator エージェント経由でクローンをマウントできるようにします。
  a| 
 [listing]
@@ -130,13 +131,11 @@ snapcreator
 --action mount
 --backupName name
 --verbose
----- a| 
-バックアップ（続き）
+----
 
 
-
- a| 
-バックアップコピーをアンマウントします。既存のバックアップに対してアンマウント処理を実行します。バックアップに基づいたボリュームクローンを削除し、 umount_CMD コマンドを使用して Snap Creator エージェント経由でクローンのアンマウントを可能にします。
+|   a| 
+バックアップコピーをアンマウント既存のバックアップに対してアンマウント処理を実行します。バックアップに基づいたボリュームクローンを削除し、 umount_CMD コマンドを使用して Snap Creator エージェント経由でクローンのアンマウントを可能にします。
  a| 
 [listing]
 ----
@@ -150,11 +149,11 @@ snapcreator
 --action umount
 --backupName name
 --verbose
----- a| 
+----
+
+
+ a| 
 バックアップタイプ
-
-
-
  a| 
 新しいバックアップタイプを作成します。
  a| 
@@ -168,11 +167,11 @@ snapcreator
 --action backupTypeAdd
 --backupTypeName name
 --verbose
----- a| 
+----
+
+
+|   a| 
 既存のバックアップタイプを更新する。
-
-
-
  a| 
 [listing]
 ----
@@ -185,7 +184,10 @@ snapcreator
 --backupTypeId 1
 --backupTypeName name
 --verbose
----- a| 
+----
+
+
+|   a| 
 既存のバックアップタイプを削除する
  a| 
 [listing]
@@ -197,12 +199,11 @@ snapcreator
 --passwd Password
 --action backupTypeDelete
 --backupTypeId 1
-
 --verbose
 ----
 
 
- a| 
+|   a| 
 バックアップタイプをリスト表示します。
  a| 
 [listing]
@@ -214,13 +215,13 @@ snapcreator
 --passwd Password
 --action backupTypeList
 --verbose
----- a| 
-クローン
-
+----
 
 
  a| 
-LUN のクローン作成：プライマリストレージシステムをバックアップし、 LUN クローンを使用してバックアップをクローニングします。igroup のボリュームのマッピングも処理されます。これには SAN 環境または iSAN 環境が必要です。
+クローン
+ a| 
+LUNのクローンを作成します。プライマリストレージシステムがバックアップされ、LUNクローンを使用してバックアップがクローニングされます。igroup のボリュームのマッピングも処理されます。これには SAN 環境または iSAN 環境が必要です。
  a| 
 [listing]
 ----
@@ -234,11 +235,11 @@ snapcreator
 --action cloneLun
 --policy Policy
 --verbose
----- a| 
-ボリュームをクローニングします。プライマリストレージシステムをバックアップし、ボリュームクローンを使用してバックアップをクローニングします。igroup 、 NFS 、 CIFS のボリュームのマッピングも処理されます。これには、 SAN 、 iSAN 、または NAS 環境が必要です。
+----
 
 
-
+|   a| 
+ボリュームをクローニングする。プライマリストレージシステムがバックアップされ、ボリュームクローンを使用してバックアップがクローニングされます。igroup 、 NFS 、 CIFS のボリュームのマッピングも処理されます。これには、 SAN 、 iSAN 、または NAS 環境が必要です。
  a| 
 [listing]
 ----
@@ -252,8 +253,11 @@ snapcreator
 --action cloneVol
 --policy Policy
 --verbose
----- a| 
-クローンを削除します。指定された保持ポリシーに基づいてクローン削除処理を実行します。LUN クローンのコピーが 1 つだけ保持されます。ボリュームクローンには、ポリシーに関連付けられた使用方法があります。
+----
+
+
+|   a| 
+クローンを削除します。指定した保持ポリシーに基づいてクローン削除処理を実行します。LUN クローンのコピーが 1 つだけ保持されます。ボリュームクローンには、ポリシーに関連付けられた使用方法があります。
  a| 
 [listing]
 ----
@@ -270,8 +274,8 @@ snapcreator
 ----
 
 
- a| 
-Snap Creator クローンをリストします。指定された構成の Snap Creator のボリュームクローンをリスト表示します。
+|   a| 
+Snap Creatorのクローンをリスト表示します。指定された構成のSnap Creatorのボリュームクローンを一覧表示します。
  a| 
 [listing]
 ----
@@ -284,11 +288,11 @@ snapcreator
 --config Config
 --action cloneList
 --verbose
----- a| 
-Snap Creator のボリュームをリストします。プライマリストレージシステム上の指定された構成の Snap Creator ボリュームをリストします。
+----
 
 
-
+|   a| 
+Snap Creatorのボリュームをリストします。プライマリストレージシステム上の指定された構成のSnap Creatorのボリュームを一覧表示します。
  a| 
 [listing]
 ----
@@ -301,13 +305,13 @@ snapcreator
 --config Config
 --action volumeList
 --verbose
----- a| 
+----
+
+
+ a| 
 構成ファイル
  a| 
 構成をインポートします。
-
-
-
  a| 
 [listing]
 ----
@@ -321,7 +325,10 @@ snapcreator
 --action configImport
 --importFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 設定をエクスポートします。
  a| 
 [listing]
@@ -339,7 +346,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 グローバル構成ファイルをインポートします。
  a| 
 [listing]
@@ -352,11 +359,11 @@ snapcreator
 --action globalImport
 --importFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 グローバル構成ファイルをエクスポートします。
-
-
-
  a| 
 [listing]
 ----
@@ -368,7 +375,10 @@ snapcreator
 --action globalExport
 --ExportFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 リポジトリからグローバル構成ファイルを削除します。
  a| 
 [listing]
@@ -384,7 +394,6 @@ snapcreator
 
 
  a| 
-構成ファイル（続き）
  a| 
 特定のプロファイルのグローバル構成ファイルをリポジトリにインポートします。
  a| 
@@ -402,7 +411,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 リポジトリから特定のプロファイルのグローバル構成ファイルをエクスポートします。
  a| 
 [listing]
@@ -416,11 +425,11 @@ snapcreator
 --action profileglobalExport
 --exportFile file_path
 --verbose
----- a| 
+----
+
+
+|   a| 
 リポジトリから特定のプロファイルのグローバル構成を削除します。
-
-
-
  a| 
 [listing]
 ----
@@ -432,7 +441,10 @@ snapcreator
 --profile Profile
 --action profileglobalDelete
 --verbose
----- a| 
+----
+
+
+|   a| 
 プロファイル内の古い構成ファイルをアップグレードします。新しく導入されたパラメータを古い構成ファイルに追加します。このコマンドを実行する前に、プロファイルフォルダを指定して scServer/engine/configs フォルダに古い構成ファイルをすべてコピーする必要があります。
  a| 
 [listing]
@@ -489,7 +501,6 @@ snapcreator
 
 
  a| 
-ポリシー（続き）
  a| 
 新しい SnapMirror ポリシーを追加します。
  a| 
@@ -511,7 +522,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 新しい SnapVault ポリシーを追加します。
  a| 
 [listing]
@@ -531,11 +542,11 @@ snapcreator
 --secondaryCount 30
 --secondaryAge 0
 --verbose
----- a| 
+----
+
+
+|   a| 
 SnapMirror ポリシーを更新します。
-
-
-
  a| 
 [listing]
 ----
@@ -553,13 +564,12 @@ snapcreator
 --primaryCount 7
 --primaryAge 0
 --verbose
----- a| 
-ポリシー（続き）
+----
+
+
+ a| 
  a| 
 SnapVault ポリシーを更新する。
-
-
-
  a| 
 [listing]
 ----
@@ -579,7 +589,10 @@ snapcreator
 --secondaryCount 30
 --secondaryAge 0
 --verbose
----- a| 
+----
+
+
+|   a| 
 ポリシーを削除する。
  a| 
 [listing]
@@ -595,7 +608,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 すべてのポリシーをリスト表示します。
  a| 
 [listing]
@@ -607,11 +620,11 @@ snapcreator
 --passwd Password
 --action policyList
 --verbose
----- a| 
+----
+
+
+|   a| 
 特定のポリシーに関する詳細情報を表示します。
-
-
-
  a| 
 [listing]
 ----
@@ -623,7 +636,10 @@ snapcreator
 --action policyDetails
 --policyId 1
 --verbose
----- a| 
+----
+
+
+|   a| 
 ポリシーをプロファイルに割り当てます。
  a| 
 [listing]
@@ -641,7 +657,6 @@ snapcreator
 
 
  a| 
-ポリシー（続き）
  a| 
 プロファイルに対するポリシーの割り当てを元に戻します。
  a| 
@@ -658,7 +673,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 プロファイルに割り当てられているすべてのポリシーを一覧表示します。
  a| 
 [listing]
@@ -671,11 +686,11 @@ snapcreator
 --profile Profile
 --action policyListForProfile
 --verbose
----- a| 
+----
+
+
+ a| 
 ポリシースケジュール
-
-
-
  a| 
 毎時ポリシースケジュールを作成します。
  a| 
@@ -693,11 +708,11 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 日次ポリシースケジュールを作成します。
-
-
-
  a| 
 [listing]
 ----
@@ -714,13 +729,12 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
-ポリシースケジュール（続き）
+----
+
+
+ a| 
  a| 
 週次ポリシースケジュールを作成します。
-
-
-
  a| 
 [listing]
 ----
@@ -738,7 +752,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 cron ポリシースケジュールを作成します。
  a| 
 [listing]
@@ -758,7 +775,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 ポリシーの毎時スケジュールを更新します。
  a| 
 [listing]
@@ -776,11 +793,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
-ポリシースケジュール（続き）
+----
 
 
-
+ a| 
  a| 
 日次ポリシースケジュールを更新する。
  a| 
@@ -800,11 +816,11 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 週次ポリシーのスケジュールを更新する。
-
-
-
  a| 
 [listing]
 ----
@@ -823,7 +839,10 @@ snapcreator
 --schedMin minute
 --schedActive true
 --verbose
----- a| 
+----
+
+
+|   a| 
 cron ポリシースケジュールを更新してください。
  a| 
 [listing]
@@ -845,7 +864,6 @@ snapcreator
 
 
  a| 
-ポリシースケジュール（続き）
  a| 
 ポリシースケジュールを削除する。
  a| 
@@ -862,7 +880,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 ポリシーのスケジュールをリストします。
  a| 
 [listing]
@@ -874,11 +892,11 @@ snapcreator
 --passwd Password
 --action policySchedList
 --verbose
----- a| 
+----
+
+
+|   a| 
 ポリシースケジュールに関する追加情報を表示します。
-
-
-
  a| 
 [listing]
 ----
@@ -890,13 +908,13 @@ snapcreator
 --action policySchedDetails
 --schedId 1
 --verbose
----- a| 
+----
+
+
+ a| 
 プロファイル
  a| 
 新しいプロファイルを作成します。
-
-
-
  a| 
 [listing]
 ----
@@ -908,8 +926,11 @@ snapcreator
 --profile Profile
 --action profileCreate
 --verbose
----- a| 
-プロファイルを削除します。 * 注： * プロファイル内の構成ファイルも削除されます。
+----
+
+
+|   a| 
+プロファイルを削除します。*注：*プロファイル内の構成ファイルも削除されます。
  a| 
 [listing]
 ----
@@ -944,30 +965,8 @@ snapcreator
 ----
 
 
- a| 
-非対話型のボリュームリストアを実行します。は、非対話型のボリュームリストアを実行します。
- a| 
-[listing]
-----
-snapcreator
---server IP
---port Port
---user User
---passwd Password
---profile Profile
---config Config
---action restore
---policy Policy
---verbose
---nonInteractive
---cntName controller
---volName volume
---backupName name
----- a| 
-非対話型ファイルのリストアを実行します。非対話型ファイルのリストアを実行します。
-
-
-
+|   a| 
+非対話型のボリュームリストアを実行します。非対話型のボリュームリストアを実行します。
  a| 
 [listing]
 ----
@@ -985,14 +984,36 @@ snapcreator
 --cntName controller
 --volName volume
 --backupName name
---files file_path1,file_path2,etc.
----- a| 
+----
+
+
+|   a| 
+非対話型のファイルリストアを実行します。非対話型のファイルリストアを実行します。
+ a| 
+[listing]
+----
+snapcreator
+--server IP
+--port Port
+--user User
+--passwd Password
+--profile Profile
+--config Config
+--action restore
+--policy Policy
+--verbose
+--nonInteractive
+--cntName controller
+--volName volume
+--backupName name
+--fileNames file_path1,file_path2,etc.
+----
+
+
+ a| 
 スケジュール
  a| 
 新しい毎時スケジュールを作成します。
-
-
-
  a| 
 [listing]
 ----
@@ -1012,7 +1033,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 新しい日次スケジュールを作成します。
  a| 
 [listing]
@@ -1037,7 +1061,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 新しい週次スケジュールを作成します。
  a| 
 [listing]
@@ -1060,11 +1084,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-スケジュール（続き）
+----
 
 
-
+ a| 
  a| 
 新しい cron スケジュールを作成します。
  a| 
@@ -1086,12 +1109,11 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-スケジュールを実行します。
-
+----
 
 
  a| 
+| スケジュールを実行します。  a| 
 [listing]
 ----
 snapcreator
@@ -1102,7 +1124,10 @@ snapcreator
 --action schedRun
 --schedId 1
 --verbose
----- a| 
+----
+
+
+|   a| 
 スケジュールを削除します
  a| 
 [listing]
@@ -1118,7 +1143,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 毎時スケジュールを更新します。
  a| 
 [listing]
@@ -1140,11 +1165,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
-スケジュール（続き）
+----
 
 
-
+ a| 
  a| 
 日次スケジュールを更新してください。
  a| 
@@ -1168,11 +1192,11 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 週次スケジュールを更新します。
-
-
-
  a| 
 [listing]
 ----
@@ -1195,7 +1219,10 @@ snapcreator
 --schedActive true
 --schedStartDate date
 --verbose
----- a| 
+----
+
+
+|   a| 
 cron スケジュールを更新してください。
  a| 
 [listing]
@@ -1221,7 +1248,6 @@ snapcreator
 
 
  a| 
-スケジュール（続き）
  a| 
 すべてのスケジュールを一覧表示します。
  a| 
@@ -1237,7 +1263,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 サポートされているスケジューラ操作をリストします
  a| 
 [listing]
@@ -1249,11 +1275,11 @@ snapcreator
 --passwd Password
 --action schedActionList
 --verbose
----- a| 
+----
+
+
+|   a| 
 サポートされているスケジューラ頻度をリストします
-
-
-
  a| 
 [listing]
 ----
@@ -1264,7 +1290,10 @@ snapcreator
 --passwd Password
 --action schedFreqList
 --verbose
----- a| 
+----
+
+
+|   a| 
 スケジュール ID の詳細を表示します。
  a| 
 [listing]
@@ -1318,7 +1347,6 @@ snapcreator
 
 
  a| 
-Snap Creator サーバおよびエージェント（続き）
  a| 
 Snap Creator サーバに ping を実行します。
  a| 
@@ -1334,7 +1362,7 @@ snapcreator
 ----
 
 
- a| 
+|   a| 
 Snap Creator エージェントに ping を実行します。
  a| 
 [listing]
@@ -1348,11 +1376,11 @@ snapcreator
 --agentName host_name
 --agentPort port
 --verbose
----- a| 
+----
+
+
+ a| 
 Archive サービスの略
-
-
-
  a| 
 構成ファイルの設定に従ってアーカイブログ管理を実行します。この処理には Snap Creator エージェントが必要です。
  a| 
@@ -1367,11 +1395,11 @@ snapcreator
 --config Config
 --action arch
 --verbose
----- a| 
+----
+
+
+ a| 
 データ保護機能
-
-
-
  a| 
 特定の構成に対して NetApp Management Console のデータ保護機能データセットを設定します。
  a| 
@@ -1386,11 +1414,11 @@ snapcreator
 --config Config
 --action pmsetup
 --verbose
----- a| 
+----
+
+
+|   a| 
 コントローラの SnapVault 関係と SnapMirror 関係のデータ保護ステータスを表示します。SnapVault または SnapMirror が設定されていない場合、結果は表示されません。
-
-
-
  a| 
 [listing]
 ----
@@ -1403,13 +1431,13 @@ snapcreator
 --config Config
 --action dpstatus
 --verbose
----- a| 
+----
+
+
+ a| 
 休止または休止解除
  a| 
 特定のアプリケーションに対して休止処理を実行します。この処理には Snap Creator エージェントが必要です。
-
-
-
  a| 
 [listing]
 ----
@@ -1422,7 +1450,10 @@ snapcreator
 --config Config
 --action quiesce
 --verbose
----- a| 
+----
+
+
+|   a| 
 指定されたアプリケーションに対して休止解除処理を実行します。この処理には Snap Creator エージェントが必要です。
  a| 
 [listing]

@@ -22,7 +22,7 @@ CLI コマンドを使用して、 Snap Creator の RBAC 操作を実行でき�
  a| 
 ユーザ
  a| 
-新しいユーザを作成します。
+新しいユーザを作成します
  a| 
 [listing]
 ----
@@ -38,9 +38,7 @@ snapcreator
 ----
 
 
- a| 
-ユーザを削除します。
- a| 
+|  | ユーザを削除します  a| 
 [listing]
 ----
 snapcreator
@@ -51,12 +49,11 @@ snapcreator
 --action userDelete
 --username user_name
 --verbose
----- a| 
-すべてのユーザをリストします。
-
+----
 
 
  a| 
+| すべてのユーザをリストします  a| 
 [listing]
 ----
 snapcreator
@@ -66,9 +63,11 @@ snapcreator
 --passwd Password
 --action userList
 --verbose
----- a| 
-特定のロールに割り当てられているすべてのユーザをリストします。
+----
+
+
  a| 
+| 特定のロールに割り当てられているすべてのユーザをリストします  a| 
 [listing]
 ----
 snapcreator
@@ -83,8 +82,7 @@ snapcreator
 
 
  a| 
-プロファイルが割り当てられているすべてのユーザをリスト表示します。
- a| 
+| プロファイルが割り当てられているすべてのユーザをリスト表示します  a| 
 [listing]
 ----
 snapcreator
@@ -95,13 +93,13 @@ snapcreator
 --profile Profile
 --action userListForProfile
 --verbose
----- a| 
-ロール
-
+----
 
 
  a| 
-新しいロールを作成します。
+ロール
+ a| 
+新しいロールを作成します
  a| 
 [listing]
 ----
@@ -114,12 +112,11 @@ snapcreator
 --roleName role_name
 --roleDesc role_description
 --verbose
----- a| 
-ロールを削除します。
-
+----
 
 
  a| 
+| ロールを削除します  a| 
 [listing]
 ----
 snapcreator
@@ -130,9 +127,11 @@ snapcreator
 --action roleDelete
 --roleName role_name
 --verbose
----- a| 
-ユーザにロールを割り当てます。
+----
+
+
  a| 
+| ユーザにロールを割り当てます  a| 
 [listing]
 ----
 snapcreator
@@ -148,8 +147,7 @@ snapcreator
 
 
  a| 
-ユーザからロールの割り当てを解除します。
- a| 
+| ユーザからロールの割り当てを解除します  a| 
 [listing]
 ----
 snapcreator
@@ -161,12 +159,11 @@ snapcreator
 --userName user_name
 --roleName role_name
 --verbose
----- a| 
-ユーザに割り当てられているロールをすべてリストします。
-
+----
 
 
  a| 
+| ユーザに割り当てられているロールをすべてリストします  a| 
 [listing]
 ----
 snapcreator
@@ -177,13 +174,13 @@ snapcreator
 --action roleListAssigned
 --userName user_name
 --verbose
----- a| 
+----
+
+
+ a| 
 権限
  a| 
-新しい権限を作成します。
-
-
-
+新しい権限を作成します
  a| 
 [listing]
 ----
@@ -196,9 +193,11 @@ snapcreator
 --permName permission_name
 --permDesc permission_description
 --verbose
----- a| 
-権限を削除します。
+----
+
+
  a| 
+| 権限を削除します  a| 
 [listing]
 ----
 snapcreator
@@ -213,8 +212,7 @@ snapcreator
 
 
  a| 
-ユーザに権限を割り当てます。
- a| 
+| ユーザに権限を割り当てます  a| 
 [listing]
 ----
 snapcreator
@@ -226,12 +224,11 @@ snapcreator
 --permName permission_name
 --roleName role_name
 --verbose
----- a| 
-ユーザへの権限の割り当てを解除します。
-
+----
 
 
  a| 
+| ユーザへの権限の割り当てを解除します  a| 
 [listing]
 ----
 snapcreator
@@ -243,9 +240,11 @@ snapcreator
 --permName
 --roleName role_name
 --verbose
----- a| 
-すべての権限を一覧表示します。
+----
+
+
  a| 
+| すべての権限を一覧表示します  a| 
 [listing]
 ----
 snapcreator
@@ -259,8 +258,7 @@ snapcreator
 
 
  a| 
-ロールに割り当てられているすべての権限をリストします。
- a| 
+| ロールに割り当てられているすべての権限をリストします  a| 
 [listing]
 ----
 snapcreator
@@ -271,13 +269,13 @@ snapcreator
 --action permListAssigned
 --roleName role_name
 --verbose
----- a| 
-処理
-
+----
 
 
  a| 
-権限に処理を割り当てます。
+処理
+ a| 
+権限に処理を割り当てます
  a| 
 [listing]
 ----
@@ -290,12 +288,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-権限から処理の割り当てを解除します。
-
+----
 
 
  a| 
+| 権限から処理の割り当てを解除します。  a| 
 [listing]
 ----
 snapcreator
@@ -307,9 +304,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-すべての処理をリスト表示します。
+----
+
+
  a| 
+| すべての処理をリスト表示します  a| 
 [listing]
 ----
 snapcreator
@@ -323,8 +322,7 @@ snapcreator
 
 
  a| 
-権限に割り当てられているすべての処理を一覧表示します。
- a| 
+| 権限に割り当てられているすべての処理を一覧表示します  a| 
 [listing]
 ----
 snapcreator
@@ -335,11 +333,11 @@ snapcreator
 --action opListAssigned
 --permName permission_name
 --verbose
----- a| 
+----
+
+
+ a| 
 プロファイル
-
-
-
  a| 
 ユーザにプロファイルを割り当てます。
  a| 
@@ -354,12 +352,11 @@ snapcreator
 --action profileAssign
 --userName user_name
 --verbose
----- a| 
-ユーザーからプロファイルの割り当てを解除します。
-
+----
 
 
  a| 
+| ユーザーからプロファイルの割り当てを解除します  a| 
 [listing]
 ----
 snapcreator
@@ -371,9 +368,11 @@ snapcreator
 --action profileUnassign
 --userName user_name
 --verbose
----- a| 
-ユーザに割り当てられているすべてのプロファイルを一覧表示します。
+----
+
+
  a| 
+| ユーザに割り当てられているすべてのプロファイルを一覧表示します  a| 
 [listing]
 ----
 snapcreator
