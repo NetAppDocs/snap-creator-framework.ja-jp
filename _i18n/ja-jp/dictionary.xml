@@ -4221,8 +4221,6 @@
   <block id="d9e901cf2c8dec3fb3d0a7115e2d0830" category="paragraph">リモートホスト上で Snap Creator エージェントを起動するには、 &lt;path to scAgent_v&lt;#&gt;&gt;/bin/scAgent start コマンドを実行します。</block>
   <block id="24dc7278962bcfc76401499b9f6546e8" category="paragraph">SC_CLONE_TARGET</block>
   <block id="6fe7225c6d56708f0f47a722220c713a" category="paragraph">クローンターゲットのホスト名または IP_address ： port</block>
-  <block id="e21428a82408feee3859e8c90b5ba7de" category="paragraph">クローン処理を有効にします。 ｛ pre でパラメータ * cloneVol * を使用します</block>
-  <block id="542e9598c7bf93bbfd9d7a9f90ab9c8a" category="cell">Post ｝ _CLONE_CREATE_CMDxx パラメータを使用すれば、リモートサイドでリモートストレージオブジェクトを管理できます（ファイルシステムのマウントやアンマウントなど）。クローンターゲットを指定するには、ホストの名前または IP アドレスのあとにコロンを入力し、さらに Snap Creator エージェントのリスニングポートを入力する必要があります。</block>
   <block id="d13dab8170b57ba54dad29406ffbbdde" category="paragraph">SC_AGENT_TIMEOUT</block>
   <block id="5f92829937e7b13ea1de0f9f1aed0d46" category="paragraph">エージェントサービスのタイムアウトを秒単位で指定します。実装されたクライアント / サーバアーキテクチャは、タイムアウトメカニズムを使用します。これは、指定された間隔でクライアントが応答しないと、サーバは失敗し、タイムアウトメッセージが表示されることを意味します。ただし、クライアント上のタスクは中止されず、さらに調査が必要になります。</block>
   <block id="1c90fe4424751b5cd95d5dfd902965d8" category="paragraph">デフォルトでは、タイムアウトは 300 秒に設定されています。負荷の高いサーバや長時間実行されているタスク（ユーザが作成したスクリプトや複雑な SnapDrive 処理など）があるサーバでは、タイムアウトを延長し、要件に応じてこの値を変更する必要があります。</block>
@@ -4601,4 +4599,8 @@
   <block id="a12965abf2d093ba56a99fab1157cba1" category="cell">ユーザーからプロファイルの割り当てを解除します</block>
   <block id="7cdc2fb941238c11489c31f937f6aa23" category="cell">ユーザに割り当てられているすべてのプロファイルを一覧表示します</block>
   <block id="81f196059d7908700f35e535c573135d" category="admonition">構成には、少なくとも 1 台のストレージコントローラまたは SVM を追加する必要があります。vsimトンネリング機能を使用するには、[IP Tunneling *]チェックボックスをオンにします（クラスタのみ）。</block>
+  <block id="7fc1d1689b46d654668ac4666069e9ce" category="paragraph">Snap Creator でバックアップ処理を実行するには、 HANA データベース内に専用のデータベースユーザを設定する必要があります。2番目の手順では、このバックアップユーザ用にSAP HANAユーザストアキーを設定する必要があります。このユーザストアキーは、 Snap Creator SAP HANA プラグインの構成内で使用されます。</block>
+  <block id="5951214569068cd75f070997baaf8545" category="paragraph">クローン処理を有効にします。｛PRE/POST｝_CLONE_CREATE_CMDxxパラメータを指定してパラメータ* cloneVol *を使用して、リモートサイドでリモートストレージオブジェクトを管理できます（ファイルシステムのマウントやアンマウントなど）。</block>
+  <block id="536365244f2630ddcece364e33664d40" category="paragraph">クローンターゲットを指定するには、ホストの名前または IP アドレスのあとにコロンを入力し、さらに Snap Creator エージェントのリスニングポートを入力する必要があります。</block>
+  <block id="0dda1c02ea357a92a449c913a623f7be" category="paragraph">Snap Creatorサーバによって実行されるすべての処理のログ作成をSnap Creatorエージェントに対して有効にします。障害が発生した場合は、これらのログを確認できます。Snap CreatorサーバはSnap Creatorエージェントに処理を送信します。Snap CreatorエージェントがSnap Creatorサーバにコールバックを送信する前にエラーが発生すると、Snap Creatorエージェントのメッセージが失われる可能性があります。このパラメータは、Snap CreatorエージェントのメッセージをSnap Creatorエージェントに記録するのに役立ちます。これにより、これらのメッセージが失われることはありません。</block>
 </blocks>
