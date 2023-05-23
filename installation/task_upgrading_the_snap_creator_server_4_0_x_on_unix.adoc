@@ -67,7 +67,7 @@ UNIX ベースのシステムでは、 Snap Creator サーバ 4.0.x から直接
 
 IMPORTANT: 古いバージョンにリバートする必要がないことが確実に確認されるまで、バックアップコピーを削除しないでください。
 
-また、指定したポート上のローカルホストに移動することで、 Snap Creator Framework の GUI の起動を検証する必要があります (https://IP_address:gui_port)[]。
+また、指定したポート上のローカルホストに移動することで、 Snap Creator Framework の GUI の起動を検証する必要があります 。
 
 HTTPS を使用して接続する必要があります。接続が HTTPS 接続に自動的にリダイレクトされず、 GUI が機能しません。
 
