@@ -383,14 +383,10 @@
   <block id="540edaf4389bd35edfa8fa3151f27fd8" category="list-text">実際に SnapVault 転送を再開するには、手動の Snapshot コピーが必要です。</block>
   <block id="46c99798aa0460278810abb417868424" category="list-text">デスティネーションのリストに SnapVault 関係が表示されていることを確認します。</block>
   <block id="5b3df86caff0ed84d5406907a8e0790f" category="summary">SAP HANA プラグインを設定して使用し、 SAP HANA データベースをバックアップおよびリストアする方法について説明します。</block>
-  <block id="692115423201e22849bdeabbf9ff7062" category="doc">『 SAP HANA ® Plug-in Operations Guide 』を参照してください</block>
-  <block id="d3938dfe42202c326833fdfff39c7ff7" category="paragraph">本書では、 SAP HANA データベースをバックアップおよびリストアするために、 Snap Creator 4.3.3 用 SAP HANA プラグインを設定および使用する方法について説明します。</block>
   <block id="04325964845984b062819fbeb5613bf0" category="summary">NetApp Snapshot ™テクノロジを使用すれば、データベースバックアップを数分で作成できます。Snapshot コピーではデータブロックは移動されないため、 Snapshot コピーの作成に要する時間はデータベースのサイズに左右されません。</block>
   <block id="c8d591b036c6345c614160fd9eb8e2b7" category="doc">NetApp 解決策の略</block>
   <block id="071af596f89d1ebeeefa6e4c1c41b146" category="paragraph">Snapshot テクノロジを使用しても、本番用 SAP システムのパフォーマンスには影響しません。そのため、 Snapshot コピーの作成スケジュールは、アクティビティのピーク期間を気にせずに作成できます。SAP とネットアップのお客様は、通常、複数のオンライン Snapshot バックアップを 1 日にスケジュールしています。たとえば、バックアップは 4 時間ごとに実行される場合があります。作成された Snapshot バックアップをプライマリストレージシステムに 3~5 日間保持しています。</block>
-  <block id="51c60f3b9cd56c81c81d782bd24ba37f" category="paragraph">Snapshot コピーは、リストアおよびリカバリ処理にも大きなメリットがあります。ネットアップの SnapRestore ® 機能を使用すると、利用可能な任意の Snapshot コピーが作成された時点にデータベース全体またはその一部をリストアできます。このリストアプロセスは、データベースのサイズに関係なく数分で完了します。また、 1 日に複数の Snapshot コピーが作成されて適用する必要があるログが少なくなるため、リカバリプロセスに要する時間も大幅に短縮されます。</block>
   <block id="3eb0f3a04996c76f86b1c7c7ac2edf21" category="paragraph">Snapshot バックアップは、アクティブなオンラインデータと同じディスクシステムに格納されます。ディスクやテープなどのセカンダリストレージへのバックアップに代わる手段としてではなく、補助的な用途で使用することを推奨します。セカンダリストレージへのバックアップは引き続き必要ですが、リストアおよびリカバリで必要になることはほとんどありません。リストアとリカバリのほとんどはプライマリストレージシステムで SnapRestore を使用して実行されます。セカンダリストレージからのリストアが必要になるのは、 Snapshot コピーが格納されているプライマリストレージシステムが損傷した場合、または Snapshot コピーから使用できなくなったバックアップをリストアする必要がある場合のみです。たとえば、 2 週間前のバックアップからリストアが必要になることがあります。</block>
-  <block id="3a150be2095b787600f9a7d829ddf0c5" category="paragraph">セカンダリストレージへのバックアップは、プライマリストレージに作成した Snapshot コピーがベースとなります。そのため、プライマリストレージシステムから直接データが読み取られ、 SAP データベースサーバに負荷は生成されません。プライマリストレージはセカンダリストレージと直接通信し、 SnapVault ® のディスクツーディスクバックアップを使用してバックアップデータをデスティネーションに送信します。NetApp SnapVault 機能には、従来のバックアップに比べて大きなメリットがあります。最初のデータ転送でソースからデスティネーションにすべてのデータが転送され、以降のバックアップでは変更されたブロックだけがセカンダリストレージにコピーされます。これにより、プライマリストレージシステムへの負荷と、フルバックアップに要する時間が大幅に削減されます。SnapVault では変更されたブロックだけがデスティネーションに格納されるため、データベースのフルバックアップに必要なディスクスペースも少なくて済みます。</block>
   <block id="2e96d7ab8e8f5fe210dbfe2055daf4fb" category="paragraph">長期バックアップとしてのデータのテープへのバックアップが引き続き必要な場合があります。たとえば、週次バックアップを 1 年間保存する場合などです。この場合、テープインフラをセカンダリストレージに直接接続し、 Network Data Management Protocol （ NDMP ；ネットワークデータ管理プロトコル）を使用してデータをテープに書き込むことができます。</block>
   <block id="cc122cb506b560736d7f7e5e0e2dafa4" category="image-alt">では、 Snap Creator SAP HANA 解決策の概要について説明します</block>
   <block id="5049ce63b0cad5968925ef3ae7b1a4df" category="doc">Data ONTAP 7-Mode との SnapVault 関係を再開</block>
@@ -1509,11 +1505,8 @@
   <block id="048dcc44ddae739f17a6629986271f8b" category="summary">データベースはオンデマンドでバックアップすることも、スケジュールに基づいてバックアップすることもできます。データベースのバックアップには、 Snap Creator の GUI または Snap Creator の CLI を使用します。</block>
   <block id="0ba7491209eff42b44e5b09d3f197fba" category="doc">データベースをバックアップしています</block>
   <block id="0b91c79a809d2f2c169597d91d13f93c" category="inline-link">『 Snap Creator Framework 4.1.2 Administration Guide 』</block>
-  <block id="ad73d215b4068f86a2168bb00365aa4b" category="admonition">このマニュアルでは、 GUI を使用してデータベースをバックアップする方法について説明します。CLI の使用方法については、を参照してください<block ref="532a3900f75badacc0e81c54213a5176" category="inline-link-rx"></block>。</block>
   <block id="bca0aee87ef36633d99e45277f3b105a" category="inline-link-macro">オンデマンドでのデータベースのバックアップ</block>
   <block id="7972a2702811e61123cb7047cd446e47" category="inline-link-macro">バックアップのスケジュール設定</block>
-  <block id="e19b088d506e1543600ef88f3c2dc29d" category="paragraph"><block ref="bccc93100305f81ed5222f7d2c994a98" category="inline-link-macro-rx"></block>
-<block ref="eeecaa0a7e94a6df0bf227ac0c175759" category="inline-link-macro-rx"></block></block>
   <block id="6724e79d6c8667f92067d0c79f454141" category="summary">初期バックアップを実行したあとに、定期的なバックアップジョブのスケジュールを設定できます。</block>
   <block id="c4417f01115fe5cd665c9c07eb358b4e" category="inline-xref-macro">構成ファイルを作成しています</block>
   <block id="45a726e6b5fbd2e087c0702f77204d3c" category="paragraph">の説明に従って、バックアップ用の構成ファイルを作成しておく必要があります <block ref="140ff5fab23254f1902ca39fa92c862d" category="inline-xref-macro-rx"></block>。</block>
@@ -1912,8 +1905,6 @@
   <block id="42665350f351370a6c756ee2658c3426" category="list-text">Disk Identification （ディスク識別）ペインで、マウントされたディスクを選択し、右クリックメニューの * Disconnect Disk （ディスクの切断） * をクリックします。</block>
   <block id="c1edfe963b4fa892eb084acddefa100e" category="list-text">[ ディスクの切断 ] ダイアログで、 [ はい ] をクリックします。</block>
   <block id="6ab3c031640de9f051fd3053d9ef25d0" category="summary">IBM Domino プラグインを設定して使用する方法、および IBM Domino データベースをバックアップおよびリストアする方法について説明します。</block>
-  <block id="a4c0ef56255949441dd09edc12f41371" category="doc">『 IBM ® Domino ® Plug-in Operations Guide 』</block>
-  <block id="cc3a19846ca6e33308cf189700ad91ff" category="paragraph">IBM Domino データベースのバックアップおよびリストアを行うために、 IBM Domino プラグイン for Snap Creator 4.3.3 を設定して使用する方法について説明します。</block>
   <block id="fefaacc44466723ca5f85607e0bf711f" category="summary">IBM Domino プラグインは、データベースが格納されているボリュームの Snapshot コピーからデータベースファイルをリストアします。Snapshot のリストア処理が完了すると、 changeinfo ディレクトリに記録された変更がプラグインによって適用されます。</block>
   <block id="d17c0718e54b8c110b0dcbd5259b758d" category="doc">IBM Domino プラグインのリストア処理の概要</block>
   <block id="665aad93a0cac1bed1a39beaa70d6492" category="list-text">Snapshot コピーからデータベースファイルをリストアします。</block>
@@ -4551,8 +4542,6 @@
   <block id="8cf04a9734132302f96da8e113e80ce5" category="sidebar">ホーム</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="sidebar">インストール</block>
-  <block id="3fa7ec916163970da88e2e2759209761" category="sidebar">IBM ® Domino ® プラグインの処理</block>
-  <block id="3cc13999b80491b390e27e7298102ccb" category="sidebar">SAP HANA ® プラグインの運用</block>
   <block id="7258e7251413465e0a3eb58094430bde" category="sidebar">管理</block>
   <block id="eae66b4b74b6b82ce35a83d2757f6d46" category="cell">（はい / いいえ）</block>
   <block id="0fed4fd40330e62e1aa81d896b62ecb5" category="paragraph">NTAP_allow_MIRROVAULT_AS_MIRROR</block>
@@ -4603,4 +4592,15 @@
   <block id="5951214569068cd75f070997baaf8545" category="paragraph">クローン処理を有効にします。｛PRE/POST｝_CLONE_CREATE_CMDxxパラメータを指定してパラメータ* cloneVol *を使用して、リモートサイドでリモートストレージオブジェクトを管理できます（ファイルシステムのマウントやアンマウントなど）。</block>
   <block id="536365244f2630ddcece364e33664d40" category="paragraph">クローンターゲットを指定するには、ホストの名前または IP アドレスのあとにコロンを入力し、さらに Snap Creator エージェントのリスニングポートを入力する必要があります。</block>
   <block id="0dda1c02ea357a92a449c913a623f7be" category="paragraph">Snap Creatorサーバによって実行されるすべての処理のログ作成をSnap Creatorエージェントに対して有効にします。障害が発生した場合は、これらのログを確認できます。Snap CreatorサーバはSnap Creatorエージェントに処理を送信します。Snap CreatorエージェントがSnap Creatorサーバにコールバックを送信する前にエラーが発生すると、Snap Creatorエージェントのメッセージが失われる可能性があります。このパラメータは、Snap CreatorエージェントのメッセージをSnap Creatorエージェントに記録するのに役立ちます。これにより、これらのメッセージが失われることはありません。</block>
+  <block id="51be88021ba9d8479fd3db824b232a95" category="admonition">GUIを使用してデータベースをバックアップできます。CLI の使用方法については、を参照してください<block ref="9c6fee504ba6f4e3cdf48b013fcc9205" category="inline-link-rx"></block>。</block>
+  <block id="bccc93100305f81ed5222f7d2c994a98" category="list-text"><block ref="bccc93100305f81ed5222f7d2c994a98" category="inline-link-macro-rx"></block></block>
+  <block id="eeecaa0a7e94a6df0bf227ac0c175759" category="list-text"><block ref="eeecaa0a7e94a6df0bf227ac0c175759" category="inline-link-macro-rx"></block></block>
+  <block id="c0e9c32b291af530f8baeb6c5d003126" category="doc">IBM Dominoプラグインの操作</block>
+  <block id="3fce5d11cc667ab536dda3b5efa02fc0" category="paragraph">Snap Creator 4.3.3用IBM Dominoプラグインを設定して使用し、IBM Dominoデータベースのバックアップとリストアを行うことができます。</block>
+  <block id="4ff49151ecc7b311b935b44393cb1817" category="paragraph">NetAppのSnapshotテクノロジを使用すると、データベースのバックアップを数分で作成できます。Snapshot コピーではデータブロックは移動されないため、 Snapshot コピーの作成に要する時間はデータベースのサイズに左右されません。</block>
+  <block id="4ec821c3afee07e7a10c59cb24aba9e8" category="paragraph">Snapshot コピーは、リストアおよびリカバリ処理にも大きなメリットがあります。NetApp SnapRestore機能を使用すると、使用可能なSnapshotコピーが作成された時点に、データベース全体またはデータベースの一部をリストアできます。このリストアプロセスは、データベースのサイズに関係なく数分で完了します。また、 1 日に複数の Snapshot コピーが作成されて適用する必要があるログが少なくなるため、リカバリプロセスに要する時間も大幅に短縮されます。</block>
+  <block id="8fadff52f43bec1c2c213bd4047b08a1" category="paragraph">セカンダリストレージへのバックアップは、プライマリストレージに作成した Snapshot コピーがベースとなります。そのため、プライマリストレージシステムから直接データが読み取られ、 SAP データベースサーバに負荷は生成されません。プライマリストレージはセカンダリストレージと直接通信し、SnapVaultのディスクツーディスクバックアップを使用してバックアップデータをデスティネーションに送信します。NetApp SnapVault 機能には、従来のバックアップに比べて大きなメリットがあります。最初のデータ転送でソースからデスティネーションにすべてのデータが転送され、以降のバックアップでは変更されたブロックだけがセカンダリストレージにコピーされます。これにより、プライマリストレージシステムへの負荷と、フルバックアップに要する時間が大幅に削減されます。SnapVaultでは変更されたブロックのみがデスティネーションに格納されるため、データベースのフルバックアップでは必要なディスクスペースが少なくて済みます。</block>
+  <block id="91b5d4f93ff87a8d44feaabae5e745d1" category="doc">『SAP HANA Plug-in Operations Guide』を参照してください</block>
+  <block id="367423d79cfdd3fdc216a55f4bcd023d" category="paragraph">Snap Creator 4.3.3用のSAP HANAプラグインを設定して使用し、SAP HANAデータベースのバックアップとリストアを行うことができます。</block>
+  <block id="fbd81bedca700187dabfca4bf4718312" category="sidebar">『SAP HANA Plug-in Operations』を参照してください</block>
 </blocks>

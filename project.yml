@@ -144,7 +144,7 @@ sidebar:
           url: "/installation/reference_cli_command_for_creating_cluster_roles.html"
         - title: SVM ロールを作成するための CLI コマンド
           url: "/installation/reference_cli_commands_for_creating_svm_roles.html"
-  - title: IBM ® Domino ® プラグインの処理
+  - title: IBM Dominoプラグインの操作
     url: "/domino-ops/index.html"
     entries:
     - title: IBM Domino プラグインの概要
@@ -224,7 +224,7 @@ sidebar:
       url: "/domino-ops/reference_domino_plug_in_specific_errors.html"
     - title: 次の手順
       url: "/domino-ops/reference_references.html"
-  - title: SAP HANA ® プラグインの運用
+  - title: "『SAP HANA Plug-in Operations』を参照してください"
     url: "/sap-hana-ops/index.html"
     entries:
     - title: SAP HANA のバックアップとリストア解決策の概要
