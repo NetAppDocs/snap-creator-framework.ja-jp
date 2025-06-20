@@ -656,4 +656,4 @@ sidebar:
       - title: Snap Creator ユーザのアクセス管理に使用するコマンドです
         url: "/administration/reference_cli_command_for_snap_creator_rbac_actions.html"
   - title: 法的通知
-    url: "/reference_legal_notices.html"
+    url: "/legal-notices.html"
